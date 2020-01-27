@@ -1,0 +1,33 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+}
+
+.row{
+  margin-bottom: 0px;
+  z-index: -1;
+}
+
+.wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: -webkit-inline-flex;
+  justify-content:space-between;
+}
+
+.img{
+  width: 100%;
+  height: auto;
+}
+
+.btn-large{
+  font-size: 20px;
+}
+
+.responsive-img {
+  padding: 0;
+}
