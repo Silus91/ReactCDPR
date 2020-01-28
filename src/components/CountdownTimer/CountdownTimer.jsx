@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class CountdownTimer extends Component {
   constructor(props){
@@ -41,7 +41,6 @@ export class CountdownTimer extends Component {
     const {days, hours, minutes, seconds} = this.state;
     return (
       <div>
-        {/* <span>APRIL 16TH, 2020</span> */}
         <span>D {this.leadingZero(days)} </span>
         <span>| H {this.leadingZero(hours)} </span>
         <span>| M {this.leadingZero(minutes)} </span>

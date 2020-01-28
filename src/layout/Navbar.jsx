@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
 
-
 class Navbar extends Component {
 
   componentDidMount() {
