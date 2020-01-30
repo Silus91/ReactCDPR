@@ -87,8 +87,3 @@ const mapActionsToProps = {
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(Login);
-
-
-        // <div>
-        //   <FacebookLoginButton />
-        // </div>

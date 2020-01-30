@@ -120,3 +120,24 @@ exports.logout = (req, res) => {
         return res.status(400).json({ general: "Wrong credentials, something went wrong" });
     });
 }
+
+exports.facebookLogin = (req, res) => {
+
+  const provider = new firebase.auth.FacebookAuthProvider(); 
+
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(res => {
+    const token = res.credential.accessToken;
+    const user = res.user;
+
+
+    console.log("token ten kurw", token);
+    console.log("user jakis", user);
+  })
+
+  .catch((err) => {
+    console.error("tu jest consolelog", err);
+      return res.status(403).json({ general: "Wrong credentials, please try again" });
+  });
+}
