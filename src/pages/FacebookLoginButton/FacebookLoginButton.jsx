@@ -13,7 +13,9 @@ export class FacebookLoginButton extends Component {
     picture: ''
   }
 
+  
   responseFacebook = response => {
+    const user = {userID,name, email, picture};
     this.setState({
       userID: response.userID,
       name: response.name,
