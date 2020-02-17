@@ -3,7 +3,6 @@ import FacebookLogin from 'react-facebook-login';
 import { loginFbAction } from '../../actions/authActions';
 import { connect } from 'react-redux';
 
-
 export class FacebookLoginButton extends Component {
 
   state = {
@@ -13,7 +12,7 @@ export class FacebookLoginButton extends Component {
     picture: ''
   }
 
-  
+
   responseFacebook = response => {
     const user = {userID,name, email, picture};
     this.setState({
@@ -63,3 +62,8 @@ const mapActionsToProps = {
 }
 
 export default connect(mapStateToProps,mapActionsToProps)(FacebookLoginButton);
+
+
+// firebase.auth().onAuthStateChange(user => {
+//   this.setState({ authorized: !!true})
+// })

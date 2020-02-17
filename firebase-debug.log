@@ -16316,3 +16316,15 @@
 [debug] [2020-01-30T18:47:48.777Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-01-30T18:47:48.778Z] [worker-api-963919da-0793-4e8f-85d1-fbd8a06a062e]: IDLE
+[debug] [2020-02-03T11:11:59.258Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-02-03T11:12:00.259Z] [worker-pool]: Shutting down IDLE worker (api)
+[debug] [2020-02-03T11:12:00.462Z] [worker-~diagnostic~-b5283f94-69d3-440f-83c1-78af645adec9]: BUSY
+[debug] [2020-02-03T11:12:00.467Z] [worker-api-963919da-0793-4e8f-85d1-fbd8a06a062e]: exited
+[debug] [2020-02-03T11:12:00.467Z] [worker-api-963919da-0793-4e8f-85d1-fbd8a06a062e]: FINISHED
+[debug] [2020-02-03T11:12:05.328Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
+[debug] [2020-02-03T11:12:05.336Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-02-03T11:12:05.546Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-03T11:12:05.547Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-03T11:12:05.547Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-03T11:12:10.561Z] [worker-~diagnostic~-b5283f94-69d3-440f-83c1-78af645adec9]: exited
+[debug] [2020-02-03T11:12:10.561Z] [worker-~diagnostic~-b5283f94-69d3-440f-83c1-78af645adec9]: FINISHED
