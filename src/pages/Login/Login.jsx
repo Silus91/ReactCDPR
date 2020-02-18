@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import M from "materialize-css";
 import { loginAction } from '../../actions/authActions';
 
-// import FacebookLoginButton from '../../components/FacebookLoginButton/FacebookLoginButton';
-
 class Login extends Component {
   constructor(props){
     super(props);
