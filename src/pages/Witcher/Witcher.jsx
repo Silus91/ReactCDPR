@@ -18,10 +18,9 @@ render() {
   return(
     <div className="container">
       <div className="row">
-          <div className=" col l6 s12 card">
-              <QuoteGenerator />
-          </div>
-
+        <div className=" col l6 s12 card">
+            <QuoteGenerator />
+        </div>
           <div className="col l6 s12">
             <Collaps />
           </div>
