@@ -26,18 +26,14 @@ class Cyberpunk extends React.Component {
                 <CountdownTimer />
               </a>              
             </div>
-
             <div className="col l6 s12 m8 offset-m2">
               <YoutubeVideo videoId='LembwKDo1Dk' />
             </div>
-
             <div className="col l2  s12 center-align flex">
               <a className="btn-large yellow pulse" href="https://www.cyberpunk.net/gb/en/pre-order">
                 PREORDER<i className="material-icons right">attach_money</i>
               </a>              
             </div>
-
-
           </div>
           <div className="parallax-container">
             <div className="parallax">
@@ -45,9 +41,7 @@ class Cyberpunk extends React.Component {
             </div>
           </div>
           <div className="row">
-
             <br />
-
           </div>
           <div className="parallax-container">
             <div className="parallax">

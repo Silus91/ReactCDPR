@@ -14,7 +14,7 @@ class Witcher extends React.Component {
     M.AutoInit();
   }
 
-render() {
+  render() {
   return(
     <div className="container">
       <div className="row">
@@ -40,13 +40,9 @@ render() {
       <div className="video-detail col-md-8">
           <YoutubeVideo videoId='c0i88t0Kacs' />
       </div>*/}
-
-
-
-
-    </div>
-  );
-}
+      </div>
+    );
+  }
 };
 
 export default Witcher;
