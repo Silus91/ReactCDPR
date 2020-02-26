@@ -2,9 +2,9 @@ import React from 'react';
 import YoutubeVideo from '../../components/YoutubeVideo/YoutubeVideo';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import M from "materialize-css";
-import netRunner from './netRunner.png';
-import cityCar from './cityCar.jpg';
-import cyber from './cyber.png';
+import netRunner from '../../resources/imgs/netRunner.png';
+import cityCar from '../../resources/imgs/cityCar.jpg';
+import cyber from '../../resources/imgs/cyber.png';
 import './Cyberpunk.css';
 
 class Cyberpunk extends React.Component {

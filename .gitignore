@@ -13,7 +13,7 @@
 
 .env
 package-lock.json
-serviceAccount.json
+/functions/serviceAccount.json
 
 # misc
 .DS_Store

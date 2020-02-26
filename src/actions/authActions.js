@@ -29,9 +29,10 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
-export const loginFbAction = (userData, history) => (dispatch) => {
+export const loginFbAction = (history) => (dispatch) => {
+  console.log("actions")
   dispatch({ type: LOADING_UI });
-  axios.post(`${BASE_URL}fblogin`, userData)
+  axios.post(`${BASE_URL}fblogin`)
   .then((res) => {
     const FBidToken = `Bearer ${res.data.token}`;
     localStorage.setItem('FBidToken', FBidToken)

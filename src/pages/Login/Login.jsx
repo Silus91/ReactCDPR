@@ -66,7 +66,7 @@ class Login extends Component {
                   <button type="submit" className="btn pink lighten-1 z-depth-2 center-align">Login</button>
                 </div>
               </form>
-              {loading && (<div class="progress"><div class="indeterminate"></div></div>)}         
+              {loading && (<div className="progress"><div className="indeterminate"></div></div>)}         
             </div>
           </div>
         </div>
