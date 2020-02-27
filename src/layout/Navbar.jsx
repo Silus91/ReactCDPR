@@ -23,7 +23,6 @@ class Navbar extends Component {
       <Fragment>
         <li><Link to='/login'>Login</Link></li>
         <li><Link to='/register'>Register</Link></li>
-        <li><Link to='/fblogin'>FBLogin</Link></li>
       </Fragment>
     )
 

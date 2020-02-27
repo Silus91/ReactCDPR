@@ -16,7 +16,6 @@ class Stock extends Component {
 
   fetchStock() {
     const pointerToThis = this;
-    
     const API_KEY = 'JUH2DXk-shUQf-ubqVhQ';
     const API_CDR = `https://www.quandl.com/api/v3/datasets/WSE/CDPROJEKT.json?api_${API_KEY}`;
 
@@ -24,22 +23,22 @@ class Stock extends Component {
     let stockChartValuesYFunction = [];
 
     fetch(API_CDR)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        const cutted = data['dataset']['data'].slice(0,100);
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      const cutted = data['dataset']['data'].slice(0,100);
 
-        for (var i = 0; i < cutted.length; i++) {
-          stockChartValuesXFunction.push(cutted[i][0]);
-          stockChartValuesYFunction.push(cutted[i][1]);
-        }
+      for (var i = 0; i < cutted.length; i++) {
+        stockChartValuesXFunction.push(cutted[i][0]);
+        stockChartValuesYFunction.push(cutted[i][1]);
+      }
 
-        pointerToThis.setState({
-          stockChartValuesX: stockChartValuesXFunction,
-          stockChartValuesY: stockChartValuesYFunction
-        })
+      pointerToThis.setState({
+        stockChartValuesX: stockChartValuesXFunction,
+        stockChartValuesY: stockChartValuesYFunction
       })
+    })
   }
 
   render() {

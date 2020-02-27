@@ -17,7 +17,6 @@ import { getUserData, logout } from './actions/authActions';
 
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
-
 const token = localStorage.getItem("FBidToken");
 
 if (token) {
