@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
 
- class Stock extends Component {
-   constructor(props){
-     super(props);
-     this.state = {
-       stockChartValuesX: [],
-       stockChartValuesY: []
+class Stock extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      stockChartValuesX: [],
+      stockChartValuesY: []
      }
    }
 

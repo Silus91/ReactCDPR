@@ -14,7 +14,6 @@ import AuthRoute from './resources/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
-// import FacebookLoginButton from './pages/FacebookLoginButton/FacebookLoginButton';
 
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
@@ -51,7 +50,6 @@ class App extends Component {
             <Route path='/cyberpunk' component={Cyberpunk} />
             <Route path='/witcher' component={Witcher} />
             <AuthRoute path='/login' component={Login} />
-            {/* <AuthRoute path='/fblogin' component={FacebookLoginButton} /> */}
             <AuthRoute path='/register' component={Register} />
           </Switch>
         </BrowserRouter>

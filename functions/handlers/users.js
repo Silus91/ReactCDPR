@@ -83,21 +83,20 @@ exports.login = (req, res) => {
 }
 
 exports.facebookLogin = (req, res) => {
-console.log("jestesm")
+  console.log("jestesm")
   const provider = new firebase.auth.FacebookAuthProvider(); 
 
   firebase.auth()
-  .signInWithPopup(provider)
-  .then(res => {
-    const token = res.credential.accessToken;
-    const user = res.user;
+    .signInWithRedirect(provider)
+    .then(res => {
+      const token = res.credential.accessToken;
+      const user = res.user;
 
 
     console.log("token ten kurw", token);
     console.log("user jakis", user);
   })
   
-
   .catch((err) => {
       return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
