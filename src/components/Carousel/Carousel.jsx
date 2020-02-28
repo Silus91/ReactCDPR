@@ -7,7 +7,6 @@ class Carousel extends Component {
       document.addEventListener('DOMContentLoaded', function() {
         const options = {
           duration: 200,
-          
         };
         const elems = document.querySelectorAll('.carousel');
         const instances = M.Carousel.init(elems,{
