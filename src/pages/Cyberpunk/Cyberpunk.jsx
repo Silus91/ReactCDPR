@@ -5,6 +5,7 @@ import M from "materialize-css";
 import netRunner from '../../resources/imgs/netRunner.png';
 import cityCar from '../../resources/imgs/cityCar.jpg';
 import cyber from '../../resources/imgs/cyber.png';
+import config from './config';
 import './Cyberpunk.css';
 
 class Cyberpunk extends React.Component {
@@ -40,8 +41,10 @@ class Cyberpunk extends React.Component {
               <img className="responsive-img" src={netRunner} alt="" />
             </div>
           </div>
-          <div className="row">
-            <br />
+          <div className="">
+            <div className="row container">
+              <h6 className="">{config}</h6>
+            </div>
           </div>
           <div className="parallax-container">
             <div className="parallax">

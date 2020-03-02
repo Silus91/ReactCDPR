@@ -29,9 +29,10 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
-export const loginFbAction = () => {
+export const loginFbAction = async () => {
   console.log("actions")
-  axios.post(`${BASE_URL}fblogin`)
+  const result = await axios.post(`${BASE_URL}fblogin`)
+  console.log(result);
 
 }
 
@@ -68,7 +69,6 @@ export const getUserData = () => (dispatch) => {
 }
 
 export const logout = () => async (dispatch) => {
-  console.log("kurwa nacisnolem")
   const result = await axios.post(`${BASE_URL}logout`)
   console.log(result);
   localStorage.removeItem('FBidToken')

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class CountdownTimer extends Component {
+class CountdownTimer extends Component {
   constructor(props){
     super(props);
     this.state = { 

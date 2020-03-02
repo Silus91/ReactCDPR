@@ -1,0 +1,10 @@
+.carousel-item{
+    height: inherit!important;
+
+}
+
+
+.carousel-img{
+    width: 100%;
+    z-index: -1;
+}

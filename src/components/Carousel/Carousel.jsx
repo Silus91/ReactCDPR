@@ -23,7 +23,7 @@ class Carousel extends Component {
     return numbers.map((num, index)=> {
       return (
         <div className="carousel-item" key={index}>
-          <img src={require(`../../resources/imgs/carous${num}.jpg`)} className="" />
+          <img src={require(`../../resources/imgs/carous${num}.jpg`)} className="carousel-img" />
         </div>
       )
     })
