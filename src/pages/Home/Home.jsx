@@ -7,6 +7,7 @@ import config from './config';
 import cd_logo from './cd_logo.png';
 import Footer from '../../components/Footer/Footer';
 import NewFbBut from '../../components/NewFbBut/NewFbBut';
+import { FacebookLoginButton } from '../FacebookLoginButton/FacebookLoginButton';
 
 class Home extends Component {
 
@@ -42,6 +43,7 @@ class Home extends Component {
           {this.renderCards()}
         </div>
         <NewFbBut />
+        <FacebookLoginButton />
         <button className="center"><Footer /></button>
       </div>
     )

@@ -29,12 +29,31 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
-export const loginFbAction = async () => {
-  console.log("actions")
-  const result = await axios.post(`${BASE_URL}fblogin`)
-  console.log(result);
 
-}
+  export const loginFbAction = (history) => (dispatch) => {
+    dispatch({ type: LOADING_UI });
+    axios.post(`${BASE_URL}fblogin`)
+    .then((res) => {
+ console.log(res);
+      dispatch(getUserData());
+      dispatch({ type: CLEAR_ERRORS });
+      history.push('/');
+    })
+    .catch(err => {
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data
+        })
+    })
+  }
+
+
+
+
+
+
+
+
 
 
 

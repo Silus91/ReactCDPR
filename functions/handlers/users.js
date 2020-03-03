@@ -86,11 +86,9 @@ exports.facebookLogin = (req, res) => {
   console.log("jestesm")
   const provider = new firebase.auth.FacebookAuthProvider(); 
 
-  firebase.auth()
-    .signInWithRedirect(provider)
-    .then(res => {
-      const token = res.credential.accessToken;
-      const user = res.user;
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    const token = result.credential.accessToken;
+    const user = result.user;
 
 
     console.log("token ten kurw", token);

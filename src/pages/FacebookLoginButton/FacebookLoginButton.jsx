@@ -14,16 +14,10 @@ export class FacebookLoginButton extends Component {
 
 
   responseFacebook = response => {
-    const user = {userID,name, email, picture};
-    this.setState({
-      userID: response.userID,
-      name: response.name,
-      email: response.email,
-      picture: response.picture.data.url,
-    })
+    console.log(response);
   }
 
-  componentClicked = () =>      this.props.loginFbAction(user, this.props.history);
+  componentClicked = () => this.props.loginFbAction();
 
   render() {
     let fbContent;
