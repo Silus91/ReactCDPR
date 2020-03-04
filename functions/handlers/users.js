@@ -83,16 +83,11 @@ exports.login = (req, res) => {
 }
 
 exports.facebookLogin = (req, res) => {
-  console.log("jestesm")
   const provider = new firebase.auth.FacebookAuthProvider(); 
+  console.log("jestesm")
 
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    const token = result.credential.accessToken;
-    const user = result.user;
-
-
-    console.log("token ten kurw", token);
-    console.log("user jakis", user);
+  firebase.auth().signInWithPopup(provider).then(() => {
+    console.log('Successfully signed in');
   })
   
   .catch((err) => {

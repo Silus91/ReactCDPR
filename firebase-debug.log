@@ -1,596 +1,184 @@
-[debug] [2020-03-03T12:02:34.824Z] ----------------------------------------------------------------------
-[debug] [2020-03-03T12:02:34.828Z] Command:       /home/dawid/.nvm/versions/node/v10.16.0/bin/node /home/dawid/.nvm/versions/node/v10.16.0/bin/firebase serve
-[debug] [2020-03-03T12:02:34.829Z] CLI Version:   7.7.0
-[debug] [2020-03-03T12:02:34.829Z] Platform:      linux
-[debug] [2020-03-03T12:02:34.829Z] Node Version:  v10.16.0
-[debug] [2020-03-03T12:02:34.876Z] Time:          Tue Mar 03 2020 12:02:34 GMT+0000 (Greenwich Mean Time)
-[debug] [2020-03-03T12:02:34.876Z] ----------------------------------------------------------------------
-[debug] [2020-03-03T12:02:34.876Z] 
-[debug] [2020-03-03T12:02:35.069Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-03-03T12:02:35.069Z] > authorizing via signed-in user
-[debug] [2020-03-03T12:02:35.070Z] [iam] checking project cdred-project for permissions ["firebase.projects.get"]
-[debug] [2020-03-03T12:02:35.072Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-03-03T12:02:35.073Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2020-03-04T11:38:52.968Z] ----------------------------------------------------------------------
+[debug] [2020-03-04T11:38:52.974Z] Command:       /home/dawid/.nvm/versions/node/v10.16.0/bin/node /home/dawid/.nvm/versions/node/v10.16.0/bin/firebase serve
+[debug] [2020-03-04T11:38:52.975Z] CLI Version:   7.7.0
+[debug] [2020-03-04T11:38:52.975Z] Platform:      linux
+[debug] [2020-03-04T11:38:52.975Z] Node Version:  v10.16.0
+[debug] [2020-03-04T11:38:52.976Z] Time:          Wed Mar 04 2020 11:38:52 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-03-04T11:38:52.976Z] ----------------------------------------------------------------------
+[debug] [2020-03-04T11:38:52.976Z] 
+[debug] [2020-03-04T11:38:53.082Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-04T11:38:53.083Z] > authorizing via signed-in user
+[debug] [2020-03-04T11:38:53.083Z] [iam] checking project cdred-project for permissions ["firebase.projects.get"]
+[debug] [2020-03-04T11:38:53.088Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-04T11:38:53.089Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2020-03-03T12:02:35.353Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-03T12:02:35.506Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cdred-project:testIamPermissions  
+[debug] [2020-03-04T11:38:53.328Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-04T11:38:53.466Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/cdred-project:testIamPermissions  
 
-[debug] [2020-03-03T12:02:36.302Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-03T12:02:36.304Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cdred-project  
+[debug] [2020-03-04T11:38:54.339Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-04T11:38:54.342Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/cdred-project  
  
-[debug] [2020-03-03T12:02:36.608Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-04T11:38:54.580Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/dawid/trening/Cdred/cdred-react-app'...
 [info] 
 [info] ✔  functions: Using node@10 from host.
 [info] ✔  functions: Emulator started at http://localhost:5000
 [info] i  functions: Watching "/home/dawid/trening/Cdred/cdred-react-app/functions" for Cloud Functions...
-[debug] [2020-03-03T12:02:36.965Z] [worker-~diagnostic~-9cad96f4-fe83-45b0-88f0-4bc6548e3944]: BUSY
-[debug] [2020-03-03T12:02:37.507Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:02:37.511Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:02:37.590Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:02:37.664Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:02:37.667Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-04T11:38:54.927Z] [worker-~diagnostic~-8fff68e8-2f2b-400b-a1f9-697fb784aa97]: BUSY
+[debug] [2020-03-04T11:38:55.415Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
+[debug] [2020-03-04T11:38:55.419Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-03-04T11:38:55.438Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-04T11:38:55.450Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-04T11:38:55.451Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
 [info] ✔  functions[api]: http function initialized (http://localhost:5000/cdred-project/us-central1/api).
-[debug] [2020-03-03T12:02:48.598Z] [worker-~diagnostic~-9cad96f4-fe83-45b0-88f0-4bc6548e3944]: exited
-[debug] [2020-03-03T12:02:48.599Z] [worker-~diagnostic~-9cad96f4-fe83-45b0-88f0-4bc6548e3944]: FINISHED
-[debug] [2020-03-03T12:03:27.995Z] Accepted request GET /cdred-project/us-central1/api/user --> api
-[debug] [2020-03-03T12:03:28.002Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:03:28.666Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:03:28.670Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:03:28.675Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:03:28.678Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:03:28.679Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:03:29.462Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:39:16.239Z] [worker-~diagnostic~-8fff68e8-2f2b-400b-a1f9-697fb784aa97]: exited
+[debug] [2020-03-04T11:39:16.239Z] [worker-~diagnostic~-8fff68e8-2f2b-400b-a1f9-697fb784aa97]: FINISHED
+[debug] [2020-03-04T11:40:13.265Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:40:13.275Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:40:13.945Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
+[debug] [2020-03-04T11:40:13.949Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-03-04T11:40:13.955Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-04T11:40:13.959Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-04T11:40:13.962Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-04T11:40:14.992Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:03:29.463Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:03:29.463Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:03:29.519Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:03:29.527Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:03:29.538Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:40:14.995Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:40:14.996Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:40:15.086Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:40:15.093Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:40:15.107Z] [runtime-status] Ephemeral server used! {}
 [info] >  No token found
-[debug] [2020-03-03T12:03:29.553Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:40:15.123Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:03:29.557Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:04.241Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:04.242Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:04.244Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:40:15.127Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:44:57.693Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
+[debug] [2020-03-04T11:44:57.693Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:44:57.694Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:04.244Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:04.245Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:04.245Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:04.246Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:04.252Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:44:57.695Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:44:57.695Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:44:57.696Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:44:57.699Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:44:57.705Z] [runtime-status] Ephemeral server used! {}
 [info] >  jestesm
-[debug] [2020-03-03T12:04:04.268Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:44:57.723Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:04.270Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:24.368Z] Accepted request GET /cdred-project/us-central1/api/user --> api
-[debug] [2020-03-03T12:04:24.368Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:24.377Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:44:57.724Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:45:07.876Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
+[debug] [2020-03-04T11:45:07.877Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:45:07.878Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:24.378Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:24.378Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:24.378Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:24.380Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:24.427Z] [runtime-status] Ephemeral server used! {}
-[debug] [2020-03-03T12:04:24.429Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:45:07.879Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:45:07.879Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:45:07.880Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:45:07.881Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:45:07.891Z] [runtime-status] Ephemeral server used! {}
+[info] >  jestesm
+[debug] [2020-03-04T11:45:07.891Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:24.430Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
+[debug] [2020-03-04T11:45:07.895Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:46:03.861Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:46:03.862Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:46:03.865Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-04T11:46:03.866Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:46:03.866Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:46:03.867Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:46:03.868Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:46:03.895Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:46:03.897Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-04T11:46:03.900Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
 [info] >  No token found
-[debug] [2020-03-03T12:04:38.130Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:38.131Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:38.133Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:49:15.884Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:49:15.885Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:49:15.888Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:38.133Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:38.133Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:38.134Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:38.135Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:38.138Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:38.140Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:49:15.890Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:49:15.890Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:49:15.890Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:15.892Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:15.913Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:49:15.914Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:38.141Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:54.854Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:54.854Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:54.856Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:54.856Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:54.856Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:54.857Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:54.858Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:54.860Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:54.862Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:54.862Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:58.066Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:58.067Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:58.067Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:58.068Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:58.068Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:58.069Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.070Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.077Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:58.080Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:58.081Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:58.495Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:58.495Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:58.496Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:58.497Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:58.498Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:58.499Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.500Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.504Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:58.506Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:58.506Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:58.661Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:58.662Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:58.662Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:58.663Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:58.663Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:58.664Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.665Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.669Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:58.670Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:58.673Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:04:58.806Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:04:58.806Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: BUSY
-[debug] [2020-03-03T12:04:58.808Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:04:58.809Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:04:58.809Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:04:58.809Z] {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.810Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23385.sock"}
-[debug] [2020-03-03T12:04:58.817Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:04:58.821Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:04:58.822Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: IDLE
-[debug] [2020-03-03T12:05:37.735Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
-[debug] [2020-03-03T12:05:38.737Z] [worker-pool]: Shutting down IDLE worker (api)
-[debug] [2020-03-03T12:05:38.749Z] [worker-~diagnostic~-f8bbbba9-c7e3-4608-8494-d63b1a66d1bd]: BUSY
-[debug] [2020-03-03T12:05:38.750Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: exited
-[debug] [2020-03-03T12:05:38.750Z] [worker-api-37ae0d75-499d-4d4b-8406-3adb0b376a30]: FINISHED
-[debug] [2020-03-03T12:05:39.130Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:05:39.134Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:05:39.137Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:05:39.138Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:05:39.141Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:05:39.751Z] [worker-~diagnostic~-f8bbbba9-c7e3-4608-8494-d63b1a66d1bd]: exited
-[debug] [2020-03-03T12:05:39.751Z] [worker-~diagnostic~-f8bbbba9-c7e3-4608-8494-d63b1a66d1bd]: FINISHED
-[debug] [2020-03-03T12:05:59.906Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:05:59.915Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: BUSY
-[debug] [2020-03-03T12:06:00.343Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:06:00.346Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:06:00.349Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:06:00.351Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:06:00.354Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:06:00.914Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:06:00.915Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:06:00.915Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:06:00.924Z] {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:00.925Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:00.935Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:06:00.966Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:06:00.967Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: IDLE
-[info] >  TypeError: Cannot read property 'signInWithRedirect' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[debug] [2020-03-03T12:06:03.867Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:06:03.867Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: BUSY
-[debug] [2020-03-03T12:06:03.869Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:06:03.869Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:06:03.869Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:06:03.870Z] {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:03.871Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:03.878Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:06:03.879Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:06:03.880Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: IDLE
-[info] >  TypeError: Cannot read property 'signInWithRedirect' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[debug] [2020-03-03T12:06:04.727Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:06:04.727Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: BUSY
-[debug] [2020-03-03T12:06:04.729Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:06:04.730Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:06:04.730Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:06:04.731Z] {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:04.731Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_23994.sock"}
-[debug] [2020-03-03T12:06:04.735Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:06:04.738Z] [runtime-status] Ephemeral server survived. {}
-[info] >  TypeError: Cannot read property 'signInWithRedirect' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:06:04.742Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: IDLE
-[debug] [2020-03-03T12:07:47.976Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
-[debug] [2020-03-03T12:07:48.976Z] [worker-pool]: Shutting down IDLE worker (api)
-[debug] [2020-03-03T12:07:48.986Z] [worker-~diagnostic~-05940088-296e-4f98-8a6c-a11ff0b6f21e]: BUSY
-[debug] [2020-03-03T12:07:48.987Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: exited
-[debug] [2020-03-03T12:07:48.988Z] [worker-api-47eef569-a2e7-4aec-9a91-987d0ab472ef]: FINISHED
-[debug] [2020-03-03T12:07:49.400Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:07:49.404Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:07:49.406Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:07:49.408Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:07:49.409Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:07:50.039Z] [worker-~diagnostic~-05940088-296e-4f98-8a6c-a11ff0b6f21e]: exited
-[debug] [2020-03-03T12:07:50.039Z] [worker-~diagnostic~-05940088-296e-4f98-8a6c-a11ff0b6f21e]: FINISHED
-[debug] [2020-03-03T12:08:12.947Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
-[debug] [2020-03-03T12:08:13.955Z] [worker-~diagnostic~-5c20c36d-7d19-456f-9b30-10b38d50c9bb]: BUSY
-[debug] [2020-03-03T12:08:14.645Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:08:14.648Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:08:14.651Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:08:14.652Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:14.654Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:15.284Z] [worker-~diagnostic~-5c20c36d-7d19-456f-9b30-10b38d50c9bb]: exited
-[debug] [2020-03-03T12:08:15.284Z] [worker-~diagnostic~-5c20c36d-7d19-456f-9b30-10b38d50c9bb]: FINISHED
-[debug] [2020-03-03T12:08:27.813Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
-[debug] [2020-03-03T12:08:28.822Z] [worker-~diagnostic~-8fe7791a-c15c-44b6-b4fc-799358eb26c0]: BUSY
-[debug] [2020-03-03T12:08:29.336Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:08:29.340Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:08:29.344Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:08:29.347Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:29.348Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:30.029Z] [worker-~diagnostic~-8fe7791a-c15c-44b6-b4fc-799358eb26c0]: exited
-[debug] [2020-03-03T12:08:30.030Z] [worker-~diagnostic~-8fe7791a-c15c-44b6-b4fc-799358eb26c0]: FINISHED
-[debug] [2020-03-03T12:08:40.890Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:08:40.899Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:08:41.370Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:08:41.373Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:08:41.376Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:08:41.378Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:41.379Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:08:41.944Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:08:41.944Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:08:41.945Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:08:41.957Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:41.958Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:41.970Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:08:41.996Z] [runtime-status] Ephemeral server survived. {}
-[info] >  TypeError: Cannot read property 'signInWithPopup' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:08:42.023Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[debug] [2020-03-03T12:08:43.041Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:08:43.041Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:08:43.046Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:08:43.046Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:08:43.047Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:08:43.047Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:43.047Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:43.050Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:08:43.053Z] [runtime-status] Ephemeral server survived. {}
-[info] >  TypeError: Cannot read property 'signInWithPopup' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:08:43.059Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[debug] [2020-03-03T12:08:43.705Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:08:43.705Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:08:43.707Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:08:43.709Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:08:43.709Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:08:43.709Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:43.710Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:43.718Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:08:43.719Z] [runtime-status] Ephemeral server survived. {}
-[info] >  TypeError: Cannot read property 'signInWithPopup' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:08:43.725Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[debug] [2020-03-03T12:08:44.215Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:08:44.215Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:08:44.216Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:08:44.218Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:08:44.218Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:08:44.218Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:44.219Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:44.229Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:08:44.233Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:08:44.233Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[info] >  TypeError: Cannot read property 'signInWithPopup' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
-[debug] [2020-03-03T12:08:48.832Z] Accepted request GET /cdred-project/us-central1/api/user --> api
-[debug] [2020-03-03T12:08:48.832Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:08:48.836Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:08:48.837Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:08:48.837Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:08:48.837Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:48.838Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:08:48.863Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:49:15.918Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
 [info] >  No token found
-[debug] [2020-03-03T12:08:48.878Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:08:48.884Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[debug] [2020-03-03T12:09:05.976Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:09:05.976Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: BUSY
-[debug] [2020-03-03T12:09:05.977Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:49:30.461Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:49:30.462Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:49:30.464Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:09:05.978Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:09:05.978Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:09:05.979Z] {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:09:05.980Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_24806.sock"}
-[debug] [2020-03-03T12:09:05.986Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:49:30.465Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:49:30.465Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:49:30.465Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:30.466Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:30.491Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:49:30.491Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-04T11:49:30.492Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[info] >  No token found
+[debug] [2020-03-04T11:49:37.369Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
+[debug] [2020-03-04T11:49:37.369Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:49:37.370Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-04T11:49:37.371Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:49:37.371Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:49:37.374Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:37.375Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:49:37.380Z] [runtime-status] Ephemeral server used! {}
 [info] >  jestesm
-[info] >  tutaj tez
-[debug] [2020-03-03T12:09:05.989Z] [runtime-status] Ephemeral server survived. {}
-[info] >  TypeError: Cannot read property 'signInWithPopup' of undefined
-[info] >      at exports.facebookLogin (/home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js:91:5)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:137:13)
-[info] >      at Route.dispatch (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:112:3)
-[info] >      at Layer.handle [as handle_request] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/layer.js:95:5)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:281:22
-[info] >      at Function.process_params (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:335:12)
-[info] >      at next (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/index.js:275:10)
-[info] >      at cors (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:188:7)
-[info] >      at /home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/cors/lib/index.js:224:17
+[debug] [2020-03-04T11:49:37.384Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:09:05.996Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: IDLE
-[debug] [2020-03-03T12:11:22.644Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
-[debug] [2020-03-03T12:11:23.644Z] [worker-pool]: Shutting down IDLE worker (api)
-[debug] [2020-03-03T12:11:23.655Z] [worker-~diagnostic~-688ebabf-b782-4be6-b9ef-58ef2a2767ec]: BUSY
-[debug] [2020-03-03T12:11:23.657Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: exited
-[debug] [2020-03-03T12:11:23.657Z] [worker-api-1205a3b8-5d96-48ae-93d3-6474b58cf0b4]: FINISHED
-[debug] [2020-03-03T12:11:24.051Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:11:24.055Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:11:24.057Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:11:24.059Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:11:24.060Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:11:24.674Z] [worker-~diagnostic~-688ebabf-b782-4be6-b9ef-58ef2a2767ec]: exited
-[debug] [2020-03-03T12:11:24.675Z] [worker-~diagnostic~-688ebabf-b782-4be6-b9ef-58ef2a2767ec]: FINISHED
-[debug] [2020-03-03T12:11:31.498Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:11:31.505Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:11:31.890Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
-[debug] [2020-03-03T12:11:31.893Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-03-03T12:11:31.896Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-03T12:11:31.898Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:11:31.902Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-03T12:11:32.469Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:49:37.385Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:50:33.112Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:50:33.112Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:50:33.113Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:11:32.470Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:11:32.470Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:11:32.481Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:32.482Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:32.494Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:50:33.114Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:50:33.114Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:50:33.115Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:50:33.122Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:50:33.147Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:50:33.151Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-04T11:50:33.155Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[info] >  No token found
+[debug] [2020-03-04T11:50:37.285Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
+[debug] [2020-03-04T11:50:37.285Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:50:37.290Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-04T11:50:37.290Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:50:37.291Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:50:37.291Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:50:37.295Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:50:37.304Z] [runtime-status] Ephemeral server used! {}
 [info] >  jestesm
-[debug] [2020-03-03T12:11:32.517Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:50:37.305Z] [runtime-status] Ephemeral server survived. {}
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:11:32.524Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:11:39.569Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:11:39.569Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:11:39.571Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:50:37.313Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:51:27.298Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:51:27.298Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:51:27.305Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:11:39.571Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:11:39.571Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:11:39.572Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:39.573Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:39.577Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:11:39.583Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:11:39.584Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:11:41.021Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:11:41.021Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:11:41.023Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:11:41.023Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:11:41.024Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:11:41.024Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:41.025Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:11:41.028Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:11:41.031Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:11:41.031Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:17:57.198Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:17:57.198Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:17:57.200Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:17:57.200Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:17:57.200Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:17:57.202Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:17:57.203Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:17:57.206Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:17:57.208Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:17:57.209Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:17:58.563Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:17:58.564Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:17:58.565Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:17:58.565Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:17:58.566Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:17:58.566Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:17:58.567Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:17:58.571Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:17:58.572Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:17:58.575Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:20:33.638Z] Accepted request GET /cdred-project/us-central1/api/user --> api
-[debug] [2020-03-03T12:20:33.639Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:20:33.643Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:20:33.644Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:20:33.644Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:20:33.644Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:20:33.646Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:20:33.672Z] [runtime-status] Ephemeral server used! {}
-[debug] [2020-03-03T12:20:33.673Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:51:27.308Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:51:27.309Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:51:27.309Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:51:27.310Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:51:27.335Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:51:27.336Z] [runtime-status] Ephemeral server survived. {}
 [info] >  No token found
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:20:33.679Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:22:37.250Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:22:37.250Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:22:37.251Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2020-03-04T11:51:27.344Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T11:51:41.399Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T11:51:41.399Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T11:51:41.401Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
 [info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:22:37.252Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:22:37.252Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:22:37.253Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:22:37.254Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:22:37.257Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:22:37.261Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:22:37.262Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:25:04.898Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:25:04.898Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:25:04.899Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:25:04.903Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:25:04.903Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:25:04.904Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:04.904Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:04.911Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:25:04.915Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:25:04.926Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:25:09.408Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:25:09.409Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:25:09.409Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:25:09.410Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:25:09.410Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:25:09.411Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:09.411Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:09.416Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:25:09.421Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:25:09.426Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:25:53.010Z] Accepted request GET /cdred-project/us-central1/api/user --> api
-[debug] [2020-03-03T12:25:53.012Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:25:53.015Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:25:53.020Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:25:53.020Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:25:53.021Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:53.022Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:25:53.044Z] [runtime-status] Ephemeral server used! {}
-[debug] [2020-03-03T12:25:53.051Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2020-03-04T11:51:41.401Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T11:51:41.401Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T11:51:41.402Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:51:41.403Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T11:51:41.411Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-03-04T11:51:41.412Z] [runtime-status] Ephemeral server survived. {}
 [info] >  No token found
 [info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:25:53.052Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:26:02.213Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:26:02.214Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:26:02.214Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:26:02.215Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:26:02.215Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:26:02.216Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:26:02.217Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:26:02.224Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:26:02.226Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:26:02.227Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
-[debug] [2020-03-03T12:26:19.874Z] Accepted request POST /cdred-project/us-central1/api/fblogin --> api
-[debug] [2020-03-03T12:26:19.874Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: BUSY
-[debug] [2020-03-03T12:26:19.875Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
-[info] i  functions: Beginning execution of "api"
-[debug] [2020-03-03T12:26:19.876Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
-[debug] [2020-03-03T12:26:19.876Z] [runtime-status] Running api in mode HTTPS {}
-[debug] [2020-03-03T12:26:19.876Z] {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:26:19.877Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_25610.sock"}
-[debug] [2020-03-03T12:26:19.882Z] [runtime-status] Ephemeral server used! {}
-[info] >  jestesm
-[debug] [2020-03-03T12:26:19.883Z] [runtime-status] Ephemeral server survived. {}
-[info] i  functions: Finished "api" in ~1s
-[debug] [2020-03-03T12:26:19.895Z] [worker-api-b2e33280-d545-428a-8ba3-2564af8451db]: IDLE
+[debug] [2020-03-04T11:51:41.424Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE

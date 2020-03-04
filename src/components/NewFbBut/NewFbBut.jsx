@@ -9,7 +9,7 @@ export class NewFbBut extends Component {
   clickFunc() {
     console.log("dawaj");
 
-    this.props.loginFbAction()
+    this.props.loginFbAction(this.props.history)
 
   }
 
@@ -18,7 +18,7 @@ export class NewFbBut extends Component {
 
     return (
       <div>
-        <button onClick={() => this.props.loginFbAction()}>
+        <button onClick={() => this.clickFunc()}>
           FB login
         </button>
       </div>

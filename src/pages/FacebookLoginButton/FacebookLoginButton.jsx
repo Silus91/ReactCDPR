@@ -14,7 +14,8 @@ export class FacebookLoginButton extends Component {
 
 
   responseFacebook = response => {
-    console.log(response);
+    console.log(response)
+
   }
 
   componentClicked = () => this.props.loginFbAction();

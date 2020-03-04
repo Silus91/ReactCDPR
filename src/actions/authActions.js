@@ -31,6 +31,7 @@ export const loginAction = (userData, history) => (dispatch) => {
 
 
   export const loginFbAction = (history) => (dispatch) => {
+    console.log("akcja")
     dispatch({ type: LOADING_UI });
     axios.post(`${BASE_URL}fblogin`)
     .then((res) => {
