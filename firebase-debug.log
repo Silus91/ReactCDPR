@@ -182,3 +182,16 @@
 [info] >  No token found
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-03-04T11:51:41.424Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE
+[debug] [2020-03-04T23:12:28.661Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-03-04T23:12:28.662Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: BUSY
+[debug] [2020-03-04T23:12:28.664Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-04T23:12:28.665Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-04T23:12:28.665Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2020-03-04T23:12:28.666Z] {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T23:12:28.673Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_21126.sock"}
+[debug] [2020-03-04T23:12:28.681Z] [runtime-status] Ephemeral server used! {}
+[info] >  No token found
+[debug] [2020-03-04T23:12:28.692Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-04T23:12:28.694Z] [worker-api-098761d5-eb2c-4931-ba6f-36e38d37f78c]: IDLE

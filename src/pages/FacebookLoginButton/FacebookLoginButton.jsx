@@ -57,8 +57,3 @@ const mapActionsToProps = {
 }
 
 export default connect(mapStateToProps,mapActionsToProps)(FacebookLoginButton);
-
-
-// firebase.auth().onAuthStateChange(user => {
-//   this.setState({ authorized: !!true})
-// })
