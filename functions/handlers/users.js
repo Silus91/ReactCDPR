@@ -86,7 +86,7 @@ exports.facebookLogin = (req, res) => {
   const provider = new firebase.auth.FacebookAuthProvider(); 
   console.log("jestesm")
 
-  firebase.auth().signInWithPopup(provider).then(() => {
+  firebase.auth().signInWithRedirect(provider).then(() => {
     console.log('Successfully signed in');
   })
   
