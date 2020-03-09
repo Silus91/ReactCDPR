@@ -86,7 +86,6 @@ exports.facebookLogin = (req, res) => {
   const provider = new firebase.auth.FacebookAuthProvider(); 
   console.log("jestesm");
 
-
   firebase.auth().signInWithPopup(provider).then((res) => {
     
     const user = res.user;
@@ -98,7 +97,8 @@ exports.facebookLogin = (req, res) => {
     return;
   })
   .catch((err) => {
-      return err.status(403).json({ general: "Wrong credentials, please try again" });
+      console.error(err);
+      return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
 }
 
