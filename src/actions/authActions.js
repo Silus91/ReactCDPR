@@ -8,6 +8,7 @@ import {
 } from '../types/types';
 import axios from 'axios';
 
+
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
 export const loginAction = (userData, history) => (dispatch) => {
@@ -43,7 +44,6 @@ export const loginAction = (userData, history) => (dispatch) => {
     .catch(err => {
       dispatch({
         type: SET_ERRORS,
-        payload: err.response.data
         })
     })
   }

@@ -43,7 +43,7 @@ class Home extends Component {
           {this.renderCards()}
         </div>
         <NewFbBut />
-        <FacebookLoginButton />
+        {/* <FacebookLoginButton /> */}
         <button className="center"><Footer /></button>
       </div>
     )

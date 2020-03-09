@@ -88,48 +88,48 @@ exports.facebookLogin = (req, res) => {
 
 
   firebase.auth().signInWithPopup(provider).then((res) => {
+    
     const user = res.user;
 
     const credential = res.credential;
 
     const operationType = res.operationType;
     console.log(user, credential, operationType)
+    return;
   })
-
-  
   .catch((err) => {
-      return res.status(403).json({ general: "Wrong credentials, please try again" });
+      return err.status(403).json({ general: "Wrong credentials, please try again" });
   });
 }
 
 
 
 //get user details
-exports.getAuthenticatedUser = (req, res) => {
-  let userData = {};
-  db.doc(`/users/${req.user.handle}`)
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        userData.credentials = doc.data();
-        return db
-          .collection('posts')
-          .where('userHandle', '==', req.user.handle)
-          .get();
-      }
-    })
-    .then((data) => {
-      userData.posts = [];
-      data.forEach((doc) => {
-        userData.posts.push(doc.data());
-      });
-      return res.json(userData);
-    })
-    .catch((err) => {
-      console.error(err);
-      return res.status(500).json({ error: err.code });
-    });
-};
+// exports.getAuthenticatedUser = (req, res) => {
+//   let userData = {};
+//   db.doc(`/users/${req.user.handle}`)
+//     .get()
+//     .then((doc) => {
+//       if (doc.exists) {
+//         userData.credentials = doc.data();
+//         return db
+//           .collection('posts')
+//           .where('userHandle', '==', req.user.handle)
+//           .get();
+//       }
+//     })
+//     .then((data) => {
+//       userData.posts = [];
+//       data.forEach((doc) => {
+//         userData.posts.push(doc.data());
+//       });
+//       return res.json(userData);
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//       return res.status(500).json({ error: err.code });
+//     });
+// };
 
 exports.logout = (req, res) => {
   firebase.auth().signOut()
