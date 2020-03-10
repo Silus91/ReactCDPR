@@ -31,15 +31,12 @@ export const loginAction = (userData, history) => (dispatch) => {
 }
 
 
-  export const loginFbAction = (history) => (dispatch) => {
+  export const loginFbAction = () => (dispatch) => {
     console.log("akcja")
     dispatch({ type: LOADING_UI });
     axios.post(`${BASE_URL}fblogin`)
     .then((res) => {
  console.log(res);
-      dispatch(getUserData());
-      dispatch({ type: CLEAR_ERRORS });
-      history.push('/');
     })
     .catch(err => {
       dispatch({

@@ -10,8 +10,8 @@ const firebase = require('firebase');
 export class NewFbBut extends Component {
 
 
-   login = ({ history }) => {
-   
+   login = () => {
+   console.log("dawaj kurwa")
       const provider = new firebase.auth.FacebookAuthProvider(); 
       console.log("jestesm");
     
@@ -21,22 +21,18 @@ export class NewFbBut extends Component {
     
         const credential = res.credential;
     
-        console.log(user, credential)
-      })
-      .then(history.push('/'))
-    
-      
-    
-  
+        console.log(user, credential);
+        return;
+      }) 
     }
 
-
+    //onClick={() => this.props.loginFbAction(this.props.history)}
+//onClick={() =>this.login}
 
   render() {
-
     return (
       <div>
-        <button onClick={() => this.props.loginFbAction(this.props.history)}>
+        <button onClick={() =>this.login()}>
           FB login
         </button>
       </div>

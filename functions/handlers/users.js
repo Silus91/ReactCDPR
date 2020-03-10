@@ -104,32 +104,33 @@ exports.facebookLogin = (req, res) => {
 
 
 
-//get user details
-// exports.getAuthenticatedUser = (req, res) => {
-//   let userData = {};
-//   db.doc(`/users/${req.user.handle}`)
-//     .get()
-//     .then((doc) => {
-//       if (doc.exists) {
-//         userData.credentials = doc.data();
-//         return db
-//           .collection('posts')
-//           .where('userHandle', '==', req.user.handle)
-//           .get();
-//       }
-//     })
-//     .then((data) => {
-//       userData.posts = [];
-//       data.forEach((doc) => {
-//         userData.posts.push(doc.data());
-//       });
-//       return res.json(userData);
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//       return res.status(500).json({ error: err.code });
-//     });
-// };
+// get user details
+exports.getAuthenticatedUser = (req, res) => {
+  let userData = {};
+  db.doc(`/users/${req.user.handle}`)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        userData.credentials = doc.data();
+        return db
+          .collection('posts')
+          .where('userHandle', '==', req.user.handle)
+          .get();
+      }
+      return;
+    })
+    .then((data) => {
+      userData.posts = [];
+      data.forEach((doc) => {
+        userData.posts.push(doc.data());
+      });
+      return res.json(userData);
+    })
+    .catch((err) => {
+      console.error(err);
+      return res.status(500).json({ error: err.code });
+    });
+};
 
 exports.logout = (req, res) => {
   firebase.auth().signOut()

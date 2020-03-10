@@ -15,7 +15,7 @@ app.post('/post', FBAuth, createPost);
 app.post('/register', register); 
 app.post('/login', login);
 app.post('/fblogin', facebookLogin);
-// app.get('/user', FBAuth, getAuthenticatedUser);
+app.get('/user', FBAuth, getAuthenticatedUser);
 
 app.post('/logout', logout);
 
