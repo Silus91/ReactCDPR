@@ -33,20 +33,6 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
@@ -66,44 +52,6 @@ export const loginFbAction = () => (dispatch) => {
     return;
   })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  export const sdf = (history) => {
-    const provider = new firebase.auth.FacebookAuthProvider(); 
-  
-  app.auth().signInWithPopup(provider).then((res) => {
-    const user = res.user;
-  
-    const credential = res.credential;
-    console.log("user", user );
-    console.log("credentials", credential.accessToken);
-    history.push('/');
-
-    return;
-    }) 
-  }
-
-
-
-
-
-
-
-
-
-
 
 export const registerAction = (newUserData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
