@@ -42,7 +42,6 @@ export const loginFbAction = () => (dispatch) => {
   
     const credential = res.credential;
 
-
     // const FBidToken = `Bearer ${res.credential.accessToken}`;
     // localStorage.setItem('FBidToken', FBidToken)
     // axios.defaults.headers.common['Authorization'] = FBidToken;
