@@ -8,6 +8,9 @@ import {
 } from '../types/types';
 import axios from 'axios';
 
+import app from '../components/Firebase/Firebase';
+const firebase = require('firebase');
+
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
@@ -31,18 +34,65 @@ export const loginAction = (userData, history) => (dispatch) => {
 }
 
 
-  export const loginFbAction = () => (dispatch) => {
-    console.log("akcja")
-    dispatch({ type: LOADING_UI });
-    axios.post(`${BASE_URL}fblogin`)
-    .then((res) => {
- console.log(res);
-    })
-    .catch(err => {
-      dispatch({
-        type: SET_ERRORS,
-        })
-    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const loginFbAction = () => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  const provider = new firebase.auth.FacebookAuthProvider(); 
+  
+  app.auth().signInWithPopup(provider).then((res) => {
+    const user = res.user;
+  
+    const credential = res.credential;
+
+
+    // const FBidToken = `Bearer ${res.credential.accessToken}`;
+    // localStorage.setItem('FBidToken', FBidToken)
+    // axios.defaults.headers.common['Authorization'] = FBidToken;
+    dispatch({ type: CLEAR_ERRORS });
+    // history.push('/');
+    console.log(user,credential);
+    return;
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  export const sdf = (history) => {
+    const provider = new firebase.auth.FacebookAuthProvider(); 
+  
+  app.auth().signInWithPopup(provider).then((res) => {
+    const user = res.user;
+  
+    const credential = res.credential;
+    console.log("user", user );
+    console.log("credentials", credential.accessToken);
+    history.push('/');
+
+    return;
+    }) 
   }
 
 
