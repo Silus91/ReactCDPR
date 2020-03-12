@@ -10,7 +10,6 @@ import axios from 'axios';
 import app from '../components/Firebase/Firebase';
 const firebase = require('firebase');
 
-
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
 export const loginAction = (userData, history) => (dispatch) => {
