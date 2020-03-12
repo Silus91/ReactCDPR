@@ -7,7 +7,6 @@ import {
   LOADING_USER
 } from '../types/types';
 import axios from 'axios';
-
 import app from '../components/Firebase/Firebase';
 const firebase = require('firebase');
 
