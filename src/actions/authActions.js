@@ -35,15 +35,12 @@ export const loginAction = (userData, history) => (dispatch) => {
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
-  // provider.addScope('user_name');
   provider.addScope('user_birthday');
 
   app.auth().signInWithPopup(provider).then((res) => {
     const user = res.user;
     const credential = res.credential;
     const token = res.credential.accessToken;
-
-
     const FBidToken = `Bearer ${res.credential.accessToken}`;
     console.log("token", FBidToken);
     localStorage.setItem('FBidToken', FBidToken);
