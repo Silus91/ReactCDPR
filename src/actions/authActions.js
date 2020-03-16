@@ -4,7 +4,8 @@ import {
   CLEAR_ERRORS,
   SET_UNAUTH,
   LOADING_UI,
-  LOADING_USER
+  LOADING_USER,
+  SET_AUTH
 } from '../types/types';
 import axios from 'axios';
 import app from '../components/Firebase/Firebase';
@@ -34,18 +35,23 @@ export const loginAction = (userData, history) => (dispatch) => {
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
-  
+  // provider.addScope('user_name');
+  provider.addScope('user_birthday');
+
   app.auth().signInWithPopup(provider).then((res) => {
     const user = res.user;
-  
     const credential = res.credential;
+    const token = res.credential.accessToken;
 
-    // const FBidToken = `Bearer ${res.credential.accessToken}`;
-    // localStorage.setItem('FBidToken', FBidToken)
-    // axios.defaults.headers.common['Authorization'] = FBidToken;
+
+    const FBidToken = `Bearer ${res.credential.accessToken}`;
+    console.log("token", FBidToken);
+    localStorage.setItem('FBidToken', FBidToken);
+    axios.defaults.headers.common['Authorization'] = FBidToken;
+    dispatch({ type: SET_AUTH });
+
     dispatch({ type: CLEAR_ERRORS });
-    // history.push('/');
-    console.log(user,credential);
+    console.log(user,credential, token);
     return;
   })
 }

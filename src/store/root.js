@@ -9,7 +9,7 @@ const middleware = [thunk];
 
 const rootReducer = combineReducers({
     user: authReducer,
-    UI: uiReducer
+    UI: uiReducer,
 });
 
 const composeEnhancers =
