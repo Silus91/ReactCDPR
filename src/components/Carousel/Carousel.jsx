@@ -3,7 +3,7 @@ import M from "materialize-css";
 
 class Carousel extends Component {
 
-  componentDidUpdate() {
+  componentDidMount() {
       document.addEventListener('DOMContentLoaded', function() {
         const options = {
           duration: 200,
@@ -19,7 +19,6 @@ class Carousel extends Component {
 
   renderCarousel() {
     const numbers = [1,2,3,4,5];
-
     return numbers.map((num, index)=> {
       return (
         <div className="carousel-item" key={index}>

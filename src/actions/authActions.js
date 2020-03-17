@@ -46,7 +46,6 @@ export const loginFbAction = () => (dispatch) => {
     localStorage.setItem('FBidToken', FBidToken);
     axios.defaults.headers.common['Authorization'] = FBidToken;
     dispatch({ type: SET_AUTH });
-
     dispatch({ type: CLEAR_ERRORS });
     console.log(user,credential, token);
     return;
