@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loginFbAction } from '../../actions/authActions';
 
-
 export class NewFbBut extends Component {
 
   render() {
@@ -15,6 +14,5 @@ export class NewFbBut extends Component {
     )
   }
 }
-
 
 export default connect(null, { loginFbAction })(NewFbBut)
