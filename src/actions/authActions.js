@@ -5,10 +5,10 @@ import {
   SET_UNAUTH,
   LOADING_UI,
   LOADING_USER,
-  SET_AUTH
 } from '../types/types';
 import axios from 'axios';
 import app from '../components/Firebase/Firebase';
+import db from '../components/Firebase/Firestore';
 const firebase = require('firebase');
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
@@ -38,16 +38,37 @@ export const loginFbAction = () => (dispatch) => {
   provider.addScope('user_birthday');
 
   app.auth().signInWithPopup(provider).then((res) => {
-    const user = res.user;
-    const credential = res.credential;
-    const token = res.credential.accessToken;
+
+    const name = res.user.displayName.split(" ");
+    const firstName = name[0];
+    const lastName = name[1];
+
+    const newUser = {
+      firstName: firstName,
+      lastName: lastName,
+      email: res.user.email,
+      handle: `${firstName}${lastName}`,
+      createdAt: new Date().toISOString(),
+      userId: res.user.uid
+
+    }
+    db.doc(`/users/${newUser.handle}`).get()
+    .then((doc) => {
+      if(doc.exists) {
+        return console.log("user exists");
+      } else {
+        return db.doc(`/users/${newUser.handle}`).set(newUser)
+      }
+    })
+    console.log(res);
     const FBidToken = `Bearer ${res.credential.accessToken}`;
     console.log("token", FBidToken);
     localStorage.setItem('FBidToken', FBidToken);
     axios.defaults.headers.common['Authorization'] = FBidToken;
-    dispatch({ type: SET_AUTH });
+  })
+  .then(()=>{
+    dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
-    console.log(user,credential, token);
     return;
   })
 }

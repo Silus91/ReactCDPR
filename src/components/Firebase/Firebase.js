@@ -11,6 +11,4 @@ const app =  firebase.initializeApp({
     messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
 });
 
-firebase.firestore();
-
 export default app;

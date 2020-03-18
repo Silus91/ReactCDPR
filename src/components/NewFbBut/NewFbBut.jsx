@@ -5,7 +5,7 @@ import { loginFbAction } from '../../actions/authActions';
 
 export class NewFbBut extends Component {
 
-
+  
 
   render() {
     return (
