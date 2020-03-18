@@ -1360,3 +1360,18 @@
 [info] >  No token found
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-03-18T12:09:49.455Z] [worker-api-dfabcfc9-5520-4072-8809-88b74ac2f369]: IDLE
+[debug] [2020-03-18T23:20:12.107Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/utility/fbAuth.js changed, reloading triggers
+[debug] [2020-03-18T23:20:13.108Z] [worker-pool]: Shutting down IDLE worker (api)
+[debug] [2020-03-18T23:20:13.109Z] [worker-pool]: Shutting down IDLE worker (api)
+[debug] [2020-03-18T23:20:13.161Z] [worker-~diagnostic~-0bd81caf-4321-43d1-8786-b812502ee3cc]: BUSY
+[debug] [2020-03-18T23:20:13.162Z] [worker-api-dfabcfc9-5520-4072-8809-88b74ac2f369]: exited
+[debug] [2020-03-18T23:20:13.162Z] [worker-api-dfabcfc9-5520-4072-8809-88b74ac2f369]: FINISHED
+[debug] [2020-03-18T23:20:13.162Z] [worker-api-e91c15a9-a01d-4292-bb33-feca1b938205]: exited
+[debug] [2020-03-18T23:20:13.162Z] [worker-api-e91c15a9-a01d-4292-bb33-feca1b938205]: FINISHED
+[debug] [2020-03-18T23:20:19.667Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
+[debug] [2020-03-18T23:20:19.670Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-03-18T23:20:19.679Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-18T23:20:19.691Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-18T23:20:19.694Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-18T23:20:23.499Z] [worker-~diagnostic~-0bd81caf-4321-43d1-8786-b812502ee3cc]: exited
+[debug] [2020-03-18T23:20:23.500Z] [worker-~diagnostic~-0bd81caf-4321-43d1-8786-b812502ee3cc]: FINISHED

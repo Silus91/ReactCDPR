@@ -9,8 +9,8 @@ import {
 import axios from 'axios';
 import app from '../components/Firebase/Firebase';
 import db from '../components/Firebase/Firestore';
-const firebase = require('firebase');
 
+const firebase = require('firebase');
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
 export const loginAction = (userData, history) => (dispatch) => {
@@ -55,7 +55,7 @@ export const loginFbAction = () => (dispatch) => {
     db.doc(`/users/${newUser.handle}`).get()
     .then((doc) => {
       if(doc.exists) {
-        return console.log("user exists");
+        return console.log("user already exists");
       } else {
         return db.doc(`/users/${newUser.handle}`).set(newUser)
       }
