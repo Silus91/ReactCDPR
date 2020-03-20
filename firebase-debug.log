@@ -1429,3 +1429,26 @@
 [debug] [2020-03-20T23:52:01.238Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
 [debug] [2020-03-20T23:52:01.254Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
 [debug] [2020-03-20T23:52:01.256Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-20T23:52:07.197Z] [worker-~diagnostic~-d6caaf44-a872-40a8-b7b0-f944d357deee]: exited
+[debug] [2020-03-20T23:52:07.197Z] [worker-~diagnostic~-d6caaf44-a872-40a8-b7b0-f944d357deee]: FINISHED
+[debug] [2020-03-20T23:52:51.727Z] File /home/dawid/trening/Cdred/cdred-react-app/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-03-20T23:52:52.737Z] [worker-~diagnostic~-494ccc06-91e1-4490-9ea9-2934368e86db]: BUSY
+[debug] [2020-03-20T23:52:53.171Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/cdred-react-app/functions","node_version":"10.16.0"}
+[debug] [2020-03-20T23:52:53.174Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-03-20T23:52:53.177Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-20T23:52:53.178Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-20T23:52:53.179Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.(anonymous function) [as post] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.(anonymous function) [as post] (/home/dawid/trening/Cdred/cdred-react-app/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/home/dawid/trening/Cdred/cdred-react-app/functions/index.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-20T23:52:53.789Z] [worker-~diagnostic~-494ccc06-91e1-4490-9ea9-2934368e86db]: exited
+[debug] [2020-03-20T23:52:53.789Z] [worker-~diagnostic~-494ccc06-91e1-4490-9ea9-2934368e86db]: FINISHED

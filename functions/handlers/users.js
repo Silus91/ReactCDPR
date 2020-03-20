@@ -82,10 +82,6 @@ exports.login = (req, res) => {
   });
 }
 
-exports.facebookLogin = (req, res) => {}
-
-
-
 // get user details
 exports.getAuthenticatedUser = (req, res) => {
   let userData = {};
