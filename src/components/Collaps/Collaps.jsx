@@ -14,7 +14,7 @@ class Collaps extends Component {
       return (
         <li className="active" key={index}>
           <div className="collapsible-header">
-            <img src={require(`./wm${index+1}.png`)} className="circle img" /><h6>{conf.title}</h6>
+            <img src={require(`./wm${index+1}.png`)} className="circle img" alt="" /><h6>{conf.title}</h6>
           </div>
           <div className="collapsible-body"><span>{conf.content}</span></div>
         </li>

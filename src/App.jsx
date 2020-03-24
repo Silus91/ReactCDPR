@@ -20,6 +20,7 @@ axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 const token = localStorage.getItem("FBidToken");
 
 if (token) {
+  console.log("app", token);
   const decodedToken = jwtDecode(token);
   if (decodedToken.exp * 1000 < Date.now()) {
     store.dispatch(logout());

@@ -13,15 +13,15 @@ export class Footer extends Component {
           <div className="modal-content">
             <div className="row">
               <div className="card col l4 m4 s4">
-              <a href={"https://www.facebook.com/CDPROJEKTRED/?epa=SEARCH_BOX"}><img className="imgsize" src={faceb} /></a>
+              <a href={"https://www.facebook.com/CDPROJEKTRED/?epa=SEARCH_BOX"}><img className="imgsize" alt="" src={faceb} /></a>
 
               </div>
               <div className="card col l4 m4 s4">
-              <a href={"https://twitter.com/CDPROJEKTRED"}><img className="imgsize" src={twitter} /></a>
+              <a href={"https://twitter.com/CDPROJEKTRED"}><img className="imgsize" src={twitter} alt="" /></a>
 
               </div>
               <div className="card col l4 m4 s4">
-              <a href={"https://www.instagram.com/cdpred/?hl=pl"}><img className="imgsize" src={insta} /></a>
+              <a href={"https://www.instagram.com/cdpred/?hl=pl"}><img className="imgsize" src={insta} alt="" /></a>
 
               </div>
             </div>

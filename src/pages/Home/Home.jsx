@@ -33,7 +33,7 @@ class Home extends Component {
       <div className="container">
         <div className="row">
           <div className="center">
-            <img className="card responsive-img" src={cd_logo} />
+            <img className="card responsive-img" src={cd_logo} alt="" />
           </div>
           <div className="card">
             <div className="card-content col l6 s12 card z-depth-2 hoverable">

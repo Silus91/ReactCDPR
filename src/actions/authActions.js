@@ -17,9 +17,11 @@ export const loginAction = (userData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}login`, userData)
   .then((res) => {
-    const FBidToken = `Bearer ${res.data.token}`;
-    localStorage.setItem('FBidToken', FBidToken)
-    axios.defaults.headers.common['Authorization'] = FBidToken;
+    // const FBidToken = `Bearer ${res.data.token}`;
+    // localStorage.setItem('FBidToken', FBidToken)
+    // axios.defaults.headers.common['Authorization'] = FBidToken;
+    setAuthorizationHeader(res.data.token);
+
     dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
     history.push('/');
@@ -32,13 +34,22 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
+const setAuthorizationHeader = (token) => {
+  const FBIdToken = `Bearer ${token}`;
+  localStorage.setItem('FBIdToken', FBIdToken);
+  axios.defaults.headers.common['Authorization'] = FBIdToken;
+};
+
+
+
+//  sprawdzic czy dziala ten krotszy kod i trzeba ta funkcje zkrocic
+
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
-  provider.addScope('user_birthday');
 
   app.auth().signInWithPopup(provider).then((res) => {
-
+    
     const name = res.user.displayName.split(" ");
     const firstName = name[0];
     const lastName = name[1];
@@ -60,16 +71,30 @@ export const loginFbAction = () => (dispatch) => {
         return db.doc(`/users/${newUser.handle}`).set(newUser)
       }
     })
-    console.log(res);
-    const FBidToken = `Bearer ${res.credential.accessToken}`;
-    console.log("token", FBidToken);
-    localStorage.setItem('FBidToken', FBidToken);
-    axios.defaults.headers.common['Authorization'] = FBidToken;
   })
-  .then(()=>{
-    dispatch(getUserData());
-    dispatch({ type: CLEAR_ERRORS });
-    return;
+  .then(() => {
+    app.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        return null;
+      }
+    })
+    app.auth().currentUser.getIdToken()
+    .then((idToken)=> {
+      // const FBidToken = `Bearer ${idToken}`;
+      // // console.log("token", FBidToken);
+      // // localStorage.setItem('FBidToken', FBidToken);
+      // // axios.defaults.headers.common['Authorization'] = FBidToken;
+      setAuthorizationHeader(idToken);
+
+      dispatch(getUserData());
+      dispatch({ type: CLEAR_ERRORS });
+    })
+  })
+  .catch(err => {
+    dispatch({
+      type: SET_ERRORS,
+      payload: err.response
+    })
   })
 }
 

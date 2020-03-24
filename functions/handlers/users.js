@@ -31,10 +31,12 @@ exports.register = (req,res) => {
   })
   .then((data) => {
     userId = data.user.uid;
-    return data.user.getIdToken()
+    console.log("userId", userId)
+    return data.user.getIdToken() 
   })
   .then((idToken) => {
     token = idToken;
+    console.log("token", token);
     const userCredentials = {
       handle: newUser.handle,
       email: newUser.email,
