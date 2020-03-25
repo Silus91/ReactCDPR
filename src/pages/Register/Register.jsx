@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerAction } from '../../actions/authActions';
+import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
+import { loginFbAction, loginGoogleAction } from '../../actions/authActions';
 
 class Register extends Component {
   constructor() {
@@ -92,11 +94,13 @@ class Register extends Component {
                   <span className="helper-text red-text center-align">{errors.handle ? errors.handle : ''}</span>
                 </div>
                 <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
-                <div className="input-field">
-                  <button type="submit" className="btn pink lighten-1 z-depth-2 center-align">Sign Up</button>
+                <div className="input-field center-align">
+                  <button type="submit" className="btn pink lighten-1 z-depth-2 center-align">Register</button>
                 </div>
               </form>
-              {loading && (<div class="progress"><div class="indeterminate"></div></div>)}  
+              {loading && (<div className="progress"><div className="indeterminate"></div></div>)}  
+              <FacebookLoginButton onClick={() => this.props.loginFbAction(this.props.history) } />  
+              <GoogleLoginButton onClick={() => this.props.loginGoogleAction()} />
             </div>
           </div>
         </div>
@@ -111,5 +115,10 @@ const mapStateToProps = (state) => {
     UI: state.UI
   }
 }
+const mapActionsToProps = {
+  registerAction,
+  loginFbAction,
+  loginGoogleAction
+}
 
-export default connect(mapStateToProps, { registerAction })(Register);
+export default connect(mapStateToProps, mapActionsToProps )(Register);

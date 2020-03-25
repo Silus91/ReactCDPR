@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
-import Navbar from './layout/Navbar'
+import Navbar from './layout/Navbar';
 import Home from './pages/Home/Home';
 import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
@@ -20,7 +20,6 @@ axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 const token = localStorage.getItem("FBidToken");
 
 if (token) {
-  console.log("app", token);
   const decodedToken = jwtDecode(token);
   if (decodedToken.exp * 1000 < Date.now()) {
     store.dispatch(logout());

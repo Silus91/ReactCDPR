@@ -14,18 +14,17 @@ export class Footer extends Component {
             <div className="row">
               <div className="card col l4 m4 s4">
               <a href={"https://www.facebook.com/CDPROJEKTRED/?epa=SEARCH_BOX"}><img className="imgsize" alt="" src={faceb} /></a>
-
               </div>
+              
               <div className="card col l4 m4 s4">
               <a href={"https://twitter.com/CDPROJEKTRED"}><img className="imgsize" src={twitter} alt="" /></a>
-
               </div>
+
               <div className="card col l4 m4 s4">
               <a href={"https://www.instagram.com/cdpred/?hl=pl"}><img className="imgsize" src={insta} alt="" /></a>
 
               </div>
             </div>
-            
         </div>
       </div>
       </div>
@@ -33,4 +32,4 @@ export class Footer extends Component {
   }
 }
 
-export default Footer
+export default Footer;

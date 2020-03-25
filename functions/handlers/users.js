@@ -15,6 +15,9 @@ exports.register = (req,res) => {
     handle: req.body.handle,
   };
 
+  //     handle: `${req.body.firstName}${req.body.lastName}`
+
+
   const { valid, errors } = validateRegisterData(newUser);
 
   if(!valid) return res.status(400).json(errors);
@@ -58,6 +61,7 @@ exports.register = (req,res) => {
       return res.status(500).json({ general:  'Something went wrong, please try again' });
     }
   })
+  return;
 }
 
 exports.login = (req, res) => {
@@ -82,6 +86,7 @@ exports.login = (req, res) => {
     console.error("tu jest consolelog", err);
       return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
+  return;
 }
 
 // get user details
@@ -111,6 +116,7 @@ exports.getAuthenticatedUser = (req, res) => {
       return res.status(500).json({ error: err.code });
     });
 };
+
 
 exports.logout = (req, res) => {
   firebase.auth().signOut()

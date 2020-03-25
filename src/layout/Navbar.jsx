@@ -40,7 +40,7 @@ class Navbar extends Component {
           </div>
         </nav>
         <ul className="right sidenav" id="mobile-demo">
-          <li><p>{ authenticated ? credentials.handle : "Guest"}</p></li>
+          <li><p>{ authenticated ? credentials.firstName : "Guest"}</p></li>
           <li><Link to='/'>Cd Project red</Link></li>
           <li><Link to='/cyberpunk'>Cyberpunk 2077</Link></li>
           <li><Link to='/witcher'>Witcher</Link></li>
