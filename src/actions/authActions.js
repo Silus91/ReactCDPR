@@ -34,7 +34,6 @@ export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
 
-
   // skrocici ta funkcje trzeba zeby dziala
   socialLogin(provider)
   .then(() => {
@@ -64,7 +63,7 @@ export const loginGoogleAction = (history) => (dispatch) => {
   const provider = new firebase.auth.GoogleAuthProvider(); 
 
   app.auth().signInWithPopup(provider).then((res) => {
-    
+  
     const name = res.user.displayName.split(" ");
     const firstName = name[0];
     const lastName = name[1];
