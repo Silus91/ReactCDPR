@@ -26,16 +26,17 @@ export const loginAction = (userData, history) => (dispatch) => {
     dispatch({
       type: SET_ERRORS,
       payload: err.response.data
-      })
+    })
   })
 }
 
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
-
-  // skrocici ta funkcje trzeba zeby dziala
-  socialLogin(provider)
+  app.auth().signInWithPopup(provider)
+  .then((res) => {
+    socialUserDataCheck(res);
+  })
   .then(() => {
     app.auth().onAuthStateChanged((user) => {
       if (!user) {
@@ -47,7 +48,6 @@ export const loginFbAction = () => (dispatch) => {
       setAuthorizationHeader(idToken);
       dispatch(getUserData());
       dispatch({ type: CLEAR_ERRORS });
-      // history.push('/');
     })
   })
   .catch(err => {
@@ -58,34 +58,12 @@ export const loginFbAction = () => (dispatch) => {
   })
 }
 
-export const loginGoogleAction = (history) => (dispatch) => {
+export const loginGoogleAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.GoogleAuthProvider(); 
 
   app.auth().signInWithPopup(provider).then((res) => {
-  
-    const name = res.user.displayName.split(" ");
-    const firstName = name[0];
-    const lastName = name[1];
-
-    console.log("name", name);
-    const newUser = {
-      firstName: firstName,
-      lastName: lastName,
-      email: res.user.email,
-      handle: res.user.displayName,
-      createdAt: new Date().toISOString(),
-      userId: res.user.uid
-    }
-    console.log("newuser", newUser);
-    db.doc(`/users/${newUser.handle}`).get()
-    .then((doc) => {
-      if(doc.exists) {
-        return console.log("user already exists");
-      } else {
-        return db.doc(`/users/${newUser.handle}`).set(newUser)
-      }
-    })
+    socialUserDataCheck(res);
   })
   .then(() => {
     app.auth().onAuthStateChanged((user) => {
@@ -98,7 +76,6 @@ export const loginGoogleAction = (history) => (dispatch) => {
       setAuthorizationHeader(idToken);
       dispatch(getUserData());
       dispatch({ type: CLEAR_ERRORS });
-      history.push('/');
     })
   })
   .catch(err => {
@@ -108,6 +85,10 @@ export const loginGoogleAction = (history) => (dispatch) => {
     })
   })
 }
+
+
+
+
 
 export const registerAction = (newUserData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -150,14 +131,34 @@ const setAuthorizationHeader = (token) => {
   axios.defaults.headers.common['Authorization'] = FBidToken;
 };
 
+const socialUserDataCheck = (res) => {
+  const name = res.user.displayName.split(" ");
+  const firstName = name[0];
+  const lastName = name[1];
+  const newUser = {
+    firstName: firstName,
+    lastName: lastName,
+    email: res.user.email,
+    handle: `${firstName}${lastName}`,
+    createdAt: new Date().toISOString(),
+    userId: res.user.uid
+  }
+  db.doc(`/users/${newUser.handle}`).get()
+  .then((doc) => {
+    if(doc.exists) {
+      return console.log("user already exists");
+    } else {
+      return db.doc(`/users/${newUser.handle}`).set(newUser)
+    }
+  })
+}
 
-const socialLogin = (provider) => (dispatch) => {
+export const socialFullAuth = (provider) => (dispatch) => {
+  console.log("jest tam ktos");
   app.auth().signInWithPopup(provider).then((res) => {
-    
     const name = res.user.displayName.split(" ");
     const firstName = name[0];
     const lastName = name[1];
-
     const newUser = {
       firstName: firstName,
       lastName: lastName,
@@ -165,7 +166,6 @@ const socialLogin = (provider) => (dispatch) => {
       handle: `${firstName}${lastName}`,
       createdAt: new Date().toISOString(),
       userId: res.user.uid
-
     }
     db.doc(`/users/${newUser.handle}`).get()
     .then((doc) => {
@@ -174,7 +174,32 @@ const socialLogin = (provider) => (dispatch) => {
       } else {
         return db.doc(`/users/${newUser.handle}`).set(newUser)
       }
+    })  })
+  .then(() => {
+    app.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        return null;
+      }
+    })
+    app.auth().currentUser.getIdToken()
+    .then((idToken)=> {
+      setAuthorizationHeader(idToken);
+      dispatch(getUserData());
+      dispatch({ type: CLEAR_ERRORS });
     })
   })
-  
+  .catch(err => {
+    dispatch({
+      type: SET_ERRORS,
+      payload: err.response
+    })
+  })
+}
+
+
+export const loginTrialAction = () => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  const provider = new firebase.auth.GoogleAuthProvider(); 
+
+  socialFullAuth(provider);
 }

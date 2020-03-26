@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import M from "materialize-css";
 import { loginAction } from '../../actions/authActions';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
-import { loginFbAction, loginGoogleAction } from '../../actions/authActions';
+import { loginFbAction, loginGoogleAction, loginTrialAction } from '../../actions/authActions';
 
 class Login extends Component {
   constructor(props){
@@ -68,7 +68,9 @@ class Login extends Component {
                   <button type="submit" className="btn pink lighten-1 z-depth-2">Login</button>
                 </div>
               </form>
-              {loading && (<div className="progress"><div className="indeterminate"></div></div>)}  
+              {loading && (<div className="progress"><div className="indeterminate"></div></div>)} 
+              <GoogleLoginButton onClick={() => this.props.loginTrialAction()} />
+
               <FacebookLoginButton onClick={ ()=> this.props.loginFbAction() } />  
               <GoogleLoginButton onClick={() => this.props.loginGoogleAction()} />
             </div>
@@ -87,7 +89,8 @@ const mapStateToProps = (state) => ({
 const mapActionsToProps = {
   loginAction,
   loginFbAction,
-  loginGoogleAction
+  loginGoogleAction,
+  loginTrialAction
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(Login);
