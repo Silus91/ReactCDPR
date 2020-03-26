@@ -86,10 +86,6 @@ export const loginGoogleAction = () => (dispatch) => {
   })
 }
 
-
-
-
-
 export const registerAction = (newUserData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}register`, newUserData)
@@ -196,10 +192,8 @@ export const socialFullAuth = (provider) => (dispatch) => {
   })
 }
 
-
 export const loginTrialAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.GoogleAuthProvider(); 
-
   socialFullAuth(provider);
 }
