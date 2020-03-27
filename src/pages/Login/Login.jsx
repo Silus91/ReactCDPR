@@ -4,15 +4,16 @@ import M from "materialize-css";
 import { loginAction } from '../../actions/authActions';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 import { loginFbAction, loginGoogleAction, loginTrialAction } from '../../actions/authActions';
+import TextInput from '../../components/TextInput/TextInput';
 
 class Login extends Component {
   constructor(props){
     super(props);
     this.state = {
-        email: '',
-        password: '',
-        errors: {}
-      }
+      email: '',
+      password: '',
+      errors: {}
+    }
   }
 
   componentDidMount() {
@@ -51,21 +52,28 @@ class Login extends Component {
             <div className="card-content">
               <h3 className="card-title center-align">Login</h3>
               <form onSubmit={this.handleSubmit}>
-                <div className="input-field">
-                  <i className="material-icons prefix">email</i>
-                  <label className="active" htmlFor="email">Email</label>
-                  <input id="email" type="email" className="validate s12 l6" onChange={this.handleChange} />
-                  <span className="helper-text red-text center-align">{errors.email? errors.email : ''}</span>
-                </div>
-                <div className="input-field">
-                  <i className="material-icons prefix">lock</i>
-                  <label className="active" htmlFor="password">Password</label>
-                  <input type="password" id='password' className="validate" onChange={this.handleChange} />
-                  <span className="helper-text red-text center-align">{errors.password ? errors.password : ''}</span>
-                </div>
+              <TextInput 
+                  id='email'
+                  type='email'
+                  label='Email'
+                  for='email'
+                  icon='email'
+                  errors={errors.email ? errors.email : ''}
+                  onChange={this.handleChange}
+                />
+                <TextInput 
+                  id='password'
+                  type='password'
+                  for='password'
+                  label='Password'
+                  icon='security'
+                  errors={errors.password ? errors.password : ''}
+                  onChange={this.handleChange}
+                  
+                />
                 <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
                 <div className="input-field center-align">
-                  <button type="submit" className="btn pink lighten-1 z-depth-2">Login</button>
+                  <button type="submit" className="btn teal darken-2 z-depth-2">Login</button>
                 </div>
               </form>
               {loading && (<div className="progress"><div className="indeterminate"></div></div>)} 

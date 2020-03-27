@@ -121,13 +121,13 @@ export const logout = () => async (dispatch) => {
   dispatch({ type: SET_UNAUTH});
 }
 
-const setAuthorizationHeader = (token) => {
+export const setAuthorizationHeader = (token) => {
   const FBidToken = `Bearer ${token}`;
   localStorage.setItem('FBidToken', FBidToken);
   axios.defaults.headers.common['Authorization'] = FBidToken;
 };
 
-const socialUserDataCheck = (res) => {
+export const socialUserDataCheck = (res) => {
   const name = res.user.displayName.split(" ");
   const firstName = name[0];
   const lastName = name[1];

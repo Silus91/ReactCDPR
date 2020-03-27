@@ -12,11 +12,8 @@ exports.register = (req,res) => {
     confirmPassword: req.body.confirmPassword,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    handle: req.body.handle,
+    handle: `${req.body.firstName}${req.body.lastName}`
   };
-
-  //     handle: `${req.body.firstName}${req.body.lastName}`
-
 
   const { valid, errors } = validateRegisterData(newUser);
 
