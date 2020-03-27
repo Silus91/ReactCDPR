@@ -20,7 +20,7 @@ exports.validateRegisterData = (data) => {
   }
 
   if (isEmpty(data.password)) errors.password = 'Password cant be empty';
-  if (data.password !== data.confirmPassword) return  errors.confirmPassword = 'Passwords must match';
+  if (data.password !== data.confirmPassword) errors.confirmPassword = 'Passwords must match';
   if (isEmpty(data.handle)) errors.handle = 'Nick cant be empty';
   if (isEmpty(data.firstName)) errors.firstName = 'Where is your name';
   if (isEmpty(data.lastName)) errors.lastName = 'Where is your last name';

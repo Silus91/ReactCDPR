@@ -24,7 +24,7 @@ class Cyberpunk extends React.Component {
           <div className="row">
           <div className="col l3 s12 center-align flex">
               <a className=" light-blue lighten-1 btn-large pulse">
-                <CountdownTimer />
+                <CountdownTimer deadline='September 17, 2020' />
               </a>              
             </div>
             <div className="col l6 s12 m8 offset-m2">
@@ -32,7 +32,7 @@ class Cyberpunk extends React.Component {
             </div>
             <div className="col l2  s12 center-align flex">
               <a className="btn-large yellow pulse" href="https://www.cyberpunk.net/gb/en/pre-order">
-                PREORDER<i className="material-icons right">attach_money</i>
+                PREORDER
               </a>              
             </div>
           </div>

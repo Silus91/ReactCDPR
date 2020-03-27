@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 class CountdownTimer extends Component {
   constructor(props){
     super(props);
-    this.state = { 
-      deadline: 'September 17, 2020',
+    this.state = {
       days:0,
       hours:0,
       minutes:0,
@@ -29,7 +28,7 @@ class CountdownTimer extends Component {
 
   getTimeUntil(){
     const now = new Date();
-    const time = Date.parse(this.state.deadline) - now;
+    const time = Date.parse(this.props.deadline) - now;
     const seconds = Math.floor((time/1000) % 60);
     const minutes = Math.floor((time/1000/60) % 60);
     const hours = Math.floor(time/(1000 * 60 * 60) % 24);

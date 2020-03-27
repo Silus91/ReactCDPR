@@ -7,11 +7,14 @@ import {
   LOADING_USER,
 } from '../types/types';
 import axios from 'axios';
-import app from '../components/Firebase/Firebase';
-import db from '../components/Firebase/Firestore';
+import app from '../resources/Firebase/Firebase';
+import db from '../resources/Firebase/Firestore';
 
 const firebase = require('firebase');
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
+
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 
 export const loginAction = (userData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });

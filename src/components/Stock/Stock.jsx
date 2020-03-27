@@ -16,8 +16,7 @@ class Stock extends Component {
 
   fetchStock() {
     const pointerToThis = this;
-    const API_KEY = 'JUH2DXk-shUQf-ubqVhQ';
-    const API_CDR = `https://www.quandl.com/api/v3/datasets/WSE/CDPROJEKT.json?api_${API_KEY}`;
+    const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
 
     let stockChartValuesXFunction = [];
     let stockChartValuesYFunction = [];
@@ -60,7 +59,7 @@ class Stock extends Component {
           useResizeHandler={true}
           style={{width: "100%", height: "100%"}}
           config={{
-            // staticPlot: true
+            // staticPlot: true on mobile it should be true need some info how it should be on mobile on
             displayModeBar: false
           }}
         />

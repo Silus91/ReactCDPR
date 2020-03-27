@@ -77,8 +77,6 @@ class Login extends Component {
                 </div>
               </form>
               {loading && (<div className="progress"><div className="indeterminate"></div></div>)} 
-              <GoogleLoginButton onClick={() => this.props.loginTrialAction()} />
-
               <FacebookLoginButton onClick={ ()=> this.props.loginFbAction() } />  
               <GoogleLoginButton onClick={() => this.props.loginGoogleAction()} />
             </div>
@@ -89,6 +87,7 @@ class Login extends Component {
   }
 }
 
+
 const mapStateToProps = (state) => ({
   user: state.user,
   UI: state.UI
@@ -98,7 +97,6 @@ const mapActionsToProps = {
   loginAction,
   loginFbAction,
   loginGoogleAction,
-  loginTrialAction
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(Login);
