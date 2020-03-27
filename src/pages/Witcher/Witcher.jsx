@@ -4,9 +4,8 @@ import './Witcher.css';
 import QuoteGenerator from '../../components/QuoteGenerator/QuoteGenerator';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from './../../components/Collaps/Collaps';
-// import Slider from '../../components/Slider/Slider';
 import M from "materialize-css";
-
+import allQuotes from '../../resources/allQuotes';
 
 class Witcher extends React.Component {
 
@@ -21,8 +20,8 @@ class Witcher extends React.Component {
       <div className="col l6 s12 m8 offset-m2">
           <YoutubeVideo videoId='c0i88t0Kacs' />
       </div>
-        <div className=" col l6 s12 card">
-            <QuoteGenerator />
+        <div className="col l6 s12">
+            <QuoteGenerator allQuotes={allQuotes} />
         </div>
           <div className="col l6 s12">
             <Collaps />
