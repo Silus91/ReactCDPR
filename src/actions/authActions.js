@@ -8,13 +8,12 @@ import {
 } from '../types/types';
 import axios from 'axios';
 import app from '../resources/Firebase/Firebase';
-import db from '../resources/Firebase/Firestore';
+import {newSocialUserMap, saveNewUser, setAuthorizationHeader } from '../services/Service';
 
 const firebase = require('firebase');
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
 // const BASE_URL = process.env.REACT_APP_BASE_URL;
-
 
 export const loginAction = (userData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -33,60 +32,33 @@ export const loginAction = (userData, history) => (dispatch) => {
   })
 }
 
+export const socialUserAction = (provider) => async (dispatch) => {
+  try{
+    const providerResponse = await app.auth().signInWithPopup(provider);
+    const userCheck = await newSocialUserMap(providerResponse);
+    await saveNewUser(userCheck);
+    const recivedToken = await app.auth().currentUser.getIdToken();
+    setAuthorizationHeader(recivedToken);
+    await dispatch(getUserData());
+    dispatch({ type: CLEAR_ERRORS });
+  } catch (error) {
+      dispatch({
+        type: SET_ERRORS,
+        payload: error.response
+      })
+    }
+}
+
 export const loginFbAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.FacebookAuthProvider(); 
-  app.auth().signInWithPopup(provider)
-  .then((res) => {
-    socialUserDataCheck(res);
-  })
-  .then(() => {
-    app.auth().onAuthStateChanged((user) => {
-      if (!user) {
-        return null;
-      }
-    })
-    app.auth().currentUser.getIdToken()
-    .then((idToken)=> {
-      setAuthorizationHeader(idToken);
-      dispatch(getUserData());
-      dispatch({ type: CLEAR_ERRORS });
-    })
-  })
-  .catch(err => {
-    dispatch({
-      type: SET_ERRORS,
-      payload: err.response
-    })
-  })
+  dispatch(socialUserAction(provider));
 }
 
 export const loginGoogleAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.GoogleAuthProvider(); 
-
-  app.auth().signInWithPopup(provider).then((res) => {
-    socialUserDataCheck(res);
-  })
-  .then(() => {
-    app.auth().onAuthStateChanged((user) => {
-      if (!user) {
-        return null;
-      }
-    })
-    app.auth().currentUser.getIdToken()
-    .then((idToken)=> {
-      setAuthorizationHeader(idToken);
-      dispatch(getUserData());
-      dispatch({ type: CLEAR_ERRORS });
-    })
-  })
-  .catch(err => {
-    dispatch({
-      type: SET_ERRORS,
-      payload: err.response
-    })
-  })
+  dispatch(socialUserAction(provider));
 }
 
 export const registerAction = (newUserData, history) => (dispatch) => {
@@ -122,81 +94,4 @@ export const logout = () => async (dispatch) => {
   localStorage.removeItem('FBidToken');
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
-}
-
-export const setAuthorizationHeader = (token) => {
-  const FBidToken = `Bearer ${token}`;
-  localStorage.setItem('FBidToken', FBidToken);
-  axios.defaults.headers.common['Authorization'] = FBidToken;
-};
-
-export const socialUserDataCheck = (res) => {
-  const name = res.user.displayName.split(" ");
-  const firstName = name[0];
-  const lastName = name[1];
-  const newUser = {
-    firstName: firstName,
-    lastName: lastName,
-    email: res.user.email,
-    handle: `${firstName}${lastName}`,
-    createdAt: new Date().toISOString(),
-    userId: res.user.uid
-  }
-  db.doc(`/users/${newUser.handle}`).get()
-  .then((doc) => {
-    if(doc.exists) {
-      return console.log("user already exists");
-    } else {
-      return db.doc(`/users/${newUser.handle}`).set(newUser)
-    }
-  })
-}
-
-export const socialFullAuth = (provider) => (dispatch) => {
-  console.log("jest tam ktos");
-  app.auth().signInWithPopup(provider).then((res) => {
-    const name = res.user.displayName.split(" ");
-    const firstName = name[0];
-    const lastName = name[1];
-    const newUser = {
-      firstName: firstName,
-      lastName: lastName,
-      email: res.user.email,
-      handle: `${firstName}${lastName}`,
-      createdAt: new Date().toISOString(),
-      userId: res.user.uid
-    }
-    db.doc(`/users/${newUser.handle}`).get()
-    .then((doc) => {
-      if(doc.exists) {
-        return console.log("user already exists");
-      } else {
-        return db.doc(`/users/${newUser.handle}`).set(newUser)
-      }
-    })  })
-  .then(() => {
-    app.auth().onAuthStateChanged((user) => {
-      if (!user) {
-        return null;
-      }
-    })
-    app.auth().currentUser.getIdToken()
-    .then((idToken)=> {
-      setAuthorizationHeader(idToken);
-      dispatch(getUserData());
-      dispatch({ type: CLEAR_ERRORS });
-    })
-  })
-  .catch(err => {
-    dispatch({
-      type: SET_ERRORS,
-      payload: err.response
-    })
-  })
-}
-
-export const loginTrialAction = () => (dispatch) => {
-  dispatch({ type: LOADING_UI });
-  const provider = new firebase.auth.GoogleAuthProvider(); 
-  socialFullAuth(provider);
 }

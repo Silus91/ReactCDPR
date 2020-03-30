@@ -17,6 +17,10 @@ class Carousel extends Component {
     )
   }
 
+  // setInterval(() => {
+  //   "carousel".carousel(next);}, 2000)
+  // }
+
   renderCarousel() {
     const numbers = [1,2,3,4,5];
     return numbers.map((num, index)=> {

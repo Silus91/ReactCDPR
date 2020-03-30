@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
+import cityCar from '../resources/imgs/cityCar.jpg';
+import samurai_1 from '../resources/imgs/samurai_1.jpg';
+
+
 
 class Navbar extends Component {
 
@@ -12,13 +16,11 @@ class Navbar extends Component {
 
   render(){
     const { authenticated, credentials } = this.props.user;
-
     const authLink = (
       <Fragment>
         <li><a onClick={() => this.props.logout()}>Log out</a></li>
       </Fragment>
     )
-
     const guestLink = (
       <Fragment>
         <li><Link to='/login'>Login</Link></li>
@@ -40,7 +42,19 @@ class Navbar extends Component {
           </div>
         </nav>
         <ul className="right sidenav" id="mobile-demo">
-          <li><p>{ authenticated ? credentials.firstName : "Guest"}</p></li>
+
+          <li>
+            
+            <div className="user-view">
+              <div className="background">
+                <img src={cityCar} />
+              </div>
+              <a href="#user"><img className="circle" src={samurai_1} /></a>
+              <a href="#name"><span className="white-text name">{credentials.firstName}</span></a>
+            </div>
+      
+      </li>
+          
           <li><Link to='/'>Cd Project red</Link></li>
           <li><Link to='/cyberpunk'>Cyberpunk 2077</Link></li>
           <li><Link to='/witcher'>Witcher</Link></li>

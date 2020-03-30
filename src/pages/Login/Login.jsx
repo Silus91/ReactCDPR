@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import M from "materialize-css";
 import { loginAction } from '../../actions/authActions';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
-import { loginFbAction, loginGoogleAction, loginTrialAction } from '../../actions/authActions';
+import { loginFbAction, loginGoogleAction } from '../../actions/authActions';
 import TextInput from '../../components/TextInput/TextInput';
 
 class Login extends Component {
@@ -56,7 +56,7 @@ class Login extends Component {
                   id='email'
                   type='email'
                   label='Email'
-                  for='email'
+                  htmlFor='email'
                   icon='email'
                   errors={errors.email ? errors.email : ''}
                   onChange={this.handleChange}
@@ -64,7 +64,7 @@ class Login extends Component {
                 <TextInput 
                   id='password'
                   type='password'
-                  for='password'
+                  htmlFor='password'
                   label='Password'
                   icon='security'
                   errors={errors.password ? errors.password : ''}
@@ -86,7 +86,6 @@ class Login extends Component {
     )
   }
 }
-
 
 const mapStateToProps = (state) => ({
   user: state.user,

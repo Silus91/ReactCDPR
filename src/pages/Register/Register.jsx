@@ -61,7 +61,7 @@ class Register extends Component {
                   id='email'
                   type='email'
                   label='Email'
-                  for='email'
+                  htmlFor='email'
                   icon='email'
                   errors={errors.email ? errors.email : ''}
                   onChange={this.handleChange}
@@ -69,7 +69,7 @@ class Register extends Component {
                 <TextInput 
                   id='password'
                   type='password'
-                  for='password'
+                  htmlFor='password'
                   label='Password'
                   icon='security'
                   errors={errors.password ? errors.password : ''}
@@ -79,7 +79,7 @@ class Register extends Component {
                   id='confirmPassword'
                   type='password'
                   label='Confirm Password'
-                  for='Confirm password'
+                  htmlFor='Confirm password'
                   icon='security'
                   errors={errors.confirmPassword ? errors.confirmPassword : ''}
                   onChange={this.handleChange}
@@ -89,7 +89,7 @@ class Register extends Component {
                   type='text'
                   label='First Name'
                   icon='account_circle'
-                  for='First name'
+                  htmlFor='First name'
                   errors={errors.firstName ? errors.firstName : ''}
                   onChange={this.handleChange}
                 />
@@ -97,7 +97,7 @@ class Register extends Component {
                   id='lastName'
                   type='text'
                   label='Last Name'
-                  for='lastName'
+                  htmlFor='lastName'
                   icon='account_circle'
                   errors={errors.lastName ? errors.lastName : ''}
                   onChange={this.handleChange}

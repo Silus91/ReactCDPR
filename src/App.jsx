@@ -28,6 +28,8 @@ if (token) {
     axios.defaults.headers.common['Authorization'] = token;
     store.dispatch(getUserData());
   }
+} else {
+  console.log("guest");
 }
 
 // Add a response interceptor

@@ -102,9 +102,8 @@ exports.getAuthenticatedUser = (req, res) => {
       return;
     })
     .then((data) => {
-      userData.posts = [];
       data.forEach((doc) => {
-        userData.posts.push(doc.data());
+        userData.push(doc.data());
       });
       return res.json(userData);
     })
@@ -112,6 +111,25 @@ exports.getAuthenticatedUser = (req, res) => {
       console.error(err);
       return res.status(500).json({ error: err.code });
     });
+};
+
+exports.getAuthenticatedTrialUser = async (req, res) => {
+  try{
+    const userFSData = await db.doc(`/users/${req.user.handle}`).get()
+    if (userFSData.exists) {
+     const userData =  userFSData.data();
+     return userData;
+    }
+
+
+//in progress
+
+
+
+  } catch {(err) => {
+    console.log("zjebales", err);
+    return res.status(500).json({ error: err.code });
+  }}
 };
 
 
@@ -126,4 +144,3 @@ exports.logout = (req, res) => {
         return res.status(400).json({ general: "Wrong credentials, something went wrong" });
     });
 }
-
