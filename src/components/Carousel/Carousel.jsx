@@ -17,26 +17,11 @@ class Carousel extends Component {
     )
   }
 
-  // setInterval(() => {
-  //   "carousel".carousel(next);}, 2000)
-  // }
-
-  renderCarousel() {
-    const numbers = [1,2,3,4,5];
-    return numbers.map((num, index)=> {
-      return (
-        <div className="carousel-item" key={index}>
-          <img src={require(`../../resources/imgs/carous${num}.jpg`)} className="carousel-img" alt="" />
-        </div>
-      )
-    })
-  }
-
   render() {
     return (
       <div>
         <div className="carousel carousel-slider center">
-          {this.renderCarousel()}
+          {this.props.children}
         </div>
       </div>
     )

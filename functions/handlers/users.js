@@ -12,9 +12,10 @@ exports.register = (req,res) => {
     confirmPassword: req.body.confirmPassword,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    handle: `${req.body.firstName}${req.body.lastName}`
+    handle: `${req.body.firstName}${req.body.lastName}`,
+    photoURL: `${req.body.lastName}`
   };
-
+console.log(newUser)
   const { valid, errors } = validateRegisterData(newUser);
 
   if(!valid) return res.status(400).json(errors);

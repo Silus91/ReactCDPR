@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
 import cityCar from '../resources/imgs/cityCar.jpg';
-import samurai_1 from '../resources/imgs/samurai_1.jpg';
-
-
+import samurai from '../resources/imgs/samurai.png';
 
 class Navbar extends Component {
 
@@ -42,19 +40,15 @@ class Navbar extends Component {
           </div>
         </nav>
         <ul className="right sidenav" id="mobile-demo">
-
           <li>
-            
             <div className="user-view">
               <div className="background">
                 <img src={cityCar} />
               </div>
-              <a href="#user"><img className="circle" src={samurai_1} /></a>
-              <a href="#name"><span className="white-text name">{credentials.firstName}</span></a>
+              <a href="#user"><img className="circle" src={authenticated ? credentials.photoURL : samurai} /></a>
+              <a href="#name"><span className="white-text name">{authenticated ? credentials.firstName : "Guest"}</span></a>
             </div>
-      
-      </li>
-          
+          </li>
           <li><Link to='/'>Cd Project red</Link></li>
           <li><Link to='/cyberpunk'>Cyberpunk 2077</Link></li>
           <li><Link to='/witcher'>Witcher</Link></li>

@@ -10,6 +10,7 @@ export const newSocialUserMap = (res) => {
         `${res.user.displayName.split(" ")[0]}
         ${res.user.displayName.split(" ")[1]}`,
       createdAt: new Date().toISOString(),
+      photoURL: res.user.photoURL,
       userId: res.user.uid
     }
     return newUser;
@@ -19,7 +20,7 @@ export const newSocialUserMap = (res) => {
     try {
       const user = await db.doc(`/users/${newUser.handle}`).get();
       if (user.exists) {
-        return alert(`Welcome back${user}`);
+        return;
       }
       try {
         await db.doc(`/users/${newUser.handle}`).set(newUser);

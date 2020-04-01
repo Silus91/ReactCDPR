@@ -33,6 +33,4 @@ class Collaps extends Component {
   }
 }
 
-
-
 export default Collaps;

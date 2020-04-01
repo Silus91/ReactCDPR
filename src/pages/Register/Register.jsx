@@ -16,6 +16,7 @@ class Register extends Component {
       lastName: '',
       handle: '',
       errors: {},
+      photoURL: '1'
     }
   }                  
 
@@ -43,6 +44,7 @@ class Register extends Component {
       confirmPassword: confirmPassword,
       firstName: firstName,
       lastName: lastName,
+      photoURL: lastName
     };
     this.props.registerAction(newUserData, this.props.history)
   };

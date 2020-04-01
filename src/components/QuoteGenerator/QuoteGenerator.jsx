@@ -21,7 +21,7 @@ class QuoteGenerator extends Component {
     const { quoteIndex } = this.state;
     return (
       <div className="card">
-        <div class="card-content">
+        <div className="card-content">
           <h5 className="">{this.props.allQuotes[quoteIndex].quote}</h5>
           <span className="">{this.props.allQuotes[quoteIndex].book}</span>
         </div>
