@@ -6,6 +6,7 @@ import './Home.css';
 import config from './config';
 import cd_logo from './cd_logo.png';
 import Footer from '../../components/Footer/Footer';
+import Switch from '../../components/Switch/Switch';
 
 class Home extends Component {
 
@@ -40,6 +41,8 @@ class Home extends Component {
           </div>
           {this.renderCards()}
         </div>
+
+        <Switch />
         <button className="center"><Footer /></button>
       </div>
     )
