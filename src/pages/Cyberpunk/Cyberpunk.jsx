@@ -36,7 +36,7 @@ class Cyberpunk extends React.Component {
               </a>              
             </div>
           </div>
-          {/* <div className="parallax-container">
+          <div className="parallax-container">
             <div className="parallax">
               <img className="responsive-img" src={netRunner} alt="" />
             </div>
@@ -50,7 +50,7 @@ class Cyberpunk extends React.Component {
             <div className="parallax">
               <img className="img" src={cityCar} alt="" />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     )
