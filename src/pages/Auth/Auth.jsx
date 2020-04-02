@@ -41,7 +41,6 @@ export class Auth extends Component {
   }
 }
 
-
 const mapActionsToProps = {
   loginFbAction,
   loginGoogleAction,
