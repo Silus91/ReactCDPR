@@ -21,3 +21,14 @@
     90%{transform: translate(3px,2px) rotate(2deg);}
     100%{transform: translate(2px,-2px) rotate(-2deg);}
 }
+
+
+.light{
+    background-color: beige!important;
+    color: black!important;
+}
+
+.dark{
+    background-color: rgb(138, 138, 138);
+    color: beige!important;
+}

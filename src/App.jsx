@@ -6,14 +6,13 @@ import Navbar from './layout/Navbar';
 import Home from './pages/Home/Home';
 import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
-import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './resources/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
+import Auth from './pages/Auth/Auth';
 
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
@@ -50,8 +49,7 @@ class App extends Component {
             <Route exact path='/'component={Home} />
             <Route path='/cyberpunk' component={Cyberpunk} />
             <Route path='/witcher' component={Witcher} />
-            <AuthRoute path='/login' component={Login} />
-            <AuthRoute path='/register' component={Register} />
+            <AuthRoute path='/auth' component={Auth} />
           </Switch>
         </BrowserRouter>
       </Provider>

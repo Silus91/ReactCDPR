@@ -27,9 +27,9 @@ class Home extends Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, lightTheme } = this.props;
     return (
-      <div className="container">
+      <div className={ lightTheme===true ? "light" : "dark" }>
         <div className="row">
           <div className="center">
             <img className="card responsive-img" src={cd_logo} alt="" />
@@ -51,7 +51,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return{
-    user: state.user
+    user: state.user,
+    lightTheme: state.UI.lightTheme
   }
 }
 

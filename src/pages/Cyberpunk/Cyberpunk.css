@@ -13,11 +13,6 @@
   justify-content: center;
 }
 
-.section {
-  display: -webkit-inline-flex;
-  justify-content:space-between;
-}
-
 .img{
   width: 100%;
   height: auto;

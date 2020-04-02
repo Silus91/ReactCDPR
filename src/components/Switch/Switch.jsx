@@ -5,37 +5,21 @@ import { connect } from 'react-redux';
 import { switchTheme } from '../../actions/uiActions';
 
 export class Switch extends Component {
-  constructor(props) {
-    super(props);
-  
-  }
 
-
-
-
-
-    render() {
-      return (
-      <div>
-        <div className="switch">
-          <label>
-            Off
-              <input type="checkbox" onClick={() => this.props.switchTheme()}/>
-              <span className="lever"></span>
-            On
-          </label>
-        </div>
+  render() {
+    return (
+    <div>
+      <div className="switch">
+        <label>
+          Light
+            <input type="checkbox" onClick={() => this.props.switchTheme()}/>
+            <span className="lever"></span>
+          Dark
+        </label>
       </div>
-      )
-    }
+    </div>
+    )
   }
+}
 
-
-  const mapStateToProps = (state) => {
-    return{
-      lightTheme: state.UI.lightTheme
-    }
-  }
-  
-
-export default connect(mapStateToProps, {switchTheme})(Switch);
+export default connect(null, { switchTheme })(Switch);

@@ -22,7 +22,7 @@ class Cyberpunk extends React.Component {
             <img className="responsive-img" src={cyber} alt="" />
           </div>
           <div className="row">
-          <div className="col l3 s12 center-align flex">
+          <div className="col l3 s12  flex">
               <a className=" light-blue lighten-1 btn-large pulse">
                 <CountdownTimer deadline='September 17, 2020' />
               </a>              
@@ -36,7 +36,7 @@ class Cyberpunk extends React.Component {
               </a>              
             </div>
           </div>
-          <div className="parallax-container">
+          {/* <div className="parallax-container">
             <div className="parallax">
               <img className="responsive-img" src={netRunner} alt="" />
             </div>
@@ -50,7 +50,7 @@ class Cyberpunk extends React.Component {
             <div className="parallax">
               <img className="img" src={cityCar} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )
