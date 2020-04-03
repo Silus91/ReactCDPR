@@ -1,12 +1,11 @@
 .authContainer{
     height: 100%;
     width: 100%;
-    background-image: url("https://cdn.mos.cms.futurecdn.net/rLh7Dh7EKo8F6zmDtXYp8W.jpg");
+    background-image: url(../../resources/imgs/cityCarv2.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
 }
-/* zasysac z resources a nie z neta zdj */
 
 .authCard {
     background-color: rgba(255, 255, 255, 0.8);

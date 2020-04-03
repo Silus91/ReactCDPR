@@ -4,8 +4,6 @@ import Stock from '../../components/Stock/Stock';
 import M from "materialize-css";
 import './Home.css';
 import config from './config';
-import cd_logo from './cd_logo.png';
-import Footer from '../../components/Footer/Footer';
 import Switch from '../../components/Switch/Switch';
 
 class Home extends Component {
@@ -31,9 +29,6 @@ class Home extends Component {
     return (
       <div className={ lightTheme===true ? "light" : "dark" }>
         <div className="row">
-          <div className="center">
-            <img className="card responsive-img" src={cd_logo} alt="" />
-          </div>
           <div className="card">
             <div className="card-content col l6 s12 card z-depth-2 hoverable">
               <Stock />
@@ -43,7 +38,6 @@ class Home extends Component {
         </div>
 
         <Switch />
-        <button className="center"><Footer /></button>
       </div>
     )
   }

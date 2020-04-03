@@ -8,7 +8,7 @@ import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
 import './App.css';
 import jwtDecode from 'jwt-decode';
-import AuthRoute from './resources/AuthRoute';
+import AuthRoute from './services/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';

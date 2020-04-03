@@ -16,25 +16,25 @@ class Cyberpunk extends React.Component {
 
   render(){
     return(
-      <div className="container">
+      <div className="cyber center">
         <div className="wrapper">
           <div>
             <img className="responsive-img" src={cyber} alt="" />
           </div>
           <div className="row">
-          <div className="col l3 s12  flex">
-              <a className=" light-blue lighten-1 btn-large pulse">
-                <CountdownTimer deadline='September 17, 2020' />
-              </a>              
-            </div>
-            <div className="col l6 s12 m8 offset-m2">
-              <YoutubeVideo videoId='LembwKDo1Dk' />
-            </div>
-            <div className="col l2  s12 center-align flex">
-              <a className="btn-large yellow pulse" href="https://www.cyberpunk.net/gb/en/pre-order">
-                PREORDER
-              </a>              
-            </div>
+          <div className="col l3 s12 center-align  flex">
+            <a className=" light-blue lighten-1 btn-large pulse">
+              <CountdownTimer deadline='September 17, 2020' />
+            </a>              
+          </div>
+          <div className="col l6 s12 m10 offset-m1">
+            <YoutubeVideo videoId='LembwKDo1Dk' />
+          </div>
+          <div className="col l2  s12 center-align flex">
+            <a className="btn-large yellow pulse" href="https://www.cyberpunk.net/gb/en/pre-order">
+              PREORDER
+            </a>              
+          </div>
           </div>
           <div className="parallax-container">
             <div className="parallax">

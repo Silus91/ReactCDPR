@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import M from "materialize-css";
 import { loginAction } from '../../actions/authActions';
-import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
-import { loginFbAction, loginGoogleAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
 
 class Login extends Component {
@@ -14,10 +11,6 @@ class Login extends Component {
       password: '',
       errors: {}
     }
-  }
-
-  componentDidMount() {
-    M.AutoInit();
   }
 
   componentWillReceiveProps(nextProps) {
