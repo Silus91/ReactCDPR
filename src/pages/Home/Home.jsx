@@ -5,6 +5,8 @@ import M from "materialize-css";
 import './Home.css';
 import config from './config';
 import Switch from '../../components/Switch/Switch';
+import Carousel  from '../../components/Carousel/Carousel';
+import slides from '../../components/Carouselv2/slides';
 
 class Home extends Component {
 
@@ -16,7 +18,7 @@ class Home extends Component {
     return config.map((conf, index) => {
       return (
         <div className="card" key={index}>
-          <div className="card-content col l5 offset-l1 s12 card z-depth-2 hoverable">
+          <div className="card card-content col l5 s12 stock z-depth-2 hoverable">
             <span>{conf}</span>
           </div>
         </div>
@@ -27,14 +29,20 @@ class Home extends Component {
   render() {
     const { user, lightTheme } = this.props;
     return (
-      <div className={ lightTheme===true ? "light" : "dark" }>
+      <div className={ lightTheme ? " light" : "dark"}>
         <div className="row">
-          <div className="card">
-            <div className="card-content col l6 s12 card z-depth-2 hoverable">
+
+        <div className="col l7 s12">
+          <Carousel 
+            slides={slides}
+          />
+        </div>
+
+        {this.renderCards()}
+
+            <div className=" col l7 s12 stock z-depth-2 hoverable">
               <Stock />
             </div>
-          </div>
-          {this.renderCards()}
         </div>
 
         <Switch />

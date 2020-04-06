@@ -16,7 +16,9 @@ class Cyberpunk extends React.Component {
 
   render(){
     return(
-      <div className="cyber center">
+
+      
+      <div className="container center">
         <div className="wrapper">
           <div>
             <img className="responsive-img" src={cyber} alt="" />

@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import M from "materialize-css";
-import carouselConfig from './carouselConfig';
+import homeCarousel from './homeCarousel';
 import './Carouselv2.css';
-
 
 export class Carouselv2 extends Component {
 
   componentDidMount() {
     document.addEventListener('DOMContentLoaded', function() {
-      // const options = {
-      //   duration: 200,
-      // };
-        const elems = document.querySelectorAll('.carousel');
-        const instances = M.Carousel.init(elems,{
-          indicators: true,
-          fullWidth: true,
-        });
+      const elems = document.getElementById('carousel');
+      const instances = M.Carousel.init(elems,{
+        duration: 200,
+        fullWidth: true,
+      });
+      const instance = M.Carousel.getInstance(elems);
+      instance.next();
+        setInterval(() => {
+          instance.next();
+        }, 3000);
       }
-    )
+    )       
   }
 
 
@@ -26,20 +27,20 @@ export class Carouselv2 extends Component {
       carouselConfig.map((config, index)=> {
       return (
         <div className="carousel-item" key={index}>
-          <div className="card">
-          <div className="card-image">
-            <img src={config.img} alt="" />
-
-
+          <img src={config.img} className="responsive-img" />
+          <div>
+          <a href={config.facebookURL}  target="_blank">
+            <img src={config.facebookImg} className="imgsize" alt="" />
+          </a>
+          <a href={config.twitterURL}  target="_blank">
+            <img src={config.twitterImg} className="imgsize" alt="" />
+          </a>
+          {config.instagramURL ? 
+          <a href={config.instagramURL}  target="_blank">
+            <img src={config.instagramImg} className="imgsize" alt="" />
+          </a>  
+          : null}
           </div>
-          
-
-            <span className="card-title">asd
-                   <a href={config.facebookURL}  target="_blank">
-              <img src={config.facebookImg} alt="" />
-            </a>
-            </span>
-       </div>
         </div>
       )
     })
@@ -48,7 +49,7 @@ export class Carouselv2 extends Component {
 
   render() {
     return (
-      <div className="carousel carousel-slider center">
+      <div id="carousel" className="carousel carousel-slider center">
       {this.renderCarousel()}
     </div>
     )
@@ -56,5 +57,3 @@ export class Carouselv2 extends Component {
 }
 
 export default Carouselv2;
-
-

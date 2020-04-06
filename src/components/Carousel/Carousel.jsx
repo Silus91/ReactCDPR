@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
 import M from "materialize-css";
+import CarouselSlide from './CarouselSlide';
 
 class Carousel extends Component {
 
   componentDidMount() {
     document.addEventListener('DOMContentLoaded', function() {
-      // const options = {
-      //   duration: 200,
-      // };
-        const elems = document.querySelectorAll('.carousel');
-        const instances = M.Carousel.init(elems,{
-          indicators: true,
-          fullWidth: true,
-        });
+      const elems = document.getElementById('carousel');
+      const instances = M.Carousel.init(elems,{
+        duration: 200,
+        fullWidth: true,
+      });
+      const instance = M.Carousel.getInstance(elems);
+      instance.next();
+        setInterval(() => {
+          instance.next();
+        }, 3000);
       }
-    )
+    )       
   }
 
   render() {
     return (
       <div>
-        <div className="carousel carousel-slider center">
-          {this.props.children}
+        <div id="carousel" className="carousel carousel-slider center">
+          {this.props.slides.map((slide) => {
+            return <CarouselSlide slide={slide} key={slide.id} />
+          })}
         </div>
       </div>
     )

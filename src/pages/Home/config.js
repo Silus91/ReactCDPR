@@ -1,4 +1,6 @@
-export default [    
+export default [  
+    "Info from the creator of this page. Hi all. I do not own any of these products or images, videos etc. Its CD Projekt RED fan page. Created that page for my future recruiters in Web Developer industry. Here are a few technologies I have used to create that page. React.js, Node.js, Redux, Firebase, MaterializeCSS, and other more-less useful technologies and libraries."
+    ,  
     "The main area of activity of the CD PROJEKT Capital Group is videogames – a dynamically growing branch of digital entertainment. For over 20 years videogames have been at the core of our professional lives. They define who we are and how we act. We create cutting-edge innovative entertainment and, thanks to our proprietary distribution platform, provide gamers from around the world with access to a vast pool of releases, free of cumbersome DRM restrictions."
     ,
     

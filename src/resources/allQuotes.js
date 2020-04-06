@@ -43,4 +43,8 @@ export default [
     quote: "I need this conversation. They say silence is golden. Maybe it is, although I'm not sure it's worth that much. It has its price certainly; you have to pay for it.",
     book: "The Last Wish"
   },
+  {
+    quote: "The sword of destiny has two blades. You are one edge the other is death",
+    book: "Andrzej Sapkowski"
+  },
 ]

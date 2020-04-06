@@ -1,17 +1,16 @@
-.imgContainer{
+.responsive-img{
     position: relative!important;
-    z-index: -1!important;
-
+    z-index: 0!important;
 }
 
-.socialA{
-   position: absolute!important;
-    z-index: 2!important;
-    top: 50%!important;
-    left: 80%!important;
+.carousel .carousel-item >div{
+    z-index: 1!important;
+    top: 20%!important;
+    right: 3%!important;
+    position: absolute!important;
+    max-width: 40px;
 }
 
-.socialImg{
-    width: 40px;
-    height: 40px;
+.carousel .carousel-item >div> a{
+    padding: 5px;;
 }
