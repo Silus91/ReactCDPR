@@ -41,7 +41,3 @@ export default CarouselSlide;
 //     )
 //   } else return null;
 // }
-
-
-
-

@@ -2,15 +2,3 @@
     position: relative!important;
     z-index: 0!important;
 }
-
-.carousel .carousel-item >div{
-    z-index: 1!important;
-    top: 20%!important;
-    right: 3%!important;
-    position: absolute!important;
-    max-width: 40px;
-}
-
-.carousel .carousel-item >div> a{
-    padding: 5px;;
-}
