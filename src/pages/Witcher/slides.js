@@ -7,6 +7,8 @@ import witcher from '../../resources/imgs/carousel/witcher.jpg';
 import carous3 from '../../resources/imgs/carousel/carous3.jpg';
 import carous4 from '../../resources/imgs/carousel/carous4.jpg';
 import Wild_Hunt_Geralt from '../../resources/imgs/carousel/Wild_Hunt_Geralt.jpg';
+import swords from '../../resources/imgs/carousel/swords.jpg';
+
 
 export default[
     {
@@ -44,5 +46,9 @@ export default[
     {
         id:9,
         img: Wild_Hunt_Geralt,
+    },
+    {
+        id:10,
+        img: swords,
     },
 ]

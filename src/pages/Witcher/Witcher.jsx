@@ -16,34 +16,31 @@ class Witcher extends React.Component {
   }
 
   render() {
-  return(
-    <div className="">
-      <span className="witcherContainer"></span>
+    return(
       <div className="container">
+        <span className="witcherContainer"></span>
         <div className="row">
-        <div className="col l6 s12 m8 offset-m2">
-          <YoutubeVideo videoId='c0i88t0Kacs' />
-        </div>
-        <div className="col l6 s12">
-          <Collaps 
-          colaps={colaps}/>
-        </div>      
-        <div className="col l5 s12">
-            <QuoteGenerator allQuotes={allQuotes} />
-        </div>
-
           <div className="card col l7 s12">
+            <YoutubeVideo videoId='c0i88t0Kacs' />
+          </div>
+          <div className="col l5 s12">
+            <Collaps 
+            colaps={colaps}/>
+          </div> 
+          </div>  
+          <div className="row">
+          <div className="col l4 s12">
+              <QuoteGenerator allQuotes={allQuotes} />
+          </div>
+          <div className="card col l8 s12">
             <div className="card-content">
             <Carousel
               slides={slides}
             />
             </div>
-
           </div> 
-      </div>
-          <p>  s</p>
+       </div>
         </div>
-      </div>
     );
   }
 };

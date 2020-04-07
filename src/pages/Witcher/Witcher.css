@@ -9,16 +9,66 @@
     background-image: url(../../resources/imgs/blood1.png);
     background-repeat: repeat;
     background-size: cover;
+    background-attachment: scroll;
+    opacity:1;
     z-index: -2;
     -webkit-animation:spin 30s linear infinite;
     -moz-animation:spin 30s linear infinite;
     animation:spin 30s linear infinite;
+
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes spin {
+    0%   {opacity: 1; transform: rotate(0deg)translateX(00px) }
+    10%  {opacity: 0; transform: rotate(0deg)translateX(20px)}
+    20%  {opacity: 0; transform: rotate(90deg)}
+    29%  {opacity: 0; transform: rotate(90deg)}
+    30%  {opacity: 1; transform: rotate(90deg)translateX(00px)}
+    40% {opacity: 0; transform: rotate(90deg)translateX(20px)}
+    50% {opacity: 0; transform: rotate(180deg)}
+    59% {opacity: 0; transform: rotate(180deg)}
+    60% {opacity: 1; transform: rotate(180deg)translateX(00px)}
+    70% {opacity: 0; transform: rotate(180deg)translateX(20px)}
+    80% {opacity: 0; transform: rotate(270deg)}
+    89% {opacity: 0; transform: rotate(270deg)}
+    90% {opacity: 1; transform: rotate(270deg)translateX(00px)}
+    100% {opacity: 0; transform: rotate(270deg)translateX(20px)}
+  }
 
+  @-webkit-keyframes spin {
+    0%   {opacity: 1; transform: rotate(0deg) }
+    10%  {opacity: 0; transform: rotate(0deg)}
+    20%  {opacity: 0; transform: rotate(90deg)}
+    29%  {opacity: 0; transform: rotate(90deg)}
+    30%  {opacity: 1; transform: rotate(90deg)}
+    40% {opacity: 0; transform: rotate(90deg)}
+    50% {opacity: 0; transform: rotate(180deg)}
+    59% {opacity: 0; transform: rotate(180deg)}
+    60% {opacity: 1; transform: rotate(180deg)}
+    70% {opacity: 0; transform: rotate(180deg)}
+    80% {opacity: 0; transform: rotate(270deg)}
+    89% {opacity: 0; transform: rotate(270deg)}
+    90% {opacity: 1; transform: rotate(270deg)}
+    100% {opacity: 0; transform: rotate(270deg)}
+  }
+
+
+  @-moz-keyframes spin {
+    0%   {opacity: 1; transform: rotate(0deg) }
+    10%  {opacity: 0; transform: rotate(0deg)}
+    20%  {opacity: 0; transform: rotate(90deg)}
+    29%  {opacity: 0; transform: rotate(90deg)}
+    30%  {opacity: 1; transform: rotate(90deg)}
+    40% {opacity: 0; transform: rotate(90deg)}
+    50% {opacity: 0; transform: rotate(180deg)}
+    59% {opacity: 0; transform: rotate(180deg)}
+    60% {opacity: 1; transform: rotate(180deg)}
+    70% {opacity: 0; transform: rotate(180deg)}
+    80% {opacity: 0; transform: rotate(270deg)}
+    89% {opacity: 0; transform: rotate(270deg)}
+    90% {opacity: 1; transform: rotate(270deg)}
+    100% {opacity: 0; transform: rotate(270deg)}
+  }
 
 .card {
     background-color: transparent;

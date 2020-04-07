@@ -35,7 +35,6 @@ export const loginAction = (userData, history) => (dispatch) => {
 export const socialUserAction = (provider) => async (dispatch) => {
   try{
     const providerResponse = await app.auth().signInWithPopup(provider);
-    console.log("tu jest res", providerResponse);
     const userCheck = await newSocialUserMap(providerResponse);
     await saveNewUser(userCheck);
     const recivedToken = await app.auth().currentUser.getIdToken();
