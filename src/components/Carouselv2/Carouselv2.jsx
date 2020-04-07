@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import M from "materialize-css";
-import homeCarousel from './homeCarousel';
-import './Carouselv2.css';
 
 export class Carouselv2 extends Component {
 
