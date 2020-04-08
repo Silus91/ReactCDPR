@@ -6,6 +6,7 @@ import Navbar from './layout/Navbar';
 import Home from './pages/Home/Home';
 import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
+import Footer from './layout/Footer';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './services/AuthRoute';
@@ -51,6 +52,7 @@ class App extends Component {
             <Route path='/witcher' component={Witcher} />
             <AuthRoute path='/auth' component={Auth} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </Provider>
     );

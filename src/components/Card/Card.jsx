@@ -15,7 +15,11 @@ export class Card extends Component {
 					</div>
 					<div>
 						{this.props.configs.map((config) => {
-							return <div className="container" id={config.id} key={config.id}>{config.body}</div>
+							return (
+								<div className="container" id={config.id} key={config.id}>
+									<span className="bodyContainer">{config.body}</span>
+								</div>
+							)
 						})}
 					</div>
 				</div>

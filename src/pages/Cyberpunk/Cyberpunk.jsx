@@ -8,6 +8,13 @@ import cyber from '../../resources/imgs/cyber.png';
 import config from './config';
 import './Cyberpunk.css';
 
+
+import InstagramEmbed from 'react-instagram-embed';
+ 
+
+
+import { Parallax } from 'react-materialize';
+
 class Cyberpunk extends React.Component {
 
   componentDidMount() {
@@ -33,26 +40,39 @@ class Cyberpunk extends React.Component {
             <YoutubeVideo videoId='LembwKDo1Dk' />
           </div>
           <div className="col l2  s12 center-align flex">
-            <a className="btn-large yellow pulse" href="https://www.cyberpunk.net/gb/en/pre-order">
+            <a className="btn-large yellow pulse" target="_blank" href="https://www.cyberpunk.net/gb/en/pre-order">
               PREORDER
             </a>              
           </div>
           </div>
-          <div className="parallax-container">
-            <div className="parallax">
-              <img className="responsive-img" src={netRunner} alt="" />
-            </div>
-          </div>
-          <div className="">
-            <div className="row container">
-              <h6 className="">{config}</h6>
-            </div>
-          </div>
-          <div className="parallax-container">
-            <div className="parallax">
-              <img className="img" src={cityCar} alt="" />
-            </div>
-          </div>
+
+          <Parallax
+            image={<img alt="" src={netRunner} />}
+            options={{
+              responsiveThreshold: 10
+            }}
+           />
+            
+            <InstagramEmbed
+              url='https://www.instagram.com/p/B5_zQFSn3zQ/?utm_source=ig_web_copy_link'
+              maxWidth={400}
+              hideCaption={false}
+              containerTagName='div'
+              protocol=''
+              injectScript
+              onLoading={() => {}}
+              onSuccess={() => {}}
+              onAfterRender={() => {}}
+              onFailure={() => {}}
+            />
+
+           
+          <Parallax
+            image={<img alt="" src={cityCar} />}
+            options={{
+              responsiveThreshold: 10
+            }}
+           />
         </div>
       </div>
     )

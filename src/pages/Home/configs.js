@@ -17,6 +17,6 @@ export default [
 	{
 		id:4,
 		title:'Buisness',
-		body: 'Our business rests upon a strong dual foundation: development of videogames, carried out by CD PROJEKT RED, and global digital distribution, which is the domain of GOG.com. CD PROJEKT RED is a world-renowned videogame development studio, famous for the Witcher trilogy set in Andrzej Sapkowski’s fantasy world. The Studio’s most recent videogame – The Witcher 3: Wild Hunt – debuted on 19 May 2015. Till the end of June 2019, over 40 million copies of The Witcher, The Witcher 2: Assassins of Kings and The Witcher 3: Wild Hunt were sold worldwide.'
+		body: 'Our business rests upon a strong dual foundation: development of videogames, carried out by CD PROJEKT RED, and global digital distribution, which is the domain of GOG.com. CD PROJEKT RED is a world-renowned videogame development studio, famous for the Witcher trilogy set in Andrzej Sapkowski’s fantasy world. The Studio’s most recent videogame – The Witcher 3: Wild Hunt – debuted on 19 May 2015. Till the end of June 2019, over 40 million copies of The Witcher.'
 	}
 ]

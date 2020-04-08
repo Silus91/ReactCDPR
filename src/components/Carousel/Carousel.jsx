@@ -13,9 +13,8 @@ class Carousel extends Component {
       });
       const instance = M.Carousel.getInstance(elems);
       instance.next();
-        setInterval(() => { instance.next() }, 3000);
-      }
-    )       
+      setInterval(() => { instance.next() }, 3000);
+    })  
   }
 
   render() {

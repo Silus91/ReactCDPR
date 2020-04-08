@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import Stock from '../../components/Stock/Stock';
 import M from "materialize-css";
 import './Home.css';
-import Switch from '../../components/Switch/Switch';
 import Carousel  from '../../components/Carousel/Carousel';
-import slides from '../../components/Carouselv2/slides';
+import slides from './slides';
 import Card from '../../components/Card/Card';
 import configs from './configs';
 
@@ -16,10 +15,9 @@ class Home extends Component {
   }
 
   render() {
-    const { user, lightTheme } = this.props;
+    const { user } = this.props;
     return (
-      <div className={ lightTheme ? "container light" : " container dark"}>
-        <Switch />
+      <div className="container">
         <div className="row">
           <div className="col l7 s12">
             <Carousel 
