@@ -11,10 +11,7 @@ export class Footer extends Component {
         <div className="row">
           <div className="center">
             <div><span>kocham tygryska</span></div>
-            <div>
-
-
-            
+            <div>           
               <SocialButton src={linkedin} href={"https://www.linkedin.com/in/dawid-dyczek-07b193183/"}/>
               <SocialButton src={githubimg} href={"https://github.com/silus91"}/>
             </div>

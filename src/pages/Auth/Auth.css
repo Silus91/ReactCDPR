@@ -4,7 +4,7 @@
     background-image: url(../../resources/imgs/cityCarv2.jpg);
     background-position: center;
     background-size: cover;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .authCard {
