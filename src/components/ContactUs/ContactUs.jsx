@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { loginAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
+import { sendMessage } from '../../actions/uiActions';
+import { Toast } from 'react-materialize';
 
-class Login extends Component {
+class ContactUs extends Component {
   constructor(props){
     super(props);
     this.state = {
+			name: '',
       email: '',
-      password: '',
+      message: '',
       errors: {}
     }
   }
@@ -27,12 +29,13 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const userData = {
+    const messageData = {
+			name: this.state.name,
       email: this.state.email,
-      password: this.state.password
+      message: this.state.message
     }
-    this.props.loginAction(userData, this.props.history)
-  }
+    this.props.sendMessage(messageData);
+}
 
   render() {
     const { errors } = this.state;
@@ -40,6 +43,15 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+				<TextInput 
+            id='name'
+            type='text'
+            label='Name'
+            htmlFor='name'
+            icon='account_circle'
+            errors={errors.email ? errors.email : ''}
+            onChange={this.handleChange}
+          />
           <TextInput 
             id='email'
             type='email'
@@ -50,28 +62,29 @@ class Login extends Component {
             onChange={this.handleChange}
           />
           <TextInput 
-            id='password'
-            type='password'
-            htmlFor='password'
-            label='Password'
-            icon='security'
+            id='message'
+            type='text'
+            htmlFor='message'
+            label='Message'
+            icon='message'
             errors={errors.password ? errors.password : ''}
             onChange={this.handleChange}
           />
           <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
           <div className="input-field center-align">
-            <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Login</button>
+            <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Send</button>
           </div>
+
         </form>
-        {loading && (<div className="progress"><div className="indeterminate"></div></div>)} 
+        {loading && (
+        <div className="progress"><div className="indeterminate"></div></div>)} 
       </div>   
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user,
   UI: state.UI
 })
 
-export default connect(mapStateToProps, { loginAction })(Login);
+export default connect(mapStateToProps, { sendMessage })(ContactUs);

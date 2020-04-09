@@ -3,7 +3,8 @@ import {
     CLEAR_ERRORS,
     LOADING_UI,
     STOP_LOADING_UI,
-    SET_THEME
+    SET_THEME,
+    SEND_MESSAGE
   } from '../types/types';
   
   const initialState = {
@@ -41,6 +42,11 @@ import {
           ...state,
           lightTheme: !state.lightTheme
         }
+      // case SEND_MESSAGE:
+      //   return {
+      //     ...state,
+          
+      //   }
       default:
         return state;
     }
