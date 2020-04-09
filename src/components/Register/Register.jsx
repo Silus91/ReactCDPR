@@ -100,7 +100,7 @@ class Register extends Component {
           />
           <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
           <div className="input-field center-align">
-            <button type="submit" className="btn teal darken-2 ">Register</button>
+            <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Register</button>
           </div>
         </form>
         {loading && (<div className="progress"><div className="indeterminate"></div></div>)}  
