@@ -19,11 +19,13 @@ class Home extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col l7 s12">
-            <Carousel 
-              slides={slides}
-            />
-          </div>
+          <div className="card col l7 s12">
+            <div className="card-content">
+              <Carousel
+                slides={slides}
+              />
+            </div>
+          </div> 
           <div className="col l5 s12">
             <CardTabs 
               configs={configs}
