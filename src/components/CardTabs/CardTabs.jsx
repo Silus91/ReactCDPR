@@ -21,7 +21,7 @@ export class CardTabs extends Component {
 						{this.props.configs.map((config) => {
 							return (
 								<div className="container" id={config.id} key={config.id}>
-									<span className="bodyContainer">{config.body}</span>
+									<p className="">{config.body}</p>
 								</div>
 							)
 						})}

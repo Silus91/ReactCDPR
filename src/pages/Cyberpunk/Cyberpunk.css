@@ -2,18 +2,15 @@
   height: 100%;
   width: 100%;
 }
+
 .first{
-  background-image: url(../../resources/imgs/cyberpunkLogo.jpg);
+  background: linear-gradient(217deg, rgba(255,255,0,.8), rgba(255,240,0,0), rgb(255, 255, 255));
+
 }
 
 .row{
   margin-bottom: 0px;
   z-index: -1;
-}
-
-.wrapper {
-  align-items: center;
-  justify-content: center;
 }
 
 .img{
@@ -28,3 +25,4 @@
 .responsive-img {
   padding: 0;
 }
+

@@ -39,14 +39,15 @@ class CountdownTimer extends Component {
   render() {
     const {days, hours, minutes, seconds} = this.state;
     return (
-      <div>
-        <span>D {this.leadingZero(days)} </span>
-        <span>| H {this.leadingZero(hours)} </span>
-        <span>| M {this.leadingZero(minutes)} </span>
-        <span>| S {this.leadingZero(seconds)}</span>
-      </div>   
+      <>
+        <span >D {this.leadingZero(days)}</span>
+        <span >| H {this.leadingZero(hours)}</span>
+        <span >| M {this.leadingZero(minutes)}</span>
+        <span >| S {this.leadingZero(seconds)}</span>
+      </>   
     )
   }
 }
 
 export default CountdownTimer;
+

@@ -21,7 +21,9 @@ class Witcher extends React.Component {
         <span className="witcherContainer"></span>
         <div className="row">
           <div className="card col l7 s12">
-            <YoutubeVideo videoId='c0i88t0Kacs' />
+            <div className="card-content">
+              <YoutubeVideo videoId='c0i88t0Kacs' />
+            </div>
           </div>
           <div className="col l5 s12">
             <Collaps 

@@ -13,11 +13,11 @@ export class Footer extends Component {
       <footer className="page-footer">
         <div className="container row">
           <div className="col l4 s12">
-            <h4 className="center">About me</h4>
+            <h4 className="center">About Me</h4>
             <Card configs={aboutMe}/>
           </div>
           <div className="col l4 s12">
-            <h4 className="center">Creator</h4>
+            <h4 className="center">Find Me</h4>
             <div className="center">
               <div><SocialButton src={linkedin} href={"https://www.linkedin.com/in/dawid-dyczek-07b193183/"}/></div>
               <div><SocialButton src={githubimg} href={"https://github.com/silus91"}/></div>
