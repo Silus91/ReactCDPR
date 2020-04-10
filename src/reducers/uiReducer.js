@@ -30,7 +30,8 @@ import {
       case LOADING_UI:
         return {
           ...state,
-          loading: true
+          loading: true,
+          errors: null
         };
       case STOP_LOADING_UI:
         return {

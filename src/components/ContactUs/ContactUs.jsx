@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import TextInput from '../TextInput/TextInput';
 import { sendMessage } from '../../actions/uiActions';
-import { Toast } from 'react-materialize';
+import M from "materialize-css";
 
 class ContactUs extends Component {
   constructor(props){
@@ -13,6 +13,10 @@ class ContactUs extends Component {
       message: '',
       errors: {}
     }
+  }
+
+  componentDidMount() {
+    M.AutoInit();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,21 +39,26 @@ class ContactUs extends Component {
       message: this.state.message
     }
     this.props.sendMessage(messageData);
-}
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    })
+  }
 
   render() {
     const { errors } = this.state;
     const { UI:{ loading } } = this.props;
     return (
-      <div>
+      <>
         <form onSubmit={this.handleSubmit}>
-				<TextInput 
+          <TextInput 
             id='name'
             type='text'
             label='Name'
             htmlFor='name'
             icon='account_circle'
-            errors={errors.email ? errors.email : ''}
+            errors={errors.name ? errors.name : ''}
             onChange={this.handleChange}
           />
           <TextInput 
@@ -67,18 +76,17 @@ class ContactUs extends Component {
             htmlFor='message'
             label='Message'
             icon='message'
-            errors={errors.password ? errors.password : ''}
+            errors={errors.message ? errors.message : ''}
             onChange={this.handleChange}
           />
           <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
           <div className="input-field center-align">
-            <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Send</button>
+            <button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
           </div>
-
         </form>
         {loading && (
         <div className="progress"><div className="indeterminate"></div></div>)} 
-      </div>   
+      </>   
     )
   }
 }

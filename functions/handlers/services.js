@@ -1,7 +1,6 @@
 const { db } = require('../utility/admin');
 const nodemailer = require('nodemailer');
-
-
+const { validateNewEmail } = require('../utility/validaters');
 
 exports.sendEmail = async (req,res) => {
 
@@ -11,30 +10,28 @@ exports.sendEmail = async (req,res) => {
     message: req.body.message
   };
 
+  const { valid, errors } = validateNewEmail(newEmail);
+
+  if(!valid) return res.status(400).json(errors);
+  console.log("tutaj kurwa", errors)
+
   const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'georgiana.sporer73@ethereal.email',
-        pass: 'dntDgNAf9qHSzG7sWs'
+      user: 'georgiana.sporer73@ethereal.email',
+      pass: 'dntDgNAf9qHSzG7sWs'
     }
-});
+  });
 
-  // send mail with defined transport object
   let info = await transporter.sendMail({
     from: newEmail.email, 
     to: "georgiana.sporer73@ethereal.email", 
     subject: newEmail.name, 
     text: newEmail.message, 
-    html: "<b>Hello world?</b>"
   });
-  console.log(res);
-
-
-  console.log("Message sent: %s", info.messageId);
-
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  return res.status(201).json({ info });
+  console.log(info);
+  return res.status(201).json({"Message send": info });
 
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
+import M from "materialize-css";
+
 
 class Register extends Component {
   constructor() {
@@ -17,6 +19,11 @@ class Register extends Component {
       photoURL: '1'
     }
   }                  
+
+  componentDidMount() {
+    M.AutoInit();
+  }
+
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {

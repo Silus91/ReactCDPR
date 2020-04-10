@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { loginAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
+import M from "materialize-css";
 
 class Login extends Component {
   constructor(props){
@@ -13,9 +14,14 @@ class Login extends Component {
     }
   }
 
+  componentDidMount() {
+    M.AutoInit();
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({ errors: nextProps.UI.errors });
+      console.log(this.state.errors)
     }
   }
 
@@ -40,15 +46,12 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <TextInput 
-            id='email'
-            type='email'
-            label='Email'
-            htmlFor='email'
-            icon='email'
-            errors={errors.email ? errors.email : ''}
-            onChange={this.handleChange}
-          />
+        <div className="input-field">
+        <i className="material-icons prefix">email</i>
+        <label className="active" htmlFor="email">Email</label>
+        <input type="email" id="email" className="validate" onChange={this.handleChange} />
+        <span className="helper-text red-text center-align">{errors.email ? errors.email : ''}</span>
+      </div>
           <TextInput 
             id='password'
             type='password'

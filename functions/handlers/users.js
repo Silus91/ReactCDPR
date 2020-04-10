@@ -15,7 +15,7 @@ exports.register = (req,res) => {
     handle: `${req.body.firstName}${req.body.lastName}`,
     photoURL: `${req.body.lastName}`
   };
-console.log(newUser)
+  
   const { valid, errors } = validateRegisterData(newUser);
 
   if(!valid) return res.status(400).json(errors);
@@ -81,10 +81,10 @@ exports.login = (req, res) => {
     return res.json({ token });
   })
   .catch((err) => {
-    console.error("tu jest consolelog", err);
+    console.error(err);
       return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
-  return;
+  
 }
 
 // get user details
@@ -124,8 +124,6 @@ exports.getAuthenticatedTrialUser = async (req, res) => {
 
 
 //in progress
-
-
 
   } catch {(err) => {
     console.log("zjebales", err);

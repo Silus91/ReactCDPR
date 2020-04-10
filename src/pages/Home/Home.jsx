@@ -5,7 +5,7 @@ import M from "materialize-css";
 import './Home.css';
 import Carousel  from '../../components/Carousel/Carousel';
 import slides from './slides';
-import Card from '../../components/Card/Card';
+import CardTabs from '../../components/CardTabs/CardTabs';
 import configs from './configs';
 
 class Home extends Component {
@@ -25,7 +25,7 @@ class Home extends Component {
             />
           </div>
           <div className="col l5 s12">
-            <Card 
+            <CardTabs 
               configs={configs}
             />
           </div>

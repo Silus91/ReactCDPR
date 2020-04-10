@@ -21,7 +21,6 @@ exports.validateRegisterData = (data) => {
 
   if (isEmpty(data.password)) errors.password = 'Password cant be empty';
   if (data.password !== data.confirmPassword) errors.confirmPassword = 'Passwords must match';
-  if (isEmpty(data.handle)) errors.handle = 'Nick cant be empty';
   if (isEmpty(data.firstName)) errors.firstName = 'Where is your name';
   if (isEmpty(data.lastName)) errors.lastName = 'Where is your last name';
 
@@ -41,6 +40,24 @@ exports.validateLoginData = (data) => {
   }
   
   if (isEmpty(data.password)) errors.password = 'Password cant be empty';
+
+  return {
+    errors,
+    valid: Object.keys(errors).length === 0 ? true : false
+  };
+};
+
+
+exports.validateNewEmail = (data) => {
+  let errors = {};
+
+  if (isEmpty(data.email)) {
+    errors.email = 'Email cant be empty';
+  } else if (!isEmail(data.email)) {
+    errors.email = 'Must be a valid email address';
+  }
+  if (isEmpty(data.name)) errors.name = 'Name cant be empty';
+  if (isEmpty(data.message)) errors.message = 'Message cant be empty';
 
   return {
     errors,

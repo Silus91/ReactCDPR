@@ -27,7 +27,7 @@ export const loginAction = (userData, history) => (dispatch) => {
   .catch(err => {
     dispatch({
       type: SET_ERRORS,
-      payload: err.response
+      payload: err.response.data
     })
   })
 }
@@ -73,7 +73,7 @@ export const registerAction = (newUserData, history) => (dispatch) => {
   .catch(err => {
     dispatch({
       type: SET_ERRORS,
-      payload: err.response
+      payload: err.res.data
     })
   })
 }
@@ -83,7 +83,7 @@ export const getUserData = () => (dispatch) => {
   axios.get(`${BASE_URL}user`).then((res) => {
     dispatch({
       type: SET_USER,
-      payload: res.data,
+      payload: res.data
     });
   })
 }
