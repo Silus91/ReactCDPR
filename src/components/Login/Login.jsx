@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { loginAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
@@ -77,4 +78,4 @@ const mapStateToProps = (state) => ({
   UI: state.UI
 })
 
-export default connect(mapStateToProps, { loginAction })(Login);
+export default connect(mapStateToProps, { loginAction })(withRouter(Login));

@@ -2,10 +2,11 @@
     font-family: fantasy;
 }
 
-.witcherContainer{
-  width: 80vw;
-  height: 80vw;
-  position: absolute;
+.witcherBackground{
+  width: 70vw;
+  height: 70vw;
+  position: fixed;
+  left: 10%;
   background-image: url(../../resources/imgs/blood1.png);
   background-repeat: no-repeat;
   background-size: cover;

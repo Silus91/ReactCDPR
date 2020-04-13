@@ -13,7 +13,7 @@ exports.register = (req,res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     handle: `${req.body.firstName}${req.body.lastName}`,
-    photoURL: `${req.body.lastName}`
+    photoURL: `https://s3.amazonaws.com/gt7sp-prod/decal/44/41/98/5846245245639984144_1.png`
   };
   
   const { valid, errors } = validateRegisterData(newUser);
@@ -44,6 +44,7 @@ exports.register = (req,res) => {
       firstName: newUser.firstName,
       lastName: newUser.lastName,
       createdAt: new Date().toISOString(),
+      photoURL: "https://s3.amazonaws.com/gt7sp-prod/decal/44/41/98/5846245245639984144_1.png",
       userId
     }
     return db.doc(`/users/${newUser.handle}`).set(userCredentials)
@@ -84,7 +85,6 @@ exports.login = (req, res) => {
     console.error(err);
       return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
-  
 }
 
 // get user details
@@ -110,7 +110,7 @@ exports.getAuthenticatedUser = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      return res.status(500).json({ error: err.code });
+      return res.status(500).json({ error: err.code }); // check czy ma byc 500 czy 404 iles
     });
 };
 

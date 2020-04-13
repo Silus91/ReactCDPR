@@ -26,7 +26,7 @@ class Stock extends Component {
       return res.json();
     })
     .then((data) => {
-      const cutted = data['dataset']['data'].slice(0,100);
+      const cutted = data['dataset']['data'].slice(0,30);
 
       for (var i = 0; i < cutted.length; i++) {
         stockChartValuesXFunction.push(cutted[i][0]);

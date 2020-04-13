@@ -35,6 +35,9 @@ class Home extends Component {
               <Stock />
             </div>
         </div>
+        <div>
+          
+        </div>
       </div>
     )
   }

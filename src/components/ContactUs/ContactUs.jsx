@@ -5,14 +5,12 @@ import { sendMessage } from '../../actions/uiActions';
 import M from "materialize-css";
 
 class ContactUs extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-			name: '',
-      email: '',
-      message: '',
-      errors: {}
-    }
+
+  state = {
+    name: '',
+    email: '',
+    message: '',
+    errors: {}
   }
 
   componentDidMount() {
@@ -44,6 +42,7 @@ class ContactUs extends Component {
       email: '',
       message: ''
     })
+
   }
 
   render() {

@@ -22,12 +22,15 @@ export const loginAction = (userData, history) => (dispatch) => {
     setAuthorizationHeader(res.data.token);
     dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
+    console.log()
     history.push('/');
   })
   .catch(err => {
+    console.log(err);
     dispatch({
       type: SET_ERRORS,
       payload: err.response.data
+    
     })
   })
 }

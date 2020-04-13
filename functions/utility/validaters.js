@@ -47,7 +47,6 @@ exports.validateLoginData = (data) => {
   };
 };
 
-
 exports.validateNewEmail = (data) => {
   let errors = {};
 

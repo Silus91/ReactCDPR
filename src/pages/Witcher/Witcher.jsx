@@ -18,7 +18,7 @@ class Witcher extends React.Component {
   render() {
     return(
       <div className="container">
-        <span className="witcherContainer"></span>
+        <span className="witcherBackground"></span>
         <div className="row">
           <div className="card col l7 s12">
             <div className="card-content">

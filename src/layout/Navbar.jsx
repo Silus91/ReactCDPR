@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
-import cityCar from '../resources/imgs/cityCar.jpg';
 import samurai from '../resources/imgs/samurai.png';
+import silverHand from '../resources/imgs/silverHand.jpg';
 
 class Navbar extends Component {
 
@@ -42,7 +42,7 @@ class Navbar extends Component {
           <li>
             <div className="user-view">
               <div className="background">
-                <img src={cityCar} />
+                <img src={silverHand} />
               </div>
               <a href="#user"><img className="circle" src={authenticated ? credentials.photoURL : samurai} /></a>
               <a href="#name"><span className="white-text name">{authenticated ? credentials.firstName : "Guest"}</span></a>
