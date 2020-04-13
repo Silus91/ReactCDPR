@@ -41,9 +41,9 @@ class CountdownTimer extends Component {
     return (
       <>
         <span >D {this.leadingZero(days)}</span>
-        <span >| H {this.leadingZero(hours)}</span>
-        <span >| M {this.leadingZero(minutes)}</span>
-        <span >| S {this.leadingZero(seconds)}</span>
+        <span > H {this.leadingZero(hours)}</span>
+        <span > M {this.leadingZero(minutes)}</span>
+        <span > S {this.leadingZero(seconds)}</span>
       </>   
     )
   }
