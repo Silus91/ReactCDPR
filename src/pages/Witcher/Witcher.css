@@ -7,7 +7,7 @@
   height: 80vw;
   position: absolute;
   background-image: url(../../resources/imgs/blood1.png);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
   opacity:1;
