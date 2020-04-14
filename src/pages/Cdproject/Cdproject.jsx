@@ -13,9 +13,6 @@ export class Cdproject extends Component {
     M.AutoInit();
   }
 
-
-
-  
   render() {
     return (
       <div>
@@ -35,7 +32,6 @@ export class Cdproject extends Component {
               />
             </div>
           </div> 
-
           </div>
       </div>
     )

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
-import { RadioGroup } from 'react-materialize';
 
 class Stock extends Component {
   constructor(props){
