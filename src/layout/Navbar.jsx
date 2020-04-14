@@ -31,7 +31,8 @@ class Navbar extends Component {
           <div className="nav-wrapper">
             <a href="#" data-target="mobile-demo" className="show-on-small-only sidenav-trigger"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
-              <li><Link to='/'>Cd Project red</Link></li>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/cdproject'>Cd Project red</Link></li>
               <li><Link to='/cyberpunk'>Cyberpunk 2077</Link></li>
               <li><Link to='/witcher'>Witcher</Link></li>
               { authenticated ? authLink : guestLink }
@@ -48,7 +49,8 @@ class Navbar extends Component {
               <a href="#name"><span className="white-text name">{authenticated ? credentials.firstName : "Guest"}</span></a>
             </div>
           </li>
-          <li><Link to='/'>Cd Project red</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/cdproject'>Cd Project red</Link></li>
           <li><Link to='/cyberpunk'>Cyberpunk 2077</Link></li>
           <li><Link to='/witcher'>Witcher</Link></li>
           { authenticated ? authLink : guestLink }

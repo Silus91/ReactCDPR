@@ -16,3 +16,37 @@
 .stock{
     padding: 0px;
 }
+.header{
+    text-align: center;
+    color: #fff;
+    background-image: url(../../resources/imgs/cdproject.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.title{
+    font-size: 5rem;
+    font-family: Cyber2077;
+    color: rgb(255, 255, 0);
+    text-shadow: 2px 2px rgb(0, 255, 255);
+    text-transform: uppercase;
+}
+
+.titleSecond{
+    font-size: 4rem;
+    font-family: Cyber2077;
+    color: rgb(255, 255, 0);
+    text-shadow: 2px 2px rgb(0, 255, 255);
+    text-transform: uppercase;
+}
+
+.headerContent{
+    padding: 200px;
+}
+
+.paragraph{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}

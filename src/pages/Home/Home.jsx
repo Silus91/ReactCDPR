@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Stock from '../../components/Stock/Stock';
 import M from "materialize-css";
 import './Home.css';
-import Carousel  from '../../components/Carousel/Carousel';
-import slides from './slides';
-import CardTabs from '../../components/CardTabs/CardTabs';
-import configs from './configs';
+import { Parallax } from 'react-materialize';
+import cityCar from '../../resources/imgs/cityCarv2.jpg';
+import silverHand from '../../resources/imgs/silverHand.jpg';
+import {creatorInfo, why } from './info';
+import githubimg from '../../resources/imgs/social/githubimg.png';
+import SocialButton from '../../components/SocialButton/SocialButton';
 
 class Home extends Component {
 
@@ -17,27 +18,47 @@ class Home extends Component {
   render() {
     const { user } = this.props;
     return (
-      <div className="container">
-        <div className="row">
-          <div className="card col l7 s12">
-            <div className="card-content">
-              <Carousel
-                slides={slides}
-              />
+      <div className="">
+        <div className="header">
+            <div className="container headerContent">
+              <h1 className="title">Welcome!</h1>
+              <h2 className="titleSecond">CD Project Red Fan Page!</h2>
+              <div>Want to jump to orginal page?? Just Click below!</div>
+              <a className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
+                Redirect
+              </a>
             </div>
-          </div> 
-          <div className="col l5 s12">
-            <CardTabs 
-              configs={configs}
-            />
           </div>
-            <div className=" col l7 s12 stock z-depth-2 hoverable">
-              <Stock />
+          <div className="section white row container">
+            <div className='center'>
+              <h3 className="titleSecond">Info from creator</h3>
+              <p className="paragraph">{creatorInfo}</p>
+              <div><SocialButton src={githubimg} href={"https://github.com/Silus91/ReactCDPR"}/></div>
             </div>
-        </div>
+          </div>
         <div>
-          
+          <Parallax
+            image={<img alt="" src={cityCar} />}
+            options={{
+            responsiveThreshold: 0
+            }}
+          />
+          <div className="section white">
+            <div className="row container">
+              {why}
+            </div>
+          </div>
+          <Parallax
+            image={<img alt="" src={silverHand} />}
+            options={{
+            responsiveThreshold: 0
+            }}
+          />
         </div>
+
+
+
+
       </div>
     )
   }
@@ -51,3 +72,13 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Home);
+
+// <Parallax
+// image={<img alt="" src={silverHand} />}
+// options={{
+// responsiveThreshold: 0
+// }}
+// />
+
+
+// jeden slide na kazda gre i jeden dla opisania stronki i ze to nie jest moje itp.

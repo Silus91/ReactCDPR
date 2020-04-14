@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { loginAction } from '../../actions/authActions';
 import TextInput from '../TextInput/TextInput';
@@ -38,21 +37,25 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }
-    this.props.loginAction(userData, this.props.history)
+    this.props.loginAction(userData)
   }
 
   render() {
+    console.log(this.props)
     const { errors } = this.state;
     const { UI:{ loading } } = this.props;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-        <div className="input-field">
-        <i className="material-icons prefix">email</i>
-        <label className="active" htmlFor="email">Email</label>
-        <input type="email" id="email" className="validate" onChange={this.handleChange} />
-        <span className="helper-text red-text center-align">{errors.email ? errors.email : ''}</span>
-      </div>
+          <TextInput 
+            id='email'
+            type='email'
+            htmlFor='email'
+            label='Email'
+            icon='email'
+            errors={errors.email ? errors.email : ''}
+            onChange={this.handleChange}
+          />
           <TextInput 
             id='password'
             type='password'
@@ -78,4 +81,4 @@ const mapStateToProps = (state) => ({
   UI: state.UI
 })
 
-export default connect(mapStateToProps, { loginAction })(withRouter(Login));
+export default connect(mapStateToProps, { loginAction })(Login);

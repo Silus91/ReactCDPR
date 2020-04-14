@@ -15,7 +15,7 @@ const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
 // const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export const loginAction = (userData, history) => (dispatch) => {
+export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}login`, userData)
   .then((res) => {
@@ -23,7 +23,6 @@ export const loginAction = (userData, history) => (dispatch) => {
     dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
     console.log()
-    history.push('/');
   })
   .catch(err => {
     console.log(err);
@@ -64,14 +63,13 @@ export const loginGoogleAction = () => (dispatch) => {
   dispatch(socialUserAction(provider));
 }
 
-export const registerAction = (newUserData, history) => (dispatch) => {
+export const registerAction = (newUserData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}register`, newUserData)
   .then(res => {
     setAuthorizationHeader(res.data.token);
     dispatch({ type: CLEAR_ERRORS });
     dispatch(getUserData());
-    history.push('/');
   })
   .catch(err => {
     dispatch({

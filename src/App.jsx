@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
+import Auth from './pages/Auth/Auth';
+import Cdproject from './pages/Cdproject/Cdproject';
 import Navbar from './layout/Navbar';
 import Home from './pages/Home/Home';
 import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
@@ -13,7 +15,7 @@ import AuthRoute from './services/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
-import Auth from './pages/Auth/Auth';
+
 
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
@@ -48,6 +50,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/'component={Home} />
+            <Route path='/cdproject' component={Cdproject} />
             <Route path='/cyberpunk' component={Cyberpunk} />
             <Route path='/witcher' component={Witcher} />
             <AuthRoute path='/auth' component={Auth} />
