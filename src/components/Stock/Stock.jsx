@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
+import { RadioGroup } from 'react-materialize';
 
 class Stock extends Component {
   constructor(props){
     super(props);
     this.state = {
       stockChartValuesX: [],
-      stockChartValuesY: []
+      stockChartValuesY: [],
+      radioValue: 30
      }
    }
 
@@ -14,7 +16,33 @@ class Stock extends Component {
     this.fetchStock();
   }
 
+  radioBtn = () => {
+    return(
+      <div className="radioBtn">
+        <p>
+          <label>
+            <input name="group1" type="radio" onChange={this.handleChange} value="30" />
+            <span>30</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" onChange={this.handleChange} value="60" />
+            <span>60</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" onChange={this.handleChange} value="120"  />
+            <span>120</span>
+          </label>
+        </p>  
+    </div>
+    )
+  }
+
   fetchStock() {
+    const { radioValue } = this.state;
     const pointerToThis = this;
     const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
 
@@ -26,7 +54,7 @@ class Stock extends Component {
       return res.json();
     })
     .then((data) => {
-      const cutted = data['dataset']['data'].slice(0,30);
+      const cutted = data['dataset']['data'].slice(0,radioValue);
 
       for (var i = 0; i < cutted.length; i++) {
         stockChartValuesXFunction.push(cutted[i][0]);
@@ -38,6 +66,10 @@ class Stock extends Component {
         stockChartValuesY: stockChartValuesYFunction
       })
     })
+  }
+
+  handleChange = event => {
+    this.setState({radioValue: event.target.value});
   }
 
   render() {
@@ -63,6 +95,7 @@ class Stock extends Component {
             displayModeBar: false
           }}
         />
+        {this.radioBtn()}
       </div>
     )
   }
