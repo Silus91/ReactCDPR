@@ -9,31 +9,31 @@ export const switchTheme = () => (dispatch) => {
 }
 
 export const sendMessage = (messageData) => (dispatch) => {
-    dispatch({ type: LOADING_UI });
-    axios.post(`${BASE_URL}message`, messageData)
-    .then((res) => {
-        console.log("res.data", res.data);
-        dispatch({ type: CLEAR_ERRORS });
+  dispatch({ type: LOADING_UI });
+  axios.post(`${BASE_URL}message`, messageData)
+  .then((res) => {
+    console.log("res.data", res.data);
+    dispatch({ type: CLEAR_ERRORS });
+  })
+  .catch(err => {
+    dispatch({
+      type: SET_ERRORS,
+      payload: err.response.data
     })
-    .catch(err => {
-        dispatch({
-          type: SET_ERRORS,
-          payload: err.response.data
-        })
-      })
+  })
 }
 
 export const sendSurvey = (surveyData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
-  axios.post(`${BASE_URL}survey`, messageData)
+  axios.post(`${BASE_URL}survey`, surveyData)
   .then((res) => {
       console.log("res.data", res.data);
       dispatch({ type: CLEAR_ERRORS });
   })
   .catch(err => {
-      dispatch({
-        type: SET_ERRORS,
-        payload: err.response.data
-      })
+    dispatch({
+      type: SET_ERRORS,
+      payload: err.response.data
     })
+  })
 }

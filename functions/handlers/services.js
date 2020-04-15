@@ -1,6 +1,6 @@
+const { db } = require('../utility/admin');
 const nodemailer = require('nodemailer');
-const { validateNewEmail } = require('../utility/validaters');
-//const db
+const { validateNewEmail, validateNewSurvey } = require('../utility/validaters');
 
 exports.sendEmail = async (req,res) => {
 
@@ -41,12 +41,23 @@ exports.sendEmail = async (req,res) => {
 // Password	dntDgNAf9qHSzG7sWs
 
 exports.sendSurvey = (req,res) => {
-
   const newSurvey = {
     opinion: req.body.opinion,
     rating: req.body.rating,
+    createdAt: new Date().toISOString(),
   };
+  const { valid, errors } = validateNewSurvey(newSurvey);
+  if(!valid) return res.status(400).json(errors);
 
-
-  //validacje mozna zrobic puzniej
-}
+  db.collection('surveys')
+    .add(newSurvey)
+    .then((doc) => {
+      const resSurvey = newSurvey;
+      resSurvey.surveyId = doc.id;
+      res.json(resSurvey);
+    })
+    .catch((err) => {
+      res.status(404).json({ error: 'something went wrong' });
+      console.error(err);
+    });
+  };

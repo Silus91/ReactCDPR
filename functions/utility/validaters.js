@@ -38,7 +38,6 @@ exports.validateLoginData = (data) => {
   } else if (!isEmail(data.email)) {
     errors.email = 'Must be a valid email address';
   }
-  
   if (isEmpty(data.password)) errors.password = 'Password cant be empty';
 
   return {
@@ -58,6 +57,18 @@ exports.validateNewEmail = (data) => {
   if (isEmpty(data.name)) errors.name = 'Name cant be empty';
   if (isEmpty(data.message)) errors.message = 'Message cant be empty';
 
+  return {
+    errors,
+    valid: Object.keys(errors).length === 0 ? true : false
+  };
+};
+
+
+exports.validateNewSurvey = (data) => {
+  let errors = {};
+  if (isEmpty(data.opinion)) errors.opinion = 'Opinion cant be empty';
+  if (data.rating < 1) errors.rating = "Leave some rating please"
+  
   return {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false

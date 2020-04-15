@@ -42,6 +42,8 @@ class ContactUs extends Component {
       email: '',
       message: ''
     })
+    event.target.reset();
+
 
   }
 

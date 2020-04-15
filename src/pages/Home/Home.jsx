@@ -1,4 +1,4 @@
-import React, { Component ,propTypes } from 'react';
+import React, { Component } from 'react';
 import M from "materialize-css";
 import './Home.css';
 import { Parallax } from 'react-materialize';
@@ -8,7 +8,6 @@ import {creatorInfo, why } from './info';
 import githubimg from '../../resources/imgs/social/githubimg.png';
 import SocialButton from '../../components/SocialButton/SocialButton';
 import Survey from '../../components/Survey/Survey';
-
  
 class Home extends Component {
 
@@ -58,15 +57,14 @@ class Home extends Component {
             responsiveThreshold: 0
             }}
           />
-          <div className="section white container">
-            <div className="card">
-              <div className="card-container">
+          <div className="section white row container">
+            <div className="col l6 m6 s12 card">
+              <div className="card-content">
                 <Survey />
               </div>
             </div>
           </div>
         </div>
-
       </div>
     )
   }

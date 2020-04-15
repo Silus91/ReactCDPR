@@ -5,7 +5,6 @@ import ContactUs from '../components/ContactUs/ContactUs';
 import githubimg from '../resources/imgs/social/githubimg.png';
 import linkedin from '../resources/imgs/social/linkedin.png';
 import aboutMe from './aboutMe';
-import Card from '../components/Card/Card';
 
 export class Footer extends Component {
   render() {
@@ -14,7 +13,7 @@ export class Footer extends Component {
         <div className="container row">
           <div className="col l4 s12">
             <h4 className="center">About Me</h4>
-            <Card configs={aboutMe}/>
+            <div>{aboutMe}</div>
           </div>
           <div className="col l4 s12">
             <h4 className="center">Find Me</h4>

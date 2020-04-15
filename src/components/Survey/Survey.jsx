@@ -8,14 +8,21 @@ const values = new Set([1, 2, 3, 4, 5]);
 
 export class Survey extends Component {
 
-	state={
+	state = {
 		opinion: '',
-		rating: 0
+		rating: 0,
+		errors: {}
 	}
 
   componentDidMount() {
     M.AutoInit();
 	}
+
+	componentWillReceiveProps(nextProps) {
+    if (nextProps.UI.errors) {
+      this.setState({ errors: nextProps.UI.errors });
+    }
+  }
 	
 	handleChange = (event) => {
     this.setState({
@@ -34,9 +41,8 @@ export class Survey extends Component {
 			opinion: this.state.opinion,
 			rating: this.state.rating
 		}
-		console.log(surveyData)
 		this.props.sendSurvey(surveyData);
-
+    event.target.reset();
 	}
 
 	renderRadio() {
@@ -51,10 +57,11 @@ export class Survey extends Component {
   }
 
 	render() {
+		const { errors } = this.state;
 		const { UI:{ loading } } = this.props;
 		return (
-			<div>
-				<hi className="titleSecond">Survey</hi>
+			<>
+				<hi className="titleSecond center">Survey</hi>
 				<form onSubmit={this.handleSubmit}>
           <TextInput 
             id='opinion'
@@ -62,14 +69,18 @@ export class Survey extends Component {
             label='Opinion'
             htmlFor='opinion'
             icon='child_care'
-            onChange={this.handleChange}
+						onChange={this.handleChange}
+						errors={errors.opinion ? errors.opinion : ''}
           />
-					{this.renderRadio()}
+					<div className="center">{this.renderRadio()}</div>
+          <span className="helper-text red-text center-align">{errors.rating ? errors.rating : ''}</span>
           <div className="input-field center-align">
             <button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
           </div>
         </form>
-			</div>
+        {loading && (
+        <div className="progress"><div className="indeterminate"></div></div>)} 
+			</>
 		)
 	}
 }

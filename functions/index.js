@@ -9,7 +9,7 @@ app.use(cors({ origin: true }));
 
 // Services 
 app.post('/message', sendEmail);
-app.post('survey', sendSurvey);
+app.post('/survey', sendSurvey);
 
 //Register / login
 app.post('/register', register); 
