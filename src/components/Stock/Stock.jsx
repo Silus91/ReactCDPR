@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
+import'./Stock.css';
+
+const values = new Set([30, 60, 120, 360, 1000]);
+
 
 class Stock extends Component {
   constructor(props){
@@ -7,7 +11,7 @@ class Stock extends Component {
     this.state = {
       stockChartValuesX: [],
       stockChartValuesY: [],
-      radioValue: 30
+      radioValue: 120
      }
    }
 
@@ -15,29 +19,22 @@ class Stock extends Component {
     this.fetchStock();
   }
 
-  radioBtn = () => {
-    return(
-      <div className="radioBtn">
-        <p>
-          <label>
-            <input name="group1" type="radio" onChange={this.handleChange} value="30" />
-            <span>30</span>
-          </label>
-        </p>
-        <p>
-          <label>
-            <input name="group1" type="radio" onChange={this.handleChange} value="60" />
-            <span>60</span>
-          </label>
-        </p>
-        <p>
-          <label>
-            <input name="group1" type="radio" onChange={this.handleChange} value="120"  />
-            <span>120</span>
-          </label>
-        </p>  
-    </div>
-    )
+  componentDidUpdate(prevProps, prevState){
+    if(prevState.radioValue !== this.state.radioValue) {
+      console.log("state changed", this.state.radioValue);
+      return this.fetchStock();
+    }
+  }
+
+  renderRadio() {
+    return Array.from(values).map((value, index) => (
+    <span key={index}>
+      <label>
+        <input name="group1" type="radio" onChange={this.handleChange} value={value} />
+        <span>{value} Days</span>
+      </label>
+    </span>
+    ));
   }
 
   fetchStock() {
@@ -69,9 +66,11 @@ class Stock extends Component {
 
   handleChange = event => {
     this.setState({radioValue: event.target.value});
+    console.log(this.state.radioValue)
   }
 
   render() {
+    const { radioValue } = this.state;
     return (
       <div>
         <Plot
@@ -94,7 +93,9 @@ class Stock extends Component {
             displayModeBar: false
           }}
         />
-        {this.radioBtn()}
+        <div className="radioBtn right">
+          {this.renderRadio()}
+        </div>
       </div>
     )
   }

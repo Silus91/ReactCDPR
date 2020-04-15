@@ -32,7 +32,7 @@ export class Cdproject extends Component {
               />
             </div>
           </div> 
-          </div>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,12 @@
+@font-face {
+  font-family: Witcher;
+  src: url('../../resources/Thewitcher.ttf');
+}
+
 .quote{
-    font-family: fantasy;
+    font-family: Witcher;
+    text-shadow: 1px 0px red;
+
 }
 
 .witcherBackground{

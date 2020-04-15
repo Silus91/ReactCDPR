@@ -25,24 +25,21 @@ class Witcher extends React.Component {
               <YoutubeVideo videoId='c0i88t0Kacs' />
             </div>
           </div>
-          <div className="col l5 s12">
-            <Collaps 
-            colaps={colaps}/>
+          <div className="col l5 s12 quote">
+            <Collaps colaps={colaps} />
           </div> 
-          </div>  
-          <div className="row">
-          <div className="col l4 s12">
-              <QuoteGenerator allQuotes={allQuotes} />
+        </div>  
+        <div className="row">
+          <div className="col l4 s12 quote">
+            <QuoteGenerator allQuotes={allQuotes} />
           </div>
           <div className="card col l8 s12">
             <div className="card-content">
-            <Carousel
-              slides={slides}
-            />
+            <Carousel slides={slides} />
             </div>
           </div> 
-       </div>
         </div>
+      </div>
     );
   }
 };

@@ -20,32 +20,35 @@ class Home extends Component {
     return (
       <div className="">
         <div className="header">
-            <div className="container headerContent">
-              <h1 className="title">Welcome!</h1>
-              <h2 className="titleSecond">CD Project Red Fan Page!</h2>
-              <div>Want to jump to orginal page?? Just Click below!</div>
-              <a className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
-                Redirect
-              </a>
-            </div>
+          <div className="container headerContent">
+            <h1 className="title">Welcome!</h1>
+            <h2 className="titleSecond">CD Project Red <br />Fan Page!</h2>
+            <div>Want to jump to orginal page?? Just Click below!</div>
+            <a className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
+              Redirect
+            </a>
           </div>
-          <div className="section white row container">
-            <div className='center'>
-              <h3 className="titleSecond">Info from creator</h3>
-              <p className="paragraph">{creatorInfo}</p>
-              <div><SocialButton src={githubimg} href={"https://github.com/Silus91/ReactCDPR"}/></div>
-            </div>
+        </div>
+        <div className="section white row container">
+          <div className='center'>
+            <h3 className="titleSecond">Info from creator</h3>
+            <p className="paragraph">{creatorInfo}</p>
+            <SocialButton
+              src={githubimg} 
+              href="https://github.com/Silus91/ReactCDPR"
+            />
           </div>
+        </div>
         <div>
           <Parallax
             image={<img alt="" src={cityCar} />}
             options={{
-            responsiveThreshold: 0
+              responsiveThreshold: 0
             }}
           />
           <div className="section white">
             <div className="row container">
-              {why}
+              <p className="paragraph">{why}</p>
             </div>
           </div>
           <Parallax
@@ -54,6 +57,11 @@ class Home extends Component {
             responsiveThreshold: 0
             }}
           />
+          <div className="section white">
+            <div className="row container">
+              <p className="paragraph">{why}</p>
+            </div>
+          </div>
         </div>
 
 
