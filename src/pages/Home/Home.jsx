@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component ,propTypes } from 'react';
 import M from "materialize-css";
 import './Home.css';
 import { Parallax } from 'react-materialize';
@@ -8,7 +7,9 @@ import silverHand from '../../resources/imgs/silverHand.jpg';
 import {creatorInfo, why } from './info';
 import githubimg from '../../resources/imgs/social/githubimg.png';
 import SocialButton from '../../components/SocialButton/SocialButton';
+import Survey from '../../components/Survey/Survey';
 
+ 
 class Home extends Component {
 
   componentDidMount() {
@@ -57,29 +58,21 @@ class Home extends Component {
             responsiveThreshold: 0
             }}
           />
-          <div className="section white">
-            <div className="row container">
-              <p className="paragraph">{why}</p>
+          <div className="section white container">
+            <div className="card">
+              <div className="card-container">
+                <Survey />
+              </div>
             </div>
           </div>
         </div>
-
-
-
 
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return{
-    user: state.user,
-    lightTheme: state.UI.lightTheme
-  }
-}
-
-export default connect(mapStateToProps)(Home);
+export default Home;
 
 // <Parallax
 // image={<img alt="" src={silverHand} />}

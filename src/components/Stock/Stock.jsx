@@ -4,7 +4,6 @@ import'./Stock.css';
 
 const values = new Set([30, 60, 120, 360, 1000]);
 
-
 class Stock extends Component {
   constructor(props){
     super(props);
@@ -70,7 +69,6 @@ class Stock extends Component {
   }
 
   render() {
-    const { radioValue } = this.state;
     return (
       <div>
         <Plot

@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const { validateNewEmail } = require('../utility/validaters');
+//const db
 
 exports.sendEmail = async (req,res) => {
 
@@ -38,3 +39,14 @@ exports.sendEmail = async (req,res) => {
 // Name	Georgiana Sporer
 // Username	georgiana.sporer73@ethereal.email (also works as a real inbound email address)
 // Password	dntDgNAf9qHSzG7sWs
+
+exports.sendSurvey = (req,res) => {
+
+  const newSurvey = {
+    opinion: req.body.opinion,
+    rating: req.body.rating,
+  };
+
+
+  //validacje mozna zrobic puzniej
+}
