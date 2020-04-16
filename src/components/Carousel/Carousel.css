@@ -28,6 +28,6 @@
 }
 @media only screen and (max-width: 450px) {
   .imgsize {
-    width: 30px;
-    height: 30px;  }
+    width: 30px!important;
+    height: 30px!important;  }
 }

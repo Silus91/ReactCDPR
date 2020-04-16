@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
+import './Navbar.css';
 import samurai from '../resources/imgs/samurai.png';
 import silverHand from '../resources/imgs/silverHand.jpg';
 
@@ -26,8 +27,8 @@ class Navbar extends Component {
     )
 
     return (
-      <div>
-        <nav className="navbar-fixed grey darken-3">
+      <div className="navbar">
+        <nav className="">
           <div className="nav-wrapper">
             <a href="#" data-target="mobile-demo" className="show-on-small-only sidenav-trigger"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">

@@ -1,0 +1,12 @@
+.navbar {
+    position: relative;
+
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+  }
+
+nav{
+    background-color:rgb(80, 80, 80)!important;
+}
