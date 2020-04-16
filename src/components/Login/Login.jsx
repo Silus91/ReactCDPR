@@ -41,7 +41,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { errors } = this.state;
     const { UI:{ loading } } = this.props;
     return (

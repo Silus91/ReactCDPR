@@ -21,7 +21,7 @@ class Cyberpunk extends React.Component {
         </span>
         <div className="row container">
           <div className=" col l12 card">
-            <div className=" card-content cyberText">{config}</div>
+            <div className="card-content cyberText">{config}</div>
           </div>
 
           <div className="col l4 s12 insta center">
@@ -51,7 +51,7 @@ class Cyberpunk extends React.Component {
           </div>
            </div>
           <div className="col l4 s12 center-align flex">
-            <a className="btn-large cyberText red" target="_blank" href="https://www.cyberpunk.net/gb/en/pre-order">
+            <a rel="noopener noreferrer" className="btn-large cyberText red" target="_blank" href="https://www.cyberpunk.net/gb/en/pre-order">
              PREORDER
             </a>             
           </div>

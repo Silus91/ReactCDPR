@@ -56,25 +56,24 @@ export class Survey extends Component {
 		const { UI:{ loading } } = this.props;
 		return (
 			<>
-				<hi className="titleSecond center">Survey</hi>
+				<h1 className="titleSecond center">Survey</h1>
 				<form onSubmit={this.handleSubmit}>
-          <TextInput 
-            id='opinion'
-            type='text'
-            label='Opinion'
-            htmlFor='opinion'
-            icon='child_care'
+					<TextInput 
+						id='opinion'
+						type='text'
+						label='Opinion'
+						htmlFor='opinion'
+						icon='child_care'
 						onChange={this.handleChange}
 						errors={errors.opinion ? errors.opinion : ''}
-          />
+					/>
 					<div className="center">{this.renderRadio()}</div>
-          <span className="helper-text red-text center-align">{errors.rating ? errors.rating : ''}</span>
-          <div className="input-field center-align">
-            <button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
-          </div>
-        </form>
-        {loading && (
-        <div className="progress"><div className="indeterminate"></div></div>)} 
+						<span className="helper-text red-text center-align">{errors.rating ? errors.rating : ''}</span>
+						<div className="input-field center-align">
+							<button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
+						</div>
+					</form>
+				{loading && (<div className="progress"><div className="indeterminate"></div></div>)} 
 			</>
 		)
 	}

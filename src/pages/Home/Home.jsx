@@ -16,15 +16,14 @@ class Home extends Component {
   }
 
   render() {
-    const { user } = this.props;
     return (
       <div className="">
-        <div className="header">
+         <div className="header">
           <div className="container headerContent">
             <h1 className="title">Welcome!</h1>
             <h2 className="titleSecond">CD Project Red <br />Fan Page!</h2>
             <div>Want to jump to orginal page?? Just Click below!</div>
-            <a className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
+            <a rel="noopener noreferrer" className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
               Redirect
             </a>
           </div>
@@ -64,20 +63,10 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     )
   }
 }
 
 export default Home;
-
-// <Parallax
-// image={<img alt="" src={silverHand} />}
-// options={{
-// responsiveThreshold: 0
-// }}
-// />
-
-
-// jeden slide na kazda gre i jeden dla opisania stronki i ze to nie jest moje itp.

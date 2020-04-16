@@ -43,9 +43,9 @@ class Navbar extends Component {
           <li>
             <div className="user-view">
               <div className="background">
-                <img src={silverHand} />
+                <img alt="" src={silverHand} />
               </div>
-              <a href="#user"><img className="circle" src={authenticated ? credentials.photoURL : samurai} /></a>
+              <a href="#user"><img alt="" className="circle" src={authenticated ? credentials.photoURL : samurai} /></a>
               <a href="#name"><span className="white-text name">{authenticated ? credentials.firstName : "Guest"}</span></a>
             </div>
           </li>
