@@ -29,11 +29,6 @@ export class Survey extends Component {
       [event.target.id || event.target.value]: event.target.value
     })
 	}
-// to rozkminij jak zrobic zeby byla jedna funkcja
-	handleChangeRadio = event => {
-    this.setState({rating: event.target.value});
-    console.log(this.state.rating)
-  }
 	
 	handleSubmit = (event) => {
     event.preventDefault();
@@ -49,7 +44,7 @@ export class Survey extends Component {
     return Array.from(values).map((value, index) => (
 			<span key={index}>
 				<label>
-					<input name="group1" type="radio" onChange={this.handleChangeRadio} value={value} />
+					<input name="group1" type="radio" onChange={this.handleChange} value={value} />
 					<span>{value}</span>
 				</label>
 			</span>

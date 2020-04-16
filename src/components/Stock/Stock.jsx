@@ -27,12 +27,12 @@ class Stock extends Component {
 
   renderRadio() {
     return Array.from(values).map((value, index) => (
-    <span key={index}>
-      <label>
-        <input name="group1" type="radio" onChange={this.handleChange} value={value} />
-        <span>{value} Days</span>
-      </label>
-    </span>
+      <span key={index}>
+        <label>
+          <input name="group1" type="radio" onChange={this.handleChange} value={value} />
+          <span>{value} Days</span>
+        </label>
+      </span>
     ));
   }
 
@@ -65,10 +65,10 @@ class Stock extends Component {
 
   handleChange = event => {
     this.setState({radioValue: event.target.value});
-    console.log(this.state.radioValue)
   }
 
   render() {
+    const { radioValue } = this.state;
     return (
       <div>
         <Plot
@@ -91,8 +91,11 @@ class Stock extends Component {
             displayModeBar: false
           }}
         />
-        <div className="radioBtn right">
-          {this.renderRadio()}
+        <div>
+          <span className="red-text left">{`Showing data from ${radioValue} days`}</span>
+          <div className="radioBtn right">
+            {this.renderRadio()}
+          </div>
         </div>
       </div>
     )

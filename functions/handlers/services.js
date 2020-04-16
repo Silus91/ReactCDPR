@@ -13,7 +13,6 @@ exports.sendEmail = async (req,res) => {
   const { valid, errors } = validateNewEmail(newEmail);
 
   if(!valid) return res.status(400).json(errors);
-  console.log("tutaj kurwa", errors)
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
@@ -54,7 +53,7 @@ exports.sendSurvey = (req,res) => {
     .then((doc) => {
       const resSurvey = newSurvey;
       resSurvey.surveyId = doc.id;
-      res.json(resSurvey);
+      res.status(201).json({ 'Survey Send Thank You!' : resSurvey})
     })
     .catch((err) => {
       res.status(404).json({ error: 'something went wrong' });

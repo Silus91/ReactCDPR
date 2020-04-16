@@ -9,7 +9,7 @@ import {
 const initialState = {
   loading: false,
   errors: null,
-  lightTheme:true
+  lightTheme:true,
 };
 
 export default function(state = initialState, action) {

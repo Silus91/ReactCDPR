@@ -1,4 +1,4 @@
-import { SET_THEME,SET_ERRORS, SEND_MESSAGE, LOADING_UI,STOP_LOADING_UI, CLEAR_ERRORS, SEND_SURVEY } from '../types/types';
+import { SET_THEME,SET_ERRORS, SEND_MESSAGE, LOADING_UI, CLEAR_ERRORS, SEND_SURVEY } from '../types/types';
 import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
