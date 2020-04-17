@@ -40,11 +40,13 @@ exports.sendEmail = async (req,res) => {
 // Password	dntDgNAf9qHSzG7sWs
 
 exports.sendSurvey = (req,res) => {
+
   const newSurvey = {
     opinion: req.body.opinion,
     rating: req.body.rating,
     createdAt: new Date().toISOString(),
   };
+  
   const { valid, errors } = validateNewSurvey(newSurvey);
   if(!valid) return res.status(400).json(errors);
 
@@ -53,10 +55,32 @@ exports.sendSurvey = (req,res) => {
     .then((doc) => {
       const resSurvey = newSurvey;
       resSurvey.surveyId = doc.id;
-      res.status(201).json({ 'Survey Send Thank You!' : resSurvey})
+      return res.status(201).json({ 'Survey Send Thank You!' : resSurvey})
     })
     .catch((err) => {
       res.status(404).json({ error: 'something went wrong' });
       console.error(err);
     });
+  };
+
+
+ exports.getAllSurveys = (req,res) => {
+    db.collection('surveys')
+      .get()
+      .then((data) => {
+        let surveys = [];
+        data.forEach((doc) => {
+          surveys.push({
+            surveyId: doc.id,
+            opinion: doc.data().opinion,
+            rating: doc.data().rating,
+            createdAt: doc.data().createdAt,
+          });
+        });
+        return res.json(surveys);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json({ error: err.code });
+      });
   };

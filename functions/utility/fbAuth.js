@@ -25,5 +25,4 @@ module.exports = (req, res, next) => {
     console.error('Error while verifying token', err);
     return res.status(403).json(err);
   })
-  return;
 }

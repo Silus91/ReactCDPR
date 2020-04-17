@@ -39,4 +39,3 @@ export const setAuthorizationHeader = (token) => {
   localStorage.setItem('FBidToken', FBidToken);
   axios.defaults.headers.common['Authorization'] = FBidToken;
 };
-

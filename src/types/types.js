@@ -7,6 +7,6 @@ export const LOADING_USER = 'LOADING_USER';
 export const LOADING_UI = 'LOADING_UI';
 export const LOADING_DATA = 'LOADING_DATA';
 export const STOP_LOADING_UI = 'STOP_LOADING_UI';
-export const SET_THEME = 'SET_THEME';
+export const SET_SURVEYS = 'SET_SURVEYS';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 export const SEND_SURVEY = 'SEND_SURVEY';

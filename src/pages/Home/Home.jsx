@@ -8,17 +8,21 @@ import {creatorInfo, why } from './info';
 import githubimg from '../../resources/imgs/social/githubimg.png';
 import SocialButton from '../../components/SocialButton/SocialButton';
 import Survey from '../../components/Survey/Survey';
- 
+import { getSurveys } from '../../actions/uiActions';
+import { connect } from 'react-redux';
+
 class Home extends Component {
 
   componentDidMount() {
     M.AutoInit();
+    this.props.getSurveys()
   }
 
   render() {
+    const { UI: {loading}, UI: {surveys} } = this.props;
     return (
       <div className="">
-         <div className="header">
+         {/* <div className="header">
           <div className="container headerContent">
             <h1 className="title">Welcome!</h1>
             <h2 className="titleSecond">CD Project Red <br />Fan Page!</h2>
@@ -63,10 +67,14 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div> 
+        </div>  */}
       </div>
     )
   }
 }
 
-export default Home;
+ const mapStateToProps = (state) => ({
+  UI: state.UI
+ })
+
+export default connect(mapStateToProps, { getSurveys })(Home);

@@ -3,17 +3,23 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-  SET_THEME,
+  SET_SURVEYS
 } from '../types/types';
 
 const initialState = {
   loading: false,
   errors: null,
-  lightTheme:true,
+  surveys: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
+    case SET_SURVEYS:
+      return {
+        ...state,
+        surveys: action.payload,
+        loading: false
+      };
     case SET_ERRORS:
       return {
         ...state,
@@ -37,11 +43,6 @@ export default function(state = initialState, action) {
         ...state,
         loading: false
       };
-    case SET_THEME:
-      return {
-        ...state,
-        lightTheme: !state.lightTheme
-      }
     // case SEND_MESSAGE:
     //   return {
     //     ...state,

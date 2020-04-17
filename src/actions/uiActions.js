@@ -1,12 +1,7 @@
-import { SET_THEME,SET_ERRORS, SEND_MESSAGE, LOADING_UI, CLEAR_ERRORS, SEND_SURVEY } from '../types/types';
+import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS,SET_SURVEYS  } from '../types/types';
 import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
-
-
-export const switchTheme = () => (dispatch) => {
-    dispatch({ type: SET_THEME });
-}
 
 export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -37,3 +32,21 @@ export const sendSurvey = (surveyData) => (dispatch) => {
     })
   })
 }
+
+export const getSurveys = () => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios.get(`${BASE_URL}getsurveys`)
+    .then((res) => {
+      console.log(res)
+      dispatch({
+        type: SET_SURVEYS,
+        payload: res.data
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_SURVEYS,
+        payload: []
+      });
+    });
+};

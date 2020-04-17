@@ -26,16 +26,24 @@ export class Survey extends Component {
 	
 	handleChange = (event) => {
     this.setState({
-      [event.target.id || event.target.value]: event.target.value
+      [event.target.id]: event.target.value
     })
-	}
+  }
+  //to kurwa wciaz trzeba naprawic
+  handleRadioChange = event => {
+    console.log(event.target.value)
+    this.setState({
+      rating: event.target.value
+    })
+  }
 	
 	handleSubmit = (event) => {
     event.preventDefault();
 		const surveyData = {
 			opinion: this.state.opinion,
 			rating: this.state.rating
-		}
+    }
+    console.log(surveyData);
 		this.props.sendSurvey(surveyData);
     event.target.reset();
 	}
@@ -44,7 +52,7 @@ export class Survey extends Component {
     return Array.from(values).map((value, index) => (
 			<span key={index}>
 				<label>
-					<input name="group1" type="radio" onChange={this.handleChange} value={value} />
+					<input name="group1" type="radio" onChange={this.handleRadioChange} value={value} />
 					<span>{value}</span>
 				</label>
 			</span>
