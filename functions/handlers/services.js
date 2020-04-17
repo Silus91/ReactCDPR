@@ -66,6 +66,7 @@ exports.sendSurvey = (req,res) => {
 
  exports.getAllSurveys = (req,res) => {
     db.collection('surveys')
+      .orderBy('rating', 'desc')
       .get()
       .then((data) => {
         let surveys = [];

@@ -4,7 +4,7 @@ class QuoteGenerator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quoteIndex: 0
+      quoteIndex: 5
     }
   }
 
@@ -13,17 +13,38 @@ class QuoteGenerator extends Component {
   }  
   
   randomizer() {
-    const trow = Math.floor(Math.random() * Object.keys(this.props.allQuotes).length -1) + 1;
+    const trow = Math.floor(Math.random() * Object.keys(this.props.surveys).length -1) + 1;
     this.setState({ quoteIndex: trow })
   }
   
+  // picker(){
+  //   const { quoteIndex } = this.state;
+  //   if(this.props.allQuotes){
+  //     return(
+  //       <>
+  //         <h5 className="">{this.props.allQuotes[quoteIndex].quote}</h5>
+  //         <span className="">{this.props.allQuotes[quoteIndex].book}</span>
+  //       </>
+  //     )
+  //   }  else {
+  //     return(
+  //       <>
+
+  //       </>
+  //     )
+  //   }
+
+  // }
+
+
+
   render() {
     const { quoteIndex } = this.state;
     return (
       <div className="card">
         <div className="card-content">
-          <h5 className="">{this.props.allQuotes[quoteIndex].quote}</h5>
-          <span className="">{this.props.allQuotes[quoteIndex].book}</span>
+        <h5 className="">{this.props.surveys[quoteIndex].rating}</h5>
+          <span className="">{this.props.surveys[quoteIndex].opinion}</span>        
         </div>
       </div>
     )
