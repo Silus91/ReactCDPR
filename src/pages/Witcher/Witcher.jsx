@@ -31,7 +31,7 @@ class Witcher extends React.Component {
         </div>  
         <div className="row">
           <div className="col l4 s12 quote">
-            {/* <QuoteGenerator allQuotes={allQuotes} /> */}
+            <QuoteGenerator allQuotes={allQuotes} />
           </div>
           <div className="card col l8 s12">
             <div className="card-content">

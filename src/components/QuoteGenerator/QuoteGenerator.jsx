@@ -4,7 +4,7 @@ class QuoteGenerator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quoteIndex: 5
+      quoteIndex: 0
     }
   }
 
@@ -13,38 +13,39 @@ class QuoteGenerator extends Component {
   }  
   
   randomizer() {
-    const trow = Math.floor(Math.random() * Object.keys(this.props.surveys).length -1) + 1;
+    const { surveys, allQuotes } = this.props;
+    const trow = Math.floor(Math.random() * Object.keys(surveys ? surveys : allQuotes).length -1) + 1;
     this.setState({ quoteIndex: trow })
   }
   
-  // picker(){
-  //   const { quoteIndex } = this.state;
-  //   if(this.props.allQuotes){
-  //     return(
-  //       <>
-  //         <h5 className="">{this.props.allQuotes[quoteIndex].quote}</h5>
-  //         <span className="">{this.props.allQuotes[quoteIndex].book}</span>
-  //       </>
-  //     )
-  //   }  else {
-  //     return(
-  //       <>
+  renderGenerator(){
+    const { quoteIndex } = this.state;
+    const { surveys, allQuotes } = this.props;
 
-  //       </>
-  //     )
-  //   }
-
-  // }
-
-
+    if(allQuotes){
+      return(
+        <>
+          <h5 className="">{allQuotes[quoteIndex].quote}</h5>
+          <span className="">{allQuotes[quoteIndex].book}</span>
+        </>
+      )
+    }  else {
+      return(
+        <>
+          <h4 className="quote center">Opinions about that page<br /> Want to add your own?? Scroll bellow.</h4>
+          <h5>{surveys[quoteIndex].opinion}</h5>
+          <img  src={require(`../../resources/imgs/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
+    
+        </>
+      )
+    }
+  }
 
   render() {
-    const { quoteIndex } = this.state;
     return (
       <div className="card">
         <div className="card-content">
-        <h5 className="">{this.props.surveys[quoteIndex].rating}</h5>
-          <span className="">{this.props.surveys[quoteIndex].opinion}</span>        
+          {this.renderGenerator()}
         </div>
       </div>
     )

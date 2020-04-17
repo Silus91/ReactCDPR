@@ -43,7 +43,6 @@ export class Survey extends Component {
 			opinion: this.state.opinion,
 			rating: this.state.rating
     }
-    console.log(surveyData);
 		this.props.sendSurvey(surveyData);
     event.target.reset();
 	}
