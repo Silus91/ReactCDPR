@@ -1,4 +1,4 @@
-import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS, SET_SURVEYS, SEND_SURVEY  } from '../types/types';
+import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS, GET_SURVEYS, SEND_SURVEY  } from '../types/types';
 import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
@@ -42,13 +42,13 @@ export const getSurveys = () => (dispatch) => {
   axios.get(`${BASE_URL}getsurveys`)
     .then((res) => {
       dispatch({
-        type: SET_SURVEYS,
+        type: GET_SURVEYS,
         payload: res.data
       });
     })
     .catch((err) => {
       dispatch({
-        type: SET_SURVEYS,
+        type: GET_SURVEYS,
         payload: []
       });
     });

@@ -110,7 +110,6 @@ class Register extends Component {
             <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Register</button>
           </div>
         </form>
-        {loading && (<div className="progress"><div className="indeterminate"></div></div>)}  
       </div>
     )
   }

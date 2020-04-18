@@ -85,8 +85,6 @@ class ContactUs extends Component {
             <button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
           </div>
         </form>
-        {loading && (
-        <div className="progress"><div className="indeterminate"></div></div>)} 
       </>   
     )
   }

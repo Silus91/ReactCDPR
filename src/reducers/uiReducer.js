@@ -3,8 +3,7 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-  SET_SURVEYS,
-  POST_SURVEY,
+  GET_SURVEYS,
   SEND_SURVEY
 } from '../types/types';
 
@@ -16,7 +15,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case SET_SURVEYS:
+    case GET_SURVEYS:
       return {
         ...state,
         surveys: action.payload,

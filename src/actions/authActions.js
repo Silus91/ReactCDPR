@@ -80,20 +80,23 @@ export const registerAction = (newUserData) => (dispatch) => {
 }
 
 export const getUserData = () => (dispatch) => {
-  dispatch({ type: LOADING_USER });
+  dispatch({ type: LOADING_UI });
   axios.get(`${BASE_URL}user`).then((res) => {
     dispatch({
       type: SET_USER,
       payload: res.data
     });
+    dispatch({ type: CLEAR_ERRORS });
   })
   .catch((err) => console.log(err));
 };
 
 export const logout = () => async (dispatch) => {
+  dispatch({ type: LOADING_UI });
   const result = await axios.post(`${BASE_URL}logout`);
   console.log(result);
   localStorage.removeItem('FBidToken');
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
+  // dispatch({ type: CLEAR_ERRORS });
 }

@@ -17,7 +17,6 @@ import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
 
-
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
 const token = localStorage.getItem("FBidToken");
@@ -48,7 +47,7 @@ class App extends Component {
     return (  
       <Provider store={store}>
         <BrowserRouter>
-        <Loader />
+          <Loader />
           <Navbar />
           <Switch>
             <Route exact path='/'component={Home} />
