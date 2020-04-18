@@ -4,8 +4,8 @@ import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import M from "materialize-css";
 import config from './config';
 import './Cyberpunk.css';
-
 import InstagramEmbed from 'react-instagram-embed';
+import { connect } from 'react-redux';
  
 class Cyberpunk extends React.Component {
 
@@ -61,4 +61,8 @@ class Cyberpunk extends React.Component {
   }
 }
 
-export default Cyberpunk;
+const mapStateToProps = (state) => ({
+  UI: state.UI
+})
+
+export default connect(mapStateToProps)(Cyberpunk);

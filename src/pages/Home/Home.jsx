@@ -24,9 +24,9 @@ class Home extends Component {
     const { UI: {loading}, UI: { surveys }  } = this.props;
     // for now until whole loader will be build
     let surveyje = surveys.length > 0 ? (
-      <QuoteGenerator time={5000}  surveys={surveys} />
+      <QuoteGenerator time={2000}  surveys={surveys} />
     ) : (
-      <div>Loading</div>
+      loading
     );
 
     return (

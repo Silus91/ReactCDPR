@@ -20,7 +20,6 @@ class Stock extends Component {
 
   componentDidUpdate(prevProps, prevState){
     if(prevState.radioValue !== this.state.radioValue) {
-      console.log("state changed", this.state.radioValue);
       return this.fetchStock();
     }
   }

@@ -75,11 +75,11 @@ export class Survey extends Component {
 						errors={errors.opinion ? errors.opinion : ''}
 					/>
 					<div className="center">{this.renderRadio()}</div>
-						<span className="helper-text red-text center-align">{errors.rating ? errors.rating : ''}</span>
-						<div className="input-field center-align">
-							<button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
-						</div>
-					</form>
+					<span className="helper-text red-text center-align">{errors.rating ? errors.rating : ''}</span>
+					<div className="input-field center-align">
+						<button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
+					</div>
+				</form>
 			</>
 		)
 	}
