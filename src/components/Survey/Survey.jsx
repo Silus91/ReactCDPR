@@ -14,49 +14,49 @@ export class Survey extends Component {
 		errors: {}
 	}
 
-  componentDidMount() {
-    M.AutoInit();
+	componentDidMount() {
+		M.AutoInit();
 	}
 
 	componentWillReceiveProps(nextProps) {
-    if (nextProps.UI.errors) {
-      this.setState({ errors: nextProps.UI.errors });
-    }
-  }
+		if (nextProps.UI.errors) {
+			this.setState({ errors: nextProps.UI.errors });
+		}
+	}
 	
 	handleChange = (event) => {
-    this.setState({
-      [event.target.id]: event.target.value
-    })
-  }
-  //to kurwa wciaz trzeba naprawic
-  handleRadioChange = event => {
-    console.log(event.target.value)
-    this.setState({
-      rating: event.target.value
-    })
-  }
+		this.setState({
+			[event.target.id]: event.target.value
+		})
+	}
+	//to kurwa wciaz trzeba naprawic
+	handleRadioChange = event => {
+		console.log(event.target.value)
+		this.setState({
+			rating: event.target.value
+		})
+	}
 	
 	handleSubmit = (event) => {
-    event.preventDefault();
+		event.preventDefault();
 		const surveyData = {
 			opinion: this.state.opinion,
 			rating: this.state.rating
-    }
+		}
 		this.props.sendSurvey(surveyData);
-    event.target.reset();
+		event.target.reset();
 	}
 
 	renderRadio() {
-    return Array.from(values).map((value, index) => (
+		return Array.from(values).map((value, index) => (
 			<span key={index}>
 				<label>
 					<input name="group1" type="radio" onChange={this.handleRadioChange} value={value} />
 					<span>{value}</span>
 				</label>
 			</span>
-    ));
-  }
+		));
+	}
 
 	render() {
 		const { errors } = this.state;
@@ -65,7 +65,7 @@ export class Survey extends Component {
 			<>
 				<h1 className="titleSecond center">Survey</h1>
 				<form onSubmit={this.handleSubmit}>
-					<TextInput 
+					<TextInput
 						id='opinion'
 						type='text'
 						label='Opinion'
@@ -87,7 +87,7 @@ export class Survey extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  UI: state.UI
+	UI: state.UI
 })
 
 export default connect(mapStateToProps, { sendSurvey })(Survey);

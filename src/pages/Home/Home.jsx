@@ -24,7 +24,7 @@ class Home extends Component {
     const { UI: {loading}, UI: { surveys }  } = this.props;
     // for now until whole loader will be build
     let surveyje = surveys.length > 0 ? (
-      <QuoteGenerator  surveys={surveys} />
+      <QuoteGenerator time={5000}  surveys={surveys} />
     ) : (
       <div>Loading</div>
     );
@@ -71,7 +71,9 @@ class Home extends Component {
           />
           <div className="section white">
             <div className="row container">
-              <div className="col l6 m6 s12 offset-l3 center quote">
+              <div className="col l6 m6 s12 offset-l3 center  quote">
+                <h4 className="quote center">Opinions about that page</h4>
+                <h5>Want to add your own?? Scroll bellow.</h5>
                 {surveyje}
               </div>
             </div>

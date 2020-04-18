@@ -6,8 +6,7 @@ import CardTabs from '../../components/CardTabs/CardTabs';
 import configs from './configs';
 import M from "materialize-css";
 
-
-export class Cdproject extends Component {
+class Cdproject extends Component {
 
   componentDidMount() {
     M.AutoInit();
@@ -17,19 +16,15 @@ export class Cdproject extends Component {
     return (
       <div>
         <div className="row">
-        <div className=" col l8 s12 stock z-depth-2 hoverable">
-          <Stock />
+          <div className=" col l8 s12 stock z-depth-2 hoverable">
+            <Stock />
           </div>
           <div className="col l4 s12">
-            <CardTabs 
-              configs={configs}
-            />
+            <CardTabs configs={configs} />
           </div>
           <div className="card col l7 s12">
             <div className="card-content">
-              <Carousel
-                slides={slides}
-              />
+              <Carousel slides={slides} />
             </div>
           </div> 
         </div>

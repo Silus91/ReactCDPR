@@ -9,7 +9,7 @@ class QuoteGenerator extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {this.randomizer()}, 10000);
+    setInterval(() => {this.randomizer()}, this.props.time);
   }  
   
   randomizer() {
@@ -32,10 +32,8 @@ class QuoteGenerator extends Component {
     }  else {
       return(
         <>
-          <h4 className="quote center">Opinions about that page<br /> Want to add your own?? Scroll bellow.</h4>
           <h5>{surveys[quoteIndex].opinion}</h5>
           <img  src={require(`../../resources/imgs/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
-    
         </>
       )
     }
@@ -43,11 +41,9 @@ class QuoteGenerator extends Component {
 
   render() {
     return (
-      <div className="card">
-        <div className="card-content">
-          {this.renderGenerator()}
-        </div>
-      </div>
+      <>
+        {this.renderGenerator()}
+      </>
     )
   }
 }

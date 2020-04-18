@@ -87,7 +87,8 @@ export const getUserData = () => (dispatch) => {
       payload: res.data
     });
   })
-}
+  .catch((err) => console.log(err));
+};
 
 export const logout = () => async (dispatch) => {
   const result = await axios.post(`${BASE_URL}logout`);

@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
 import Footer from './layout/Footer';
+import Loader from './components/Loader/Loader';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './services/AuthRoute';
@@ -47,6 +48,7 @@ class App extends Component {
     return (  
       <Provider store={store}>
         <BrowserRouter>
+        <Loader />
           <Navbar />
           <Switch>
             <Route exact path='/'component={Home} />

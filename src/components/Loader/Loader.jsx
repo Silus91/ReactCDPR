@@ -1,34 +1,25 @@
-import React, { Component } from 'react';
-import './Loader.css';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 
-const isEmpty = (prop) => (
-  prop === null ||
-  prop === undefined ||
-  (prop.hasOwnProperty('length') && prop.length === 0) ||
-  (prop.constructor === Object && Object.keys(prop).length === 0)
-);
 
-const Loader = (loadingProp) => (WrappedComponent) => {
-  return class LoadingHOC extends Component {
-    componentDidMount(){
-      this.startTimer = Date.now();
-    }
-
-    componentWillUpdate(nextProps){
-      if(!isEmpty(nextProps[loadingProp])) {
-        this.endTimer = Date.now();
-      }
-    }
-
-    render() {
-      const myProps = {
-        loadingTime: ((this.endTimer - this.startTimer)/1000).toFixed(2),
-      };
-
-      return isEmpty(this.props[loadingProp]) ? <div className="loader" /> : <WrappedComponent {...this.props} {...myProps}/>;
-    }
+class Loader extends Component {
+  render() {
+    const { UI: { loading }} = this.props;
+    return (
+      <Fragment>
+    { loading ?
+      <>
+        <p>Loading....</p>
+      </>
+      : null}
+      </Fragment>
+    )
   }
 }
 
+const mapStateToProps = (state) => ({
+  UI: state.UI
+ })
 
-export default Loader;
+
+export default connect(mapStateToProps)(Loader);

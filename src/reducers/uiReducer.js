@@ -3,7 +3,9 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
-  SET_SURVEYS
+  SET_SURVEYS,
+  POST_SURVEY,
+  SEND_SURVEY
 } from '../types/types';
 
 const initialState = {
@@ -43,11 +45,11 @@ export default function(state = initialState, action) {
         ...state,
         loading: false
       };
-    // case SEND_MESSAGE:
-    //   return {
-    //     ...state,
-        
-    //   }
+      case SEND_SURVEY:
+        return {
+          ...state,
+          surveys: [action.payload, ...state.surveys]
+        };
     default:
       return state;
   }

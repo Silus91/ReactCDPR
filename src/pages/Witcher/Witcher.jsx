@@ -30,8 +30,10 @@ class Witcher extends React.Component {
           </div> 
         </div>  
         <div className="row">
-          <div className="col l4 s12 quote">
-            <QuoteGenerator allQuotes={allQuotes} />
+          <div className="col l4 s12 quote card">
+            <div className="card-content">
+              <QuoteGenerator time={10000} allQuotes={allQuotes} />
+            </div>
           </div>
           <div className="card col l8 s12">
             <div className="card-content">

@@ -55,7 +55,7 @@ exports.sendSurvey = (req,res) => {
     .then((doc) => {
       const resSurvey = newSurvey;
       resSurvey.surveyId = doc.id;
-      return res.status(201).json({ 'Survey Send Thank You!' : resSurvey})
+      return res.status(201).json({ resSurvey })
     })
     .catch((err) => {
       res.status(404).json({ error: 'something went wrong' });
