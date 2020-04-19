@@ -4,12 +4,7 @@ import { connect } from 'react-redux';
 
 export class ToastSender extends Component {
 
-
-
 //next state next toast trzeba sprawdzic czy ja to potrzebuje
-
-
-
 
   render() {
     const { UI: { toast }} = this.props;
