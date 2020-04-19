@@ -22,7 +22,10 @@ class Home extends Component {
 
   render() {
     const { UI: {loading}, UI: { surveys }  } = this.props;
-    // for now until whole loader will be build
+    // for now until whole loader will be build to moge zrobic wcomponent did mout tez
+    //    if (!this.props.clubs.length) {
+    //  this.props.fetchClubs();
+    //}
     let surveyje = surveys.length > 0 ? (
       <QuoteGenerator time={2000}  surveys={surveys} />
     ) : (

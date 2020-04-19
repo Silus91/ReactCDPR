@@ -10,12 +10,14 @@ import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
 import Footer from './layout/Footer';
 import Loader from './components/Loader/Loader';
+import ToastSender from './components/ToastSender/ToastSender';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './services/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
+import { connect } from 'react-redux';
 
 axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
@@ -47,6 +49,7 @@ class App extends Component {
     return (  
       <Provider store={store}>
         <BrowserRouter>
+          <ToastSender />
           <Loader />
           <Navbar />
           <Switch>
@@ -63,4 +66,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  UI: state.UI
+})
+
+export default connect(mapStateToProps)(App);

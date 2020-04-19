@@ -4,13 +4,16 @@ import {
   LOADING_UI,
   STOP_LOADING_UI,
   GET_SURVEYS,
-  SEND_SURVEY
+  SEND_SURVEY,
+  SHOW_TOAST,
+  REMOVE_TOAST
 } from '../types/types';
 
 const initialState = {
   loading: false,
   errors: null,
-  surveys: []
+  surveys: [],
+  toast: {}
 };
 
 export default function(state = initialState, action) {
@@ -44,11 +47,19 @@ export default function(state = initialState, action) {
         ...state,
         loading: false
       };
-      case SEND_SURVEY:
-        return {
-          ...state,
-          surveys: [action.payload, ...state.surveys]
-        };
+    case SEND_SURVEY:
+      return {
+        ...state,
+        surveys: [action.payload, ...state.surveys]
+      };
+    case SHOW_TOAST:
+      return Object.assign({}, state, {
+        toast: state.toast({
+          toast: action.toast,
+        }),
+      }); 
+    case REMOVE_TOAST:
+      return initialState.toast; 
     default:
       return state;
   }

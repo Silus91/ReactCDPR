@@ -7,3 +7,5 @@ export const STOP_LOADING_UI = 'STOP_LOADING_UI';
 export const GET_SURVEYS = 'GET_SURVEYS';
 export const SEND_MESSAGE = 'SEND_MESSAGE';// do i need this?? 
 export const SEND_SURVEY = 'SEND_SURVEY';
+export const SHOW_TOAST = 'SHOW_TOAST';
+export const REMOVE_TOAST = 'REMOVE_TOAST';

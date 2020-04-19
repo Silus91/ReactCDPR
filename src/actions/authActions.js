@@ -4,7 +4,6 @@ import {
   CLEAR_ERRORS,
   SET_UNAUTH,
   LOADING_UI,
-  LOADING_USER,
 } from '../types/types';
 import axios from 'axios';
 import app from '../resources/Firebase/Firebase';
@@ -98,5 +97,5 @@ export const logout = () => async (dispatch) => {
   localStorage.removeItem('FBidToken');
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
-  // dispatch({ type: CLEAR_ERRORS });
+  dispatch({ type: CLEAR_ERRORS });
 }

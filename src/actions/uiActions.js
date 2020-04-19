@@ -1,4 +1,4 @@
-import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS, GET_SURVEYS, SEND_SURVEY  } from '../types/types';
+import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS, GET_SURVEYS, SEND_SURVEY,REMOVE_TOAST, SHOW_TOAST  } from '../types/types';
 import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
@@ -28,6 +28,7 @@ export const sendSurvey = (surveyData) => (dispatch) => {
       payload: res.data.resSurvey
     });
     dispatch({ type: CLEAR_ERRORS });
+    addToast("Survey send Succesful");
   })
   .catch(err => {
     dispatch({
@@ -53,3 +54,20 @@ export const getSurveys = () => (dispatch) => {
       });
     });
 };
+
+export const addToast = (toast) => {
+  return {
+    type: SHOW_TOAST,
+    payload: toast
+  };
+};
+
+
+export const removeToast = () => {
+  return {
+    type: REMOVE_TOAST,
+  };
+};
+
+
+
