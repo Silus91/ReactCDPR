@@ -1,4 +1,12 @@
-import { SET_ERRORS, LOADING_UI, CLEAR_ERRORS, GET_SURVEYS, SEND_SURVEY,REMOVE_TOAST, SHOW_TOAST  } from '../types/types';
+import { 
+  SET_ERRORS,
+  LOADING_UI, 
+  CLEAR_ERRORS, 
+  GET_SURVEYS, 
+  SEND_SURVEY, 
+  REMOVE_TOAST, 
+  SHOW_TOAST  } 
+  from '../types/types';
 import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
