@@ -83,7 +83,7 @@ exports.login = (req, res) => {
   })
   .catch((err) => {
     console.error(err);
-      return res.status(403).json({ general: "Wrong credentials, please try again" });
+    return res.status(403).json({ general: "Wrong credentials, please try again" });
   });
 }
 
@@ -121,16 +121,12 @@ exports.getAuthenticatedTrialUser = async (req, res) => {
      const userData =  userFSData.data();
      return userData;
     }
-
-
 //in progress
-
   } catch {(err) => {
     console.log("zjebales", err);
     return res.status(500).json({ error: err.code });
   }}
 };
-
 
 exports.logout = (req, res) => {
   firebase.auth().signOut()
@@ -139,7 +135,7 @@ exports.logout = (req, res) => {
     return res.status(200).json({ message: "Succes logout" })
   })
   .catch((err) => {
-      console.error(err);
-        return res.status(400).json({ general: "Wrong credentials, something went wrong" });
-    });
+    console.error(err);
+      return res.status(400).json({ general: "Wrong credentials, something went wrong" });
+  });
 }

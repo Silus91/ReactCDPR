@@ -512,3 +512,62 @@
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-04-20T13:57:43.373Z] [worker-api-8020dad3-5ea0-4ef5-897f-7970dfb8f47a]: IDLE
 [debug] [2020-04-20T13:57:43.373Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-20T20:57:02.882Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-20T20:57:03.883Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-20T20:57:03.883Z] [worker-~diagnostic~-0f580191-d061-43af-b7c6-c747dfea29ed]: FINISHING
+[debug] [2020-04-20T20:57:03.884Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-04-20T20:57:03.884Z] [worker-api-8020dad3-5ea0-4ef5-897f-7970dfb8f47a]: FINISHING
+[debug] [2020-04-20T20:57:03.885Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-04-20T20:57:03.885Z] [worker-api-8ef3cff3-e2c1-4580-8f17-66716e8c7d0a]: FINISHING
+[debug] [2020-04-20T20:57:03.897Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-20T20:57:03.898Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-20T20:57:03.898Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-20T20:57:03.899Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: Assigning socketPath: /tmp/fire_emu_32588.sock
+[debug] [2020-04-20T20:57:03.899Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: BUSY
+[debug] [2020-04-20T20:57:03.906Z] [worker-~diagnostic~-0f580191-d061-43af-b7c6-c747dfea29ed]: exited
+[debug] [2020-04-20T20:57:03.906Z] [worker-~diagnostic~-0f580191-d061-43af-b7c6-c747dfea29ed]: FINISHED
+[debug] [2020-04-20T20:57:03.906Z] [worker-api-8020dad3-5ea0-4ef5-897f-7970dfb8f47a]: exited
+[debug] [2020-04-20T20:57:03.906Z] [worker-api-8020dad3-5ea0-4ef5-897f-7970dfb8f47a]: FINISHED
+[debug] [2020-04-20T20:57:03.907Z] [worker-api-8ef3cff3-e2c1-4580-8f17-66716e8c7d0a]: exited
+[debug] [2020-04-20T20:57:03.907Z] [worker-api-8ef3cff3-e2c1-4580-8f17-66716e8c7d0a]: FINISHED
+[debug] [2020-04-20T20:57:04.095Z] [runtime-status] [32588] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"13.12.0"}
+[debug] [2020-04-20T20:57:04.097Z] [runtime-status] [32588] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-20T20:57:04.098Z] [runtime-status] [32588] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-20T20:57:04.099Z] [runtime-status] [32588] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:04.100Z] [runtime-status] [32588] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:04.470Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: IDLE
+[debug] [2020-04-20T20:57:22.162Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-20T20:57:23.162Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-20T20:57:23.163Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: FINISHING
+[debug] [2020-04-20T20:57:23.163Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-20T20:57:23.163Z] [worker-pool] Cleaned up workers for api: 2 --> 0
+[debug] [2020-04-20T20:57:23.175Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-20T20:57:23.175Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-20T20:57:23.175Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-20T20:57:23.176Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: Assigning socketPath: /tmp/fire_emu_32617.sock
+[debug] [2020-04-20T20:57:23.176Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: BUSY
+[debug] [2020-04-20T20:57:23.178Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: exited
+[debug] [2020-04-20T20:57:23.178Z] [worker-~diagnostic~-6acf6d94-f50c-4689-bf98-3f70a43d562d]: FINISHED
+[debug] [2020-04-20T20:57:23.368Z] [runtime-status] [32617] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"13.12.0"}
+[debug] [2020-04-20T20:57:23.370Z] [runtime-status] [32617] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-20T20:57:23.372Z] [runtime-status] [32617] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-20T20:57:23.373Z] [runtime-status] [32617] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:23.374Z] [runtime-status] [32617] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:23.726Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: IDLE
+[debug] [2020-04-20T20:57:28.718Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers
+[debug] [2020-04-20T20:57:29.719Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-20T20:57:29.719Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: FINISHING
+[debug] [2020-04-20T20:57:29.719Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-20T20:57:29.735Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-20T20:57:29.735Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-20T20:57:29.735Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-20T20:57:29.736Z] [worker-~diagnostic~-cdc51333-60d8-4686-9c00-104f23def590]: Assigning socketPath: /tmp/fire_emu_32640.sock
+[debug] [2020-04-20T20:57:29.736Z] [worker-~diagnostic~-cdc51333-60d8-4686-9c00-104f23def590]: BUSY
+[debug] [2020-04-20T20:57:29.738Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: exited
+[debug] [2020-04-20T20:57:29.738Z] [worker-~diagnostic~-88ea4680-2b3e-4d3c-b7f3-05a2db0cf614]: FINISHED
+[debug] [2020-04-20T20:57:29.924Z] [runtime-status] [32640] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"13.12.0"}
+[debug] [2020-04-20T20:57:29.925Z] [runtime-status] [32640] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-20T20:57:29.927Z] [runtime-status] [32640] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-20T20:57:29.927Z] [runtime-status] [32640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:29.928Z] [runtime-status] [32640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.5.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-20T20:57:30.306Z] [worker-~diagnostic~-cdc51333-60d8-4686-9c00-104f23def590]: IDLE
