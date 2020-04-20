@@ -1,5 +1,11 @@
 import db from '../resources/Firebase/Firestore';
 import axios from 'axios';
+import M from "materialize-css";
+
+export const toastMsg = (msg) => {
+  M.AutoInit();
+  M.toast({html: msg, displayLength: 4000})
+}
 
 export const newSocialUserMap = (res) => {
     const newUser = {

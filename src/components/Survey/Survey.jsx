@@ -29,14 +29,7 @@ export class Survey extends Component {
 			[event.target.id]: event.target.value
 		})
 	}
-	//to kurwa wciaz trzeba naprawic
-	handleRadioChange = event => {
-		console.log(event.target.value)
-		this.setState({
-			rating: event.target.value
-		})
-	}
-	
+
 	handleSubmit = (event) => {
 		event.preventDefault();
 		const surveyData = {
@@ -51,7 +44,7 @@ export class Survey extends Component {
 		return Array.from(values).map((value, index) => (
 			<span key={index}>
 				<label>
-					<input name="group1" type="radio" onChange={this.handleRadioChange} value={value} />
+					<input name="group1" type="radio" id="rating" onChange={this.handleChange} value={value} />
 					<span>{value}</span>
 				</label>
 			</span>

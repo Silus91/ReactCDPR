@@ -19,12 +19,6 @@
   background-image: radial-gradient(rgb(255, 0, 0) 10%, rgba(0, 0, 0, 0) 60%);
 }
 
-.cyberBackground{
-  background-image: url(../../resources/imgs/cyberLogo.png);
-  z-index: -1;
-  background-size: contain;
-}
-
 .headerCyberpunk{
   margin-top: 0px;
   font-family: Cyber2077;

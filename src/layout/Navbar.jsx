@@ -5,7 +5,7 @@ import { logout } from '../actions/authActions';
 import M from "materialize-css";
 import './Navbar.css';
 import samurai from '../resources/imgs/samurai.png';
-import silverHand from '../resources/imgs/silverHand.jpg';
+import silverHand from '../resources/imgs/silverHandMini.jpg';
 
 class Navbar extends Component {
 

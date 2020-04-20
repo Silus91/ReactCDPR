@@ -16,10 +16,10 @@ class Cdproject extends Component {
     return (
       <div>
         <div className="row">
-          <div className=" col l8 s12 stock z-depth-2 hoverable">
+          <div className=" col l12 stock z-depth-2 hoverable">
             <Stock />
           </div>
-          <div className="col l4 s12">
+          <div className="col l5 s12">
             <CardTabs configs={configs} />
           </div>
           <div className="card col l7 s12">

@@ -8,6 +8,7 @@ import {
 import axios from 'axios';
 import app from '../resources/Firebase/Firebase';
 import {newSocialUserMap, saveNewUser, setAuthorizationHeader } from '../services/Service';
+import { toastMsg } from '../services/Service'
 
 const firebase = require('firebase');
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
@@ -21,7 +22,7 @@ export const loginAction = (userData) => (dispatch) => {
     setAuthorizationHeader(res.data.token);
     dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
-    console.log()
+    toastMsg('Login Succesful!');
   })
   .catch(err => {
     console.log(err);
@@ -42,6 +43,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
     setAuthorizationHeader(recivedToken);
     await dispatch(getUserData());
     dispatch({ type: CLEAR_ERRORS });
+    toastMsg('Login Succesful!')
   } catch (error) {
       dispatch({
         type: SET_ERRORS,
@@ -69,6 +71,7 @@ export const registerAction = (newUserData) => (dispatch) => {
     setAuthorizationHeader(res.data.token);
     dispatch({ type: CLEAR_ERRORS });
     dispatch(getUserData());
+    toastMsg('Register Succesful!')
   })
   .catch(err => {
     dispatch({
@@ -93,9 +96,10 @@ export const getUserData = () => (dispatch) => {
 export const logout = () => async (dispatch) => {
   dispatch({ type: LOADING_UI });
   const result = await axios.post(`${BASE_URL}logout`);
-  console.log(result);
   localStorage.removeItem('FBidToken');
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
   dispatch({ type: CLEAR_ERRORS });
+  toastMsg('Logout Succesful!')
+  toastMsg('Please Comeback one day!')
 }

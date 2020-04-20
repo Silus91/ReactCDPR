@@ -3,11 +3,10 @@ import {
   LOADING_UI, 
   CLEAR_ERRORS, 
   GET_SURVEYS, 
-  SEND_SURVEY, 
-  REMOVE_TOAST, 
-  SHOW_TOAST  } 
+  SEND_SURVEY } 
   from '../types/types';
 import axios from 'axios';
+import { toastMsg } from '../services/Service'
 
 const BASE_URL = 'http://localhost:5000/cdred-project/us-central1/api/';
 
@@ -17,6 +16,7 @@ export const sendMessage = (messageData) => (dispatch) => {
   .then((res) => {
     console.log("res.data", res.data);
     dispatch({ type: CLEAR_ERRORS });
+    toastMsg('Message send Succesfuly!')
   })
   .catch(err => {
     dispatch({
@@ -36,7 +36,7 @@ export const sendSurvey = (surveyData) => (dispatch) => {
       payload: res.data.resSurvey
     });
     dispatch({ type: CLEAR_ERRORS });
-    addToast("Survey send Succesful");
+    toastMsg('Survey send Succesfuly!')
   })
   .catch(err => {
     dispatch({
@@ -62,20 +62,4 @@ export const getSurveys = () => (dispatch) => {
       });
     });
 };
-
-export const addToast = (toast) => {
-  return {
-    type: SHOW_TOAST,
-    payload: toast
-  };
-};
-
-
-export const removeToast = () => {
-  return {
-    type: REMOVE_TOAST,
-  };
-};
-
-
 

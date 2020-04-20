@@ -32,8 +32,8 @@ class QuoteGenerator extends Component {
     }  else {
       return(
         <>
-          <h5>{surveys[quoteIndex].opinion}</h5>
-          <img  src={require(`../../resources/imgs/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
+          <p>{surveys[quoteIndex].opinion}</p>
+          <img  src={require(`../../resources/imgs/star/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
         </>
       )
     }

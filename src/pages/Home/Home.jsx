@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import M from "materialize-css";
 import './Home.css';
 import { Parallax } from 'react-materialize';
-import cityCar from '../../resources/imgs/cityCarv2.jpg';
+import startImg from '../../resources/imgs/startImg.jpg';
 import silverHand from '../../resources/imgs/silverHand.jpg';
 import swords from '../../resources/imgs/carousel/swords.jpg';
 import {creatorInfo, why } from './info';
@@ -22,16 +22,7 @@ class Home extends Component {
 
   render() {
     const { UI: {loading}, UI: { surveys }  } = this.props;
-    // for now until whole loader will be build to moge zrobic wcomponent did mout tez
-    //    if (!this.props.clubs.length) {
-    //  this.props.fetchClubs();
-    //}
-    let surveyje = surveys.length > 0 ? (
-      <QuoteGenerator time={2000}  surveys={surveys} />
-    ) : (
-      loading
-    );
-
+ 
     return (
       <div className="">
           <div className="header">
@@ -56,13 +47,16 @@ class Home extends Component {
         </div>
         <div>
           <Parallax
-            image={<img alt="" src={cityCar} />}
+            image={<img alt="" src={startImg} />}
             options={{
               responsiveThreshold: 0
             }}
+            style={{height: "700px"}}
           />
           <div className="section white">
-            <div className="row container">
+            <div className="row container center quote">
+              <h4>Big Games</h4>
+
               <p className="paragraph">{why}</p>
             </div>
           </div>
@@ -75,9 +69,14 @@ class Home extends Component {
           <div className="section white">
             <div className="row container">
               <div className="col l6 m6 s12 offset-l3 center  quote">
-                <h4 className="quote center">Opinions about that page</h4>
+                <h4>Opinions about that page</h4>
                 <h5>Want to add your own?? Scroll bellow.</h5>
-                {surveyje}
+                <div className="survey">
+                  {surveys.length > 0 ? (
+                    <QuoteGenerator time={2000}  surveys={surveys} />
+                      ) : (
+                    loading)}
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import Auth from './pages/Auth/Auth';
@@ -10,7 +9,6 @@ import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
 import Footer from './layout/Footer';
 import Loader from './components/Loader/Loader';
-import ToastSender from './components/ToastSender/ToastSender';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './services/AuthRoute';
@@ -47,21 +45,18 @@ console.error(error);
 class App extends Component {
   render() {
     return (  
-      <Provider store={store}>
-        <BrowserRouter>
-          <ToastSender />
-          <Loader />
-          <Navbar />
-          <Switch>
-            <Route exact path='/'component={Home} />
-            <Route path='/cdproject' component={Cdproject} />
-            <Route path='/cyberpunk' component={Cyberpunk} />
-            <Route path='/witcher' component={Witcher} />
-            <AuthRoute path='/auth' component={Auth} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-      </Provider>
+      <BrowserRouter>
+        <Loader />
+        <Navbar />
+        <Switch>
+          <Route exact path='/'component={Home} />
+          <Route path='/cdproject' component={Cdproject} />
+          <Route path='/cyberpunk' component={Cyberpunk} />
+          <Route path='/witcher' component={Witcher} />
+          <AuthRoute path='/auth' component={Auth} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     );
   }
 }

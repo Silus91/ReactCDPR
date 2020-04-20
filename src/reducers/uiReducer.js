@@ -5,15 +5,12 @@ import {
   STOP_LOADING_UI,
   GET_SURVEYS,
   SEND_SURVEY,
-  SHOW_TOAST,
-  REMOVE_TOAST
 } from '../types/types';
 
 const initialState = {
   loading: false,
   errors: null,
   surveys: [],
-  toast: {}
 };
 
 export default function(state = initialState, action) {
@@ -52,14 +49,6 @@ export default function(state = initialState, action) {
         ...state,
         surveys: [action.payload, ...state.surveys]
       };
-    case SHOW_TOAST:
-      return Object.assign({}, state, {
-        toast: state.toast({
-          toast: action.toast,
-        }),
-      }); 
-    case REMOVE_TOAST:
-      return initialState.toast; 
     default:
       return state;
   }

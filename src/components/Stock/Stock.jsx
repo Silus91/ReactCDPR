@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
 import'./Stock.css';
+import { connect } from 'react-redux';
 
 const values = new Set([30, 60, 120, 360, 1000]);
 
@@ -29,7 +30,7 @@ class Stock extends Component {
       <span key={index}>
         <label>
           <input name="group1" type="radio" onChange={this.handleChange} value={value} />
-          <span>{value} Days</span>
+          <span className="radioValue">{value} Days</span>
         </label>
       </span>
     ));
@@ -43,7 +44,9 @@ class Stock extends Component {
     let stockChartValuesXFunction = [];
     let stockChartValuesYFunction = [];
 
-    fetch(API_CDR)
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+    fetch(proxyurl + API_CDR)
     .then((res) => {
       return res.json();
     })
@@ -86,7 +89,7 @@ class Stock extends Component {
           useResizeHandler={true}
           style={{width: "100%", height: "100%"}}
           config={{
-            // staticPlot: true on mobile it should be true need some info how it should be on mobile on
+             staticPlot: true,
             displayModeBar: false
           }}
         />
@@ -101,4 +104,8 @@ class Stock extends Component {
   }
 }
 
-export default Stock;
+const mapStateToProps = (state) => ({
+  UI: state.UI
+ })
+
+export default connect(mapStateToProps)(Stock);
