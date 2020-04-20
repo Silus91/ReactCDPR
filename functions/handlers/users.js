@@ -12,7 +12,7 @@ exports.register = (req,res) => {
     confirmPassword: req.body.confirmPassword,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    handle: `${req.body.firstName}${req.body.lastName}`,
+    handle: req.body.email,
     photoURL: `https://s3.amazonaws.com/gt7sp-prod/decal/44/41/98/5846245245639984144_1.png`
   };
   
@@ -39,7 +39,7 @@ exports.register = (req,res) => {
     token = idToken;
     console.log("token", token);
     const userCredentials = {
-      handle: newUser.handle,
+      handle: newUser.email,
       email: newUser.email,
       firstName: newUser.firstName,
       lastName: newUser.lastName,

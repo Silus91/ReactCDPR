@@ -25,7 +25,7 @@ export const loginAction = (userData) => (dispatch) => {
     toastMsg('Login Succesful!');
   })
   .catch(err => {
-    console.log(err);
+    toastMsg('Error please try Again')
     dispatch({
       type: SET_ERRORS,
       payload: err.response.data
@@ -45,6 +45,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
     dispatch({ type: CLEAR_ERRORS });
     toastMsg('Login Succesful!')
   } catch (error) {
+    toastMsg('Error please try Again')
       dispatch({
         type: SET_ERRORS,
         payload: error.response
@@ -74,6 +75,7 @@ export const registerAction = (newUserData) => (dispatch) => {
     toastMsg('Register Succesful!')
   })
   .catch(err => {
+    toastMsg('Error please try Again')
     dispatch({
       type: SET_ERRORS,
       payload: err.res.data

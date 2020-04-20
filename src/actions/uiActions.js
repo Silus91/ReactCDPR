@@ -14,11 +14,11 @@ export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}message`, messageData)
   .then((res) => {
-    console.log("res.data", res.data);
     dispatch({ type: CLEAR_ERRORS });
     toastMsg('Message send Succesfuly!')
   })
-  .catch(err => {
+  .catch(err => {   
+     toastMsg('Error please refresh')
     dispatch({
       type: SET_ERRORS,
       payload: err.response.data
@@ -30,7 +30,6 @@ export const sendSurvey = (surveyData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios.post(`${BASE_URL}survey`, surveyData)
   .then((res) => {
-    console.log(res)
     dispatch({
       type: SEND_SURVEY,
       payload: res.data.resSurvey
@@ -39,6 +38,7 @@ export const sendSurvey = (surveyData) => (dispatch) => {
     toastMsg('Survey send Succesfuly!')
   })
   .catch(err => {
+    toastMsg('Error please refresh')
     dispatch({
       type: SET_ERRORS,
       payload: err.response.data
@@ -56,6 +56,7 @@ export const getSurveys = () => (dispatch) => {
       });
     })
     .catch((err) => {
+      toastMsg('Error please refresh')
       dispatch({
         type: GET_SURVEYS,
         payload: []
