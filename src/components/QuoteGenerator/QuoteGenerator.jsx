@@ -10,7 +10,7 @@ class QuoteGenerator extends Component {
 
   componentDidMount() {
     setInterval(() => {this.randomizer()}, this.props.time);
-  }  
+  }
   
   randomizer() {
     const { surveys, allQuotes } = this.props;
@@ -33,7 +33,7 @@ class QuoteGenerator extends Component {
       return(
         <>
           <p>{surveys[quoteIndex].opinion}</p>
-          <img  src={require(`../../resources/imgs/star/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
+          <img alt=""  src={require(`../../resources/imgs/star/${surveys[quoteIndex].rating}Stars.png`)} className="img-size" />
         </>
       )
     }

@@ -15,11 +15,12 @@ import AuthRoute from './services/AuthRoute';
 import store from './store/root';
 import axios from 'axios';
 import { getUserData, logout } from './actions/authActions';
-import { connect } from 'react-redux';
-
-axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
 
 const token = localStorage.getItem("FBidToken");
+
+if(token) {
+  axios.create().get('http://localhost:5000/cdred-project/us-central1/api/user');
+}
 
 if (token) {
   const decodedToken = jwtDecode(token);
@@ -30,11 +31,8 @@ if (token) {
     axios.defaults.headers.common['Authorization'] = token;
     store.dispatch(getUserData());
   }
-} else {
-  console.log("guest");
 }
 
-// Add a response interceptor
 axios.create().interceptors.response.use(
   response => {
   return response;
@@ -61,8 +59,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  UI: state.UI
-})
-
-export default connect(mapStateToProps)(App);
+export default App;

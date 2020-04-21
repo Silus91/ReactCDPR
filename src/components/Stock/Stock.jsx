@@ -48,6 +48,7 @@ class Stock extends Component {
 
     fetch(proxyurl + API_CDR)
     .then((res) => {
+      console.log("res", res)
       return res.json();
     })
     .then((data) => {

@@ -24,7 +24,7 @@ exports.register = (req,res) => {
   db.doc(`/users/${newUser.handle}`).get()
   .then((doc) => {
     if(doc.exists) {
-      return res.status(400).json({ handle: "this handle is taken"});
+      return res.status(400).json({ email: "this email is taken"});
     } else {
       return firebase.auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
@@ -32,7 +32,6 @@ exports.register = (req,res) => {
   })
   .then((data) => {
     userId = data.user.uid;
-    console.log("userId", userId)
     return data.user.getIdToken() 
   })
   .then((idToken) => {
@@ -91,47 +90,23 @@ exports.login = (req, res) => {
 exports.getAuthenticatedUser = (req, res) => {
   let userData = {};
   db.doc(`/users/${req.user.handle}`)
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        userData.credentials = doc.data();
-        return db
-          .collection('posts')
-          .where('userHandle', '==', req.user.handle)
-          .get();
-      }
-      return;
-    })
-    .then((data) => {
-      data.forEach((doc) => {
-        userData.push(doc.data());
-      });
-      return res.json(userData);
-    })
-    .catch((err) => {
-      console.error(err);
-      return res.status(500).json({ error: err.code }); // check czy ma byc 500 czy 404 iles
-    });
-};
-
-exports.getAuthenticatedTrialUser = async (req, res) => {
-  try{
-    const userFSData = await db.doc(`/users/${req.user.handle}`).get()
-    if (userFSData.exists) {
-     const userData =  userFSData.data();
-     return userData;
+  .get()
+  .then((doc) => {
+    if (!doc.exists) {
+      return res.status(404).json({ error: 'User not found' });
     }
-//in progress
-  } catch {(err) => {
-    console.log("zjebales", err);
-    return res.status(500).json({ error: err.code });
-  }}
+    userData.credentials = doc.data();
+    return res.json(userData);
+  })
+  .catch((err) => {
+    console.error(err);
+    return res.status(404).json({ error: err.code });
+  });
 };
 
 exports.logout = (req, res) => {
   firebase.auth().signOut()
   .then(() => {
-    console.log("ddoszlo?")
     return res.status(200).json({ message: "Succes logout" })
   })
   .catch((err) => {

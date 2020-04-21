@@ -63,25 +63,36 @@ exports.sendSurvey = (req,res) => {
     });
   };
 
-
- exports.getAllSurveys = (req,res) => {
-    db.collection('surveys')
-      .orderBy('rating', 'desc')
-      .get()
-      .then((data) => {
-        let surveys = [];
-        data.forEach((doc) => {
-          surveys.push({
-            surveyId: doc.id,
-            opinion: doc.data().opinion,
-            rating: doc.data().rating,
-            createdAt: doc.data().createdAt,
-          });
+exports.getAllSurveys = (req,res) => {
+  let surveys = [];
+  db.collection('surveys')
+    .orderBy('rating', 'desc')
+    .get()
+    .then((data) => {
+      data.forEach((doc) => {
+        surveys.push({
+          surveyId: doc.id,
+          opinion: doc.data().opinion,
+          rating: doc.data().rating,
+          createdAt: doc.data().createdAt,
         });
-        return res.json(surveys);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).json({ error: err.code });
       });
+      // this.getStock();
+      return res.json(surveys);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: err.code });
+    });
   };
+
+  // exports.getStock = (req,res) => {
+  //   fetch("https://www.quandl.com/api/v3/datasets/WSE/CDPROJEKT.json?api_zNgTC_7X5LR2r5tdGNLU")
+  //   .then((res) => {
+  //     console.log("res", res)
+  //     return res.json();
+  //   })
+  // }
+
+
+  
