@@ -41,7 +41,7 @@ class Cyberpunk extends React.Component {
           </div>
           <div className="card col l8 s12">
             <div className="card-content">
-              <YoutubeVideo videoId='LembwKDo1Dk' />
+              {<YoutubeVideo videoId='LembwKDo1Dk' /> ? <YoutubeVideo videoId='LembwKDo1Dk' /> : loading }
             </div>
           </div>
           <div className="col l4 s12">

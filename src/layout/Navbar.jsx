@@ -17,6 +17,7 @@ class Navbar extends Component {
     const { authenticated, credentials } = this.props.user;
     const authLink = (
       <Fragment>
+        <li><Link to='/profile'>Profile</Link></li>
         <li><a onClick={() => this.props.logout()}>Log out</a></li>
       </Fragment>
     )

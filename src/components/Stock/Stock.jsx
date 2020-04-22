@@ -25,6 +25,10 @@ class Stock extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.fetchStock();
+  }
+
   renderRadio() {
     return Array.from(values).map((value, index) => (
       <span key={index}>

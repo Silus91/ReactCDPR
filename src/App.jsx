@@ -9,6 +9,7 @@ import Cyberpunk from './pages/Cyberpunk/Cyberpunk';
 import Witcher from './pages/Witcher/Witcher';
 import Footer from './layout/Footer';
 import Loader from './components/Loader/Loader';
+import Profile from './pages/Profile/Profile';
 import './App.css';
 import jwtDecode from 'jwt-decode';
 import AuthRoute from './services/AuthRoute';
@@ -51,9 +52,10 @@ class App extends Component {
           <Route path='/cdproject' component={Cdproject} />
           <Route path='/cyberpunk' component={Cyberpunk} />
           <Route path='/witcher' component={Witcher} />
+          <Route path='/profile' component={Profile} />
           <AuthRoute path='/auth' component={Auth} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     );
   }

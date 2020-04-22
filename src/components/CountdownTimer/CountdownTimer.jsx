@@ -11,12 +11,13 @@ class CountdownTimer extends Component {
     }
   }
 
-  componentWillMount (){
+  componentDidMount() {
     this.getTimeUntil();
+    this.interval = setInterval(() => this.getTimeUntil());
   }
 
-  componentDidMount() {
-    setInterval(() => this.getTimeUntil());
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
   
   leadingZero = (num) => {

@@ -4,7 +4,7 @@ import CarouselSlide from './CarouselSlide';
 
 class Carousel extends Component {
 
-  carouselIndicator() {
+  componentDidMount() {
     document.addEventListener('DOMContentLoaded', function() {
       const elems = document.getElementById('carousel');
       const instances = M.Carousel.init(elems,{
@@ -12,9 +12,6 @@ class Carousel extends Component {
         fullWidth: true,
       });   
     }) 
-  }
-  componentDidMount() {
-    this.carouselIndicator();
   }
 
   startInterval() {
@@ -30,8 +27,18 @@ class Carousel extends Component {
   render() {
     return (
       <div>
-        <a className="btn-floating btn-medium teal right" onClick={() => {this.startInterval()}}><i class="material-icons small">all_inclusive</i></a>
-        <a className="btn-floating btn-medium red right" onClick={() => {this.stopInterval()}}><i class="material-icons small">block</i></a>
+        <a 
+          className="btn-floating btn-medium teal right" 
+          onClick={() => {this.startInterval()}}
+        >
+          <i className="material-icons small">all_inclusive</i>
+        </a>
+        <a
+          className="btn-floating btn-medium red right"
+          onClick={() => {this.stopInterval()}}
+        >
+          <i className="material-icons small">block</i>
+        </a>
         <div id="carousel" className="carousel carousel-slider center">
           {this.props.slides.map((slide) => {
             return <CarouselSlide slide={slide} key={slide.id}  />

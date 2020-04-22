@@ -9,7 +9,11 @@ class QuoteGenerator extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {this.randomizer()}, this.props.time);
+    this.interval = setInterval(() => {this.randomizer()}, this.props.time);
+  }
+  
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
   
   randomizer() {
