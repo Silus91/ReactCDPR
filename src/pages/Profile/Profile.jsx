@@ -4,7 +4,6 @@ import { Redirect } from "react-router-dom";
 
 export class Profile extends Component {
 
-
   renderRedirect = () => {
     if (!this.props.user.authenticated) {
       return <Redirect to='/' />
@@ -38,8 +37,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(Profile);
-
-
-
-
-
