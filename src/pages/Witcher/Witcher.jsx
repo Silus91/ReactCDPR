@@ -2,7 +2,7 @@ import React from 'react';
 import YoutubeVideo from '../../components/YoutubeVideo/YoutubeVideo';
 import './Witcher.css';
 import QuoteGenerator from '../../components/QuoteGenerator/QuoteGenerator';
-import Carousel  from '../../components/Carousel/Carousel';
+import Carousel from '../../components/Carousel/Carousel';
 import Collaps from './../../components/Collaps/Collaps';
 import M from "materialize-css";
 import allQuotes from './allQuotes';

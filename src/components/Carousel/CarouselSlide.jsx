@@ -5,7 +5,7 @@ class CarouselSlide extends Component {
   
   render() {
     return (
-      <div className="carousel-item">
+      <div className="carousel-item" >
         <img src={this.props.slide.img} className="responsive-img" alt="" />
         {this.props.slide.facebookUrl ? 
           <div>
@@ -32,14 +32,3 @@ class CarouselSlide extends Component {
 }
 
 export default CarouselSlide;
-
-// socialBtn = (social) => {
-//   const { Url, Img } = this.props;
-//   if(social) {
-//     return(
-//       <a href={this.props.slide.social}  target="_blank">
-//         <img src={this.props.slide.social} className="imgsize" alt="" />
-//       </a>
-//     )
-//   } else return null;
-// }

@@ -14,6 +14,7 @@ class Cyberpunk extends React.Component {
   }
 
   render(){
+    const { UI: { loading }} = this.props;
     return(
       <div className="center cyberpunkContainer">
         <span>

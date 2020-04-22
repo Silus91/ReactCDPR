@@ -40,10 +40,8 @@ class Stock extends Component {
     const { radioValue } = this.state;
     const pointerToThis = this;
     const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
-
     let stockChartValuesXFunction = [];
     let stockChartValuesYFunction = [];
-
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     fetch(proxyurl + API_CDR)

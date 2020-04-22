@@ -20,15 +20,32 @@
 }
 
 .headerCyberpunk{
+  position: relative;
   margin-top: 0px;
   font-family: Cyber2077;
-  font-size: 8vw;
+  font-size: 5rem;
   color: rgb(255, 255, 0);
   text-shadow: 2px 2px rgb(0, 255, 255);
 }
 
+.headerCyberpunk::after{
+  content: "2077";
+  font-size: 2rem;
+  position: absolute;
+  left: 57%;
+  top: 57%;
+  color: cyan;
+  text-shadow: 1px 1px grey;
+}
+
+@media only screen and (max-width: 470px) {
+  .headerCyberpunk {
+    font-size: 4rem;
+  }
+}
+
 .header2077{
-  font-size: 6vw;
+  font-size: 4rem;
   position: relative;
   left:20%;
   color:rgb(0, 255, 255);
@@ -43,7 +60,7 @@ iframe{
   font-family: Cyber2077;
   color: yellow!important;
   text-shadow: 2px 2px cyan;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 .row{
