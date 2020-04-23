@@ -105,3 +105,37 @@ export const logout = () => async (dispatch) => {
   toastMsg('Logout Succesful!')
   toastMsg('Please Comeback one day!')
 }
+
+export const uploadUserImg = (formData) => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios
+  .post(`${BASE_URL}userimage`, formData)
+  // .then(() => {
+  //   dispatch(getUserData());
+  //}) 
+   console.log(formData)
+  dispatch({ type: CLEAR_ERRORS });
+}
+
+// handleUpload = () => {
+//   const {image} = this.state;
+//   const uploadTask = storage.ref(`images/${image.name}`).put(image);
+//   uploadTask.on('state_changed', 
+//   (snapshot) => {
+//     // progrss function ....
+//     const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+//     this.setState({progress});
+//   }, 
+//   (error) => {
+//        // error function ....
+//     console.log(error);
+//   }, 
+// () => {
+//     // complete function ....
+//     storage.ref('images').child(image.name).getDownloadURL().then(url => {
+//         console.log(url);
+//         this.setState({url});
+//     })
+// });
+// }
+

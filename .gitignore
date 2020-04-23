@@ -14,6 +14,7 @@
 .env
 package-lock.json
 /functions/serviceAccount.json
+/functions/utility/config.js
 
 # misc
 .DS_Store

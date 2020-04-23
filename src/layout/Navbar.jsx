@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 import M from "materialize-css";
 import './Navbar.css';
-import samurai from '../resources/imgs/samurai.png';
+import profile from '../resources/imgs/profile.png';
 import silverHand from '../resources/imgs/silverHandMini.jpg';
 
 class Navbar extends Component {
@@ -47,7 +47,7 @@ class Navbar extends Component {
               <div className="background">
                 <img alt="" src={silverHand} />
               </div>
-              <a href="#user"><img alt="" className="circle" src={authenticated ? credentials.photoURL : samurai} /></a>
+              <a href="#user"><img alt="" className="circle" src={authenticated ? credentials.photoURL : profile} /></a>
               <a href="#name"><span className="white-text name">{authenticated ? credentials.firstName : "Guest"}</span></a>
             </div>
           </li>

@@ -1,6 +1,8 @@
-const { db } = require('../utility/admin');
+const { db, admin } = require('../utility/admin');
 const firebase = require('firebase');
 const config = require('../utility/config');
+const { uuid } = require("uuidv4");
+
 const { validateRegisterData, validateLoginData } = require('../utility/validaters');
 firebase.initializeApp(config);
 
@@ -13,7 +15,6 @@ exports.register = (req,res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     handle: req.body.email,
-    photoURL: `https://s3.amazonaws.com/gt7sp-prod/decal/44/41/98/5846245245639984144_1.png`
   };
   
   const { valid, errors } = validateRegisterData(newUser);
@@ -43,7 +44,7 @@ exports.register = (req,res) => {
       firstName: newUser.firstName,
       lastName: newUser.lastName,
       createdAt: new Date().toISOString(),
-      photoURL: "https://s3.amazonaws.com/gt7sp-prod/decal/44/41/98/5846245245639984144_1.png",
+      photoURL: "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/userImgs%2Fsamurai.png?alt=media&token=94e6cf68-c123-436f-905c-29d57d28533b",
       userId
     }
     return db.doc(`/users/${newUser.handle}`).set(userCredentials)
@@ -114,3 +115,64 @@ exports.logout = (req, res) => {
       return res.status(400).json({ general: "Wrong credentials, something went wrong" });
   });
 }
+
+exports.uploadImage = (req, res) => {
+
+
+  
+  // const BusBoy = require("busboy");
+  // const path = require("path");
+  // const os = require("os");
+  // const fs = require("fs");
+
+  // const busboy = new BusBoy({ headers: req.headers });
+
+  // let imageToBeUploaded = {};
+  // let imageFileName;
+  // // String for image token
+  // let generatedToken = uuid();
+
+  // busboy.on("file", (fieldname, file, filename, encoding, mimetype) => {
+  //   console.log(fieldname, file, filename, encoding, mimetype);
+  //   if (mimetype !== "image/jpeg" && mimetype !== "image/png") {
+  //     return res.status(400).json({ error: "Wrong file type submitted" });
+  //   }
+  //   // my.image.png => ['my', 'image', 'png']
+  //   const imageExtension = filename.split(".")[filename.split(".").length - 1];
+  //   // 32756238461724837.png
+  //   imageFileName = `${Math.round(
+  //     Math.random() * 1000000000000
+  //   ).toString()}.${imageExtension}`;
+  //   const filepath = path.join(os.tmpdir(), imageFileName);
+  //   imageToBeUploaded = { filepath, mimetype };
+  //   file.pipe(fs.createWriteStream(filepath));
+  // });
+  // busboy.on("finish", () => {
+  //   firebase
+  //     .storage()
+  //     .bucket()
+  //     .upload(imageToBeUploaded.filepath, {
+  //       resumable: false,
+  //       metadata: {
+  //         metadata: {
+  //           contentType: imageToBeUploaded.mimetype,
+  //           //Generate token to be appended to imageUrl
+  //           firebaseStorageDownloadTokens: generatedToken,
+  //         },
+  //       },
+  //     })
+  //     .then(() => {
+  //       // Append token to url
+  //       const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media&token=${generatedToken}`;
+  //       return db.doc(`/users/${req.user.handle}`).update({ photoURL });
+  //     })
+  //     .then(() => {
+  //       return res.json({ message: "image uploaded successfully" });
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //       return res.status(500).json({ error: "something went wrong" });
+  //     });
+  // });
+  // busboy.end(req.rawBody);
+};
