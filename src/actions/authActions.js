@@ -97,7 +97,7 @@ export const getUserData = () => (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   dispatch({ type: LOADING_UI });
-  const result = await axios.post(`${BASE_URL}logout`);
+  await axios.post(`${BASE_URL}logout`);
   localStorage.removeItem('FBidToken');
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
@@ -116,26 +116,3 @@ export const uploadUserImg = (formData) => (dispatch) => {
    console.log(formData)
   dispatch({ type: CLEAR_ERRORS });
 }
-
-// handleUpload = () => {
-//   const {image} = this.state;
-//   const uploadTask = storage.ref(`images/${image.name}`).put(image);
-//   uploadTask.on('state_changed', 
-//   (snapshot) => {
-//     // progrss function ....
-//     const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-//     this.setState({progress});
-//   }, 
-//   (error) => {
-//        // error function ....
-//     console.log(error);
-//   }, 
-// () => {
-//     // complete function ....
-//     storage.ref('images').child(image.name).getDownloadURL().then(url => {
-//         console.log(url);
-//         this.setState({url});
-//     })
-// });
-// }
-

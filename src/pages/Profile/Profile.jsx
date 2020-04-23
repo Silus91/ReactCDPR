@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from "react-router-dom";
 import { uploadUserImg } from '../../actions/authActions';
-import storage from '../../resources/Firebase/FirebaseStorage';
 import firebase from '../../resources/Firebase/Firebase';
-
 
 export class Profile extends Component {
 
@@ -72,9 +70,6 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, { uploadUserImg })(Profile);
-
-
-
 
     // const formData = new FormData();
     // formData.append('image', image, image.name);
