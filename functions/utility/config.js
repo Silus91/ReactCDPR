@@ -1,4 +1,3 @@
-
 module.exports = {
   apiKey: "AIzaSyDQNsDHwcQZdZ_9EqwFODmjPJw33GgO-1A",
   authDomain: "cdred-project.firebaseapp.com",
