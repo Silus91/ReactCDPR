@@ -102,17 +102,18 @@ export const logout = () => async (dispatch) => {
   delete axios.defaults.headers.common['Authorization'];
   dispatch({ type: SET_UNAUTH});
   dispatch({ type: CLEAR_ERRORS });
-  toastMsg('Logout Succesful!')
-  toastMsg('Please Comeback one day!')
+  toastMsg('Logout Succesful!');
+  toastMsg('Please Comeback one day!');
 }
 
 export const uploadUserImg = (formData) => (dispatch) => {
+  console.log("akcje")
   dispatch({ type: LOADING_UI });
   axios
-  .post(`${BASE_URL}userimage`, formData)
-  // .then(() => {
-  //   dispatch(getUserData());
-  //}) 
-   console.log(formData)
-  dispatch({ type: CLEAR_ERRORS });
-}
+    .post(`${BASE_URL}user/image`, formData)
+    .then(() => {
+      dispatch(getUserData());
+      toastMsg('Profile Image Updated!');
+    })
+    .catch((err) => console.log(err));
+};

@@ -55,7 +55,7 @@ class App extends Component {
           <Route path='/profile' component={Profile} />
           <AuthRoute path='/auth' component={Auth} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     );
   }

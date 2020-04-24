@@ -16,7 +16,7 @@ app.get('/getsurveys', getAllSurveys);
 app.post('/register', register); 
 app.post('/login', login);
 app.get('/user', FBAuth, getAuthenticatedUser);
-// app.post('userimage', FBAuth, uploadImage);
+app.post('/user/image', FBAuth, uploadImage);
 app.post('/logout', logout);
 
 exports.api = functions.https.onRequest(app);

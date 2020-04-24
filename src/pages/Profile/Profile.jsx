@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from "react-router-dom";
 import { uploadUserImg } from '../../actions/authActions';
-import firebase from '../../resources/Firebase/Firebase';
+import './Profile.css';
+import M from "materialize-css";
 
 export class Profile extends Component {
+
+  componentDidMount() {
+    M.AutoInit();
+  }
 
   renderRedirect = () => {
     if (!this.props.user.authenticated) {
@@ -13,52 +18,47 @@ export class Profile extends Component {
   }
 
   handleImageChange = (event) => {
-    const image = event.target.files[0]
-    const storageRef = firebase.storage().ref('userImgs/' + image.name);
-    const task = storageRef.put(image);
-    task.on(
-      'state_changed',
-      function progress(snapshot) {
-        console.log(snapshot)
-      },
-      function error(err) {
-        console.log(err)
-      },
-      function complete() {
+    const image = event.target.files[0];
+    const formData = new FormData();
+    formData.append('image', image, image.name);
+    this.props.uploadUserImg(formData);
+  };
 
-      }
-    )
-  }
+  inputHandler = () => {
+    const imgInput = document.getElementById('imgInput');
+    imgInput.click();
+  };
 
   render() {
     const { firstName, lastName, email, photoURL } = this.props.user.credentials;
     return (
       <div className="container row">
         {this.renderRedirect()}
-        <h1>Profile</h1>
-        <div className="card col l4">
-          <div className="card-image">
-            <img className="responsive-img" src={photoURL} />
+        <h1 className="profileHeader center">Profile</h1>
+        <div className="card">
+        <div className=" col l6 s12">
+          <div className="profilePicConteiner">
+            <a className="inputHandler tooltipped" data-position="right" data-tooltip="Edit photo" onClick={this.inputHandler}>
+              <img className="profilePic circle" src={photoURL} />
+              <input 
+                id="imgInput"
+                hidden="hidden" 
+                type="file"
+                onChange={this.handleImageChange}
+              />
+            </a>
           </div>
-          <div className="card-stacked">
-            <div className="card-content">
-              <div>{`${firstName} ${lastName}`}</div>
-              <div>{email}</div>
+        </div>
+        <div className="card col l6 s12">
+          <div className="card-content">
+            <div className="card-stacked">
+              <div className="card-content">
+                <p className="profileData flow-text">{`${firstName} ${lastName}`}</p>
+                <p className="profileData flow-text">{email}</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="card col l6">
-          <div className="card-content">
-            <div className="file-field input-field">
-              <div className="btn">
-                <span>Img</span>
-                <input type="file" onChange={this.handleImageChange} />
-              </div>
-              <div className="file-path-wrapper">
-                <input className="file-path validate" type="text" placeholder="Upload your profile Img" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     )
@@ -70,8 +70,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, { uploadUserImg })(Profile);
-
-    // const formData = new FormData();
-    // formData.append('image', image, image.name);
-    // this.props.uploadUserImg(formData);
-    // console.log(formData.append)
