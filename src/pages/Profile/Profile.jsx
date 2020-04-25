@@ -7,8 +7,19 @@ import M from "materialize-css";
 
 export class Profile extends Component {
 
+  state = {
+    errors: ''
+  }
+
   componentDidMount() {
     M.AutoInit();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.UI.errors) {
+      this.setState({ errors: nextProps.UI.errors });
+      console.log(this.state.errors)
+    }
   }
 
   renderRedirect = () => {
@@ -30,6 +41,7 @@ export class Profile extends Component {
   };
 
   render() {
+    const { errors } = this.state;
     const { firstName, lastName, email, photoURL } = this.props.user.credentials;
     return (
       <div className="container row">
@@ -37,6 +49,7 @@ export class Profile extends Component {
         <h1 className="profileHeader center">Profile</h1>
         <div className="card">
           <div className=" col m6 offset-m3 s12">
+          <span className="helper-text red-text center-align">{errors.photo ? errors.photo : ''}</span>
             <div className="profilePicConteiner">
               <a className="inputHandler tooltipped" data-position="right" data-tooltip="Edit photo" onClick={this.inputHandler}>
                 <img className="profilePic circle" src={photoURL} />
@@ -67,7 +80,8 @@ export class Profile extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user
+  user: state.user,
+  UI: state.UI
 })
 
 export default connect(mapStateToProps, { uploadUserImg })(Profile);

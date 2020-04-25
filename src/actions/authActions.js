@@ -107,7 +107,6 @@ export const logout = () => async (dispatch) => {
 }
 
 export const uploadUserImg = (formData) => (dispatch) => {
-  console.log("akcje")
   dispatch({ type: LOADING_UI });
   axios
     .post(`${BASE_URL}user/image`, formData)
@@ -115,5 +114,13 @@ export const uploadUserImg = (formData) => (dispatch) => {
       dispatch(getUserData());
       toastMsg('Profile Image Updated!');
     })
-    .catch((err) => console.log(err));
+    .catch((err) =>{
+      console.log(err.res.data)
+      toastMsg('Only jpeg/png');
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.res.data
+      })
+    });
 };
+

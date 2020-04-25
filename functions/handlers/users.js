@@ -130,12 +130,11 @@ console.log("bakcend")
     let generatedToken = uuid();
   
     busboy.on("file", (fieldname, file, filename, encoding, mimetype) => {
-      console.log(fieldname, file, filename, encoding, mimetype);
       if (mimetype !== "image/jpeg" && mimetype !== "image/png") {
-        return res.status(400).json({ errors: "Wrong file type submitted" });
+        return res.status(400).json({ photo: "Only jpeg/png files!!" });
       }
       const imageExtension = filename.split(".")[filename.split(".").length - 1];
-      imageFileName = `${Math.round(Math.random() * 100000).toString()}.${imageExtension}`;
+      imageFileName = `user${Math.round(Math.random() * 10000).toString()}.${imageExtension}`;
       const filepath = path.join(os.tmpdir(), imageFileName);
       imageToBeUploaded = { filepath, mimetype };
       file.pipe(fs.createWriteStream(filepath));
@@ -146,6 +145,7 @@ console.log("bakcend")
         .bucket()
         .upload(imageToBeUploaded.filepath, {
           resumable: false,
+          destination: `userImgs/${imageFileName}`,
           metadata: {
             metadata: {
               contentType: imageToBeUploaded.mimetype,
