@@ -15,6 +15,7 @@ class Cdproject extends Component {
   render() {
     return (
       <div>
+        <h1 className="titleSecond center">CD Project Red SA</h1>
         <div className="row">
           <div className=" col l12 stock z-depth-2 hoverable">
             <Stock />

@@ -6,7 +6,7 @@ class CarouselSlide extends Component {
   render() {
     return (
       <div className="carousel-item" >
-        <img src={this.props.slide.img} className="responsive-img" alt="" />
+        <img src={this.props.slide.img} className="responsive-img" alt={this.props.name} />
         {this.props.slide.facebookUrl ? 
           <div>
           {this.props.slide.facebookUrl ? 

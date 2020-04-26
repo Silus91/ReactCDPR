@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import M from "materialize-css";
 import './Home.css';
 import { Parallax } from 'react-materialize';
-import startImg from '../../resources/imgs/startImg.jpg';
-import silverHand from '../../resources/imgs/silverHand.jpg';
-import swords from '../../resources/imgs/carousel/swords.jpg';
 import {creatorInfo, why } from './info';
-import githubimg from '../../resources/imgs/social/githubimg.png';
 import SocialButton from '../../components/SocialButton/SocialButton';
 import Survey from '../../components/Survey/Survey';
 import { getSurveys } from '../../actions/uiActions';
@@ -22,13 +18,12 @@ class Home extends Component {
 
   render() {
     const { UI: {loading}, UI: { surveys }  } = this.props;
- 
     return (
       <div className="">
           <div className="header">
           <div className="container headerContent">
             <h1 className="title">Welcome!</h1>
-            <h2 className="titleSecond">CD Project Red <br />Fan Page!</h2>
+            <h1 className="titleSecond">CD Project Red <br />Fan Page!</h1>
             <div>Want to jump to orginal page?? Just Click below!</div>
             <a rel="noopener noreferrer" className="btn large cyan yellow-text" href="https://en.cdprojektred.com/" target="_blank">
               Redirect
@@ -40,14 +35,21 @@ class Home extends Component {
             <h3 className="titleSecond">Info from creator</h3>
             <p className="paragraph">{creatorInfo}</p>
             <SocialButton
-              src={githubimg} 
+              src="https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Fgithubimg.png?alt=media&token=3b23bab8-1d18-435d-9548-c7cc0244f1d2" 
               href="https://github.com/Silus91/ReactCDPR"
+              toolPosition="right"
+              toolTip="My GitHub portfolio!"
             />
           </div>
         </div>
         <div>
           <Parallax
-            image={<img alt="" src={startImg} />}
+            image={
+              <img
+                alt="cdpr"
+                src="https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FstartImg.jpg?alt=media&token=e28e2361-c941-481f-844b-3e457016a859"
+              />
+            }
             options={{
               responsiveThreshold: 0
             }}
@@ -61,7 +63,12 @@ class Home extends Component {
             </div>
           </div>
           <Parallax
-            image={<img alt="" src={silverHand} />}
+            image={
+              <img
+                alt="Silver Hand"
+                src="https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FsilverHand.jpg?alt=media&token=11bf9e9b-a494-4cd2-9e8b-1ab056a6fc84"
+              />
+            }
             options={{
             responsiveThreshold: 0
             }}
@@ -81,7 +88,12 @@ class Home extends Component {
             </div>
           </div>
           <Parallax
-            image={<img alt="" src={swords} />}
+            image={
+              <img
+                alt=""
+                src="https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fswords.jpg?alt=media&token=1f33ccf1-ec87-4121-b4d0-1eba340f7638" 
+              />
+            }
             options={{
             responsiveThreshold: 0
             }}

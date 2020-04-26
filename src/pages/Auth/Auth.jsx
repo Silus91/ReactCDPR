@@ -7,7 +7,7 @@ import './Auth.css';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 import { loginFbAction, loginGoogleAction } from '../../actions/authActions';
 
-export class Auth extends Component {
+class Auth extends Component {
 
   componentDidMount() {
     M.AutoInit();

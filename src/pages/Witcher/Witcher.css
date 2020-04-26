@@ -13,7 +13,7 @@
   height: 70vw;
   position: fixed;
   left: 10%;
-  background-image: url(../../resources/imgs/blood1.png);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fblood1.png?alt=media&token=6e2d8cd5-f6ff-480e-ad6a-04f69c031bcf");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;

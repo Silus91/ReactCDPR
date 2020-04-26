@@ -1,53 +1,45 @@
-import cdred from '../../resources/imgs/carousel/cdred.jpg';
-import witcher from '../../resources/imgs/carousel/witcher.jpg';
-import cyberpunk from '../../resources/imgs/carousel/cyberpunk.jpg'
-import gwent from '../../resources/imgs/carousel/gwent.jpg';
-import faceb from '../../resources/imgs/social/faceb.png';
-import twitter from '../../resources/imgs/social/twitter.png';
-import instagram from '../../resources/imgs/social/instagram.png';
-
 export default[
     {
         id:1,
-        name: 'cdprojekt',
-        img: cdred,
+        name: 'Cdprojekt Red',
+        img: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcdred.jpg?alt=media&token=9177ac01-2b1f-4dcd-9f1b-a98a8dde92c4',
         facebookUrl:'https://www.facebook.com/CDPROJEKTRED/',
-        facebookImg: faceb,
+        facebookImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c',
         twitterUrl:'https://twitter.com/CDPROJEKTRED',
-        twitterImg: twitter,
+        twitterImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ftwitter.png?alt=media&token=1c2decd2-9a9e-49d6-bee6-cbe16492f88b',
         instagramUrl:'https://www.instagram.com/cdpred/?hl=pl',
-        instagramImg: instagram
+        instagramImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Finstagram.png?alt=media&token=f8d88207-c5b4-4fcb-bec4-b60893ad729f'
     },
     {
         id:2,
-        name: 'witcher',
-        img: witcher,
+        name: 'Witcher',
+        img: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher.jpg?alt=media&token=fb6088dd-c02c-46c6-8b5f-37f9505ad344',
         facebookUrl:'https://www.facebook.com/thewitcher/',
-        facebookImg: faceb,
+        facebookImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c',
         twitterUrl:'https://twitter.com/witchergame',
-        twitterImg: twitter,
+        twitterImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ftwitter.png?alt=media&token=1c2decd2-9a9e-49d6-bee6-cbe16492f88b',
         instagramUrl:'',
         instagramImg: ''
     },
     {
         id:3,
-        name: 'cyberpunk',
-        img: cyberpunk,
+        name: 'Cyberpunk',
+        img: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcyberpunk.jpg?alt=media&token=aaddab18-1ae6-4b44-9a7a-317e84103abd',
         facebookUrl:'https://www.facebook.com/CyberpunkGame/',
-        facebookImg: faceb,
+        facebookImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c',
         twitterUrl:'https://twitter.com/CyberpunkGame',
-        twitterImg: twitter,
+        twitterImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ftwitter.png?alt=media&token=1c2decd2-9a9e-49d6-bee6-cbe16492f88b',
         instagramUrl:'https://www.instagram.com/cyberpunkgame/?hl=pl',
-        instagramImg: instagram
+        instagramImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Finstagram.png?alt=media&token=f8d88207-c5b4-4fcb-bec4-b60893ad729f'
     },
     {
         id:4,
-        name: 'gwent',
-        img: gwent,
+        name: 'Gwent',
+        img: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fgwent.jpg?alt=media&token=97e7123c-5ff2-4a7a-8afd-f09bc8502354',
         facebookUrl:'https://www.facebook.com/PlayGwent/',
-        facebookImg: faceb,
+        facebookImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c',
         twitterUrl:'https://twitter.com/playgwent',
-        twitterImg: twitter,
+        twitterImg: 'https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ftwitter.png?alt=media&token=1c2decd2-9a9e-49d6-bee6-cbe16492f88b',
         instagramUrl:'',
         instagramImg: ''
     },

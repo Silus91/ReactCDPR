@@ -145,7 +145,6 @@ console.log("bakcend")
         .bucket()
         .upload(imageToBeUploaded.filepath, {
           resumable: false,
-          destination: `userImgs/${imageFileName}`,
           metadata: {
             metadata: {
               contentType: imageToBeUploaded.mimetype,
@@ -154,7 +153,6 @@ console.log("bakcend")
           },
         })
         .then(() => {
-          // Append token to url
           const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media&token=${generatedToken}`;
           return db.doc(`/users/${req.user.handle}`).update({ photoURL });
         })

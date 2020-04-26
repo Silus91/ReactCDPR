@@ -1,10 +1,9 @@
 .authContainer{
     height: 100%;
     width: 100%;
-    background-image: url(../../resources/imgs/cityCarv2.jpg);
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FcityCarv2.jpg?alt=media&token=377b4abc-a6a8-43da-be61-d0df2d92b705");
     background-position: center;
     background-size: cover;
-    /* position: absolute;  still need to find out*/
 }
 
 .authCard {
