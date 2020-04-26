@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Stock from '../../components/Stock/Stock';
 import Carousel  from '../../components/Carousel/Carousel';
-import slides from './slides';
+import slides from '../../resources/textConfigs/slidesCDPR';
 import CardTabs from '../../components/CardTabs/CardTabs';
-import configs from './configs';
+import configs from '../../resources/textConfigs/configsCDPR';
 import M from "materialize-css";
 
 class Cdproject extends Component {

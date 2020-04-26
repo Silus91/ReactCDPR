@@ -7,11 +7,11 @@ export class CollapsibleItem extends Component {
       <>
         <li className="active">
           <div className="collapsible-header">
-            <img src={this.props.colaps.img} className="circle img" alt="" />
-            <h6>{this.props.colaps.title}</h6>
+            <img src={this.props.collaps.img} className="circle img" alt="" />
+            <h6>{this.props.collaps.title}</h6>
           </div>
           <div className="collapsible-body">
-            <span>{this.props.colaps.content}</span>
+            <span>{this.props.collaps.content}</span>
           </div>
         </li>
       </>

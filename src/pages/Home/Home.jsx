@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import M from "materialize-css";
 import './Home.css';
 import { Parallax } from 'react-materialize';
-import {creatorInfo, why } from './info';
+import {creatorInfo, why } from '../../resources/textConfigs/info';
 import SocialButton from '../../components/SocialButton/SocialButton';
 import Survey from '../../components/Survey/Survey';
 import { getSurveys } from '../../actions/uiActions';

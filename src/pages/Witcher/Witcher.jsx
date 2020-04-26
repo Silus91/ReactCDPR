@@ -5,9 +5,9 @@ import QuoteGenerator from '../../components/QuoteGenerator/QuoteGenerator';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from './../../components/Collaps/Collaps';
 import M from "materialize-css";
-import allQuotes from './allQuotes';
-import slides from './slides';
-import colaps from '../../components/Collaps/colaps';
+import allQuotes from '../../resources/textConfigs/allQuotes';
+import slides from '../../resources/textConfigs/slidesWitcher';
+import collaps from '../../resources/textConfigs/collaps';
 
 class Witcher extends React.Component {
 
@@ -26,7 +26,7 @@ class Witcher extends React.Component {
             </div>
           </div>
           <div className="col l5 s12 quote">
-            <Collaps colaps={colaps} />
+            <Collaps collaps={collaps} />
           </div> 
         </div>  
         <div className="row">

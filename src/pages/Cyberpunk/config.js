@@ -1,1 +1,0 @@
-export default ["Cyber... What?? WTF? Exacly good question Just watch THIS s***!! Do you see this stuff couting down?? When its hits zero then you can play Preorder that stuff yazz"]

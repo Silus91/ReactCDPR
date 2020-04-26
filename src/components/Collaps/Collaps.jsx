@@ -13,8 +13,8 @@ class Collaps extends Component {
     return (
       <div className="container">
         <ul className="collapsible expandable">
-        {this.props.colaps.map((colaps) => {
-            return <CollapsibleItem colaps={colaps} key={colaps.id} />
+        {this.props.collaps.map((collaps) => {
+            return <CollapsibleItem collaps={collaps} key={collaps.id} />
           })}
         </ul>
       </div>

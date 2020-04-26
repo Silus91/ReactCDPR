@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Footer.css';
 import SocialButton from '../components/SocialButton/SocialButton';
 import ContactUs from '../components/ContactUs/ContactUs';
-import aboutMe from './aboutMe';
+import { aboutMe } from '../resources/textConfigs/info';
 
 export class Footer extends Component {
   render() {

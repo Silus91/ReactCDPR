@@ -2,7 +2,7 @@ import React from 'react';
 import YoutubeVideo from '../../components/YoutubeVideo/YoutubeVideo';
 import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 import M from "materialize-css";
-import config from './config';
+import { cyber } from '../../resources/textConfigs/info';
 import './Cyberpunk.css';
 import InstagramEmbed from 'react-instagram-embed';
 import { connect } from 'react-redux';
@@ -22,7 +22,7 @@ class Cyberpunk extends React.Component {
         </span>
         <div className="row container">
           <div className=" col l12 card">
-            <div className="card-content cyberText">{config}</div>
+            <div className="card-content cyberText">{cyber}</div>
           </div>
 
           <div className="col l4 s12 insta center">
