@@ -1,50 +1,50 @@
 .imgsize {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
-.header{
-    text-align: center;
-    color: #fff;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+.header {
+  text-align: center;
+  color: #fff;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
-.title{
-    font-size: 9vw;
-    font-family: Cyber2077;
-    color: rgb(255, 255, 0);
-    text-shadow: 2px 2px rgb(0, 255, 255);
-    text-transform: uppercase;
+.title {
+  font-size: 9vw;
+  font-family: Cyber2077;
+  color: rgb(255, 255, 0);
+  text-shadow: 2px 2px rgb(0, 255, 255);
+  text-transform: uppercase;
 }
 
-.titleSecond{
-    font-size: 4rem;
-    font-family: Witcher;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px rgb(255, 0, 0);
-    text-transform: uppercase;
+.titleSecond {
+  font-size: 4rem;
+  font-family: Witcher;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px rgb(255, 0, 0);
+  text-transform: uppercase;
 }
 
-.headerContent{
-    padding: 12rem 0rem;
+.headerContent {
+  padding: 12rem 0rem;
 }
 
-.paragraph{
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
+.paragraph {
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.quote{
-    font-family: Witcher;
-    text-shadow: 1px 0px red;
+.quote {
+  font-family: Witcher;
+  text-shadow: 1px 0px red;
 }
 
-.survey{
-    font-family: Cyber2077;
-    font-size: 2.5rem;
-    text-shadow: 1px 1px red;
+.survey {
+  font-family: Cyber2077;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px red;
 }

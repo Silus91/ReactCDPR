@@ -299,3 +299,531 @@
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-04-27T09:40:52.266Z] [worker-api-ccc9e832-948e-46da-b824-06c672c06fad]: IDLE 
 [debug] [2020-04-27T09:40:52.266Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:45:59.260Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/config.js changed, reloading triggers 
+[debug] [2020-04-27T09:46:00.261Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:46:00.262Z] [worker-~diagnostic~-9af4442f-fd3b-46f7-a2ef-ae3f98bcfd80]: FINISHING 
+[debug] [2020-04-27T09:46:00.262Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-04-27T09:46:00.263Z] [worker-api-ccc9e832-948e-46da-b824-06c672c06fad]: FINISHING 
+[debug] [2020-04-27T09:46:00.274Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:46:00.275Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:46:00.275Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:46:00.275Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: Assigning socketPath: /tmp/fire_emu_4700.sock 
+[debug] [2020-04-27T09:46:00.276Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: BUSY 
+[debug] [2020-04-27T09:46:00.279Z] [worker-~diagnostic~-9af4442f-fd3b-46f7-a2ef-ae3f98bcfd80]: exited 
+[debug] [2020-04-27T09:46:00.279Z] [worker-~diagnostic~-9af4442f-fd3b-46f7-a2ef-ae3f98bcfd80]: FINISHED 
+[debug] [2020-04-27T09:46:00.280Z] [worker-api-ccc9e832-948e-46da-b824-06c672c06fad]: exited 
+[debug] [2020-04-27T09:46:00.280Z] [worker-api-ccc9e832-948e-46da-b824-06c672c06fad]: FINISHED 
+[debug] [2020-04-27T09:46:00.522Z] [runtime-status] [4700] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:46:00.524Z] [runtime-status] [4700] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:46:00.526Z] [runtime-status] [4700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:00.527Z] [runtime-status] [4700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:00.531Z] [runtime-status] [4700] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:46:00.560Z] [runtime-status] [4700] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:46:00.560Z] [runtime-status] [4700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:00.561Z] [runtime-status] [4700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:00.563Z] [runtime-status] [4700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:00.563Z] [runtime-status] [4700] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:46:00.638Z] [runtime-status] [4700] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:46:00.931Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: IDLE 
+[debug] [2020-04-27T09:46:46.545Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/admin.js changed, reloading triggers 
+[debug] [2020-04-27T09:46:47.545Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:46:47.545Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: FINISHING 
+[debug] [2020-04-27T09:46:47.546Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:46:47.546Z] [worker-pool] Cleaned up workers for api: 1 --> 0 
+[debug] [2020-04-27T09:46:47.560Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:46:47.561Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:46:47.561Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:46:47.562Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: Assigning socketPath: /tmp/fire_emu_4720.sock 
+[debug] [2020-04-27T09:46:47.562Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: BUSY 
+[debug] [2020-04-27T09:46:47.563Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: exited 
+[debug] [2020-04-27T09:46:47.563Z] [worker-~diagnostic~-2c46f39a-7bdb-4a55-9dee-233cc4059400]: FINISHED 
+[debug] [2020-04-27T09:46:47.921Z] [runtime-status] [4720] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:46:47.924Z] [runtime-status] [4720] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:46:47.926Z] [runtime-status] [4720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:47.927Z] [runtime-status] [4720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:47.932Z] [runtime-status] [4720] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:46:47.989Z] [runtime-status] [4720] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:46:47.991Z] [runtime-status] [4720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:47.996Z] [runtime-status] [4720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:47.997Z] [runtime-status] [4720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:47.997Z] [runtime-status] [4720] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:46:48.119Z] [runtime-status] [4720] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:46:48.503Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: IDLE 
+[debug] [2020-04-27T09:46:51.982Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/fbAuth.js changed, reloading triggers 
+[debug] [2020-04-27T09:46:52.983Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:46:52.983Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: FINISHING 
+[debug] [2020-04-27T09:46:52.984Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:46:52.999Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:46:53.000Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:46:53.000Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:46:53.001Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: Assigning socketPath: /tmp/fire_emu_4730.sock 
+[debug] [2020-04-27T09:46:53.002Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: BUSY 
+[debug] [2020-04-27T09:46:53.006Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: exited 
+[debug] [2020-04-27T09:46:53.007Z] [worker-~diagnostic~-96e3792f-c483-4c31-b7eb-f010a7ece0ab]: FINISHED 
+[debug] [2020-04-27T09:46:53.370Z] [runtime-status] [4730] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:46:53.373Z] [runtime-status] [4730] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:46:53.376Z] [runtime-status] [4730] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:53.377Z] [runtime-status] [4730] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:53.383Z] [runtime-status] [4730] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:46:53.428Z] [runtime-status] [4730] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:46:53.429Z] [runtime-status] [4730] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:53.430Z] [runtime-status] [4730] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:53.430Z] [runtime-status] [4730] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:53.431Z] [runtime-status] [4730] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:46:53.552Z] [runtime-status] [4730] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:46:53.836Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: IDLE 
+[debug] [2020-04-27T09:46:54.887Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/admin.js changed, reloading triggers 
+[debug] [2020-04-27T09:46:55.888Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:46:55.889Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: FINISHING 
+[debug] [2020-04-27T09:46:55.890Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:46:55.903Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:46:55.903Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:46:55.904Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:46:55.904Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: Assigning socketPath: /tmp/fire_emu_4749.sock 
+[debug] [2020-04-27T09:46:55.904Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: BUSY 
+[debug] [2020-04-27T09:46:55.906Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: exited 
+[debug] [2020-04-27T09:46:55.906Z] [worker-~diagnostic~-6b6f43a1-8a5c-47ee-a6f1-734ecef28119]: FINISHED 
+[debug] [2020-04-27T09:46:56.173Z] [runtime-status] [4749] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:46:56.175Z] [runtime-status] [4749] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:46:56.177Z] [runtime-status] [4749] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:56.179Z] [runtime-status] [4749] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:56.182Z] [runtime-status] [4749] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:46:56.212Z] [runtime-status] [4749] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:46:56.212Z] [runtime-status] [4749] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:56.213Z] [runtime-status] [4749] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:46:56.213Z] [runtime-status] [4749] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:46:56.214Z] [runtime-status] [4749] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:46:56.295Z] [runtime-status] [4749] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:46:56.625Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: IDLE 
+[debug] [2020-04-27T09:46:59.564Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/validaters.js changed, reloading triggers 
+[debug] [2020-04-27T09:47:00.564Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:47:00.564Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: FINISHING 
+[debug] [2020-04-27T09:47:00.564Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:47:00.570Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:47:00.570Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:47:00.570Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:47:00.571Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: Assigning socketPath: /tmp/fire_emu_4768.sock 
+[debug] [2020-04-27T09:47:00.571Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: BUSY 
+[debug] [2020-04-27T09:47:00.572Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: exited 
+[debug] [2020-04-27T09:47:00.573Z] [worker-~diagnostic~-695df531-4ac5-4c15-8343-6ef406eaa163]: FINISHED 
+[debug] [2020-04-27T09:47:00.923Z] [runtime-status] [4768] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:47:00.925Z] [runtime-status] [4768] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:47:00.928Z] [runtime-status] [4768] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:00.929Z] [runtime-status] [4768] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:00.934Z] [runtime-status] [4768] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:47:00.979Z] [runtime-status] [4768] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:47:00.980Z] [runtime-status] [4768] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:00.982Z] [runtime-status] [4768] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:00.983Z] [runtime-status] [4768] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:00.983Z] [runtime-status] [4768] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:47:01.108Z] [runtime-status] [4768] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:47:01.495Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: IDLE 
+[debug] [2020-04-27T09:47:50.432Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers 
+[debug] [2020-04-27T09:47:51.432Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:47:51.432Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: FINISHING 
+[debug] [2020-04-27T09:47:51.433Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:47:51.444Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:47:51.444Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:47:51.444Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:47:51.445Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: Assigning socketPath: /tmp/fire_emu_4794.sock 
+[debug] [2020-04-27T09:47:51.445Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: BUSY 
+[debug] [2020-04-27T09:47:51.446Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: exited 
+[debug] [2020-04-27T09:47:51.446Z] [worker-~diagnostic~-92c702de-ce20-4823-8477-db42fdff9f6d]: FINISHED 
+[debug] [2020-04-27T09:47:51.697Z] [runtime-status] [4794] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:47:51.699Z] [runtime-status] [4794] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:47:51.701Z] [runtime-status] [4794] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:51.702Z] [runtime-status] [4794] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:51.706Z] [runtime-status] [4794] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:47:51.734Z] [runtime-status] [4794] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:47:51.735Z] [runtime-status] [4794] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:51.737Z] [runtime-status] [4794] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:51.737Z] [runtime-status] [4794] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:51.737Z] [runtime-status] [4794] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:47:51.811Z] [runtime-status] [4794] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:47:52.099Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: IDLE 
+[debug] [2020-04-27T09:47:54.972Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/services.js changed, reloading triggers 
+[debug] [2020-04-27T09:47:55.972Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:47:55.972Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: FINISHING 
+[debug] [2020-04-27T09:47:55.972Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:47:55.977Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:47:55.978Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:47:55.978Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:47:55.978Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: Assigning socketPath: /tmp/fire_emu_4820.sock 
+[debug] [2020-04-27T09:47:55.978Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: BUSY 
+[debug] [2020-04-27T09:47:55.979Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: exited 
+[debug] [2020-04-27T09:47:55.979Z] [worker-~diagnostic~-5c2d9479-9f33-4790-b297-2464db885ab5]: FINISHED 
+[debug] [2020-04-27T09:47:56.265Z] [runtime-status] [4820] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:47:56.267Z] [runtime-status] [4820] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:47:56.269Z] [runtime-status] [4820] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:56.269Z] [runtime-status] [4820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:56.273Z] [runtime-status] [4820] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:47:56.303Z] [runtime-status] [4820] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:47:56.304Z] [runtime-status] [4820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:56.306Z] [runtime-status] [4820] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:47:56.306Z] [runtime-status] [4820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:47:56.306Z] [runtime-status] [4820] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:47:56.393Z] [runtime-status] [4820] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:47:56.669Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: IDLE 
+[debug] [2020-04-27T09:48:06.874Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/services.js changed, reloading triggers 
+[debug] [2020-04-27T09:48:07.874Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:07.875Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: FINISHING 
+[debug] [2020-04-27T09:48:07.876Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:07.885Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:07.886Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:07.886Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:07.886Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: Assigning socketPath: /tmp/fire_emu_4834.sock 
+[debug] [2020-04-27T09:48:07.886Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: BUSY 
+[debug] [2020-04-27T09:48:07.887Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: exited 
+[debug] [2020-04-27T09:48:07.887Z] [worker-~diagnostic~-15a180d5-9dd0-4774-9f24-66e054a02f2a]: FINISHED 
+[debug] [2020-04-27T09:48:08.281Z] [runtime-status] [4834] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:08.282Z] [runtime-status] [4834] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:08.285Z] [runtime-status] [4834] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:08.285Z] [runtime-status] [4834] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:08.291Z] [runtime-status] [4834] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:08.348Z] [runtime-status] [4834] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:08.349Z] [runtime-status] [4834] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:08.351Z] [runtime-status] [4834] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:08.352Z] [runtime-status] [4834] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:08.352Z] [runtime-status] [4834] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:08.473Z] [runtime-status] [4834] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:08.936Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: IDLE 
+[debug] [2020-04-27T09:48:22.406Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/services.js changed, reloading triggers 
+[debug] [2020-04-27T09:48:23.408Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:23.408Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: FINISHING 
+[debug] [2020-04-27T09:48:23.409Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:23.422Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:23.423Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:23.423Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:23.424Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: Assigning socketPath: /tmp/fire_emu_4856.sock 
+[debug] [2020-04-27T09:48:23.424Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: BUSY 
+[debug] [2020-04-27T09:48:23.425Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: exited 
+[debug] [2020-04-27T09:48:23.426Z] [worker-~diagnostic~-399b0eb4-60b6-47e0-864b-13ff25332a38]: FINISHED 
+[debug] [2020-04-27T09:48:23.866Z] [runtime-status] [4856] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:23.870Z] [runtime-status] [4856] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:23.874Z] [runtime-status] [4856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:23.877Z] [runtime-status] [4856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:23.885Z] [runtime-status] [4856] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:23.964Z] [runtime-status] [4856] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:23.965Z] [runtime-status] [4856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:23.967Z] [runtime-status] [4856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:23.968Z] [runtime-status] [4856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:23.968Z] [runtime-status] [4856] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:24.092Z] [runtime-status] [4856] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:24.572Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: IDLE 
+[debug] [2020-04-27T09:48:27.550Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers 
+[debug] [2020-04-27T09:48:28.551Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:28.551Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: FINISHING 
+[debug] [2020-04-27T09:48:28.551Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:28.561Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:28.561Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:28.561Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:28.562Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: Assigning socketPath: /tmp/fire_emu_4867.sock 
+[debug] [2020-04-27T09:48:28.562Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: BUSY 
+[debug] [2020-04-27T09:48:28.563Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: exited 
+[debug] [2020-04-27T09:48:28.564Z] [worker-~diagnostic~-4e051631-8fd1-49fd-a1c6-1512fd3d1244]: FINISHED 
+[debug] [2020-04-27T09:48:28.795Z] [runtime-status] [4867] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:28.797Z] [runtime-status] [4867] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:28.798Z] [runtime-status] [4867] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:28.799Z] [runtime-status] [4867] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:28.803Z] [runtime-status] [4867] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:28.831Z] [runtime-status] [4867] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:28.832Z] [runtime-status] [4867] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:28.832Z] [runtime-status] [4867] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:28.833Z] [runtime-status] [4867] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:28.833Z] [runtime-status] [4867] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:28.903Z] [runtime-status] [4867] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:29.185Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: IDLE 
+[debug] [2020-04-27T09:48:33.655Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/utility/fbAuth.js changed, reloading triggers 
+[debug] [2020-04-27T09:48:34.655Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:34.655Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: FINISHING 
+[debug] [2020-04-27T09:48:34.655Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:34.659Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:34.660Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:34.660Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:34.660Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: Assigning socketPath: /tmp/fire_emu_4881.sock 
+[debug] [2020-04-27T09:48:34.660Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: BUSY 
+[debug] [2020-04-27T09:48:34.660Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: exited 
+[debug] [2020-04-27T09:48:34.661Z] [worker-~diagnostic~-ef503ded-2818-46d4-b1bd-137244840b70]: FINISHED 
+[debug] [2020-04-27T09:48:34.877Z] [runtime-status] [4881] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:34.879Z] [runtime-status] [4881] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:34.881Z] [runtime-status] [4881] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:34.882Z] [runtime-status] [4881] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:34.886Z] [runtime-status] [4881] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:34.914Z] [runtime-status] [4881] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:34.915Z] [runtime-status] [4881] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:34.916Z] [runtime-status] [4881] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:34.917Z] [runtime-status] [4881] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:34.917Z] [runtime-status] [4881] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:34.992Z] [runtime-status] [4881] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:35.261Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: IDLE 
+[debug] [2020-04-27T09:48:43.494Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/index.js changed, reloading triggers 
+[debug] [2020-04-27T09:48:44.494Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:44.494Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: FINISHING 
+[debug] [2020-04-27T09:48:44.495Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:44.499Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:44.499Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:44.499Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:44.499Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: Assigning socketPath: /tmp/fire_emu_4906.sock 
+[debug] [2020-04-27T09:48:44.499Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: BUSY 
+[debug] [2020-04-27T09:48:44.501Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: exited 
+[debug] [2020-04-27T09:48:44.501Z] [worker-~diagnostic~-f14770b3-8500-4a7a-8295-5332903fe05e]: FINISHED 
+[debug] [2020-04-27T09:48:44.737Z] [runtime-status] [4906] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:44.739Z] [runtime-status] [4906] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:44.741Z] [runtime-status] [4906] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:44.742Z] [runtime-status] [4906] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:44.745Z] [runtime-status] [4906] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:44.775Z] [runtime-status] [4906] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:44.776Z] [runtime-status] [4906] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:44.777Z] [runtime-status] [4906] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:44.777Z] [runtime-status] [4906] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:44.777Z] [runtime-status] [4906] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:44.858Z] [runtime-status] [4906] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:45.312Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: IDLE 
+[debug] [2020-04-27T09:48:48.355Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/package.json changed, reloading triggers 
+[debug] [2020-04-27T09:48:49.355Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:49.356Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: FINISHING 
+[debug] [2020-04-27T09:48:49.356Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:49.369Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:49.370Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:49.370Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:49.371Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: Assigning socketPath: /tmp/fire_emu_4919.sock 
+[debug] [2020-04-27T09:48:49.371Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: BUSY 
+[debug] [2020-04-27T09:48:49.374Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: exited 
+[debug] [2020-04-27T09:48:49.374Z] [worker-~diagnostic~-68951ac6-a6d4-435e-a757-3f56faf35826]: FINISHED 
+[debug] [2020-04-27T09:48:49.733Z] [runtime-status] [4919] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:49.735Z] [runtime-status] [4919] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:49.738Z] [runtime-status] [4919] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:49.739Z] [runtime-status] [4919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:49.745Z] [runtime-status] [4919] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:49.790Z] [runtime-status] [4919] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:49.791Z] [runtime-status] [4919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:49.792Z] [runtime-status] [4919] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:49.792Z] [runtime-status] [4919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:49.793Z] [runtime-status] [4919] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:49.911Z] [runtime-status] [4919] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:50.388Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: IDLE 
+[debug] [2020-04-27T09:48:51.447Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/serviceAccount.json changed, reloading triggers 
+[debug] [2020-04-27T09:48:52.448Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-27T09:48:52.449Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: FINISHING 
+[debug] [2020-04-27T09:48:52.449Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:48:52.464Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-27T09:48:52.465Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-27T09:48:52.465Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-27T09:48:52.465Z] [worker-~diagnostic~-7201b714-2d3b-47d0-97e5-10b9825f0ef2]: Assigning socketPath: /tmp/fire_emu_4928.sock 
+[debug] [2020-04-27T09:48:52.465Z] [worker-~diagnostic~-7201b714-2d3b-47d0-97e5-10b9825f0ef2]: BUSY 
+[debug] [2020-04-27T09:48:52.468Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: exited 
+[debug] [2020-04-27T09:48:52.468Z] [worker-~diagnostic~-8b90d846-b4aa-4aaa-aa40-1d42780b0cbb]: FINISHED 
+[debug] [2020-04-27T09:48:52.853Z] [runtime-status] [4928] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:48:52.856Z] [runtime-status] [4928] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:48:52.860Z] [runtime-status] [4928] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:52.861Z] [runtime-status] [4928] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:52.866Z] [runtime-status] [4928] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:48:52.922Z] [runtime-status] [4928] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:48:52.922Z] [runtime-status] [4928] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:52.923Z] [runtime-status] [4928] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:48:52.924Z] [runtime-status] [4928] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:48:52.924Z] [runtime-status] [4928] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:48:53.085Z] [runtime-status] [4928] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:48:53.417Z] [worker-~diagnostic~-7201b714-2d3b-47d0-97e5-10b9825f0ef2]: IDLE 
+[debug] [2020-04-27T09:49:16.606Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:49:16.606Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:49:16.607Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:49:16.607Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-27T09:49:16.611Z] [worker-pool] addWorker(api) 
+[debug] [2020-04-27T09:49:16.612Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-04-27T09:49:16.612Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:49:16.612Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:49:16.612Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:49:16.962Z] [runtime-status] [4995] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-04-27T09:49:16.964Z] [runtime-status] [4995] Disabled runtime features: undefined 
+[debug] [2020-04-27T09:49:16.966Z] [runtime-status] [4995] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:49:16.967Z] [runtime-status] [4995] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:49:16.971Z] [runtime-status] [4995] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-27T09:49:17.011Z] [runtime-status] [4995] Checked functions.config() {"config":{}} 
+[debug] [2020-04-27T09:49:17.011Z] [runtime-status] [4995] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:49:17.012Z] [runtime-status] [4995] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-04-27T09:49:17.012Z] [runtime-status] [4995] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-04-27T09:49:17.012Z] [runtime-status] [4995] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-04-27T09:49:17.109Z] [runtime-status] [4995] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-27T09:49:17.455Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:49:17.456Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:49:17.456Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:49:17.459Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:49:17.462Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:49:17.467Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:49:17.475Z] [runtime-status] [4995] Ephemeral server survived. 
+[warn] ⚠  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:49:18.127Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:49:18.127Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:49:52.659Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:49:52.660Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:49:52.660Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:49:52.660Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:49:52.660Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:49:52.660Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:49:52.661Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:49:52.662Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:49:52.662Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:49:52.663Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:49:52.664Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:49:52.669Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:49:52.672Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:49:52.801Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:49:52.801Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:50:01.442Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:50:01.442Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:50:01.443Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:50:01.443Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:50:01.443Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:01.443Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:50:01.444Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:50:01.444Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:50:01.444Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:50:01.445Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:01.447Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:50:01.454Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:50:01.454Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:50:01.526Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:50:01.526Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:50:43.430Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:50:43.430Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:50:43.431Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:50:43.431Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:50:43.431Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:43.431Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:50:43.431Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:50:43.432Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:50:43.432Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:50:43.432Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:43.433Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:50:43.435Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:50:43.436Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:50:43.539Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:50:43.540Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:50:50.204Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:50:50.205Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:50:50.205Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:50:50.206Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:50:50.206Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:50.207Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:50:50.209Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:50:50.210Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:50:50.211Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:50:50.211Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:50.214Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:50:50.224Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:50:50.224Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:50:50.320Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:50:50.320Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:50:56.132Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:50:56.132Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:50:56.132Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:50:56.133Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:50:56.133Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:56.133Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:50:56.133Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:50:56.134Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:50:56.134Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:50:56.134Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:50:56.135Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:50:56.138Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:50:56.138Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:50:56.232Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:50:56.233Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:51:08.245Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:51:08.245Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:51:08.245Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:51:08.246Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:51:08.246Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:51:08.246Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:51:08.247Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:51:08.247Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:51:08.247Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:51:08.248Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:51:08.248Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:51:08.250Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:51:08.251Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:51:08.339Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:51:08.340Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:51:39.747Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:51:39.747Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:51:39.748Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:51:39.748Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:51:39.748Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:51:39.748Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:51:39.748Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:51:39.749Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:51:39.749Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:51:39.749Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:51:39.750Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:51:39.753Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:51:39.755Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:51:39.841Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:51:39.842Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:52:32.785Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:52:32.785Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:52:32.785Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:52:32.785Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:52:32.785Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:52:32.785Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:52:32.786Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:52:32.788Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:52:32.788Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:52:32.788Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:52:32.789Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:52:32.792Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:52:32.793Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:52:32.893Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:52:32.894Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-27T09:53:11.228Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-27T09:53:11.228Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-27T09:53:11.229Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-04-27T09:53:11.229Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-27T09:53:11.229Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: Assigning socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:53:11.229Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: BUSY 
+[debug] [2020-04-27T09:53:11.230Z] [runtime-status] [4995] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-27T09:53:11.231Z] [runtime-status] [4995] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-27T09:53:11.231Z] [runtime-status] [4995] Running api in mode HTTPS 
+[debug] [2020-04-27T09:53:11.232Z] [runtime-status] [4995] Attempting to listen to socketPath: /tmp/fire_emu_4995.sock 
+[debug] [2020-04-27T09:53:11.234Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-27T09:53:11.242Z] [runtime-status] [4995] Ephemeral server handling GET request 
+[debug] [2020-04-27T09:53:11.244Z] [runtime-status] [4995] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-27T09:53:11.336Z] [worker-api-14137f38-6210-46f9-bc9c-6af340c53751]: IDLE 
+[debug] [2020-04-27T09:53:11.337Z] [work-queue] {"queueLength":0,"workRunningCount":0}

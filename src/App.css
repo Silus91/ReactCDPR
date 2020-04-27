@@ -1,15 +1,5 @@
 .App {
-    background-color: rgb(246, 245, 245);
-    opacity: 0.9;
-    z-index: -2;
+  background-color: rgb(246, 245, 245);
+  opacity: 0.9;
+  z-index: -2;
 }
-
-/* .light{
-    background-color: beige!important;
-    color: black!important;
-}
-
-.dark{
-    background-color: black!important;
-    color: beige!important;
-} */

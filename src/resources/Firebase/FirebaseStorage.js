@@ -1,5 +1,5 @@
-import 'firebase/storage';
-import * as firebase from 'firebase/app';
+import "firebase/storage";
+import * as firebase from "firebase/app";
 
 const storage = firebase.storage();
 

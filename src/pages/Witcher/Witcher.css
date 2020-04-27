@@ -1,14 +1,14 @@
 @font-face {
   font-family: Witcher;
-  src: url('../../resources/Fonts/Thewitcher.ttf');
+  src: url("../../resources/Fonts/Thewitcher.ttf");
 }
 
-.quote{
+.quote {
   font-family: Witcher;
   text-shadow: 1px 0px red;
 }
 
-.witcherBackground{
+.witcherBackground {
   width: 70vw;
   height: 70vw;
   position: fixed;
@@ -17,72 +17,201 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  opacity:1;
+  opacity: 1;
   z-index: -2;
-  -webkit-animation:spin 30s linear infinite;
-  -moz-animation:spin 30s linear infinite;
-  animation:spin 30s linear infinite;
+  -webkit-animation: spin 30s linear infinite;
+  -moz-animation: spin 30s linear infinite;
+  animation: spin 30s linear infinite;
 }
 
 @keyframes spin {
-    0%   {opacity: 1; transform: rotate(0deg)translateX(00px) }
-    10%  {opacity: 0; transform: rotate(0deg)translateX(20px)}
-    20%  {opacity: 0; transform: rotate(90deg)}
-    29%  {opacity: 0; transform: rotate(90deg)}
-    30%  {opacity: 1; transform: rotate(90deg)translateX(00px)}
-    40% {opacity: 0; transform: rotate(90deg)translateX(20px)}
-    50% {opacity: 0; transform: rotate(180deg)}
-    59% {opacity: 0; transform: rotate(180deg)}
-    60% {opacity: 1; transform: rotate(180deg)translateX(00px)}
-    70% {opacity: 0; transform: rotate(180deg)translateX(20px)}
-    80% {opacity: 0; transform: rotate(270deg)}
-    89% {opacity: 0; transform: rotate(270deg)}
-    90% {opacity: 1; transform: rotate(270deg)translateX(00px)}
-    100% {opacity: 0; transform: rotate(270deg)translateX(20px)}
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(00px);
   }
-
-  @-webkit-keyframes spin {
-    0%   {opacity: 1; transform: rotate(0deg) }
-    10%  {opacity: 0; transform: rotate(0deg)}
-    20%  {opacity: 0; transform: rotate(90deg)}
-    29%  {opacity: 0; transform: rotate(90deg)}
-    30%  {opacity: 1; transform: rotate(90deg)}
-    40% {opacity: 0; transform: rotate(90deg)}
-    50% {opacity: 0; transform: rotate(180deg)}
-    59% {opacity: 0; transform: rotate(180deg)}
-    60% {opacity: 1; transform: rotate(180deg)}
-    70% {opacity: 0; transform: rotate(180deg)}
-    80% {opacity: 0; transform: rotate(270deg)}
-    89% {opacity: 0; transform: rotate(270deg)}
-    90% {opacity: 1; transform: rotate(270deg)}
-    100% {opacity: 0; transform: rotate(270deg)}
+  10% {
+    opacity: 0;
+    transform: rotate(0deg) translateX(20px);
   }
-
-
-  @-moz-keyframes spin {
-    0%   {opacity: 1; transform: rotate(0deg) }
-    10%  {opacity: 0; transform: rotate(0deg)}
-    20%  {opacity: 0; transform: rotate(90deg)}
-    29%  {opacity: 0; transform: rotate(90deg)}
-    30%  {opacity: 1; transform: rotate(90deg)}
-    40% {opacity: 0; transform: rotate(90deg)}
-    50% {opacity: 0; transform: rotate(180deg)}
-    59% {opacity: 0; transform: rotate(180deg)}
-    60% {opacity: 1; transform: rotate(180deg)}
-    70% {opacity: 0; transform: rotate(180deg)}
-    80% {opacity: 0; transform: rotate(270deg)}
-    89% {opacity: 0; transform: rotate(270deg)}
-    90% {opacity: 1; transform: rotate(270deg)}
-    100% {opacity: 0; transform: rotate(270deg)}
+  20% {
+    opacity: 0;
+    transform: rotate(90deg);
   }
+  29% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(90deg) translateX(00px);
+  }
+  40% {
+    opacity: 0;
+    transform: rotate(90deg) translateX(20px);
+  }
+  50% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  59% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(180deg) translateX(00px);
+  }
+  70% {
+    opacity: 0;
+    transform: rotate(180deg) translateX(20px);
+  }
+  80% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  89% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(270deg) translateX(00px);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(270deg) translateX(20px);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  29% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  40% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  59% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  70% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  80% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  89% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(270deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  29% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  40% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  59% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  70% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  80% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  89% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(270deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(270deg);
+  }
+}
 
 .card {
-    background-color: transparent;
+  background-color: transparent;
 }
-.collapsible-header{
-    background-color: transparent;
+.collapsible-header {
+  background-color: transparent;
 }
 
-.collapsible-body{
-    background-image: linear-gradient(120deg, rgba(240, 211, 211, 0.322), rgba(243, 11, 11, 0.39));
+.collapsible-body {
+  background-image: linear-gradient(
+    120deg,
+    rgba(240, 211, 211, 0.322),
+    rgba(243, 11, 11, 0.39)
+  );
 }

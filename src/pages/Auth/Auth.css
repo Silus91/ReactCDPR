@@ -1,31 +1,32 @@
-.authContainer{
-    height: 100%;
-    width: 100%;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FcityCarv2.jpg?alt=media&token=377b4abc-a6a8-43da-be61-d0df2d92b705");
-    background-position: center;
-    background-size: cover;
+.authContainer {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FcityCarv2.jpg?alt=media&token=377b4abc-a6a8-43da-be61-d0df2d92b705");
+  background-position: center;
+  background-size: cover;
 }
 
 .authCard {
-    background-color: rgba(255, 255, 255, 0.8)!important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.tabs{
-    background-color: rgba(255, 255, 255, 0.0);
+.tabs {
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.tab{
-    background-color: rgba(255, 255, 255, 0.0);
+.tab {
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.tabs .indicator{
-    background-color: rgb(0, 128, 128);
+.tabs .indicator {
+  background-color: rgb(0, 128, 128);
 }
 
-.tabs .tab a{
-    color:rgb(0, 128, 128)!important;
+.tabs .tab a {
+  color: rgb(0, 128, 128) !important;
 }
 
-.tabs .tab a:focus, .tabs .tab a:focus.active{
-    background-color: rgba(0, 128, 128, 0.3)!important;
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(0, 128, 128, 0.3) !important;
 }

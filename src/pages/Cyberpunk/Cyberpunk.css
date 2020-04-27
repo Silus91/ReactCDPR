@@ -5,21 +5,27 @@
 
 @font-face {
   font-family: Cyber2077;
-  src: url('../../resources/Fonts/Cyberpunk.ttf');
+  src: url("../../resources/Fonts/Cyberpunk.ttf");
 }
 
-.cyberpunkContainer{
-  background: linear-gradient(250deg, rgb(255, 255, 1)10%, rgb(0, 255, 255)20%, rgb(211, 0, 253) 70%,rgb(255,255,255) 120%);
+.cyberpunkContainer {
+  background: linear-gradient(
+    250deg,
+    rgb(255, 255, 1) 10%,
+    rgb(0, 255, 255) 20%,
+    rgb(211, 0, 253) 70%,
+    rgb(255, 255, 255) 120%
+  );
 }
 
-.counter{
+.counter {
   font-size: 2rem;
   color: rgb(255, 255, 0);
   text-shadow: 2px 2px rgb(0, 255, 255);
   background-image: radial-gradient(rgb(255, 0, 0) 10%, rgba(0, 0, 0, 0) 60%);
 }
 
-.headerCyberpunk{
+.headerCyberpunk {
   position: relative;
   margin-top: 0px;
   font-family: Cyber2077;
@@ -28,7 +34,7 @@
   text-shadow: 2px 2px rgb(0, 255, 255), -2px -2px rgb(0, 0, 0);
 }
 
-.headerCyberpunk::after{
+.headerCyberpunk::after {
   content: "2077";
   font-size: 2rem;
   position: absolute;
@@ -44,28 +50,25 @@
   }
 }
 
-.header2077{
+.header2077 {
   font-size: 4rem;
   position: relative;
-  left:20%;
-  color:rgb(0, 255, 255);
-
+  left: 20%;
+  color: rgb(0, 255, 255);
 }
 
-iframe{
-  display: inline!important;
+iframe {
+  display: inline !important;
 }
 
-.cyberText{
+.cyberText {
   font-family: Cyber2077;
-  color: yellow!important;
+  color: yellow !important;
   text-shadow: 2px 2px cyan;
   font-size: 2rem;
 }
 
-.row{
+.row {
   margin-bottom: 0px;
   z-index: -1;
 }
-
-
