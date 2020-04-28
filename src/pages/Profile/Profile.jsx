@@ -17,6 +17,8 @@ export class Profile extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({ errors: nextProps.UI.errors });
+    } else if (!nextProps.UI.errors) {
+      this.setState({ errors: "" });
     }
   }
 
