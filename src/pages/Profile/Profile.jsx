@@ -17,7 +17,6 @@ export class Profile extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({ errors: nextProps.UI.errors });
-      console.log(this.state.errors);
     }
   }
 
@@ -53,14 +52,14 @@ export class Profile extends Component {
         <h1 className='profileHeader center'>Profile</h1>
         <div className='card'>
           <div className=' col m6 offset-m3 s12'>
-            <span className='helper-text red-text center-align'>
+            <span className='center helper-text red-text center-align'>
               {errors.photo ? errors.photo : ""}
             </span>
             <div className='profilePicConteiner'>
               <a
                 className='inputHandler tooltipped'
                 data-position='right'
-                data-tooltip='Edit photo'
+                data-tooltip='Edit photo Only jpeg/png'
                 onClick={this.inputHandler}
               >
                 <img className='profilePic circle' src={photoURL} />

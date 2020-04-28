@@ -122,11 +122,10 @@ export const uploadUserImg = (formData) => (dispatch) => {
       toastMsg("Profile Image Updated!");
     })
     .catch((err) => {
-      console.log(err.res.data);
       toastMsg("Only jpeg/png");
       dispatch({
         type: SET_ERRORS,
-        payload: err.res.data,
+        payload: err.response.data,
       });
     });
 };

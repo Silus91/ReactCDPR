@@ -1,25 +1,24 @@
-.responsive-img{
-  position: relative!important;
-  z-index: 0!important;
+.responsive-img {
+  position: relative !important;
+  z-index: 0 !important;
 }
 
-.carousel .carousel-item >div{
-  z-index: 1!important;
-  top: 25%!important;
-  right: 3%!important;
-  position: absolute!important;
+.carousel .carousel-item > div {
+  z-index: 1 !important;
+  top: 25% !important;
+  right: 3% !important;
+  position: absolute !important;
   max-width: 40px;
 }
 
 @media only screen and (max-width: 450px) {
-  .carousel .carousel-item >div {
-    top: 15%!important;
+  .carousel .carousel-item > div {
+    top: 15% !important;
   }
 }
 
-
-.carousel .carousel-item >div> a{
-  padding: 5px;;
+.carousel .carousel-item > div > a {
+  padding: 5px;
 }
 
 .imgsize {
@@ -28,6 +27,7 @@
 }
 @media only screen and (max-width: 450px) {
   .imgsize {
-    width: 30px!important;
-    height: 30px!important;  }
+    width: 30px !important;
+    height: 30px !important;
+  }
 }

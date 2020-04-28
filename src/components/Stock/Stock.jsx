@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import Plot from 'react-plotly.js';
-import'./Stock.css';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import Plot from "react-plotly.js";
+import "./Stock.css";
+import { connect } from "react-redux";
 
 const values = new Set([30, 60, 120, 360, 1000]);
 
 class Stock extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       stockChartValuesX: [],
       stockChartValuesY: [],
-      radioValue: 120
-     }
-   }
+      radioValue: 120,
+    };
+  }
 
   componentDidMount() {
     this.fetchStock();
   }
 
-  componentDidUpdate(prevProps, prevState){
-    if(prevState.radioValue !== this.state.radioValue) {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.radioValue !== this.state.radioValue) {
       return this.fetchStock();
     }
   }
@@ -33,8 +33,13 @@ class Stock extends Component {
     return Array.from(values).map((value, index) => (
       <span key={index}>
         <label>
-          <input name="group1" type="radio" onChange={this.handleChange} value={value} />
-          <span className="radioValue">{value} Days</span>
+          <input
+            name='group1'
+            type='radio'
+            onChange={this.handleChange}
+            value={value}
+          />
+          <span className='radioValue'>{value} Days</span>
         </label>
       </span>
     ));
@@ -49,28 +54,27 @@ class Stock extends Component {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     fetch(proxyurl + API_CDR)
-    .then((res) => {
-      console.log("res", res)
-      return res.json();
-    })
-    .then((data) => {
-      const cutted = data['dataset']['data'].slice(0,radioValue);
-
-      for (var i = 0; i < cutted.length; i++) {
-        stockChartValuesXFunction.push(cutted[i][0]);
-        stockChartValuesYFunction.push(cutted[i][1]);
-      }
-
-      pointerToThis.setState({
-        stockChartValuesX: stockChartValuesXFunction,
-        stockChartValuesY: stockChartValuesYFunction
+      .then((res) => {
+        return res.json();
       })
-    })
+      .then((data) => {
+        const cutted = data["dataset"]["data"].slice(0, radioValue);
+
+        for (var i = 0; i < cutted.length; i++) {
+          stockChartValuesXFunction.push(cutted[i][0]);
+          stockChartValuesYFunction.push(cutted[i][1]);
+        }
+
+        pointerToThis.setState({
+          stockChartValuesX: stockChartValuesXFunction,
+          stockChartValuesY: stockChartValuesYFunction,
+        });
+      });
   }
 
-  handleChange = event => {
-    this.setState({radioValue: event.target.value});
-  }
+  handleChange = (event) => {
+    this.setState({ radioValue: event.target.value });
+  };
 
   render() {
     const { radioValue } = this.state;
@@ -81,34 +85,36 @@ class Stock extends Component {
             {
               x: this.state.stockChartValuesX,
               y: this.state.stockChartValuesY,
-              type: 'scatter',
-              mode: 'lines',
-              marker: {color: 'red'},
-              legendgroup:false
+              type: "scatter",
+              mode: "lines",
+              marker: { color: "red" },
+              legendgroup: false,
             },
           ]}
-          layout={{autosize: true, title: 'CD Project Red SA', showlegend: false}}
-          displayModeBar= {false}
+          layout={{
+            autosize: true,
+            title: "CD Project Red SA",
+            showlegend: false,
+          }}
+          displayModeBar={false}
           useResizeHandler={true}
-          style={{width: "100%", height: "100%"}}
+          style={{ width: "100%", height: "100%" }}
           config={{
-             staticPlot: true,
-            displayModeBar: false
+            staticPlot: true,
+            displayModeBar: false,
           }}
         />
         <div>
-          <span className="red-text left">{`Showing data from ${radioValue} days`}</span>
-          <div className="radioBtn right">
-            {this.renderRadio()}
-          </div>
+          <span className='red-text left'>{`Showing data from ${radioValue} days`}</span>
+          <div className='radioBtn right'>{this.renderRadio()}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => ({
-  UI: state.UI
- })
+  UI: state.UI,
+});
 
 export default connect(mapStateToProps)(Stock);

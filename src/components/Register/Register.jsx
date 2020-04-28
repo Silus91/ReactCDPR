@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { registerAction } from '../../actions/authActions';
-import TextInput from '../TextInput/TextInput';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { registerAction } from "../../actions/authActions";
+import TextInput from "../TextInput/TextInput";
 import M from "materialize-css";
-
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      email: '',
-      password: '',
-      confirmPassword: '',
-      firstName: '',
-      lastName: '',
-      handle: '',
+      email: "",
+      password: "",
+      confirmPassword: "",
+      firstName: "",
+      lastName: "",
+      handle: "",
       errors: {},
-      photoURL: '1'
-    }
-  }                  
+      photoURL: "1",
+    };
+  }
 
   componentDidMount() {
     M.AutoInit();
   }
-
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
@@ -33,15 +31,21 @@ class Register extends Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.id]: event.target.value
-    })
-  }
-  
+      [event.target.id]: event.target.value,
+    });
+  };
+
   handleSubmit = (event) => {
-    const { email, password, confirmPassword, firstName, lastName} = this.state;
+    const {
+      email,
+      password,
+      confirmPassword,
+      firstName,
+      lastName,
+    } = this.state;
     event.preventDefault();
     this.setState({
-      loading: true
+      loading: true,
     });
     const newUserData = {
       email: email,
@@ -49,77 +53,88 @@ class Register extends Component {
       confirmPassword: confirmPassword,
       firstName: firstName,
       lastName: lastName,
-      photoURL: lastName
+      photoURL: lastName,
     };
-    this.props.registerAction(newUserData, this.props.history)
+    this.props.registerAction(newUserData, this.props.history);
   };
 
   render() {
-    const { UI:{ loading } } = this.props;
+    const {
+      UI: { loading },
+    } = this.props;
     const { errors } = this.state;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <TextInput 
+          <TextInput
             id='email'
             type='email'
             label='Email'
             htmlFor='email'
             icon='email'
-            errors={errors.email ? errors.email : ''}
+            errors={errors.email ? errors.email : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='password'
             type='password'
             htmlFor='password'
             label='Password'
             icon='security'
-            errors={errors.password ? errors.password : ''}
+            errors={errors.password ? errors.password : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='confirmPassword'
             type='password'
             label='Confirm Password'
             htmlFor='Confirm password'
             icon='security'
-            errors={errors.confirmPassword ? errors.confirmPassword : ''}
+            errors={errors.confirmPassword ? errors.confirmPassword : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='firstName'
             type='text'
             label='First Name'
             icon='account_circle'
             htmlFor='First name'
-            errors={errors.firstName ? errors.firstName : ''}
+            errors={errors.firstName ? errors.firstName : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='lastName'
             type='text'
             label='Last Name'
             htmlFor='lastName'
             icon='account_circle'
-            errors={errors.lastName ? errors.lastName : ''}
+            errors={errors.lastName ? errors.lastName : ""}
             onChange={this.handleChange}
           />
-          <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
-          <div className="input-field center-align">
-            <button type="submit" className={loading ? "btn disabled": "btn teal darken-2 z-depth-2" }>Register</button>
+          <span className='helper-text red-text center-align'>
+            {errors.general ? errors.general : ""}
+          </span>
+          <div className='input-field center-align'>
+            <button
+              type='submit'
+              className={
+                loading ? "btn disabled" : "btn teal darken-2 z-depth-2"
+              }
+            >
+              Register
+            </button>
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
-  return{
+  return {
     user: state.user,
-    UI: state.UI
-  }
-}
+    UI: state.UI,
+  };
+};
 
-export default connect(mapStateToProps, { registerAction } )(Register);
+export default connect(mapStateToProps, { registerAction })(Register);

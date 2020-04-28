@@ -1,6 +1,6 @@
-import React from 'react';
-import YouTube from 'react-youtube';
-import './YoutubeVideo.css';
+import React from "react";
+import YouTube from "react-youtube";
+import "./YoutubeVideo.css";
 
 class YoutubeVideo extends React.Component {
   videoOnReady(event) {
@@ -8,13 +8,13 @@ class YoutubeVideo extends React.Component {
   }
 
   render() {
-    const { videoId }= this.props;
+    const { videoId } = this.props;
     return (
-      <div className="video-container">      
+      <div className='video-container'>
         <YouTube
           videoId={videoId}
           onReady={this.videoOnReady}
-          className="video"
+          className='video'
         />
       </div>
     );

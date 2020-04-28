@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import TextInput from '../TextInput/TextInput';
-import { sendMessage } from '../../actions/uiActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import TextInput from "../TextInput/TextInput";
+import { sendMessage } from "../../actions/uiActions";
 import M from "materialize-css";
 
 class ContactUs extends Component {
-
   state = {
-    name: '',
-    email: '',
-    message: '',
-    errors: {}
-  }
+    name: "",
+    email: "",
+    message: "",
+    errors: {},
+  };
 
   componentDidMount() {
     M.AutoInit();
@@ -25,73 +24,82 @@ class ContactUs extends Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.id]: event.target.value
-    })
-  }
+      [event.target.id]: event.target.value,
+    });
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
     const messageData = {
-			name: this.state.name,
+      name: this.state.name,
       email: this.state.email,
-      message: this.state.message
-    }
+      message: this.state.message,
+    };
     this.props.sendMessage(messageData);
     this.setState({
-      name: '',
-      email: '',
-      message: ''
-    })
+      name: "",
+      email: "",
+      message: "",
+    });
     event.target.reset();
-
-
-  }
+  };
 
   render() {
     const { errors } = this.state;
-    const { UI:{ loading } } = this.props;
+    const {
+      UI: { loading },
+    } = this.props;
     return (
       <>
         <form onSubmit={this.handleSubmit}>
-          <TextInput 
+          <TextInput
             id='name'
             type='text'
             label='Name'
             htmlFor='name'
             icon='account_circle'
-            errors={errors.name ? errors.name : ''}
+            errors={errors.name ? errors.name : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='email'
             type='email'
             label='Email'
             htmlFor='email'
             icon='email'
-            errors={errors.email ? errors.email : ''}
+            errors={errors.email ? errors.email : ""}
             onChange={this.handleChange}
           />
-          <TextInput 
+          <TextInput
             id='message'
             type='text'
             htmlFor='message'
             label='Message'
             icon='message'
-            errors={errors.message ? errors.message : ''}
+            errors={errors.message ? errors.message : ""}
             onChange={this.handleChange}
           />
-          <span className="helper-text red-text center-align">{errors.general ? errors.general : ''}</span>
-          <div className="input-field center-align">
-            <button type="submit" className={loading ? "btn disabled" : "btn teal darken-2 z-depth-2" }>Send</button>
+          <span className='helper-text red-text center-align'>
+            {errors.general ? errors.general : ""}
+          </span>
+          <div className='input-field center-align'>
+            <button
+              type='submit'
+              className={
+                loading ? "btn disabled" : "btn teal darken-2 z-depth-2"
+              }
+            >
+              Send
+            </button>
           </div>
         </form>
-      </>   
-    )
+      </>
+    );
   }
 }
 
 const mapStateToProps = (state) => ({
-  UI: state.UI
-})
+  UI: state.UI,
+});
 
 export default connect(mapStateToProps, { sendMessage })(ContactUs);

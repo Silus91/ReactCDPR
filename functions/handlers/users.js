@@ -75,7 +75,6 @@ exports.login = (req, res) => {
     email: req.body.email,
     password: req.body.password,
   };
-
   const { valid, errors } = validateLoginData(user);
 
   if (!valid) return res.status(400).json(errors);
@@ -131,7 +130,6 @@ exports.logout = (req, res) => {
 };
 
 exports.uploadImage = (req, res) => {
-  console.log("bakcend");
   const BusBoy = require("busboy");
   const path = require("path");
   const os = require("os");
@@ -161,6 +159,7 @@ exports.uploadImage = (req, res) => {
       .bucket()
       .upload(imageToBeUploaded.filepath, {
         resumable: false,
+        destination: `userImgs/${imageFileName}`,
         metadata: {
           metadata: {
             contentType: imageToBeUploaded.mimetype,
@@ -169,7 +168,7 @@ exports.uploadImage = (req, res) => {
         },
       })
       .then(() => {
-        const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media&token=${generatedToken}`;
+        const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/userImgs%2F${imageFileName}?alt=media&token=${generatedToken}`;
         return db.doc(`/users/${req.user.handle}`).update({ photoURL });
       })
       .then(() => {
