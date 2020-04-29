@@ -49,7 +49,7 @@ exports.register = (req, res) => {
         lastName: newUser.lastName,
         createdAt: new Date().toISOString(),
         photoURL:
-          "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/userImgs%2Fsamurai.png?alt=media&token=94e6cf68-c123-436f-905c-29d57d28533b",
+          "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/userImgs%2Fsamurai.png?alt=media&token=3a74747b-4740-40c6-b297-33d1599e4b14",
         userId,
       };
       return db.doc(`/users/${newUser.handle}`).set(userCredentials);

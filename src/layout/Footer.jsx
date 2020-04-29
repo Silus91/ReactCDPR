@@ -31,7 +31,7 @@ export class Footer extends Component {
             </div>
           </div>
           <div className='col l4 s12 card z-depth-2 hoverable grey darken-2'>
-            <h4 className='center'>Contact Us</h4>
+            <h4 className='center'>Contact Me</h4>
             <ContactUs />
           </div>
         </div>

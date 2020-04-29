@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CardTabs.css";
 
 export class CardTabs extends Component {
   render() {
@@ -16,7 +17,7 @@ export class CardTabs extends Component {
               })}
             </ul>
           </div>
-          <div>
+          <div className='textContainer'>
             {this.props.configs.map((config) => {
               return (
                 <div className='container' id={config.id} key={config.id}>

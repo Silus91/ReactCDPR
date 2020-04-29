@@ -22,7 +22,7 @@ const token = localStorage.getItem("FBidToken");
 if (token) {
   axios
     .create()
-    .get("http://localhost:5000/cdred-project/us-central1/api/user");
+    .get("https://us-central1-cdred-project.cloudfunctions.net/api/user");
 }
 
 if (token) {

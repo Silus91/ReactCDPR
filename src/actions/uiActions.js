@@ -8,7 +8,7 @@ import {
 import axios from "axios";
 import { toastMsg } from "../services/Service";
 
-const BASE_URL = "http://localhost:5000/cdred-project/us-central1/api/";
+const BASE_URL = "https://us-central1-cdred-project.cloudfunctions.net/api/";
 
 export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });

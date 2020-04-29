@@ -19,12 +19,13 @@ class Home extends Component {
     const {
       UI: { loading },
       UI: { surveys },
+      user: { authenticated },
     } = this.props;
     return (
       <div className=''>
         <div className='header'>
           <div className='container headerContent'>
-            <h1 className='title'>Welcome!</h1>
+            <h1 className='title'>Wel come!</h1>
             <h1 className='titleSecond'>
               CD Project Red <br />
               Fan Page!
@@ -86,7 +87,7 @@ class Home extends Component {
           <div className='section white'>
             <div className='row container'>
               <div className='col l6 m6 s12 offset-l3 center  quote'>
-                <h4>Opinions about that page</h4>
+                <h4>Opinions From Users</h4>
                 <h5>Want to add your own?? Scroll bellow.</h5>
                 <div className='survey'>
                   {surveys.length > 0 ? (
@@ -112,7 +113,11 @@ class Home extends Component {
           <div className='section white row container'>
             <div className='col l6 m6 s12 card'>
               <div className='card-content'>
-                <Survey />
+                {authenticated ? (
+                  <Survey />
+                ) : (
+                  <h4 className='quote'>Signup to Send some Survey!</h4>
+                )}
               </div>
             </div>
           </div>
@@ -123,6 +128,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  user: state.user,
   UI: state.UI,
 });
 

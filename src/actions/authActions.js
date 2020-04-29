@@ -15,7 +15,7 @@ import {
 import { toastMsg } from "../services/Service";
 
 const firebase = require("firebase");
-const BASE_URL = "http://localhost:5000/cdred-project/us-central1/api/";
+const BASE_URL = "https://us-central1-cdred-project.cloudfunctions.net/api/";
 
 // const BASE_URL = process.env.REACT_APP_BASE_URL;
 
