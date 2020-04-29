@@ -21,7 +21,7 @@
 .counter {
   font-size: 2rem;
   color: rgb(255, 255, 0);
-  text-shadow: 2px 2px rgb(0, 255, 255);
+  text-shadow: 2px 2px rgb(0, 255, 255), -2px -2px black;
   background-image: radial-gradient(rgb(255, 0, 0) 10%, rgba(0, 0, 0, 0) 60%);
 }
 
@@ -57,6 +57,10 @@
   color: rgb(0, 255, 255);
 }
 
+.insta {
+  padding-top: 24px !important;
+}
+
 iframe {
   display: inline !important;
 }
@@ -64,7 +68,7 @@ iframe {
 .cyberText {
   font-family: Cyber2077;
   color: yellow !important;
-  text-shadow: 2px 2px cyan;
+  text-shadow: 2px 2px cyan, -2px -2px black;
   font-size: 2rem;
 }
 

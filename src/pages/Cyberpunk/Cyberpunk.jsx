@@ -26,7 +26,7 @@ class Cyberpunk extends React.Component {
             <div className='card-content cyberText'>{cyber}</div>
           </div>
 
-          <div className='col l4 s12 insta center'>
+          <div className='col l4 s12 insta center card'>
             <InstagramEmbed
               url='https://www.instagram.com/p/B5_zQFSn3zQ/?utm_source=ig_web_copy_link'
               maxWidth={400}

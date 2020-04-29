@@ -25,20 +25,13 @@ class Home extends Component {
       <div className=''>
         <div className='header'>
           <div className='container headerContent'>
-            <h1 className='title'>Wel come!</h1>
-            <h1 className='titleSecond'>
-              CD Project Red <br />
-              Fan Page!
-            </h1>
-            <div>Want to jump to orginal page?? Just Click below!</div>
-            <a
-              rel='noopener noreferrer'
-              className='btn large cyan yellow-text'
-              href='https://en.cdprojektred.com/'
-              target='_blank'
-            >
-              Redirect
-            </a>
+            <div className='headerBackground'>
+              <h1 className='title'>Wel come!</h1>
+              <h1 className='titleSecond'>
+                CD Project Red <br />
+                Fan Page!
+              </h1>
+            </div>
           </div>
         </div>
         <div className='section white row container'>
@@ -58,7 +51,7 @@ class Home extends Component {
             image={
               <img
                 alt='cdpr'
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FstartImg.jpg?alt=media&token=e28e2361-c941-481f-844b-3e457016a859'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172'
               />
             }
             options={{
@@ -69,8 +62,18 @@ class Home extends Component {
           <div className='section white'>
             <div className='row container center quote'>
               <h4>Big Games</h4>
-
               <p className='paragraph'>{why}</p>
+              <p className='paragraph'>
+                Want to jump to orginal page?? Just Click below!
+              </p>
+              <a
+                rel='noopener noreferrer'
+                className='btn large cyan yellow-text'
+                href='https://en.cdprojektred.com/'
+                target='_blank'
+              >
+                Redirect
+              </a>
             </div>
           </div>
           <Parallax

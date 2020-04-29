@@ -20,12 +20,16 @@ export class Footer extends Component {
                 <SocialButton
                   src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Flinkedin.png?alt=media&token=97113707-7cb5-4ebb-894e-dd8ff46dd9d4'
                   href='https://www.linkedin.com/in/dawid-dyczek-07b193183/'
+                  toolPosition='left'
+                  toolTip='Are we LinkedIn?!'
                 />
               </div>
               <div>
                 <SocialButton
                   src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Fgithubimg.png?alt=media&token=3b23bab8-1d18-435d-9548-c7cc0244f1d2'
                   href='https://github.com/silus91'
+                  toolPosition='right'
+                  toolTip='My GitHub portfolio!'
                 />
               </div>
             </div>
