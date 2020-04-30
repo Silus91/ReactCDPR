@@ -39,6 +39,10 @@ class Login extends Component {
       password: this.state.password,
     };
     this.props.loginAction(userData);
+    this.setState({
+      email: "",
+      password: "",
+    });
   };
 
   render() {
