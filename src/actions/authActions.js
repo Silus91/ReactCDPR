@@ -15,9 +15,7 @@ import {
 import { toastMsg } from "../services/Service";
 
 const firebase = require("firebase");
-const BASE_URL = "https://us-central1-cdred-project.cloudfunctions.net/api/";
-
-// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });

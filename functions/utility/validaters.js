@@ -10,6 +10,11 @@ const isEmpty = (string) => {
   return false;
 };
 
+const tooLong = (string) => {
+  if (string.length > 30) return true;
+  return false;
+};
+
 exports.validateRegisterData = (data) => {
   let errors = {};
 
@@ -66,7 +71,11 @@ exports.validateNewEmail = (data) => {
 
 exports.validateNewSurvey = (data) => {
   let errors = {};
-  if (isEmpty(data.opinion)) errors.opinion = "Opinion cant be empty";
+  if (isEmpty(data.opinion)) {
+    errors.opinion = "Opinion cant be empty";
+  } else if (tooLong(data.opinion)) {
+    errors.opinion = "Too long opinion sorry max 30 characters";
+  }
   if (data.rating < 1) errors.rating = "Leave some rating please";
 
   return {

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import M from "materialize-css";
 // import './TextInput.css';
 
 export class TextInput extends Component {
+  componentDidMount() {
+    M.AutoInit();
+  }
+
   render() {
     return (
       <div className='input-field'>
@@ -14,6 +19,7 @@ export class TextInput extends Component {
           id={this.props.id}
           className='validate'
           onChange={this.props.onChange}
+          data-length={this.props.datalength}
         />
         <span className='helper-text red-text center-align'>
           {this.props.errors}

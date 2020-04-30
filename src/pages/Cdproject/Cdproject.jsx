@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Stock from "../../components/Stock/Stock";
-import Carousel from "../../components/Carousel/Carousel";
+import CarouselRender from "../../components/Carousel/CarouselRender";
 import slides from "../../resources/textConfigs/slidesCDPR";
 import CardTabs from "../../components/CardTabs/CardTabs";
 import configs from "../../resources/textConfigs/configsCDPR";
@@ -21,7 +21,7 @@ class Cdproject extends Component {
           </div>
           <div className='card col l7 s12'>
             <div className='card-content'>
-              <Carousel slides={slides} />
+              <CarouselRender slides={slides} />
             </div>
           </div>
           <div className='col l5 s12'>

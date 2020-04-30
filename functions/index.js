@@ -11,7 +11,11 @@ const {
 const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
 
-app.use(cors({ origin: true }));
+app.use(
+  cors({
+    origin: "https://cdred-project.web.app",
+  })
+);
 
 // Services
 app.post("/message", sendEmail);

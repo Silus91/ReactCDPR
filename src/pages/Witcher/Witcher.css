@@ -6,6 +6,7 @@
 .quote {
   font-family: Witcher;
   text-shadow: 1px 0px red;
+  text-align: center;
 }
 
 .witcherBackground {

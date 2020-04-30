@@ -20,9 +20,7 @@ import { getUserData, logout } from "./actions/authActions";
 const token = localStorage.getItem("FBidToken");
 
 if (token) {
-  axios
-    .create()
-    .get("https://us-central1-cdred-project.cloudfunctions.net/api/user");
+  axios.create().get(process.env.REACT_APP_BASE_URL);
 }
 
 if (token) {

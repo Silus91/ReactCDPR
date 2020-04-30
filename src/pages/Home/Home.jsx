@@ -24,8 +24,8 @@ class Home extends Component {
     return (
       <div className=''>
         <div className='header'>
-          <div className='container headerContent'>
-            <div className='headerBackground'>
+          <div className='container headerContent center'>
+            <div className='headerBackground '>
               <h1 className='title'>Wel come!</h1>
               <h1 className='titleSecond'>
                 CD Project Red <br />
@@ -35,8 +35,8 @@ class Home extends Component {
           </div>
         </div>
         <div className='section white row container'>
-          <div className='center'>
-            <h3 className='titleSecond'>Info from creator</h3>
+          <div className='center sectionContent'>
+            <h3 className='titleSecond noMargin'>Info from creator</h3>
             <p className='paragraph'>{creatorInfo}</p>
             <SocialButton
               src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Fgithubimg.png?alt=media&token=3b23bab8-1d18-435d-9548-c7cc0244f1d2'
@@ -60,11 +60,11 @@ class Home extends Component {
             style={{ height: "700px" }}
           />
           <div className='section white'>
-            <div className='row container center quote'>
-              <h4>Big Games</h4>
-              <p className='paragraph'>{why}</p>
+            <div className='row container sectionContent center quote'>
+              <h3 className='noMargin'>Big Games</h3>
               <p className='paragraph'>
-                Want to jump to orginal page?? Just Click below!
+                {why}
+                <br /> Want to jump to orginal page?? Just Click below!
               </p>
               <a
                 rel='noopener noreferrer'
@@ -87,18 +87,16 @@ class Home extends Component {
               responsiveThreshold: 0,
             }}
           />
-          <div className='section white'>
-            <div className='row container'>
-              <div className='col l6 m6 s12 offset-l3 center  quote'>
-                <h4>Opinions From Users</h4>
-                <h5>Want to add your own?? Scroll bellow.</h5>
-                <div className='survey'>
-                  {surveys.length > 0 ? (
-                    <QuoteGenerator time={2000} surveys={surveys} />
-                  ) : (
-                    loading
-                  )}
-                </div>
+          <div className='section white row'>
+            <div className='container sectionContent center quote'>
+              <h4>Opinions From Users</h4>
+              <h5>Want to add your own?? Scroll bellow.</h5>
+              <div className='survey'>
+                {surveys.length > 0 ? (
+                  <QuoteGenerator time={2000} surveys={surveys} />
+                ) : (
+                  loading
+                )}
               </div>
             </div>
           </div>
@@ -114,13 +112,13 @@ class Home extends Component {
             }}
           />
           <div className='section white row container'>
-            <div className='col l6 m6 s12 card'>
+            <div className='center card'>
               <div className='card-content'>
-                {authenticated ? (
-                  <Survey />
-                ) : (
-                  <h4 className='quote'>Signup to Send some Survey!</h4>
-                )}
+                {/* {authenticated ? ( */}
+                <Survey />
+                {/* ) : ( */}
+                {/* <h4 className='quote'>Signup to Send some Survey!</h4>
+                )} */}
               </div>
             </div>
           </div>
