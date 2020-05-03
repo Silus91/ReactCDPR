@@ -16,7 +16,7 @@ class Cdproject extends Component {
       <div>
         <h1 className='titleSecond center'>CD Project Red SA</h1>
         <div className='row'>
-          <div className=' col l12 stock z-depth-2 hoverable'>
+          <div className=' col l12 stock z-depth-2'>
             <Stock />
           </div>
           <div className='card col l7 s12'>

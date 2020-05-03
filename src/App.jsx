@@ -20,12 +20,9 @@ import { getUserData, logout } from "./actions/authActions";
 const token = localStorage.getItem("FBidToken");
 
 if (token) {
-  axios.create().get(process.env.REACT_APP_BASE_URL);
-}
-
-if (token) {
   const decodedToken = jwtDecode(token);
   if (decodedToken.exp * 1000 < Date.now()) {
+    localStorage.removeItem("FBidToken");
     store.dispatch(logout());
     window.location.href = "/";
   } else {
@@ -33,6 +30,11 @@ if (token) {
     store.dispatch(getUserData());
   }
 }
+// if (token) {
+//   axios
+//     .create()
+//     .get(`http://localhost:5001/cdred-project/us-central1/api/user`);
+// }
 
 axios.create().interceptors.response.use(
   (response) => {

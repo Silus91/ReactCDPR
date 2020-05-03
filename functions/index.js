@@ -11,11 +11,7 @@ const {
 const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
 
-app.use(
-  cors({
-    origin: "https://cdred-project.web.app",
-  })
-);
+app.use(cors({ origin: true }));
 
 // Services
 app.post("/message", sendEmail);
@@ -29,4 +25,11 @@ app.get("/user", FBAuth, getAuthenticatedUser);
 app.post("/user/image", FBAuth, uploadImage);
 app.post("/logout", logout);
 
+process.on("unhandledRejection", (error) => {
+  // Will print "unhandledRejection err is not defined"
+  console.log("unhandledRejection", JSON.stringify(error));
+});
+
 exports.api = functions.https.onRequest(app);
+
+//sentry

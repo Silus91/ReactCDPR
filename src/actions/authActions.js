@@ -15,12 +15,12 @@ import {
 import { toastMsg } from "../services/Service";
 
 const firebase = require("firebase");
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = "http://localhost:5001/cdred-project/us-central1/api";
 
 export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .post(`${BASE_URL}login`, userData)
+    .post(`${BASE_URL}/login`, userData)
     .then((res) => {
       setAuthorizationHeader(res.data.token);
       dispatch(getUserData());
@@ -70,7 +70,7 @@ export const loginGoogleAction = () => (dispatch) => {
 export const registerAction = (newUserData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .post(`${BASE_URL}register`, newUserData)
+    .post(`${BASE_URL}/register`, newUserData)
     .then((res) => {
       setAuthorizationHeader(res.data.token);
       dispatch({ type: CLEAR_ERRORS });
@@ -89,7 +89,7 @@ export const registerAction = (newUserData) => (dispatch) => {
 export const getUserData = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .get(`${BASE_URL}user`)
+    .get(`${BASE_URL}/user`)
     .then((res) => {
       dispatch({
         type: SET_USER,
@@ -102,7 +102,7 @@ export const getUserData = () => (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   dispatch({ type: LOADING_UI });
-  await axios.post(`${BASE_URL}logout`);
+  await axios.post(`${BASE_URL}/logout`);
   localStorage.removeItem("FBidToken");
   delete axios.defaults.headers.common["Authorization"];
   dispatch({ type: SET_UNAUTH });
@@ -114,7 +114,7 @@ export const logout = () => async (dispatch) => {
 export const uploadUserImg = (formData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .post(`${BASE_URL}user/image`, formData)
+    .post(`${BASE_URL}/user/image`, formData)
     .then(() => {
       dispatch(getUserData());
       toastMsg("Profile Image Updated!");

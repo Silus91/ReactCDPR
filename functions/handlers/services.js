@@ -24,17 +24,21 @@ exports.sendEmail = async (req, res) => {
       pass: "dntDgNAf9qHSzG7sWs",
     },
   });
+  try {
+    let info = await transporter.sendMail({
+      from: newEmail.email,
+      to: "georgiana.sporer73@ethereal.email",
+      subject: newEmail.name,
+      text: newEmail.message,
+    });
+    console.log(info);
 
-  let info = await transporter.sendMail({
-    from: newEmail.email,
-    to: "georgiana.sporer73@ethereal.email",
-    subject: newEmail.name,
-    text: newEmail.message,
-  });
-  console.log(info);
-  return res.status(201).json({ "Message send": info });
+    return res.status(201).json({ "Message send": info });
+  } catch (error) {
+    return res.status(400).json({ error });
+  }
 };
-
+//mandrill
 exports.sendSurvey = (req, res) => {
   const newSurvey = {
     opinion: req.body.opinion,

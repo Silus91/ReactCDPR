@@ -140,44 +140,49 @@ exports.uploadImage = (req, res) => {
   let imageToBeUploaded = {};
   let imageFileName;
   let generatedToken = uuid();
-
-  busboy.on("file", (fieldname, file, filename, encoding, mimetype) => {
-    if (mimetype !== "image/jpeg" && mimetype !== "image/png") {
-      return res.status(400).json({ photo: "Only jpeg/png files!!" });
-    }
-    const imageExtension = filename.split(".")[filename.split(".").length - 1];
-    imageFileName = `user${Math.round(
-      Math.random() * 10000
-    ).toString()}.${imageExtension}`;
-    const filepath = path.join(os.tmpdir(), imageFileName);
-    imageToBeUploaded = { filepath, mimetype };
-    file.pipe(fs.createWriteStream(filepath));
-  });
-  busboy.on("finish", () => {
-    admin
-      .storage()
-      .bucket()
-      .upload(imageToBeUploaded.filepath, {
-        resumable: false,
-        destination: `userImgs/${imageFileName}`,
-        metadata: {
+  try {
+    busboy.on("file", (fieldname, file, filename, encoding, mimetype) => {
+      if (mimetype !== "image/jpeg" && mimetype !== "image/png") {
+        return res.status(400).json({ photo: "Only jpeg/png files!!" });
+      }
+      const imageExtension = filename.split(".")[
+        filename.split(".").length - 1
+      ];
+      imageFileName = `user${Math.round(
+        Math.random() * 10000
+      ).toString()}.${imageExtension}`;
+      const filepath = path.join(os.tmpdir(), imageFileName);
+      imageToBeUploaded = { filepath, mimetype };
+      file.pipe(fs.createWriteStream(filepath));
+    });
+    busboy.on("finish", () => {
+      admin
+        .storage()
+        .bucket()
+        .upload(imageToBeUploaded.filepath, {
+          resumable: false,
+          destination: `userImgs/${imageFileName}`,
           metadata: {
-            contentType: imageToBeUploaded.mimetype,
-            firebaseStorageDownloadTokens: generatedToken,
+            metadata: {
+              contentType: imageToBeUploaded.mimetype,
+              firebaseStorageDownloadTokens: generatedToken,
+            },
           },
-        },
-      })
-      .then(() => {
-        const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/userImgs%2F${imageFileName}?alt=media&token=${generatedToken}`;
-        return db.doc(`/users/${req.user.handle}`).update({ photoURL });
-      })
-      .then(() => {
-        return res.json({ message: "image uploaded successfully" });
-      })
-      .catch((err) => {
-        console.error(err);
-        return res.status(500).json({ error: "something went wrong" });
-      });
-  });
-  busboy.end(req.rawBody);
+        })
+        .then(() => {
+          const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/userImgs%2F${imageFileName}?alt=media&token=${generatedToken}`;
+          return db.doc(`/users/${req.user.handle}`).update({ photoURL });
+        })
+        .then(() => {
+          return res.json({ message: "image uploaded successfully" });
+        })
+        .catch((err) => {
+          console.error(err);
+          return res.status(400).json({ error: "something went wrong" });
+        });
+    });
+    busboy.end(req.rawBody);
+  } catch (error) {
+    return res.status(400).json({ error: "zjebane" });
+  }
 };
