@@ -21,14 +21,14 @@ exports.register = (req, res) => {
 
   const { valid, errors } = validateRegisterData(newUser);
 
-  if (!valid) return res.status(400).json(errors);
+  if (!valid) return res.status(406).json(errors);
 
   let token, userId;
   db.doc(`/users/${newUser.handle}`)
     .get()
     .then((doc) => {
       if (doc.exists) {
-        return res.status(400).json({ email: "this email is taken" });
+        return res.status(403).json({ email: "this email is taken" });
       } else {
         return firebase
           .auth()
@@ -63,7 +63,7 @@ exports.register = (req, res) => {
         return res.status(400).json({ email: "Email is in use" });
       } else {
         return res
-          .status(500)
+          .status(400)
           .json({ general: "Something went wrong, please try again" });
       }
     });
@@ -77,7 +77,7 @@ exports.login = (req, res) => {
   };
   const { valid, errors } = validateLoginData(user);
 
-  if (!valid) return res.status(400).json(errors);
+  if (!valid) return res.status(406).json(errors);
 
   firebase
     .auth()
@@ -110,7 +110,7 @@ exports.getAuthenticatedUser = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      return res.status(404).json({ error: err.code });
+      return res.status(400).json({ error: err.code });
     });
 };
 
@@ -174,7 +174,9 @@ exports.uploadImage = (req, res) => {
           return db.doc(`/users/${req.user.handle}`).update({ photoURL });
         })
         .then(() => {
-          return res.json({ message: "image uploaded successfully" });
+          return res
+            .status(201)
+            .json({ message: "image uploaded successfully" });
         })
         .catch((err) => {
           console.error(err);

@@ -14,7 +14,7 @@ exports.sendEmail = async (req, res) => {
 
   const { valid, errors } = validateNewEmail(newEmail);
 
-  if (!valid) return res.status(400).json(errors);
+  if (!valid) return res.status(406).json(errors);
 
   const transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
@@ -47,7 +47,7 @@ exports.sendSurvey = (req, res) => {
   };
 
   const { valid, errors } = validateNewSurvey(newSurvey);
-  if (!valid) return res.status(400).json(errors);
+  if (!valid) return res.status(406).json(errors);
 
   db.collection("surveys")
     .add(newSurvey)
@@ -76,10 +76,10 @@ exports.getAllSurveys = (req, res) => {
           createdAt: doc.data().createdAt,
         });
       });
-      return res.json(surveys);
+      return res.status(200).json(surveys);
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).json({ error: err.code });
+      res.status(400).json({ error: err.code });
     });
 };

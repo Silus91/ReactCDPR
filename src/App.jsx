@@ -30,11 +30,6 @@ if (token) {
     store.dispatch(getUserData());
   }
 }
-// if (token) {
-//   axios
-//     .create()
-//     .get(`http://localhost:5001/cdred-project/us-central1/api/user`);
-// }
 
 axios.create().interceptors.response.use(
   (response) => {

@@ -120,7 +120,8 @@ export const uploadUserImg = (formData) => (dispatch) => {
       toastMsg("Profile Image Updated!");
     })
     .catch((err) => {
-      toastMsg("Only jpeg/png");
+      toastMsg("Error please try again later or Contact Us");
+      console.log("err", err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,
