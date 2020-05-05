@@ -62,7 +62,7 @@ exports.register = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      logger.error(`Error At Trying to register  ${JSON.stringify(err)}`);
+      logger.debug(`Error At Trying to register  ${JSON.stringify(err)}`);
       return res
         .status(400)
         .json({ general: "Something went wrong, please try again" });
@@ -90,7 +90,7 @@ exports.login = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      logger.error(`Error At Trying to Login | data: ${user.email}`);
+      logger.debug(`Error At Trying to Login | data: ${user.email}`);
       return res
         .status(403)
         .json({ general: "Wrong credentials, please try again" });
@@ -184,7 +184,7 @@ exports.uploadImage = (req, res) => {
     });
     busboy.end(req.rawBody);
   } catch (error) {
-    logger.error(`Error At Trying to upload Photo ${JSON.stringify(errors)}`);
+    logger.debug(`Error At Trying to upload Photo ${JSON.stringify(errors)}`);
     return res.status(400).json({ error: "zjebane" });
   }
 };

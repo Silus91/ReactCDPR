@@ -12,7 +12,6 @@ exports.sendEmail = async (req, res) => {
     name: req.body.name,
     message: req.body.message,
   };
-
   const { valid, errors } = validateNewEmail(newEmail);
   if (!valid) return res.status(406).json(errors);
 
@@ -34,7 +33,7 @@ exports.sendEmail = async (req, res) => {
     logger.info(`Email was send Sucessfuly by ${newEmail.email}`);
     return res.status(201).json({ "Message send": info });
   } catch (error) {
-    logger.error(`Error At Trying to Send Email ${JSON.stringify(error)}`);
+    logger.debug(`Error At Trying to Send Email ${JSON.stringify(error)}`);
     return res.status(400).json({ error });
   }
 };
@@ -58,7 +57,7 @@ exports.sendSurvey = (req, res) => {
       return res.status(201).json({ resSurvey });
     })
     .catch((error) => {
-      logger.error(`Error At Trying to send Survey ${JSON.stringify(error)}`);
+      logger.debug(`Error At Trying to send Survey ${JSON.stringify(error)}`);
       res.status(404).json({ error: "something went wrong" });
       console.error(error);
     });
