@@ -38,26 +38,16 @@ class Register extends Component {
   };
 
   handleSubmit = (event) => {
-    const {
-      email,
-      password,
-      confirmPassword,
-      firstName,
-      lastName,
-    } = this.state;
     event.preventDefault();
-    this.setState({
-      loading: true,
-    });
     const newUserData = {
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword,
-      firstName: firstName,
-      lastName: lastName,
-      photoURL: lastName,
+      email: this.state.email,
+      password: this.state.password,
+      confirmPassword: this.state.confirmPassword,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      photoURL: this.state.lastName,
     };
-    this.props.registerAction(newUserData, this.props.history);
+    this.props.registerAction(newUserData);
   };
 
   render() {

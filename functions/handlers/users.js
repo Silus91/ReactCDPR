@@ -2,6 +2,8 @@ const { db, admin } = require("../utility/admin");
 const firebase = require("firebase");
 const config = require("../utility/config");
 const { uuid } = require("uuidv4");
+const Logger = require("../logger/logger");
+const logger = new Logger("app");
 
 const {
   validateRegisterData,
@@ -21,7 +23,7 @@ exports.register = (req, res) => {
 
   const { valid, errors } = validateRegisterData(newUser);
 
-  if (!valid) return res.status(406).json(errors);
+  if (!valid) return res.status(400).json(errors);
 
   let token, userId;
   db.doc(`/users/${newUser.handle}`)
@@ -55,17 +57,15 @@ exports.register = (req, res) => {
       return db.doc(`/users/${newUser.handle}`).set(userCredentials);
     })
     .then(() => {
+      logger.info(`New User created | data : ${newUser.email}`);
       return res.status(201).json({ token });
     })
     .catch((err) => {
       console.error(err);
-      if (err.code === "auth/email-already-in-use") {
-        return res.status(400).json({ email: "Email is in use" });
-      } else {
-        return res
-          .status(400)
-          .json({ general: "Something went wrong, please try again" });
-      }
+      logger.error(`Error At Trying to register  ${JSON.stringify(err)}`);
+      return res
+        .status(400)
+        .json({ general: "Something went wrong, please try again" });
     });
   return;
 };
@@ -77,7 +77,7 @@ exports.login = (req, res) => {
   };
   const { valid, errors } = validateLoginData(user);
 
-  if (!valid) return res.status(406).json(errors);
+  if (!valid) return res.status(400).json(errors);
 
   firebase
     .auth()
@@ -90,13 +90,13 @@ exports.login = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
+      logger.error(`Error At Trying to Login | data: ${user.email}`);
       return res
         .status(403)
         .json({ general: "Wrong credentials, please try again" });
     });
 };
 
-// get user details
 exports.getAuthenticatedUser = (req, res) => {
   let userData = {};
   db.doc(`/users/${req.user.handle}`)
@@ -171,20 +171,20 @@ exports.uploadImage = (req, res) => {
         })
         .then(() => {
           const photoURL = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/userImgs%2F${imageFileName}?alt=media&token=${generatedToken}`;
+          logger.info(
+            `User ${req.user.email} uploaded new photo ${imageFileName}`
+          );
           return db.doc(`/users/${req.user.handle}`).update({ photoURL });
         })
         .then(() => {
           return res
             .status(201)
             .json({ message: "image uploaded successfully" });
-        })
-        .catch((err) => {
-          console.error(err);
-          return res.status(400).json({ error: "something went wrong" });
         });
     });
     busboy.end(req.rawBody);
   } catch (error) {
+    logger.error(`Error At Trying to upload Photo ${JSON.stringify(errors)}`);
     return res.status(400).json({ error: "zjebane" });
   }
 };

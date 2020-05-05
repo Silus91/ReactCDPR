@@ -12,8 +12,7 @@ export const newSocialUserMap = (res) => {
     firstName: res.user.displayName.split(" ")[0],
     lastName: res.user.displayName.split(" ")[1],
     email: res.user.email,
-    handle: `${res.user.displayName.split(" ")[0]}
-        ${res.user.displayName.split(" ")[1]}`,
+    handle: res.user.email,
     createdAt: new Date().toISOString(),
     photoURL: res.user.photoURL,
     userId: res.user.uid,

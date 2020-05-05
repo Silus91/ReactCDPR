@@ -81,7 +81,7 @@ export const registerAction = (newUserData) => (dispatch) => {
       toastMsg("Error please try Again");
       dispatch({
         type: SET_ERRORS,
-        payload: err.res.data,
+        payload: err.response.data,
       });
     });
 };
@@ -121,7 +121,6 @@ export const uploadUserImg = (formData) => (dispatch) => {
     })
     .catch((err) => {
       toastMsg("Error please try again later or Contact Us");
-      console.log("err", err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,

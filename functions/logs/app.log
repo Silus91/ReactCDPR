@@ -1,0 +1,35 @@
+Tue, 05 May 2020 13:46:23 GMT | INFO | app.log | Request recieved at /test | data:"wizard911@o2.pl" | 
+Tue, 05 May 2020 13:49:33 GMT | INFO | app.log | User >test@test.com login Succes | 
+Tue, 05 May 2020 13:54:24 GMT | INFO | app.log | New User created asdaaaasd@asdasd.com | 
+Tue, 05 May 2020 15:17:21 GMT | ERROR | app.log | Error At Trying to Login wrong validation [object Object] | 
+Tue, 05 May 2020 15:17:31 GMT | INFO | app.log | User login Succes | data: wizard911@o2.pl | 
+Tue, 05 May 2020 15:17:41 GMT | INFO | app.log | User wizard911@o2.pl uploaded new photo user6686.jpg | 
+Tue, 05 May 2020 15:18:47 GMT | ERROR | app.log | Error At Trying to Login wrong validation [object Object] | 
+Tue, 05 May 2020 15:18:51 GMT | ERROR | app.log | Error At Trying to Login wrong validation [object Object] | 
+Tue, 05 May 2020 15:20:29 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"email":"Email cant be empty"} | 
+Tue, 05 May 2020 15:20:33 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"password":"Password cant be empty"} | 
+Tue, 05 May 2020 15:20:37 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"email":"Email cant be empty"} | 
+Tue, 05 May 2020 15:22:32 GMT | ERROR | app.log | Error At Trying to register wrong validation {"confirmPassword":"Passwords must match"} | 
+Tue, 05 May 2020 15:22:59 GMT | ERROR | app.log | Error At Trying to register wrong validation {"lastName":"Where is your last name"} | 
+Tue, 05 May 2020 15:24:22 GMT | ERROR | app.log | Error At Trying to register wrong validation {"confirmPassword":"Passwords must match"} | 
+Tue, 05 May 2020 15:26:55 GMT | ERROR | app.log | User login Succes | data: wizard911@o2.pl | 
+Tue, 05 May 2020 15:27:46 GMT | ERROR | app.log | User error | data: test@test.com | 
+Tue, 05 May 2020 15:28:40 GMT | ERROR | app.log | User Error | data: test@test.com | 
+Tue, 05 May 2020 16:06:37 GMT | ERROR | app.log | User Error | data: test@test.com | 
+Tue, 05 May 2020 16:07:00 GMT | INFO | app.log | User login Succes | data: test@test.com | 
+Tue, 05 May 2020 16:10:02 GMT | ERROR | app.log | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Tue, 05 May 2020 16:11:04 GMT | ERROR | app.log | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Tue, 05 May 2020 16:11:36 GMT | ERROR | app.log | Error At Trying to register wrong validation {"lastName":"Where is your last name"} | 
+Tue, 05 May 2020 16:13:37 GMT | ERROR | app.log | User Error | data: wizard911@o2.pl | 
+Tue, 05 May 2020 16:14:19 GMT | ERROR | app.log | User Error | data: wizard911@o2.pl | 
+Tue, 05 May 2020 16:14:29 GMT | INFO | app.log | User login Succes | data: wizard911@o2.pl | 
+Tue, 05 May 2020 16:17:42 GMT | ERROR | app.log | Error at Trying to Login | data: wizard911@o2.pl | 
+Tue, 05 May 2020 16:18:25 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"email":"Email cant be empty"} | 
+Tue, 05 May 2020 16:18:51 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"password":"Password cant be empty"} | 
+Tue, 05 May 2020 16:20:42 GMT | ERROR | app.log | Error At Trying to register wrong validation {"lastName":"Where is your last name"} | 
+Tue, 05 May 2020 16:34:08 GMT | ERROR | app.log | Error At Trying to Login wrong validation {"password":"Password cant be empty"} | 
+Tue, 05 May 2020 16:34:12 GMT | ERROR | app.log | Error at Trying to Login | data: wizard911@o2.pl | 
+Tue, 05 May 2020 16:43:42 GMT | ERROR | app.log | Error At Trying to register wrong validation {"firstName":"Where is your name"} | 
+Tue, 05 May 2020 16:43:58 GMT | ERROR | app.log | Error At Trying to register wrong validation {"confirmPassword":"Passwords must match"} | 
+Tue, 05 May 2020 16:44:09 GMT | ERROR | app.log | Error At Trying to register wrong validation {"email":"Email cant be empty","confirmPassword":"Passwords must match"} | 
+Tue, 05 May 2020 16:44:27 GMT | INFO | app.log | New User created | data : dyczek.dawsssid@gmail.com | 

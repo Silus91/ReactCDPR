@@ -4,6 +4,7 @@ const {
   validateNewEmail,
   validateNewSurvey,
 } = require("../utility/validaters");
+const logger = require("../logger/logger");
 
 exports.sendEmail = async (req, res) => {
   const newEmail = {
@@ -13,7 +14,6 @@ exports.sendEmail = async (req, res) => {
   };
 
   const { valid, errors } = validateNewEmail(newEmail);
-
   if (!valid) return res.status(406).json(errors);
 
   const transporter = nodemailer.createTransport({
@@ -31,14 +31,14 @@ exports.sendEmail = async (req, res) => {
       subject: newEmail.name,
       text: newEmail.message,
     });
-    console.log(info);
-
+    logger.info(`Email was send Sucessfuly by ${newEmail.email}`);
     return res.status(201).json({ "Message send": info });
   } catch (error) {
+    logger.error(`Error At Trying to Send Email ${JSON.stringify(error)}`);
     return res.status(400).json({ error });
   }
 };
-//mandrill
+
 exports.sendSurvey = (req, res) => {
   const newSurvey = {
     opinion: req.body.opinion,
@@ -47,18 +47,20 @@ exports.sendSurvey = (req, res) => {
   };
 
   const { valid, errors } = validateNewSurvey(newSurvey);
-  if (!valid) return res.status(406).json(errors);
+  if (!valid) return res.status(400).json(errors);
 
   db.collection("surveys")
     .add(newSurvey)
     .then((doc) => {
       const resSurvey = newSurvey;
       resSurvey.surveyId = doc.id;
+      logger.info(`Survey Send sucessful ${resSurvey.surveyId}`);
       return res.status(201).json({ resSurvey });
     })
-    .catch((err) => {
+    .catch((error) => {
+      logger.error(`Error At Trying to send Survey ${JSON.stringify(error)}`);
       res.status(404).json({ error: "something went wrong" });
-      console.error(err);
+      console.error(error);
     });
 };
 
@@ -78,8 +80,8 @@ exports.getAllSurveys = (req, res) => {
       });
       return res.status(200).json(surveys);
     })
-    .catch((err) => {
-      console.error(err);
-      res.status(400).json({ error: err.code });
+    .catch((error) => {
+      console.error(error);
+      res.status(400).json({ error: error.code });
     });
 };

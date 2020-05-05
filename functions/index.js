@@ -11,7 +11,18 @@ const {
 const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
 
+const Logger = require("./logger/logger");
+const bodyParser = require("body-parser");
+const logger = new Logger("app");
+
 app.use(cors({ origin: true }));
+
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(bodyParser.json());
 
 // Services
 app.post("/message", sendEmail);
@@ -26,10 +37,14 @@ app.post("/user/image", FBAuth, uploadImage);
 app.post("/logout", logout);
 
 process.on("unhandledRejection", (error) => {
-  // Will print "unhandledRejection err is not defined"
-  console.log("unhandledRejection", JSON.stringify(error));
+  logger.error(`Error At main page ${JSON.stringify(error)}`),
+    console.log("unhandledRejection", JSON.stringify(error));
 });
-
 exports.api = functions.https.onRequest(app);
 
-//sentry
+// // catch the uncaught errors that weren't wrapped in a domain or try catch statement
+// // do not use this in modules, but only in applications, as otherwise we could have multiple of these bound
+// process.on('uncaughtException', function(err) {
+//   // handle the error safely
+//   console.log(err)
+// })
