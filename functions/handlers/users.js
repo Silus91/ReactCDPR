@@ -2,7 +2,7 @@ const { db, admin } = require("../utility/admin");
 const firebase = require("firebase");
 const config = require("../utility/config");
 const { uuid } = require("uuidv4");
-const Logger = require("../logger/logger");
+const Logger = require("../utility/logger");
 const logger = new Logger("app");
 
 const {

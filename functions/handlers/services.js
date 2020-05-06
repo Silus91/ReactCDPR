@@ -4,7 +4,7 @@ const {
   validateNewEmail,
   validateNewSurvey,
 } = require("../utility/validaters");
-const Logger = require("../logger/logger");
+const Logger = require("../utility/logger");
 const logger = new Logger("app");
 const Sentry = require("@sentry/node");
 

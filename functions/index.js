@@ -10,7 +10,7 @@ const {
 } = require("./handlers/users");
 const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
-const Logger = require("./logger/logger");
+const Logger = require("./utility/logger");
 const bodyParser = require("body-parser");
 const Sentry = require("@sentry/node");
 
@@ -52,4 +52,5 @@ process.on("uncaughtException", (error) => {
   logger.error(`Error uncaughtException ${JSON.stringify(error)}`);
   console.log("uncaughtException", JSON.stringify(error));
 });
+
 exports.api = functions.https.onRequest(app);
