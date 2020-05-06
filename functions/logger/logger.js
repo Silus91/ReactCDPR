@@ -13,7 +13,7 @@ class LoggerService {
         }),
       ],
       format: winston.format.printf((info) => {
-        let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${route}.log | ${
+        let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${
           info.message
         } | `;
         message = info.obj

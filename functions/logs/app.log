@@ -33,3 +33,17 @@ Tue, 05 May 2020 16:43:42 GMT | ERROR | app.log | Error At Trying to register wr
 Tue, 05 May 2020 16:43:58 GMT | ERROR | app.log | Error At Trying to register wrong validation {"confirmPassword":"Passwords must match"} | 
 Tue, 05 May 2020 16:44:09 GMT | ERROR | app.log | Error At Trying to register wrong validation {"email":"Email cant be empty","confirmPassword":"Passwords must match"} | 
 Tue, 05 May 2020 16:44:27 GMT | INFO | app.log | New User created | data : dyczek.dawsssid@gmail.com | 
+Tue, 05 May 2020 21:25:04 GMT | ERROR | app.log | Error At main page {} | 
+Tue, 05 May 2020 21:28:19 GMT | ERROR | app.log | Error At main page {} | 
+Tue, 05 May 2020 21:29:34 GMT | ERROR | app.log | Error At main page TypeError: logger.debug is not a function | 
+Tue, 05 May 2020 21:32:20 GMT | ERROR | app.log | Error At main page TypeError: logger.error is not a function | 
+Tue, 05 May 2020 21:37:18 GMT | ERROR | app.log | Error At main page TypeError: logger.error is not a function | 
+Tue, 05 May 2020 21:40:31 GMT | ERROR | app.log | Error At main page TypeError: logger.error is not a function | 
+Tue, 05 May 2020 21:43:14 GMT | ERROR | app.log | Error At main page TypeError: logger.error is not a function | 
+Wed, 06 May 2020 07:24:15 GMT | ERROR | app.log | Error At main page TypeError: logger.error is not a function | 
+Wed, 06 May 2020 07:34:09 GMT | INFO | app.log | Survey Was submited UwNyVdbs02YNWc8ECwwe | 
+Wed, 06 May 2020 07:34:56 GMT | INFO | app.log | Email was send Sucessfuly by dyczek.dawid@gmail.com | 
+Wed, 06 May 2020 07:40:40 GMT | INFO | app.log | New User created | data : dyczek.aadawid@gmail.com | 
+Wed, 06 May 2020 07:40:51 GMT | INFO | app.log | User dyczek.aadawid@gmail.com uploaded new photo user9078.jpg | 
+Wed, 06 May 2020 08:58:05 GMT | INFO | app.log | User wizard911@o2.pl uploaded new photo user659.jpg | 
+Wed, 06 May 2020 08:58:34 GMT | INFO | app.log | User wizard911@o2.pl uploaded new photo user753.jpg | 

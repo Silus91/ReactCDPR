@@ -10,10 +10,24 @@ const {
 } = require("./handlers/users");
 const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
-
 const Logger = require("./logger/logger");
 const bodyParser = require("body-parser");
+const Sentry = require("@sentry/node");
+
 const logger = new Logger("app");
+
+Sentry.init({
+  dsn:
+    "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
+  release: "cdred-project",
+});
+
+app.use(
+  Sentry.Handlers.requestHandler({
+    serverName: false,
+    user: ["dyczek.dawid@gmail.com"],
+  })
+);
 
 app.use(cors({ origin: true }));
 
@@ -36,15 +50,14 @@ app.get("/user", FBAuth, getAuthenticatedUser);
 app.post("/user/image", FBAuth, uploadImage);
 app.post("/logout", logout);
 
+app.use(Sentry.Handlers.errorHandler());
+
 process.on("unhandledRejection", (error) => {
-  logger.error(`Error At main page ${JSON.stringify(error)}`),
-    console.log("unhandledRejection", JSON.stringify(error));
+  logger.error(`Error unhandledRejection ${JSON.stringify(error)}`);
+  console.log("unhandledRejection", JSON.stringify(error));
+});
+process.on("uncaughtException", (error) => {
+  logger.error(`Error uncaughtException ${JSON.stringify(error)}`);
+  console.log("uncaughtException", JSON.stringify(error));
 });
 exports.api = functions.https.onRequest(app);
-
-// // catch the uncaught errors that weren't wrapped in a domain or try catch statement
-// // do not use this in modules, but only in applications, as otherwise we could have multiple of these bound
-// process.on('uncaughtException', function(err) {
-//   // handle the error safely
-//   console.log(err)
-// })

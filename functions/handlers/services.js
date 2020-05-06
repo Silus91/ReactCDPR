@@ -4,7 +4,9 @@ const {
   validateNewEmail,
   validateNewSurvey,
 } = require("../utility/validaters");
-const logger = require("../logger/logger");
+const Logger = require("../logger/logger");
+const logger = new Logger("app");
+const Sentry = require("@sentry/node");
 
 exports.sendEmail = async (req, res) => {
   const newEmail = {
@@ -13,7 +15,8 @@ exports.sendEmail = async (req, res) => {
     message: req.body.message,
   };
   const { valid, errors } = validateNewEmail(newEmail);
-  if (!valid) return res.status(406).json(errors);
+  if (!valid)
+    return Sentry.captureException(errors), res.status(406).json(errors);
 
   const transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
@@ -53,7 +56,7 @@ exports.sendSurvey = (req, res) => {
     .then((doc) => {
       const resSurvey = newSurvey;
       resSurvey.surveyId = doc.id;
-      logger.info(`Survey Send sucessful ${resSurvey.surveyId}`);
+      logger.info(`Survey Was submited ${resSurvey.opinion}`);
       return res.status(201).json({ resSurvey });
     })
     .catch((error) => {
