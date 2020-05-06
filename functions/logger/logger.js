@@ -11,6 +11,7 @@ class LoggerService {
         new winston.transports.File({
           filename: `./logs/${route}.log`,
         }),
+        //sentry link
       ],
       format: winston.format.printf((info) => {
         let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${

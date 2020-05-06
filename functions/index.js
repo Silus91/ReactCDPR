@@ -16,21 +16,13 @@ const Sentry = require("@sentry/node");
 
 const logger = new Logger("app");
 
-Sentry.init({
-  dsn:
-    "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
-  release: "cdred-project",
-});
-
 app.use(
   Sentry.Handlers.requestHandler({
     serverName: false,
     user: ["dyczek.dawid@gmail.com"],
   })
 );
-
 app.use(cors({ origin: true }));
-
 app.use(
   bodyParser.urlencoded({
     extended: false,
