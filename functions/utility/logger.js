@@ -1,7 +1,17 @@
 const winston = require("winston");
-dateFormat = () => {
+const Sentry = require("winston-transport-sentry-node").default;
+
+const options = {
+  sentry: {
+    dsn:
+      "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
+  },
+  level: "error",
+};
+const dateFormat = () => {
   return new Date(Date.now()).toUTCString();
 };
+
 class LoggerService {
   constructor(route) {
     this.log_data = null;
@@ -9,9 +19,14 @@ class LoggerService {
     const logger = winston.createLogger({
       transports: [
         new winston.transports.File({
-          filename: `./logs/${route}.log`,
+          filename: `./logs/info.log`,
+          level: "info",
         }),
-        //sentry link
+        new winston.transports.File({
+          filename: `./logs/error.log`,
+          level: "error",
+        }),
+        new Sentry(options),
       ],
       format: winston.format.printf((info) => {
         let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${
@@ -34,26 +49,11 @@ class LoggerService {
   async info(message) {
     this.logger.log("info", message);
   }
-  async info(message, obj) {
-    this.logger.log("info", message, {
-      obj,
-    });
-  }
   async debug(message) {
     this.logger.log("debug", message);
   }
-  async debug(message, obj) {
-    this.logger.log("debug", message, {
-      obj,
-    });
-  }
   async error(message) {
     this.logger.log("error", message);
-  }
-  async error(message, obj) {
-    this.logger.log("error", message, {
-      obj,
-    });
   }
 }
 module.exports = LoggerService;

@@ -114,11 +114,11 @@ class Home extends Component {
           <div className='section white row container'>
             <div className='center card'>
               <div className='card-content'>
-                {/* {authenticated ? ( */}
-                <Survey />
-                {/* ) : ( */}
-                {/* <h4 className='quote'>Signup to Send some Survey!</h4>
-                )} */}
+                {authenticated ? (
+                  <Survey />
+                ) : (
+                  <h4 className='quote'>Signup to Send some Survey!</h4>
+                )}
               </div>
             </div>
           </div>

@@ -477,7 +477,7 @@
     "@sentry/types" "5.15.5"
     tslib "^1.9.3"
 
-"@sentry/node@^5.15.5":
+"@sentry/node@^5.15.5", "@sentry/node@^5.6.2":
   version "5.15.5"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-5.15.5.tgz#f64cfcf8770cc0249f48b3ef439a7efcabdcec1d"
   integrity sha512-BK0iTOiiIM0UnydLeT/uUBY1o1Sp85aqwaQRMfZbjMCsgXERLNGvzzV68FDH1cyC1nR6dREK3Gs8bxS4S54aLQ==
@@ -4893,6 +4893,16 @@ widest-line@^2.0.0:
   integrity sha512-Ba5m9/Fa4Xt9eb2ELXt77JxVDV8w7qQrH0zS/TWSJdLyAwQjWoOzpzj5lwVftDz6n/EOu3tNACS84v509qwnJA==
   dependencies:
     string-width "^2.1.1"
+
+winston-transport-sentry-node@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/winston-transport-sentry-node/-/winston-transport-sentry-node-0.2.0.tgz#a5d9087497a455d3b84cd69638e29c22c47106e6"
+  integrity sha512-tSZY0v/ArL/Zu3QI8HgBPiQKO+oXddV3Dj66ojr+6sMR3V4RUGAyAxRv97dYzstvQDP3/4KgeF1xy3V/EV3yKw==
+  dependencies:
+    "@sentry/node" "^5.6.2"
+    lodash "^4.17.14"
+    winston "^3.2.1"
+    winston-transport "^4.3.0"
 
 winston-transport@^4.3.0:
   version "4.3.0"

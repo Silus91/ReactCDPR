@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "materialize-css/dist/css/materialize.min.css";
 import Auth from "./pages/Auth/Auth";
 import Cdproject from "./pages/Cdproject/Cdproject";
 import Navbar from "./layout/Navbar";
@@ -16,6 +15,9 @@ import AuthRoute from "./services/AuthRoute";
 import store from "./store/root";
 import axios from "axios";
 import { getUserData, logout } from "./actions/authActions";
+import * as Sentry from "@sentry/browser";
+
+Sentry.init({ dsn: process.env.REACT_APP_SENTRY_DSN });
 
 const token = localStorage.getItem("FBidToken");
 

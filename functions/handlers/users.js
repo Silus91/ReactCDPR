@@ -1,15 +1,13 @@
-const { db, admin } = require("../utility/admin");
-const firebase = require("firebase");
 const config = require("../utility/config");
+const { db, bucket } = require("../utility/admin");
+const firebase = require("firebase");
 const { uuid } = require("uuidv4");
 const Logger = require("../utility/logger");
 const logger = new Logger("app");
-
 const {
   validateRegisterData,
   validateLoginData,
 } = require("../utility/validaters");
-firebase.initializeApp(config);
 
 exports.register = (req, res) => {
   const newUser = {
@@ -22,7 +20,6 @@ exports.register = (req, res) => {
   };
 
   const { valid, errors } = validateRegisterData(newUser);
-
   if (!valid) return res.status(400).json(errors);
 
   let token, userId;
@@ -62,7 +59,7 @@ exports.register = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      logger.debug(`Error At Trying to register  ${JSON.stringify(err)}`);
+      logger.error(`Error At Trying to register  ${JSON.stringify(err)}`);
       return res
         .status(400)
         .json({ general: "Something went wrong, please try again" });
@@ -75,8 +72,8 @@ exports.login = (req, res) => {
     email: req.body.email,
     password: req.body.password,
   };
-  const { valid, errors } = validateLoginData(user);
 
+  const { valid, errors } = validateLoginData(user);
   if (!valid) return res.status(400).json(errors);
 
   firebase
@@ -90,7 +87,7 @@ exports.login = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      logger.debug(`Error At Trying to Login | data: ${user.email}`);
+      logger.error(`Error At Trying to Login | data: ${user.email}`);
       return res
         .status(403)
         .json({ general: "Wrong credentials, please try again" });
@@ -134,7 +131,6 @@ exports.uploadImage = (req, res) => {
   const path = require("path");
   const os = require("os");
   const fs = require("fs");
-
   const busboy = new BusBoy({ headers: req.headers });
 
   let imageToBeUploaded = {};
@@ -150,15 +146,14 @@ exports.uploadImage = (req, res) => {
       ];
       imageFileName = `user${Math.round(
         Math.random() * 10000
-      ).toString()}.${imageExtension}`;
+      ).toString()}huj.${imageExtension}`;
       const filepath = path.join(os.tmpdir(), imageFileName);
       imageToBeUploaded = { filepath, mimetype };
       file.pipe(fs.createWriteStream(filepath));
     });
     busboy.on("finish", () => {
-      admin
-        .storage()
-        .bucket()
+      console.log(bucket);
+      bucket
         .upload(imageToBeUploaded.filepath, {
           resumable: false,
           destination: `userImgs/${imageFileName}`,
@@ -174,6 +169,7 @@ exports.uploadImage = (req, res) => {
           logger.info(
             `User ${req.user.email} uploaded new photo ${imageFileName}`
           );
+          console.log(photoURL);
           return db.doc(`/users/${req.user.handle}`).update({ photoURL });
         })
         .then(() => {
@@ -184,7 +180,9 @@ exports.uploadImage = (req, res) => {
     });
     busboy.end(req.rawBody);
   } catch (error) {
-    logger.debug(`Error At Trying to upload Photo ${JSON.stringify(errors)}`);
+    logger.error(`Error At Trying to upload Photo ${JSON.stringify(error)}`);
     return res.status(400).json({ error: "zjebane" });
   }
 };
+
+// napisac reduktor rozmiaru albo validacja rozmiaru do 0.5 MB okkolo jeszcze trzeb a zobaczyc

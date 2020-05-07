@@ -13,11 +13,9 @@ import {
   setAuthorizationHeader,
 } from "../services/Service";
 import { toastMsg } from "../services/Service";
-
 const firebase = require("firebase");
-const BASE_URL = "http://localhost:5001/cdred-project/us-central1/api";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-//https://us-central1-cdred-project.cloudfunctions.net/api
 export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios

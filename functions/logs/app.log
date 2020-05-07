@@ -47,3 +47,12 @@ Wed, 06 May 2020 07:40:40 GMT | INFO | app.log | New User created | data : dycze
 Wed, 06 May 2020 07:40:51 GMT | INFO | app.log | User dyczek.aadawid@gmail.com uploaded new photo user9078.jpg | 
 Wed, 06 May 2020 08:58:05 GMT | INFO | app.log | User wizard911@o2.pl uploaded new photo user659.jpg | 
 Wed, 06 May 2020 08:58:34 GMT | INFO | app.log | User wizard911@o2.pl uploaded new photo user753.jpg | 
+Thu, 07 May 2020 07:38:04 GMT | ERROR | Error unhandledRejection {} | 
+Thu, 07 May 2020 07:39:04 GMT | ERROR | Error uncaughtException {} | 
+Thu, 07 May 2020 07:51:15 GMT | ERROR | Error unhandledRejection {} | 
+Thu, 07 May 2020 07:52:15 GMT | ERROR | Error uncaughtException {} | 
+Thu, 07 May 2020 08:35:22 GMT | ERROR | Error unhandledRejection {} | 
+Thu, 07 May 2020 08:36:22 GMT | ERROR | Error uncaughtException {} | 
+Thu, 07 May 2020 08:36:57 GMT | INFO | Email was send Sucessfuly by asdas3sd@asdasd.com | 
+Thu, 07 May 2020 09:13:04 GMT | INFO | Email was send Sucessfuly by dyczek.dawid@gmail.com | 
+Thu, 07 May 2020 09:13:54 GMT | INFO | Survey Was submited I like blood effect :P | 

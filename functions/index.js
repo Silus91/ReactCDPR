@@ -1,5 +1,7 @@
 const functions = require("firebase-functions");
 const app = require("express")();
+const config = require("./utility/config");
+const firebase = require("firebase");
 const { sendEmail, sendSurvey, getAllSurveys } = require("./handlers/services");
 const {
   register,
@@ -16,13 +18,23 @@ const Sentry = require("@sentry/node");
 
 const logger = new Logger("app");
 
+firebase.initializeApp(config);
+
+Sentry.init({
+  dsn:
+    "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
+  release: "cdred-project",
+});
+
 app.use(
   Sentry.Handlers.requestHandler({
     serverName: false,
     user: ["dyczek.dawid@gmail.com"],
   })
 );
+
 app.use(cors({ origin: true }));
+
 app.use(
   bodyParser.urlencoded({
     extended: false,
@@ -52,5 +64,4 @@ process.on("uncaughtException", (error) => {
   logger.error(`Error uncaughtException ${JSON.stringify(error)}`);
   console.log("uncaughtException", JSON.stringify(error));
 });
-
 exports.api = functions.https.onRequest(app);
