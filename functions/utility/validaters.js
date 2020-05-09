@@ -15,6 +15,11 @@ const tooLong = (string) => {
   return false;
 };
 
+const tooShort = (string) => {
+  if (string.length < 6) return true;
+  return false;
+};
+
 exports.validateRegisterData = (data) => {
   let errors = {};
 
@@ -24,9 +29,15 @@ exports.validateRegisterData = (data) => {
     errors.email = "Must be a valid email address";
   }
 
-  if (isEmpty(data.password)) errors.password = "Password cant be empty";
+  if (isEmpty(data.password)) {
+    errors.password = "Password cant be empty";
+  } else if (tooShort(data.password)) {
+    errors.password = "Minimum 6 char password";
+  }
   if (data.password !== data.confirmPassword)
     errors.confirmPassword = "Passwords must match";
+  if (isEmpty(data.confirmPassword))
+    errors.confirmPassword = "Confirm Password cant be empty";
   if (isEmpty(data.firstName)) errors.firstName = "Where is your name";
   if (isEmpty(data.lastName)) errors.lastName = "Where is your last name";
 
