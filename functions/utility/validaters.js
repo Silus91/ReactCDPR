@@ -40,7 +40,6 @@ exports.validateRegisterData = (data) => {
     errors.confirmPassword = "Confirm Password cant be empty";
   if (isEmpty(data.firstName)) errors.firstName = "Where is your name";
   if (isEmpty(data.lastName)) errors.lastName = "Where is your last name";
-
   return {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false,
@@ -56,7 +55,6 @@ exports.validateLoginData = (data) => {
     errors.email = "Must be a valid email address";
   }
   if (isEmpty(data.password)) errors.password = "Password cant be empty";
-
   return {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false,
@@ -73,7 +71,6 @@ exports.validateNewEmail = (data) => {
   }
   if (isEmpty(data.name)) errors.name = "Name cant be empty";
   if (isEmpty(data.message)) errors.message = "Message cant be empty";
-
   return {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false,
@@ -88,7 +85,6 @@ exports.validateNewSurvey = (data) => {
     errors.opinion = "Too long opinion sorry max 30 characters";
   }
   if (data.rating < 1) errors.rating = "Leave some rating please";
-
   return {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false,

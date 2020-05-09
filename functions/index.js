@@ -14,17 +14,11 @@ const FBAuth = require("./utility/fbAuth");
 const cors = require("cors");
 const Logger = require("./utility/logger");
 const bodyParser = require("body-parser");
-const Sentry = require("@sentry/node");
+const Sentry = require("./utility/sentry");
 
 const logger = new Logger("app");
 
 firebase.initializeApp(config);
-
-Sentry.init({
-  dsn:
-    "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
-  release: "cdred-project",
-});
 
 app.use(
   Sentry.Handlers.requestHandler({
