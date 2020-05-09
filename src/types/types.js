@@ -5,5 +5,4 @@ export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const LOADING_UI = "LOADING_UI";
 export const STOP_LOADING_UI = "STOP_LOADING_UI";
 export const GET_SURVEYS = "GET_SURVEYS";
-export const SEND_MESSAGE = "SEND_MESSAGE"; // do i need this??
 export const SEND_SURVEY = "SEND_SURVEY";

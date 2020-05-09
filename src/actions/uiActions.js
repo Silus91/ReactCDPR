@@ -14,7 +14,7 @@ export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
     .post(`${BASE_URL}/message`, messageData)
-    .then((res) => {
+    .then(() => {
       dispatch({ type: CLEAR_ERRORS });
       toastMsg("Message send Succesfuly!");
     })
