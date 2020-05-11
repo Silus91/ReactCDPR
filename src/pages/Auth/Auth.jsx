@@ -18,7 +18,7 @@ class Auth extends Component {
   render() {
     return (
       <div className='row authContainer'>
-        <div className='col s12 m6 offset-m3 l4 offset-l4'>
+        <div className='col s12 m8 offset-m2 l6 offset-l3'>
           <div className='card authCard'>
             <div className='card-content'>
               <div>

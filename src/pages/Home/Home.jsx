@@ -50,8 +50,8 @@ class Home extends Component {
           <Parallax
             image={
               <img
-                alt='cdpr'
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172'
+                alt='cdpr games'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FstartImg.jpg?alt=media&token=e28e2361-c941-481f-844b-3e457016a859'
               />
             }
             options={{
@@ -68,7 +68,7 @@ class Home extends Component {
               </p>
               <a
                 rel='noopener noreferrer'
-                className='btn large cyan yellow-text'
+                className='btn large black yellow-text'
                 href='https://en.cdprojektred.com/'
                 target='_blank'
               >
@@ -79,8 +79,8 @@ class Home extends Component {
           <Parallax
             image={
               <img
-                alt='Silver Hand'
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FsilverHand.jpg?alt=media&token=11bf9e9b-a494-4cd2-9e8b-1ab056a6fc84'
+                alt='Cd project red'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172'
               />
             }
             options={{

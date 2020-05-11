@@ -70,14 +70,14 @@ class Navbar extends Component {
                   src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FsilverHandMini.jpg?alt=media&token=ed5861f8-a999-490d-840c-86bd4cda1757'
                 />
               </div>
-              <a href='#user'>
+              <a href={authenticated ? "/profile" : "/auth"}>
                 <img
                   alt=''
                   className='circle'
                   src={authenticated ? credentials.photoURL : profilePic}
                 />
               </a>
-              <a href='#name'>
+              <a href={authenticated ? "/profile" : "/auth"}>
                 <span className='red-text name'>
                   {authenticated ? credentials.firstName : "Guest"}
                 </span>
