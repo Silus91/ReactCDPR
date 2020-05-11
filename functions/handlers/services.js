@@ -1,4 +1,5 @@
 const { db } = require("../utility/admin");
+const config = require("../utility/config");
 const nodemailer = require("nodemailer");
 const {
   validateNewEmail,
@@ -20,14 +21,14 @@ exports.sendEmail = async (req, res) => {
     host: "smtp.ethereal.email",
     port: 587,
     auth: {
-      user: "georgiana.sporer73@ethereal.email",
-      pass: "dntDgNAf9qHSzG7sWs",
+      user: config.trialEmail,
+      pass: config.trialEmailPassword,
     },
   });
   try {
     let info = await transporter.sendMail({
       from: newEmail.email,
-      to: "georgiana.sporer73@ethereal.email",
+      to: config.trialEmail,
       subject: `New Email from ${newEmail.name} about cdred-project`,
       text: newEmail.message,
     });

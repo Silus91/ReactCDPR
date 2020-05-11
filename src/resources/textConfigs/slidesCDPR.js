@@ -18,7 +18,7 @@ export default [
     id: 2,
     name: "Witcher",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher.jpg?alt=media&token=fb6088dd-c02c-46c6-8b5f-37f9505ad344",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher.jpg?alt=media&token=7f678dbe-a337-484e-8681-5ac03a95a8ba",
     facebookUrl: "https://www.facebook.com/thewitcher/",
     facebookImg:
       "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c",
@@ -32,7 +32,7 @@ export default [
     id: 3,
     name: "Cyberpunk",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcyberpunk.jpg?alt=media&token=aaddab18-1ae6-4b44-9a7a-317e84103abd",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcyberpunk.jpg?alt=media&token=b8c9727a-4b3a-492d-af37-c782d53635d1",
     facebookUrl: "https://www.facebook.com/CyberpunkGame/",
     facebookImg:
       "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c",
@@ -47,7 +47,7 @@ export default [
     id: 4,
     name: "Gwent",
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fgwent.jpg?alt=media&token=97e7123c-5ff2-4a7a-8afd-f09bc8502354",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fgwent.jpg?alt=media&token=a7be68df-cf61-4402-8b7c-9f21d1f2e738",
     facebookUrl: "https://www.facebook.com/PlayGwent/",
     facebookImg:
       "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/social%2Ffaceb.png?alt=media&token=2075e91c-b07b-4ea4-9e18-357f9b1e995c",

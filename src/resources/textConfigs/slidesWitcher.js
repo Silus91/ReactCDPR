@@ -10,7 +10,7 @@ export default [
   {
     id: 2,
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcarous3.jpg?alt=media&token=1bba1479-b57c-4161-9633-81e73a675982",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fcarous3.jpg?alt=media&token=3932c1fe-eca2-4984-9568-61e2e8b67999",
     name: witcher,
   },
   {
@@ -34,25 +34,25 @@ export default [
   {
     id: 6,
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher.jpg?alt=media&token=fb6088dd-c02c-46c6-8b5f-37f9505ad344",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher.jpg?alt=media&token=7f678dbe-a337-484e-8681-5ac03a95a8ba",
     name: witcher,
   },
   {
     id: 7,
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher10.jpg?alt=media&token=82057c2b-aac3-4f9b-a8c8-1193a35c4e29",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher10.jpg?alt=media&token=bafd9f95-4558-43f7-98b0-6b9736645563",
     name: witcher,
   },
   {
     id: 8,
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher3blood.jpg?alt=media&token=27a47977-e85d-48d4-b9e5-fa863ee767d3",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher3blood.jpg?alt=media&token=84073b6b-0fba-464d-9bb6-1e12365f71e5",
     name: witcher,
   },
   {
     id: 9,
     img:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2FWild_Hunt_Geralt.jpg?alt=media&token=7048ab63-d6cd-443c-896e-e1768ef6fe83",
+      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2FWild_Hunt_Geralt.jpg?alt=media&token=bd867a96-adef-402c-929c-d6daf84d847c",
     name: witcher,
   },
   {

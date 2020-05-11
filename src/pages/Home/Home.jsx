@@ -51,7 +51,7 @@ class Home extends Component {
             image={
               <img
                 alt='cdpr games'
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FstartImg.jpg?alt=media&token=e28e2361-c941-481f-844b-3e457016a859'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2FstartImg.jpg?alt=media&token=a022dce6-52c2-4e17-9791-6abc22c1e5dc'
               />
             }
             options={{
@@ -80,7 +80,7 @@ class Home extends Component {
             image={
               <img
                 alt='Cd project red'
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=67ce0a7d-50cb-46eb-96ef-f7e5b0c8c172'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fcdproject.jpg?alt=media&token=fd768844-cd96-42d2-9ecf-01fb29e6707e'
               />
             }
             options={{
@@ -103,8 +103,8 @@ class Home extends Component {
           <Parallax
             image={
               <img
-                alt=''
-                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fswords.jpg?alt=media&token=1f33ccf1-ec87-4121-b4d0-1eba340f7638'
+                alt='witcher family'
+                src='https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/Carousels%2Fwitcher10.jpg?alt=media&token=bafd9f95-4558-43f7-98b0-6b9736645563'
               />
             }
             options={{
