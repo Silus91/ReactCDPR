@@ -9,4 +9,6 @@ Thu, 07 May 2020 18:03:17 GMT | ERROR | Error uncaughtException {} |
 Thu, 07 May 2020 18:45:58 GMT | INFO | busboy | 
 Thu, 07 May 2020 21:16:39 GMT | INFO | busboy | 
 Thu, 07 May 2020 21:32:33 GMT | INFO | User wizard911@o2.pl uploaded new photo user510huj.jpg | 
-Thu, 07 May 2020 21:34:42 GMT | INFO | User wizard911@o2.pl uploaded new photo user1924huj.jpg | 
+Thu, 07 May 2020 21:34:42 GMT | INFO | User wizard911@o2.pl uploaded new photo user1924huj.jpg | Mon, 11 May 2020 15:29:50 GMT | ERROR | Error At Trying to Send Email {"errno":"ENOTFOUND","code":"EDNS","syscall":"getaddrinfo","hostname":"gmail","command":"CONN"} | 
+Mon, 11 May 2020 15:38:36 GMT | ERROR | Error At Trying to Send Email {"errno":"ENOTFOUND","code":"EDNS","syscall":"getaddrinfo","hostname":"gmail","command":"CONN"} | 
+Mon, 11 May 2020 15:43:24 GMT | INFO | Email was send Sucessfuly by asdas3sd@asdasd.com | 

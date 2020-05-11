@@ -28,13 +28,13 @@ exports.sendEmail = async (req, res) => {
     let info = await transporter.sendMail({
       from: newEmail.email,
       to: "georgiana.sporer73@ethereal.email",
-      subject: newEmail.name,
+      subject: `New Email from ${newEmail.name} about cdred-project`,
       text: newEmail.message,
     });
     logger.info(`Email was send Sucessfuly by ${newEmail.email}`);
     return res.status(201).json({ "Message send": info });
   } catch (error) {
-    logger.debug(`Error At Trying to Send Email ${JSON.stringify(error)}`);
+    logger.error(`Error At Trying to Send Email ${JSON.stringify(error)}`);
     return res.status(400).json({ error });
   }
 };
