@@ -5,6 +5,7 @@ const {
   validateNewEmail,
   validateNewSurvey,
 } = require("../utility/validaters");
+var request = require("request");
 const Logger = require("../utility/logger");
 const logger = new Logger("app");
 
@@ -85,4 +86,29 @@ exports.getAllSurveys = (req, res) => {
       console.error(error);
       res.status(400).json({ error: error.code });
     });
+};
+
+exports.getStockValue = (req, res) => {
+  const value = req.body.stockDays;
+
+  const url = config.stockMarketURL;
+  request.get(
+    {
+      url: url,
+      json: true,
+      headers: { "User-Agent": "request" },
+    },
+    (err, res, data) => {
+      if (err) {
+        console.log("Error:", err);
+      } else if (res.statusCode !== 200) {
+        console.log("Status:", res.statusCode);
+      } else {
+        console.log(data.html_url);
+      }
+
+      //sprawdzic co dostajemy spowrotem
+      // return res.status(200).json(stockValue);
+    }
+  );
 };
