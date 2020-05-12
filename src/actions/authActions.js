@@ -13,8 +13,10 @@ import {
   setAuthorizationHeader,
 } from "../services/Service";
 import { toastMsg } from "../services/Service";
+import * as Sentry from "@sentry/browser";
+
 const firebase = require("firebase");
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_LOCAL;
 
 export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -28,6 +30,7 @@ export const loginAction = (userData) => (dispatch) => {
     })
     .catch((err) => {
       toastMsg("Error please try Again");
+      Sentry.captureException(err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,
@@ -47,6 +50,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
     toastMsg("Login Succesful!");
   } catch (error) {
     toastMsg("Error please try Again");
+    Sentry.captureException(error);
     dispatch({
       type: SET_ERRORS,
       payload: error.response,

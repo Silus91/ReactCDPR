@@ -7,8 +7,9 @@ import {
 } from "../types/types";
 import axios from "axios";
 import { toastMsg } from "../services/Service";
+import * as Sentry from "@sentry/browser";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_LOCAL;
 
 export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -20,6 +21,7 @@ export const sendMessage = (messageData) => (dispatch) => {
     })
     .catch((err) => {
       toastMsg("Error please refresh");
+      Sentry.captureException(err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,
@@ -41,6 +43,7 @@ export const sendSurvey = (surveyData) => (dispatch) => {
     })
     .catch((err) => {
       toastMsg("Error please refresh");
+      Sentry.captureException(err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,

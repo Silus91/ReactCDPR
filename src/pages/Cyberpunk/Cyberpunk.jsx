@@ -5,7 +5,6 @@ import M from "materialize-css";
 import { cyber } from "../../resources/textConfigs/info";
 import "./Cyberpunk.css";
 import InstagramEmbed from "react-instagram-embed";
-import { connect } from "react-redux";
 
 class Cyberpunk extends React.Component {
   componentDidMount() {
@@ -13,9 +12,6 @@ class Cyberpunk extends React.Component {
   }
 
   render() {
-    const {
-      UI: { loading },
-    } = this.props;
     return (
       <div className='center cyberpunkContainer'>
         <span>
@@ -25,7 +21,6 @@ class Cyberpunk extends React.Component {
           <div className=' col l12 card'>
             <div className='card-content cyberText'>{cyber}</div>
           </div>
-
           <div className='col l4 s12 insta center card'>
             <InstagramEmbed
               url='https://www.instagram.com/p/B5_zQFSn3zQ/?utm_source=ig_web_copy_link'
@@ -68,8 +63,4 @@ class Cyberpunk extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  UI: state.UI,
-});
-
-export default connect(mapStateToProps)(Cyberpunk);
+export default Cyberpunk;

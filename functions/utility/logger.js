@@ -1,13 +1,21 @@
 const winston = require("winston");
 const Sentry = require("winston-transport-sentry-node").default;
+const config = require("./config");
 
 const options = {
   sentry: {
-    dsn:
-      "https://e32c6af99f7345d2b3108aa8615bd2c1@o388526.ingest.sentry.io/5225481",
+    dsn: config.sentryDSN,
   },
   level: "error",
 };
+
+const sentryInfo = {
+  sentry: {
+    dsn: config.sentryDSN,
+  },
+  level: "info",
+};
+
 const dateFormat = () => {
   return new Date(Date.now()).toUTCString();
 };
@@ -27,6 +35,7 @@ class LoggerService {
           level: "error",
         }),
         new Sentry(options),
+        new Sentry(sentryInfo),
       ],
       format: winston.format.printf((info) => {
         let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${

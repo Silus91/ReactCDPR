@@ -1,6 +1,7 @@
 import db from "../resources/Firebase/Firestore";
 import axios from "axios";
 import M from "materialize-css";
+import * as Sentry from "@sentry/browser";
 
 export const toastMsg = (msg) => {
   M.AutoInit();
@@ -24,16 +25,17 @@ export const saveNewUser = async (newUser) => {
   try {
     const user = await db.doc(`/users/${newUser.handle}`).get();
     if (user.exists) {
-      return;
-    }
-    try {
-      await db.doc(`/users/${newUser.handle}`).set(newUser);
-      console.log("user created");
       return newUser;
-    } catch (error) {
-      console.error(error);
+    } else {
+      try {
+        await db.doc(`/users/${newUser.handle}`).set(newUser);
+        return newUser;
+      } catch (error) {
+        Sentry.captureException("1social save user", error);
+      }
     }
   } catch (error) {
+    Sentry.captureException("2social save user", error);
     console.error(error);
   }
 };

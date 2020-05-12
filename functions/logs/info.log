@@ -16,3 +16,8 @@ Mon, 11 May 2020 15:54:57 GMT | ERROR | Error At Trying to Send Email {"code":"E
 Mon, 11 May 2020 15:57:03 GMT | ERROR | Error At Trying to Send Email {"code":"EAUTH","command":"API"} | 
 Mon, 11 May 2020 16:00:48 GMT | ERROR | Error At Trying to Send Email {"code":"EENVELOPE","command":"API"} | 
 Mon, 11 May 2020 16:01:40 GMT | INFO | Email was send Sucessfuly by asdas3sd@asdasd.com | 
+Tue, 12 May 2020 09:33:04 GMT | INFO | Email was send Sucessfuly by asdas3sd@asdasd.com | 
+Tue, 12 May 2020 09:33:37 GMT | INFO | Survey Was submited cool | 
+Tue, 12 May 2020 09:50:08 GMT | INFO | New User created | data : dyczek.daw343id@gmail.com | 
+Tue, 12 May 2020 09:51:36 GMT | INFO | User dyczek.daw343id@gmail.com uploaded new photo user2790huj.jpg | 
+Tue, 12 May 2020 12:56:13 GMT | ERROR | Error At Trying to Login | data: wizard911@o2.pl | 

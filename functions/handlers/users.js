@@ -27,7 +27,7 @@ exports.register = (req, res) => {
     .get()
     .then((doc) => {
       if (doc.exists) {
-        return res.status(403).json({ email: "this email is taken" });
+        return res.status(403).json({ general: "this email is taken" });
       } else {
         return firebase
           .auth()
@@ -40,7 +40,6 @@ exports.register = (req, res) => {
     })
     .then((idToken) => {
       token = idToken;
-      console.log("token", token);
       const userCredentials = {
         handle: newUser.email,
         email: newUser.email,
@@ -146,7 +145,7 @@ exports.uploadImage = (req, res) => {
       ];
       imageFileName = `user${Math.round(
         Math.random() * 10000
-      ).toString()}huj.${imageExtension}`;
+      ).toString()}.${imageExtension}`;
       const filepath = path.join(os.tmpdir(), imageFileName);
       imageToBeUploaded = { filepath, mimetype };
       file.pipe(fs.createWriteStream(filepath));
