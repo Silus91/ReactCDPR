@@ -45,7 +45,7 @@ app.use(bodyParser.json());
 app.post("/message", sendEmail);
 app.post("/survey", sendSurvey);
 app.get("/getsurveys", getAllSurveys);
-app.get("/getstock", getStockValue);
+// app.get("/getstock", getStockValue);
 
 //Register / login
 app.post("/register", register);

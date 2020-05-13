@@ -5,19 +5,32 @@ import slides from "../../resources/textConfigs/slidesCDPR";
 import CardTabs from "../../components/CardTabs/CardTabs";
 import configs from "../../resources/textConfigs/configsCDPR";
 import M from "materialize-css";
+import { connect } from "react-redux";
+import { getStockValue } from "../../actions/uiActions";
 
 class Cdproject extends Component {
   componentDidMount() {
+    const {
+      UI: { stock },
+    } = this.props;
     M.AutoInit();
+    if (!stock.length > 0) {
+      console.log("cdred did");
+      this.props.getStockValue();
+    }
   }
 
   render() {
+    const {
+      UI: { loading },
+      UI: { stock },
+    } = this.props;
     return (
       <div>
         <h1 className='titleSecond center'>CD Project Red SA</h1>
         <div className='row'>
           <div className=' col l12 stock z-depth-2'>
-            <Stock />
+            {stock.length > 0 ? <Stock stock={stock} /> : loading}
           </div>
           <div className='card col l7 s12'>
             <div className='card-content'>
@@ -33,4 +46,8 @@ class Cdproject extends Component {
   }
 }
 
-export default Cdproject;
+const mapStateToProps = (state) => ({
+  UI: state.UI,
+});
+
+export default connect(mapStateToProps, { getStockValue })(Cdproject);

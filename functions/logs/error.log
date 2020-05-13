@@ -7,3 +7,6 @@ Mon, 11 May 2020 15:54:57 GMT | ERROR | Error At Trying to Send Email {"code":"E
 Mon, 11 May 2020 15:57:03 GMT | ERROR | Error At Trying to Send Email {"code":"EAUTH","command":"API"} | 
 Mon, 11 May 2020 16:00:48 GMT | ERROR | Error At Trying to Send Email {"code":"EENVELOPE","command":"API"} | 
 Tue, 12 May 2020 12:56:13 GMT | ERROR | Error At Trying to Login | data: wizard911@o2.pl | 
+Wed, 13 May 2020 07:55:32 GMT | ERROR | Error uncaughtException {} | 
+Wed, 13 May 2020 07:58:24 GMT | ERROR | Error uncaughtException {} | 
+Wed, 13 May 2020 08:06:33 GMT | ERROR | Error uncaughtException {} | 

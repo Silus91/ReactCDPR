@@ -21,3 +21,6 @@ Tue, 12 May 2020 09:33:37 GMT | INFO | Survey Was submited cool |
 Tue, 12 May 2020 09:50:08 GMT | INFO | New User created | data : dyczek.daw343id@gmail.com | 
 Tue, 12 May 2020 09:51:36 GMT | INFO | User dyczek.daw343id@gmail.com uploaded new photo user2790huj.jpg | 
 Tue, 12 May 2020 12:56:13 GMT | ERROR | Error At Trying to Login | data: wizard911@o2.pl | 
+Wed, 13 May 2020 07:55:32 GMT | ERROR | Error uncaughtException {} | 
+Wed, 13 May 2020 07:58:24 GMT | ERROR | Error uncaughtException {} | 
+Wed, 13 May 2020 08:06:33 GMT | ERROR | Error uncaughtException {} | 

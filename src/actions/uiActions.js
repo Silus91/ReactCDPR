@@ -4,12 +4,13 @@ import {
   CLEAR_ERRORS,
   GET_SURVEYS,
   SEND_SURVEY,
+  GET_STOCK,
 } from "../types/types";
 import axios from "axios";
 import { toastMsg } from "../services/Service";
 import * as Sentry from "@sentry/browser";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_LOCAL;
 
 export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -65,6 +66,31 @@ export const getSurveys = () => (dispatch) => {
       toastMsg("Error please refresh");
       dispatch({
         type: GET_SURVEYS,
+        payload: [],
+      });
+    });
+};
+
+export const getStockValue = () => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
+
+  fetch(proxyurl + API_CDR)
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      const stockValue = res["dataset"]["data"].slice(0, 1000);
+      dispatch({
+        type: GET_STOCK,
+        payload: stockValue,
+      });
+    })
+    .catch((err) => {
+      toastMsg("Error please refresh");
+      dispatch({
+        type: GET_STOCK,
         payload: [],
       });
     });

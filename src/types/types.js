@@ -6,3 +6,4 @@ export const LOADING_UI = "LOADING_UI";
 export const STOP_LOADING_UI = "STOP_LOADING_UI";
 export const GET_SURVEYS = "GET_SURVEYS";
 export const SEND_SURVEY = "SEND_SURVEY";
+export const GET_STOCK = "GET_STOCK";

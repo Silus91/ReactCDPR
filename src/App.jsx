@@ -20,7 +20,6 @@ import * as Sentry from "@sentry/browser";
 Sentry.init({ dsn: process.env.REACT_APP_SENTRY_DSN });
 
 const token = localStorage.getItem("FBidToken");
-
 if (token) {
   const decodedToken = jwtDecode(token);
   if (decodedToken.exp * 1000 < Date.now()) {

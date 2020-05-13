@@ -5,12 +5,14 @@ import {
   STOP_LOADING_UI,
   GET_SURVEYS,
   SEND_SURVEY,
+  GET_STOCK,
 } from "../types/types";
 
 const initialState = {
   loading: false,
   errors: null,
   surveys: [],
+  stock: [],
 };
 
 export default function (state = initialState, action) {
@@ -48,6 +50,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         surveys: [action.payload, ...state.surveys],
+      };
+    case GET_STOCK:
+      return {
+        ...state,
+        stock: action.payload,
+        loading: false,
       };
     default:
       return state;

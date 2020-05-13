@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Plot from "react-plotly.js";
 import "./Stock.css";
-import { connect } from "react-redux";
 
-const values = new Set([30, 60, 120, 360, 1000]);
+const values = new Set([5, 30, 60, 120, 360, 1000]);
 
 class Stock extends Component {
   constructor(props) {
@@ -15,18 +14,10 @@ class Stock extends Component {
     };
   }
 
-  componentDidMount() {
-    this.fetchStock();
-  }
-
   componentDidUpdate(prevProps, prevState) {
     if (prevState.radioValue !== this.state.radioValue) {
       return this.fetchStock();
     }
-  }
-
-  componentWillUnmount() {
-    this.fetchStock();
   }
 
   renderRadio() {
@@ -47,39 +38,29 @@ class Stock extends Component {
 
   fetchStock() {
     const { radioValue } = this.state;
-    const pointerToThis = this;
-    const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
     let stockChartValuesXFunction = [];
     let stockChartValuesYFunction = [];
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    console.log("fetchstock");
+    const cutted = this.props.stock.slice(0, radioValue);
 
-    fetch(proxyurl + API_CDR)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        const cutted = data["dataset"]["data"].slice(0, radioValue);
+    for (let i = 0; i < cutted.length; i++) {
+      stockChartValuesXFunction.push(cutted[i][0]);
+      stockChartValuesYFunction.push(cutted[i][1]);
+    }
 
-        for (var i = 0; i < cutted.length; i++) {
-          stockChartValuesXFunction.push(cutted[i][0]);
-          stockChartValuesYFunction.push(cutted[i][1]);
-        }
-
-        pointerToThis.setState({
-          stockChartValuesX: stockChartValuesXFunction,
-          stockChartValuesY: stockChartValuesYFunction,
-        });
-      });
+    this.setState({
+      stockChartValuesX: stockChartValuesXFunction,
+      stockChartValuesY: stockChartValuesYFunction,
+    });
   }
 
   handleChange = (event) => {
     this.setState({ radioValue: event.target.value });
   };
 
-  render() {
-    const { radioValue } = this.state;
+  chart() {
     return (
-      <div>
+      <>
         <Plot
           data={[
             {
@@ -104,6 +85,16 @@ class Stock extends Component {
             displayModeBar: false,
           }}
         />
+      </>
+    );
+  }
+
+  render() {
+    const { radioValue } = this.state;
+    console.log("render");
+    return (
+      <div>
+        {this.chart()}
         <div>
           <span className='red-text left'>{`Showing data from ${radioValue} days`}</span>
           <div className='radioBtn right'>{this.renderRadio()}</div>
@@ -113,8 +104,4 @@ class Stock extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  UI: state.UI,
-});
-
-export default connect(mapStateToProps)(Stock);
+export default Stock;

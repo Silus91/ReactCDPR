@@ -88,27 +88,25 @@ exports.getAllSurveys = (req, res) => {
     });
 };
 
-exports.getStockValue = (req, res) => {
-  const value = req.body.stockDays;
-
-  const url = config.stockMarketURL;
-  request.get(
-    {
-      url: url,
-      json: true,
-      headers: { "User-Agent": "request" },
-    },
-    (err, res, data) => {
-      if (err) {
-        console.log("Error:", err);
-      } else if (res.statusCode !== 200) {
-        console.log("Status:", res.statusCode);
-      } else {
-        console.log(data.html_url);
-      }
-
-      //sprawdzic co dostajemy spowrotem
-      // return res.status(200).json(stockValue);
-    }
-  );
-};
+// exports.getStockValue = (req, res) => {
+//   const url = config.stockMarketURL;
+//   request.get(
+//     {
+//       url: url,
+//       json: true,
+//       headers: { "User-Agent": "request" },
+//     },
+//     (err, res, data) => {
+//       if (err) {
+//         console.log("Error:", err);
+//       } else if (res.statusCode !== 200) {
+//         console.log("Status:", res.statusCode);
+//       } else {
+//         console.log("powinna byc data", data);
+//       }
+//       return data;
+//       //sprawdzic co dostajemy spowrotem
+//       // return res.status(200).json(stockValue);
+//     }
+//   );
+// };
