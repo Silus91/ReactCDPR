@@ -16,7 +16,7 @@ import { toastMsg } from "../services/Service";
 import * as Sentry from "@sentry/browser";
 
 const firebase = require("firebase");
-const BASE_URL = process.env.REACT_APP_LOCAL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const loginAction = (userData) => (dispatch) => {
   dispatch({ type: LOADING_UI });

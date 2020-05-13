@@ -13,6 +13,9 @@ class Stock extends Component {
       radioValue: 120,
     };
   }
+  componentDidMount() {
+    this.fetchStock();
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.radioValue !== this.state.radioValue) {
