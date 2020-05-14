@@ -87,7 +87,3 @@ exports.getAllSurveys = (req, res) => {
       res.status(400).json({ error: error.code });
     });
 };
-
-// exports.getStockValue = (req, res) => {
-//   const url = config.stockMarketURL;
-//   request.get(
