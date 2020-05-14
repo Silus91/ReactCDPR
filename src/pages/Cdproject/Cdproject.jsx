@@ -15,7 +15,6 @@ class Cdproject extends Component {
     } = this.props;
     M.AutoInit();
     if (!stock.length > 0) {
-      console.log("cdred did");
       this.props.getStockValue();
     }
   }

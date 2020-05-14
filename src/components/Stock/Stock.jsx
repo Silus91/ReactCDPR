@@ -43,7 +43,6 @@ class Stock extends Component {
     const { radioValue } = this.state;
     let stockChartValuesXFunction = [];
     let stockChartValuesYFunction = [];
-    console.log("fetchstock");
     const cutted = this.props.stock.slice(0, radioValue);
 
     for (let i = 0; i < cutted.length; i++) {
@@ -94,7 +93,6 @@ class Stock extends Component {
 
   render() {
     const { radioValue } = this.state;
-    console.log("render");
     return (
       <div>
         {this.chart()}

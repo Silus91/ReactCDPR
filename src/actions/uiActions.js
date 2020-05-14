@@ -10,7 +10,7 @@ import axios from "axios";
 import { toastMsg } from "../services/Service";
 import * as Sentry from "@sentry/browser";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_LOCAL;
 
 export const sendMessage = (messageData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
@@ -76,7 +76,7 @@ export const getStockValue = () => (dispatch) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
 
-  fetch(proxyurl + API_CDR)
+  fetch(API_CDR, { mode: "cors" })
     .then((res) => {
       return res.json();
     })
