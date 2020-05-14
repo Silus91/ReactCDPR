@@ -2,12 +2,7 @@ const functions = require("firebase-functions");
 const app = require("express")();
 const config = require("./utility/config");
 const firebase = require("firebase");
-const {
-  sendEmail,
-  sendSurvey,
-  getAllSurveys,
-  getStockValue,
-} = require("./handlers/services");
+const { sendEmail, sendSurvey, getAllSurveys } = require("./handlers/services");
 const {
   register,
   login,
@@ -45,7 +40,6 @@ app.use(bodyParser.json());
 app.post("/message", sendEmail);
 app.post("/survey", sendSurvey);
 app.get("/getsurveys", getAllSurveys);
-// app.get("/getstock", getStockValue);
 
 //Register / login
 app.post("/register", register);
