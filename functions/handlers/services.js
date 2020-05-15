@@ -5,7 +5,6 @@ const {
   validateNewEmail,
   validateNewSurvey,
 } = require("../utility/validaters");
-var request = require("request");
 const Logger = require("../utility/logger");
 const logger = new Logger("app");
 
