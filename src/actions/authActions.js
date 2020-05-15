@@ -16,6 +16,7 @@ import { toastMsg } from "../services/Service";
 import * as Sentry from "@sentry/browser";
 
 const firebase = require("firebase");
+
 const BASE_URL = process.env.REACT_APP_LOCAL;
 
 export const loginAction = (userData) => (dispatch) => {
@@ -67,8 +68,31 @@ export const loginFbAction = () => (dispatch) => {
 export const loginGoogleAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.GoogleAuthProvider();
-  dispatch(socialUserAction(provider));
+  // dispatch(socialUserAction(provider));
+  dispatch(linkWithPopup(provider));
 };
+
+export const linkWithPopup = (provider) => {
+  firebase.auth.currentUser
+    .linkWithPopup(provider)
+    .then(function (result) {
+      console.log("jestem");
+
+      var credential = result.credential;
+      var user = result.user;
+      console.log(user, credential);
+    })
+    .catch(function (error) {
+      // Handle Errors here.
+      // ...
+    });
+  // [END auth_link_with_popup]
+};
+
+// const provider = new firebase.auth.GoogleAuthProvider();
+// provider.setCustomParameters({
+//   prompt: 'select_account'
+// });
 
 export const registerAction = (newUserData) => (dispatch) => {
   dispatch({ type: LOADING_UI });

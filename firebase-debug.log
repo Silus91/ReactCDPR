@@ -159,3 +159,853 @@
 [debug] [2020-05-14T21:26:30.271Z] [runtime-status] [32726] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
 [warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
 [debug] [2020-05-14T21:26:30.577Z] [worker-~diagnostic~-fb18edbc-44ac-486a-b1f9-8612d407d7a8]: IDLE 
+[debug] [2020-05-15T08:29:36.414Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T08:29:36.415Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:29:36.415Z] Accepted request OPTIONS /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:29:36.415Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-15T08:29:36.420Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-15T08:29:36.420Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-15T08:29:36.420Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:29:36.420Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: Assigning socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:29:36.421Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: BUSY 
+[debug] [2020-05-15T08:29:36.843Z] [runtime-status] [2056] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T08:29:36.846Z] [runtime-status] [2056] Disabled runtime features: undefined 
+[debug] [2020-05-15T08:29:36.850Z] [runtime-status] [2056] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T08:29:36.852Z] [runtime-status] [2056] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:36.857Z] [runtime-status] [2056] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T08:29:36.909Z] [runtime-status] [2056] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T08:29:36.911Z] [runtime-status] [2056] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:36.912Z] [runtime-status] [2056] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T08:29:36.913Z] [runtime-status] [2056] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:36.914Z] [runtime-status] [2056] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T08:29:37.316Z] [runtime-status] [2056] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T08:29:37.949Z] [runtime-status] [2056] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:29:37.950Z] [runtime-status] [2056] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:29:37.950Z] [runtime-status] [2056] Running api in mode HTTPS 
+[debug] [2020-05-15T08:29:37.954Z] [runtime-status] [2056] Attempting to listen to socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:29:37.959Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:29:37.972Z] [runtime-status] [2056] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T08:29:37.984Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-05-15T08:29:37.984Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-05-15T08:29:37.985Z] Accepted request POST /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:29:37.994Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-15T08:29:37.995Z] [worker-pool] Adding worker with key api, total=2 
+[debug] [2020-05-15T08:29:37.995Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:29:37.995Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: Assigning socketPath: /tmp/fire_emu_2067.sock 
+[debug] [2020-05-15T08:29:37.999Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: BUSY 
+[debug] [2020-05-15T08:29:38.000Z] [runtime-status] [2056] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:29:38.001Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: IDLE 
+[debug] [2020-05-15T08:29:38.002Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:29:38.418Z] [runtime-status] [2067] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T08:29:38.420Z] [runtime-status] [2067] Disabled runtime features: undefined 
+[debug] [2020-05-15T08:29:38.423Z] [runtime-status] [2067] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T08:29:38.424Z] [runtime-status] [2067] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:38.429Z] [runtime-status] [2067] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T08:29:38.488Z] [runtime-status] [2067] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T08:29:38.489Z] [runtime-status] [2067] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:38.490Z] [runtime-status] [2067] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T08:29:38.491Z] [runtime-status] [2067] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T08:29:38.491Z] [runtime-status] [2067] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T08:29:38.881Z] [runtime-status] [2067] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T08:29:39.496Z] [runtime-status] [2067] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:29:39.496Z] [runtime-status] [2067] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:29:39.496Z] [runtime-status] [2067] Running api in mode HTTPS 
+[debug] [2020-05-15T08:29:39.501Z] [runtime-status] [2067] Attempting to listen to socketPath: /tmp/fire_emu_2067.sock 
+[debug] [2020-05-15T08:29:39.505Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:29:39.537Z] [runtime-status] [2067] Ephemeral server handling POST request 
+[debug] [2020-05-15T08:29:39.551Z] [runtime-status] [2067] Ephemeral server survived. 
+[warn] ⚠  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] >  { [Error: The email address is already in use by another account.] {"user":"{ [Error: The email address is already in use by another account.]"}
+[info] >    code: 'auth/email-already-in-use', {"user":"  code: 'auth/email-already-in-use',"}
+[info] >    message: 'The email address is already in use by another account.', {"user":"  message: 'The email address is already in use by another account.',"}
+[info] >    a: null } {"user":"  a: null }"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:29:40.638Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: IDLE 
+[debug] [2020-05-15T08:29:40.639Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T08:30:20.958Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T08:30:20.958Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:30:20.959Z] Accepted request OPTIONS /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:30:20.959Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:30:20.959Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: Assigning socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:30:20.959Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: BUSY 
+[debug] [2020-05-15T08:30:20.960Z] [runtime-status] [2056] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:30:20.960Z] [runtime-status] [2056] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:30:20.960Z] [runtime-status] [2056] Running api in mode HTTPS 
+[debug] [2020-05-15T08:30:20.961Z] [runtime-status] [2056] Attempting to listen to socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:30:20.962Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:30:20.965Z] [runtime-status] [2056] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T08:30:20.966Z] [runtime-status] [2056] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:30:20.968Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: IDLE 
+[debug] [2020-05-15T08:30:20.968Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T08:30:20.969Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T08:30:20.969Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:30:20.969Z] Accepted request POST /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:30:20.969Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:30:20.970Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: Assigning socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:30:20.970Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: BUSY 
+[debug] [2020-05-15T08:30:20.978Z] [runtime-status] [2056] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:30:20.978Z] [runtime-status] [2056] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:30:20.978Z] [runtime-status] [2056] Running api in mode HTTPS 
+[debug] [2020-05-15T08:30:20.979Z] [runtime-status] [2056] Attempting to listen to socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:30:20.980Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:30:20.998Z] [runtime-status] [2056] Ephemeral server handling POST request 
+[debug] [2020-05-15T08:30:21.003Z] [runtime-status] [2056] Ephemeral server survived. 
+[warn] ⚠  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] >  { [Error: The email address is already in use by another account.] {"user":"{ [Error: The email address is already in use by another account.]"}
+[info] >    code: 'auth/email-already-in-use', {"user":"  code: 'auth/email-already-in-use',"}
+[info] >    message: 'The email address is already in use by another account.', {"user":"  message: 'The email address is already in use by another account.',"}
+[info] >    a: null } {"user":"  a: null }"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:30:22.518Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: IDLE 
+[debug] [2020-05-15T08:30:22.518Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T08:32:31.118Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T08:32:31.118Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:32:31.119Z] Accepted request OPTIONS /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:32:31.119Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:32:31.119Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: Assigning socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:32:31.119Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: BUSY 
+[debug] [2020-05-15T08:32:31.119Z] [runtime-status] [2056] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:32:31.120Z] [runtime-status] [2056] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:32:31.120Z] [runtime-status] [2056] Running api in mode HTTPS 
+[debug] [2020-05-15T08:32:31.120Z] [runtime-status] [2056] Attempting to listen to socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:32:31.121Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:32:31.123Z] [runtime-status] [2056] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T08:32:31.124Z] [runtime-status] [2056] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:32:31.126Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: IDLE 
+[debug] [2020-05-15T08:32:31.126Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T08:32:31.129Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T08:32:31.129Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T08:32:31.129Z] Accepted request POST /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T08:32:31.129Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T08:32:31.129Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: Assigning socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:32:31.129Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: BUSY 
+[debug] [2020-05-15T08:32:31.136Z] [runtime-status] [2056] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T08:32:31.137Z] [runtime-status] [2056] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T08:32:31.137Z] [runtime-status] [2056] Running api in mode HTTPS 
+[debug] [2020-05-15T08:32:31.138Z] [runtime-status] [2056] Attempting to listen to socketPath: /tmp/fire_emu_2056.sock 
+[debug] [2020-05-15T08:32:31.139Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T08:32:31.145Z] [runtime-status] [2056] Ephemeral server handling POST request 
+[debug] [2020-05-15T08:32:31.146Z] [runtime-status] [2056] Ephemeral server survived. 
+[info] >  TypeError: Cannot read property 'uid' of undefined {"user":"TypeError: Cannot read property 'uid' of undefined"}
+[info] >      at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:38:26) {"user":"    at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:38:26)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason: {"user":"This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason:"}
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client {"user":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11) {"user":"    at ServerResponse.setHeader (_http_outgoing.js:470:11)"}
+[info] >      at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10) {"user":"    at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10)"}
+[info] >      at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12) {"user":"    at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12)"}
+[info] >      at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15) {"user":"    at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15)"}
+[info] >      at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:64:10) {"user":"    at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:64:10)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  unhandledRejection {} {"user":"unhandledRejection {}"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T08:32:31.325Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: IDLE 
+[debug] [2020-05-15T08:32:31.326Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T11:31:46.138Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers 
+[debug] [2020-05-15T11:31:47.139Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-15T11:31:47.139Z] [worker-~diagnostic~-fb18edbc-44ac-486a-b1f9-8612d407d7a8]: FINISHING 
+[debug] [2020-05-15T11:31:47.140Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-05-15T11:31:47.140Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: FINISHING 
+[debug] [2020-05-15T11:31:47.140Z] [worker-pool] Shutting down IDLE worker (api) 
+[debug] [2020-05-15T11:31:47.140Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: FINISHING 
+[debug] [2020-05-15T11:31:47.147Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-15T11:31:47.147Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-15T11:31:47.147Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-15T11:31:47.147Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: Assigning socketPath: /tmp/fire_emu_9619.sock 
+[debug] [2020-05-15T11:31:47.147Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: BUSY 
+[debug] [2020-05-15T11:31:47.148Z] [worker-~diagnostic~-fb18edbc-44ac-486a-b1f9-8612d407d7a8]: exited 
+[debug] [2020-05-15T11:31:47.148Z] [worker-~diagnostic~-fb18edbc-44ac-486a-b1f9-8612d407d7a8]: FINISHED 
+[debug] [2020-05-15T11:31:47.148Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: exited 
+[debug] [2020-05-15T11:31:47.148Z] [worker-api-74d58e8d-38d1-492b-a43e-c96084be5f1c]: FINISHED 
+[debug] [2020-05-15T11:31:47.148Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: exited 
+[debug] [2020-05-15T11:31:47.149Z] [worker-api-d5ae90d6-2d89-4cc2-95b1-99ab80afb4b6]: FINISHED 
+[debug] [2020-05-15T11:31:47.356Z] [runtime-status] [9619] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T11:31:47.358Z] [runtime-status] [9619] Disabled runtime features: undefined 
+[debug] [2020-05-15T11:31:47.360Z] [runtime-status] [9619] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T11:31:47.361Z] [runtime-status] [9619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:31:47.365Z] [runtime-status] [9619] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T11:31:47.392Z] [runtime-status] [9619] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T11:31:47.393Z] [runtime-status] [9619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:31:47.394Z] [runtime-status] [9619] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T11:31:47.394Z] [runtime-status] [9619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:31:47.394Z] [runtime-status] [9619] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T11:31:47.616Z] [runtime-status] [9619] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T11:31:47.926Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: IDLE 
+[debug] [2020-05-15T11:32:48.263Z] File /home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js changed, reloading triggers 
+[debug] [2020-05-15T11:32:49.264Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-05-15T11:32:49.264Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: FINISHING 
+[debug] [2020-05-15T11:32:49.265Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-15T11:32:49.265Z] [worker-pool] Cleaned up workers for api: 2 --> 0 
+[debug] [2020-05-15T11:32:49.274Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-15T11:32:49.275Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-05-15T11:32:49.275Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-15T11:32:49.276Z] [worker-~diagnostic~-8a72e9c0-a140-426c-a5bb-a828cdf47bb4]: Assigning socketPath: /tmp/fire_emu_9667.sock 
+[debug] [2020-05-15T11:32:49.276Z] [worker-~diagnostic~-8a72e9c0-a140-426c-a5bb-a828cdf47bb4]: BUSY 
+[debug] [2020-05-15T11:32:49.278Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: exited 
+[debug] [2020-05-15T11:32:49.278Z] [worker-~diagnostic~-c1ccfcde-8e30-4d67-8657-a0d5c6bbb0e7]: FINISHED 
+[debug] [2020-05-15T11:32:49.530Z] [runtime-status] [9667] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T11:32:49.532Z] [runtime-status] [9667] Disabled runtime features: undefined 
+[debug] [2020-05-15T11:32:49.533Z] [runtime-status] [9667] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T11:32:49.534Z] [runtime-status] [9667] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:32:49.537Z] [runtime-status] [9667] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T11:32:49.567Z] [runtime-status] [9667] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T11:32:49.568Z] [runtime-status] [9667] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:32:49.568Z] [runtime-status] [9667] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T11:32:49.569Z] [runtime-status] [9667] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T11:32:49.569Z] [runtime-status] [9667] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T11:32:49.786Z] [runtime-status] [9667] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T11:32:50.107Z] [worker-~diagnostic~-8a72e9c0-a140-426c-a5bb-a828cdf47bb4]: IDLE 
+[debug] [2020-05-15T13:13:59.076Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T13:13:59.076Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T13:13:59.077Z] Accepted request OPTIONS /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T13:13:59.077Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-05-15T13:13:59.082Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-15T13:13:59.082Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-05-15T13:13:59.082Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T13:13:59.083Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T13:13:59.083Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T13:13:59.486Z] [runtime-status] [12619] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T13:13:59.488Z] [runtime-status] [12619] Disabled runtime features: undefined 
+[debug] [2020-05-15T13:13:59.491Z] [runtime-status] [12619] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T13:13:59.493Z] [runtime-status] [12619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:13:59.500Z] [runtime-status] [12619] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T13:13:59.551Z] [runtime-status] [12619] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T13:13:59.552Z] [runtime-status] [12619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:13:59.554Z] [runtime-status] [12619] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T13:13:59.555Z] [runtime-status] [12619] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:13:59.555Z] [runtime-status] [12619] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T13:13:59.966Z] [runtime-status] [12619] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T13:14:00.583Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T13:14:00.583Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T13:14:00.584Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T13:14:00.588Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T13:14:00.592Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T13:14:00.605Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T13:14:00.616Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-05-15T13:14:00.616Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-05-15T13:14:00.617Z] Accepted request POST /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T13:14:00.625Z] [worker-pool] addWorker(api) 
+[debug] [2020-05-15T13:14:00.626Z] [worker-pool] Adding worker with key api, total=2 
+[debug] [2020-05-15T13:14:00.626Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T13:14:00.626Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: Assigning socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T13:14:00.626Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: BUSY 
+[debug] [2020-05-15T13:14:00.627Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T13:14:00.628Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T13:14:00.630Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T13:14:01.041Z] [runtime-status] [12631] Functions runtime initialized. {"cwd":"/home/dawid/trening/Cdred/ReactCDPR/functions","node_version":"10.16.3"} 
+[debug] [2020-05-15T13:14:01.043Z] [runtime-status] [12631] Disabled runtime features: undefined 
+[debug] [2020-05-15T13:14:01.046Z] [runtime-status] [12631] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T13:14:01.047Z] [runtime-status] [12631] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:14:01.051Z] [runtime-status] [12631] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-15T13:14:01.105Z] [runtime-status] [12631] Checked functions.config() {"config":{}} 
+[debug] [2020-05-15T13:14:01.107Z] [runtime-status] [12631] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:14:01.108Z] [runtime-status] [12631] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"} 
+[debug] [2020-05-15T13:14:01.108Z] [runtime-status] [12631] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-functions/lib/index.js"} 
+[debug] [2020-05-15T13:14:01.109Z] [runtime-status] [12631] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/firebase-admin/lib/index.js"}} 
+[debug] [2020-05-15T13:14:01.512Z] [runtime-status] [12631] initializeApp(DEFAULT) {"databaseURL":"https://cdred-project.firebaseio.com","storageBucket":"cdred-project.appspot.com","projectId":"cdred-project","credential":{"implicit":false,"projectId":"cdred-project","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuG+pB8WQjPsz\nsUdiOhRGtjfzFbOC5KfQCDjHd1XpcFaPckp14OejQq0ajcJNDlU7paqennFKymGq\nK03c8kg1x+iGXdCk6XS2jogI3HowPg2QdsZ1iZp8nh6GEYaIic+JGsx14gAeORO6\n9/uz4LlqX+fcHMzfUdeG+AlKQsFORIj9/TcIpAcDENbKWuvQgoXKmWxaWhtozEUN\nmtHDb7VHVx2YfijnM2JcnlAMfe7QoDls5fBAVKLin/8nLX8ZbFo1Jet3+SlPPBQu\nR3WmFRy5yBQqxVBMb/0U1E4JmDEv3M6NAo8npve9fbcOkd2Cd4pgsOQNlPLmPJwx\nh4IYOuVnAgMBAAECggEABfv+/wVs/LGIZY1gZO+/4Ms5QWqMjLM0VemPXAQUtitA\nuzeO84RbmlBQLE/qdA4iG+qPGa//vbVOvAyhGukhhT3OT4AdseK2UVNlrhAca9+D\nqcDN5Y7MEncUDe09yhLncTXslUpODgtU+B4AoUmhMtv6JEKAkp0lY0qDzhub+QKS\ng6TSrCO5e19i86FVD0OhmV3NKUrN6b2Eh8OhY4RBAGbHKCxYWOnlr0EGT8xDZEkr\nkiX/KZr4fvdd6y8lRlXtU8QvEsQwekyEsn2MugxxTy5Yf6Lq0W9fAG5PUVIsRFqw\ng/bvOwghwjy16JwuqQLr39zKBKXA94BtlLHd10HLgQKBgQDdKPnClzJHRDN7zHn7\nWgaQsZStcmb+uJsQjohJIIODu/183dFkNA4W5SQVCTkXozNc0l6AHZlqXJeb8pSK\nlGh51CdGbCYHg/X9aQ4TdLjTxeIEtxEPwuQ31v+ItBXP9z2czUAkEFeyIZpdN68d\nPjdrE1feRnzDI1aT/pEm7cIDJwKBgQC7Mluxupq8/aFOXQHbr4kgVDhPG5i9J8/A\noFj3iEUT1DXCdPGnBKUZAEP+dthxS1x9mzdXfigoDgA04R/9zouGS5O0ZfY1h+9R\nm2/SVxvdD6P/R12QPzH/g/agGiHzAmBmUncTjXl+aP/DhSf+k1GXpcDj6Wa7Tzg4\n6hQXiZRzwQKBgHo3n7aaiY16shzTBgISYRhrGmezlhlj+UVwDv6ieis9ozry9jky\nzyp13LfHTgazCLpeAx03vkVZ/+qNZusiUo4o4L95GpcCpNkyyjWURmO5skq6xDH6\nmNYG+VYZdwhjcGgLwUtswJnPGhgzopE9hbClkuRh/aZ1C+5jOuHReGr3AoGAQhcb\nbHo3W3YoVyRbHZax0Soq3zMdD9tYa+ewwWPpD4Eioc7r6k2nhFYlq1eGPymeM/Jy\n7X7q6olW5VR+GPutIvLX6R7+eBPQGH3KUvbSLY/yFJS7ocvN+So8DnZregJiyn1e\n8RZHyKuFcSA36JdWfTXWDiE/Ve44KU/rXAwEz4ECgYBGscdtvNkx9l6B47l+ZVIR\n3BkHk2WZBCSm1HTByE5Lu7T0Ms2fuLN5MQbj9GLdCPhtp7tveMnngD5J2cM8FS7S\ngY8XkLnWozdaoAo12ZKtVbIjtliL9WB96apoyNzJAHwTRoNZwvTJ0JxHj0ehwdER\n/m/by9jLJcuThCAauRvoHg==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-t8irl@cdred-project.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-15T13:14:02.120Z] [runtime-status] [12631] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T13:14:02.121Z] [runtime-status] [12631] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T13:14:02.121Z] [runtime-status] [12631] Running api in mode HTTPS 
+[debug] [2020-05-15T13:14:02.126Z] [runtime-status] [12631] Attempting to listen to socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T13:14:02.132Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T13:14:02.158Z] [runtime-status] [12631] Ephemeral server handling POST request 
+[debug] [2020-05-15T13:14:02.168Z] [runtime-status] [12631] Ephemeral server survived. 
+[warn] ⚠  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] >  TypeError: Cannot read property 'uid' of undefined {"user":"TypeError: Cannot read property 'uid' of undefined"}
+[info] >      at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:41:26) {"user":"    at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:41:26)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason: {"user":"This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason:"}
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client {"user":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11) {"user":"    at ServerResponse.setHeader (_http_outgoing.js:470:11)"}
+[info] >      at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10) {"user":"    at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10)"}
+[info] >      at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12) {"user":"    at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12)"}
+[info] >      at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15) {"user":"    at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15)"}
+[info] >      at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:67:10) {"user":"    at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:67:10)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  unhandledRejection {} {"user":"unhandledRejection {}"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T13:14:02.854Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: IDLE 
+[debug] [2020-05-15T13:14:02.854Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T16:37:33.438Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T16:37:33.439Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T16:37:33.439Z] Accepted request OPTIONS /cdred-project/us-central1/api/message --> api
+[debug] [2020-05-15T16:37:33.439Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T16:37:33.439Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:37:33.439Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T16:37:33.440Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T16:37:33.440Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T16:37:33.440Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T16:37:33.441Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:37:33.442Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T16:37:33.445Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T16:37:33.446Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T16:37:33.447Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T16:37:33.447Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T16:37:33.449Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T16:37:33.449Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T16:37:33.449Z] Accepted request POST /cdred-project/us-central1/api/message --> api
+[debug] [2020-05-15T16:37:33.449Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T16:37:33.449Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:37:33.449Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T16:37:33.457Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T16:37:33.458Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T16:37:33.458Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T16:37:33.458Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:37:33.459Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T16:37:33.472Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T16:37:33.476Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T16:37:33.477Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T16:37:33.477Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T16:38:02.308Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T16:38:02.308Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T16:38:02.308Z] Accepted request OPTIONS /cdred-project/us-central1/api/message --> api
+[debug] [2020-05-15T16:38:02.309Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T16:38:02.309Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:02.309Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T16:38:02.310Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T16:38:02.310Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T16:38:02.310Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T16:38:02.310Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:02.311Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T16:38:02.313Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T16:38:02.314Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T16:38:02.315Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T16:38:02.315Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T16:38:02.316Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T16:38:02.316Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T16:38:02.316Z] Accepted request POST /cdred-project/us-central1/api/message --> api
+[debug] [2020-05-15T16:38:02.316Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T16:38:02.317Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:02.317Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T16:38:02.325Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T16:38:02.325Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T16:38:02.325Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T16:38:02.327Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:02.328Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T16:38:02.331Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T16:38:02.333Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T16:38:02.333Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T16:38:02.334Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T16:38:08.853Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T16:38:08.853Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T16:38:08.854Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T16:38:08.854Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T16:38:08.854Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:08.854Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T16:38:08.856Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T16:38:08.857Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T16:38:08.857Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T16:38:08.857Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T16:38:08.858Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T16:38:08.861Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T16:38:08.869Z] [runtime-status] [12619] Ephemeral server survived. 
+[warn] ⚠  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T16:38:09.719Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T16:38:09.719Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:07:20.592Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:07:20.592Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:07:20.592Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:07:20.593Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:07:20.593Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:07:20.593Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:07:20.594Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:07:20.595Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:07:20.595Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:07:20.596Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:07:20.597Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:07:20.601Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:07:20.603Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:07:20.868Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:07:20.869Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:09:29.381Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:09:29.381Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:09:29.382Z] Accepted request OPTIONS /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:09:29.382Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:09:29.382Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:29.382Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:09:29.383Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:09:29.384Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:09:29.385Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:09:29.385Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:29.387Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:09:29.389Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:09:29.391Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:09:29.392Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:09:29.392Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:09:29.394Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:09:29.394Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:09:29.394Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:09:29.394Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:09:29.394Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:29.395Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:09:29.401Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:09:29.402Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:09:29.402Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:09:29.402Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:29.403Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:09:29.408Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:09:29.454Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:09:29.830Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:09:29.831Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:09:30.001Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:09:30.002Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:09:30.002Z] Accepted request OPTIONS /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:09:30.002Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:09:30.002Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:30.002Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:09:30.003Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:09:30.004Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:09:30.004Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:09:30.005Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:30.007Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:09:30.011Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:09:30.012Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:09:30.013Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:09:30.013Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:09:30.017Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:09:30.018Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:09:30.018Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:09:30.018Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:09:30.018Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:30.018Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:09:30.023Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:09:30.024Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:09:30.024Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:09:30.024Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:09:30.025Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:09:30.027Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:09:30.028Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:09:30.122Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:09:30.122Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:10:11.307Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:10:11.308Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:10:11.308Z] Accepted request OPTIONS /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:10:11.308Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:11.308Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:11.308Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:10:11.309Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-05-15T17:10:11.309Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-05-15T17:10:11.309Z] Accepted request OPTIONS /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:10:11.309Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:11.309Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: Assigning socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T17:10:11.309Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: BUSY 
+[debug] [2020-05-15T17:10:11.312Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:11.312Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:11.312Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:11.312Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:11.313Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:11.313Z] [runtime-status] [12631] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:11.314Z] [runtime-status] [12631] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:11.314Z] [runtime-status] [12631] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:11.314Z] [runtime-status] [12631] Attempting to listen to socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T17:10:11.315Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:11.319Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:10:11.320Z] [runtime-status] [12631] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:10:11.321Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:11.322Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:10:11.322Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:10:11.322Z] [runtime-status] [12631] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:11.323Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: IDLE 
+[debug] [2020-05-15T17:10:11.323Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:10:11.359Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:10:11.360Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:10:11.360Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:10:11.360Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:11.361Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:11.361Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:10:11.361Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:11.362Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:11.362Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:11.364Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:11.365Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:11.368Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-05-15T17:10:11.368Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-05-15T17:10:11.368Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:10:11.368Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:11.368Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: Assigning socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T17:10:11.369Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: BUSY 
+[debug] [2020-05-15T17:10:11.369Z] [runtime-status] [12631] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:11.370Z] [runtime-status] [12631] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:11.370Z] [runtime-status] [12631] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:11.370Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:10:11.371Z] [runtime-status] [12631] Attempting to listen to socketPath: /tmp/fire_emu_12631.sock 
+[debug] [2020-05-15T17:10:11.372Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:11.375Z] [runtime-status] [12619] Ephemeral server survived. 
+[debug] [2020-05-15T17:10:11.376Z] [runtime-status] [12631] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:10:11.382Z] [runtime-status] [12631] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:11.556Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:10:11.557Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:11.833Z] [worker-api-6df268ac-09f3-4ae2-adf7-faca93e0fc16]: IDLE 
+[debug] [2020-05-15T17:10:11.833Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:10:13.271Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:10:13.272Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:10:13.272Z] Accepted request OPTIONS /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:10:13.272Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:13.272Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:13.272Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:10:13.272Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:13.273Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:13.273Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:13.273Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:13.274Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:13.277Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:10:13.278Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:13.278Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:10:13.279Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:10:13.280Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:10:13.281Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:10:13.281Z] Accepted request POST /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:10:13.281Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:10:13.281Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:13.281Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:10:13.289Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:10:13.289Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:10:13.289Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:10:13.289Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:10:13.290Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:10:13.292Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T17:10:13.301Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:10:13.301Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:10:13.301Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.416Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.417Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:43.417Z] Accepted request OPTIONS /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:22:43.417Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:43.417Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.417Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:43.417Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:43.418Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:43.418Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:43.418Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.419Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:43.422Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:22:43.423Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:43.424Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:43.424Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.425Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.425Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:43.425Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:22:43.425Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:43.425Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.425Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:43.433Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:43.434Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:43.434Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:43.434Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.435Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:43.439Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:22:43.440Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:43.752Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:43.753Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.925Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.925Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:43.925Z] Accepted request OPTIONS /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:22:43.925Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:43.925Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.925Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:43.925Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:43.926Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:43.926Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:43.926Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.927Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:43.929Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:22:43.929Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:43.930Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:43.930Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.932Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:43.932Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:43.932Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:22:43.932Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:43.932Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.933Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:43.939Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:43.940Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:43.940Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:43.940Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:43.941Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:43.944Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:22:43.945Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:44.039Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:44.039Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:45.524Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:45.524Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:45.524Z] Accepted request OPTIONS /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:22:45.524Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:45.524Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:45.525Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:45.525Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:45.525Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:45.526Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:45.526Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:45.527Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:45.529Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:22:45.529Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:45.530Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:45.531Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:22:45.533Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:22:45.533Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:22:45.533Z] Accepted request POST /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:22:45.533Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:22:45.533Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:45.534Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:22:45.540Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:22:45.541Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:22:45.541Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:22:45.542Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:22:45.543Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:22:45.545Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T17:22:45.546Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:22:45.546Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:22:45.546Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:18.358Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:18.359Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:18.359Z] Accepted request OPTIONS /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:34:18.359Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:18.359Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:18.359Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:18.360Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:18.364Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:18.364Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:18.365Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:18.366Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:18.369Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:34:18.370Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:18.371Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:18.371Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:18.372Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:18.372Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:18.373Z] Accepted request GET /cdred-project/us-central1/api/user --> api
+[debug] [2020-05-15T17:34:18.373Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:18.373Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:18.373Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:18.381Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:18.382Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:18.382Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:18.382Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:18.383Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:18.387Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:34:18.388Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:18.967Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:18.968Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:19.141Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:19.141Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:19.141Z] Accepted request OPTIONS /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:34:19.141Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:19.141Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:19.142Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:19.142Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:19.142Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:19.143Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:19.143Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:19.144Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:19.147Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:34:19.148Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:19.149Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:19.149Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:19.153Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:19.153Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:19.153Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:34:19.153Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:19.153Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:19.154Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:19.159Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:19.160Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:19.160Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:19.162Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:19.163Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:19.166Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:34:19.167Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:19.255Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:19.255Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.020Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.020Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:56.020Z] Accepted request OPTIONS /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:34:56.020Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:56.020Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.020Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:56.021Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:56.022Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:56.022Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:56.022Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.023Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:56.026Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:34:56.027Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:56.028Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:56.028Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.029Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.029Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:56.029Z] Accepted request POST /cdred-project/us-central1/api/logout --> api
+[debug] [2020-05-15T17:34:56.029Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:56.030Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.030Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:56.037Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:56.038Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:56.038Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:56.038Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.039Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:56.040Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T17:34:56.042Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:56.042Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:56.042Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.167Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:34:56.167Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:34:56.168Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:34:56.168Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:34:56.170Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.170Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:34:56.171Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:34:56.172Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:34:56.172Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:34:56.172Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:34:56.174Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:34:56.183Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:34:56.185Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:34:56.278Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:34:56.278Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:35:24.048Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:35:24.049Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:35:24.049Z] Accepted request OPTIONS /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T17:35:24.049Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:35:24.049Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:24.049Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:35:24.050Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:35:24.050Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:35:24.050Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:35:24.051Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:24.052Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:35:24.056Z] [runtime-status] [12619] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-15T17:35:24.058Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:35:24.059Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:35:24.059Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:35:24.064Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:35:24.065Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:35:24.065Z] Accepted request POST /cdred-project/us-central1/api/register --> api
+[debug] [2020-05-15T17:35:24.065Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:35:24.065Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:24.066Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:35:24.069Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:35:24.070Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:35:24.070Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:35:24.070Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:24.071Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:35:24.075Z] [runtime-status] [12619] Ephemeral server handling POST request 
+[debug] [2020-05-15T17:35:24.077Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] >  TypeError: Cannot read property 'uid' of undefined {"user":"TypeError: Cannot read property 'uid' of undefined"}
+[info] >      at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:41:26) {"user":"    at db.doc.get.then.then (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:41:26)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason: {"user":"This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason:"}
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client {"user":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11) {"user":"    at ServerResponse.setHeader (_http_outgoing.js:470:11)"}
+[info] >      at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10) {"user":"    at ServerResponse.header (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:771:10)"}
+[info] >      at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12) {"user":"    at ServerResponse.send (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:170:12)"}
+[info] >      at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15) {"user":"    at ServerResponse.json (/home/dawid/trening/Cdred/ReactCDPR/functions/node_modules/express/lib/response.js:267:15)"}
+[info] >      at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:67:10) {"user":"    at db.doc.get.then.then.then.then.catch (/home/dawid/trening/Cdred/ReactCDPR/functions/handlers/users.js:67:10)"}
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7) {"user":"    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+[info] >  unhandledRejection {} {"user":"unhandledRejection {}"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:35:24.197Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:35:24.198Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-15T17:35:53.051Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-15T17:35:53.051Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-15T17:35:53.051Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-15T17:35:53.051Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-15T17:35:53.052Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: Assigning socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:53.052Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: BUSY 
+[debug] [2020-05-15T17:35:53.052Z] [runtime-status] [12619] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-15T17:35:53.053Z] [runtime-status] [12619] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-15T17:35:53.053Z] [runtime-status] [12619] Running api in mode HTTPS 
+[debug] [2020-05-15T17:35:53.053Z] [runtime-status] [12619] Attempting to listen to socketPath: /tmp/fire_emu_12619.sock 
+[debug] [2020-05-15T17:35:53.054Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-15T17:35:53.058Z] [runtime-status] [12619] Ephemeral server handling GET request 
+[debug] [2020-05-15T17:35:53.059Z] [runtime-status] [12619] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-15T17:35:53.154Z] [worker-api-e731d886-6f69-46ab-a046-aa0333d65918]: IDLE 
+[debug] [2020-05-15T17:35:53.154Z] [work-queue] {"queueLength":0,"workRunningCount":0}

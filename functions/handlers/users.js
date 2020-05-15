@@ -27,7 +27,10 @@ exports.register = (req, res) => {
     .get()
     .then((doc) => {
       if (doc.exists) {
-        return res.status(403).json({ general: "this email is taken" });
+        return res.status(403).json({
+          general:
+            "This email is already in use or you have used Social Media before",
+        });
       } else {
         return firebase
           .auth()
