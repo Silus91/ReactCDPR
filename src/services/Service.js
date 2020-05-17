@@ -2,6 +2,7 @@ import db from "../resources/Firebase/Firestore";
 import axios from "axios";
 import M from "materialize-css";
 import * as Sentry from "@sentry/browser";
+import app from "../resources/Firebase/Firebase";
 
 export const toastMsg = (msg) => {
   M.AutoInit();
@@ -19,6 +20,21 @@ export const newSocialUserMap = (res) => {
     userId: res.user.uid,
   };
   return newUser;
+};
+
+export const linkWithPopup = (provider) => {
+  app.auth.currentUser
+    .linkWithPopup(provider)
+    .then(function (result) {
+      console.log("jestem");
+
+      var credential = result.credential;
+      var user = result.user;
+      console.log(user, credential);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 };
 
 export const saveNewUser = async (newUser) => {

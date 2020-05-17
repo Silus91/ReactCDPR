@@ -76,7 +76,7 @@ export const getStockValue = () => (dispatch) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const API_CDR = process.env.REACT_APP_STOCK_API_CDR;
 
-  fetch(API_CDR, { mode: "cors" })
+  fetch(proxyurl + API_CDR)
     .then((res) => {
       return res.json();
     })

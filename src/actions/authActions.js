@@ -39,23 +39,114 @@ export const loginAction = (userData) => (dispatch) => {
     });
 };
 
+// export const socialUserAction = (provider) => async (dispatch) => {
+//   try {
+//     const providerResponse = await app.auth().signInWithPopup(provider);
+//     console.log("providerResponse", providerResponse);
+//     const userCheck = await newSocialUserMap(providerResponse);
+//     await saveNewUser(userCheck);
+//     const recivedToken = await app.auth().currentUser.getIdToken();
+//     setAuthorizationHeader(recivedToken);
+//     await dispatch(getUserData());
+//     dispatch({ type: CLEAR_ERRORS });
+//     toastMsg("Login Succesful!");
+//   } catch (error) {
+//     console.log("idziemy dluzsza droga", error);
+//     console.log(error.code);
+
+//     if (error.code === "auth/account-exists-with-different-credential") {
+//       try {
+//         const providers = await app
+//           .auth()
+//           .fetchSignInMethodsForEmail(error.email);
+//         console.log("providers", providers);
+//         if (providers.includes("password")) {
+//           console.log("z passwordem");
+//           // open pop and ask the bastard for the password!
+//           // await alert('password please', (password) => {
+//           //   // user gave me password
+//           alert("alert");
+//           // });
+//           //popup
+//           const password = "123456";
+
+//           try {
+//             const currentUser = await app
+//               .auth()
+//               .signInWithEmailAndPassword(error.email, password);
+
+//             try {
+//               const user = await app
+//                 .auth()
+//                 .currentUser.linkWithCredential(error.credential);
+//               console.log({ user });
+//               const userCheck = await newSocialUserMap(user);
+//               await saveNewUser(userCheck);
+//               const recivedToken = await app.auth().currentUser.getIdToken();
+//               setAuthorizationHeader(recivedToken);
+//               await dispatch(getUserData());
+//               dispatch({ type: CLEAR_ERRORS });
+//               toastMsg("Login Succesful!");
+//             } catch (e) {
+//               console.log("linkWithCredential", e);
+//             }
+//           } catch (e) {
+//             console.log("signInWithEmailAndPassword Error", e);
+//           }
+//         } else if (providers === "google.com") {
+//           console.log("providers asd");
+//           try {
+//             console.log("try w sync social i social");
+//           } catch (e) {
+//             console.log("else", e);
+//           }
+//         }
+//       } catch (e) {
+//         console.log({ e });
+//         // login refused
+//       }
+//     }
+//   }
+// };
+
 export const socialUserAction = (provider) => async (dispatch) => {
   try {
+    console.log("jestesmy w 1 try");
     const providerResponse = await app.auth().signInWithPopup(provider);
-    const userCheck = await newSocialUserMap(providerResponse);
-    await saveNewUser(userCheck);
-    const recivedToken = await app.auth().currentUser.getIdToken();
-    setAuthorizationHeader(recivedToken);
-    await dispatch(getUserData());
-    dispatch({ type: CLEAR_ERRORS });
-    toastMsg("Login Succesful!");
+    console.log(providerResponse);
   } catch (error) {
-    toastMsg("Error please try Again");
-    Sentry.captureException(error);
-    dispatch({
-      type: SET_ERRORS,
-      payload: error.response,
-    });
+    console.log("jestesmy w 1 catch");
+
+    if (error.code === "auth/account-exists-with-different-credential") {
+      console.log("if");
+      var pendingCred = error.credential;
+      var email = error.email;
+      app
+        .auth()
+        .fetchSignInMethodsForEmail(email)
+        .then(function (methods) {
+          if (methods[0] === "password") {
+            const password = {};
+            app
+              .auth()
+              .signInWithEmailAndPassword(email, password)
+              .then(function (user) {
+                return user.linkWithCredential(pendingCred);
+              })
+              .then(function () {});
+            return;
+          }
+
+          app
+            .auth()
+            .signInWithPopup(provider)
+            .then(function (result) {
+              result.user
+                .linkAndRetrieveDataWithCredential(pendingCred)
+                .then(function (usercred) {});
+            });
+        });
+    }
   }
 };
 
@@ -68,31 +159,8 @@ export const loginFbAction = () => (dispatch) => {
 export const loginGoogleAction = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   const provider = new firebase.auth.GoogleAuthProvider();
-  // dispatch(socialUserAction(provider));
-  dispatch(linkWithPopup(provider));
+  dispatch(socialUserAction(provider));
 };
-
-export const linkWithPopup = (provider) => {
-  firebase.auth.currentUser
-    .linkWithPopup(provider)
-    .then(function (result) {
-      console.log("jestem");
-
-      var credential = result.credential;
-      var user = result.user;
-      console.log(user, credential);
-    })
-    .catch(function (error) {
-      // Handle Errors here.
-      // ...
-    });
-  // [END auth_link_with_popup]
-};
-
-// const provider = new firebase.auth.GoogleAuthProvider();
-// provider.setCustomParameters({
-//   prompt: 'select_account'
-// });
 
 export const registerAction = (newUserData) => (dispatch) => {
   dispatch({ type: LOADING_UI });
