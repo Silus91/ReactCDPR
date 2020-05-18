@@ -1,8 +1,6 @@
 import db from "../resources/Firebase/Firestore";
 import axios from "axios";
 import M from "materialize-css";
-import * as Sentry from "@sentry/browser";
-import app from "../resources/Firebase/Firebase";
 
 export const toastMsg = (msg) => {
   M.AutoInit();
@@ -11,12 +9,8 @@ export const toastMsg = (msg) => {
 
 export const newSocialUserMap = (res) => {
   const newUser = {
-    firstName: res.user.displayName
-      ? res.user.displayName.split(" ")[0]
-      : res.user.email,
-    lastName: res.user.displayName
-      ? res.user.displayName.split(" ")[1]
-      : res.user.email,
+    firstName: res.user.displayName.split(" ")[0],
+    lastName: res.user.displayName.split(" ")[1],
     email: res.user.email,
     handle: res.user.email,
     createdAt: new Date().toISOString(),
@@ -36,11 +30,10 @@ export const saveNewUser = async (newUser) => {
         await db.doc(`/users/${newUser.handle}`).set(newUser);
         return newUser;
       } catch (error) {
-        Sentry.captureException("1social save user", error);
+        console.error(error);
       }
     }
   } catch (error) {
-    Sentry.captureException("2social save user", error);
     console.error(error);
   }
 };

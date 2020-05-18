@@ -4581,3 +4581,173 @@
 [info] i  functions: Finished "api" in ~1s
 [debug] [2020-05-18T20:49:13.532Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
 [debug] [2020-05-18T20:49:13.532Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:09:08.115Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:09:08.116Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:09:08.116Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:09:08.116Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:09:08.116Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:09:08.116Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:09:08.118Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:09:08.118Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:09:08.118Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:09:08.118Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:09:08.119Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:09:08.123Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:09:08.123Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:09:08.368Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:09:08.368Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:14:58.118Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:14:58.118Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:14:58.118Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:14:58.118Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:14:58.118Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:14:58.118Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:14:58.119Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:14:58.119Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:14:58.119Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:14:58.121Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:14:58.122Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:14:58.124Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:14:58.125Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:14:58.394Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:14:58.394Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:16:45.735Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:16:45.735Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:16:45.735Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:16:45.735Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:16:45.735Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:16:45.735Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:16:45.736Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:16:45.736Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:16:45.736Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:16:45.736Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:16:45.737Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:16:45.739Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:16:45.740Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:16:45.862Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:16:45.862Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:31:22.240Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:31:22.241Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:31:22.241Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:31:22.241Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:31:22.241Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:31:22.241Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:31:22.242Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:31:22.242Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:31:22.242Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:31:22.243Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:31:22.243Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:31:22.246Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:31:22.247Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:31:22.526Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:31:22.526Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:33:21.701Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:33:21.702Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:33:21.702Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:33:21.702Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:33:21.702Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:33:21.703Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:33:21.703Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:33:21.705Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:33:21.705Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:33:21.711Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:33:21.713Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:33:21.718Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:33:21.724Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:33:21.839Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:33:21.840Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:34:27.326Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:34:27.326Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:34:27.326Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:34:27.326Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:34:27.326Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:34:27.326Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:34:27.326Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:34:27.327Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:34:27.327Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:34:27.327Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:34:27.328Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:34:27.331Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:34:27.332Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:34:27.435Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:34:27.435Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:38:44.392Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:38:44.392Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:38:44.392Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:38:44.392Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:38:44.392Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:38:44.392Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:38:44.393Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:38:44.393Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:38:44.393Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:38:44.396Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:38:44.397Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:38:44.398Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:38:44.399Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:38:44.732Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:38:44.732Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:40:04.092Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:40:04.093Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:40:04.093Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:40:04.093Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:40:04.093Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:40:04.093Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:40:04.095Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:40:04.095Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:40:04.095Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:40:04.095Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:40:04.096Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:40:04.098Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:40:04.099Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:40:04.203Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:40:04.203Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:41:43.537Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:41:43.537Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:41:43.537Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:41:43.537Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:41:43.537Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:41:43.537Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:41:43.538Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:41:43.538Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:41:43.538Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:41:43.539Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:41:43.539Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:41:43.542Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:41:43.542Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:41:43.640Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:41:43.640Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T21:44:08.073Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T21:44:08.073Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T21:44:08.073Z] Accepted request GET /cdred-project/us-central1/api/getsurveys --> api
+[debug] [2020-05-18T21:44:08.073Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-05-18T21:44:08.073Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: Assigning socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:44:08.073Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: BUSY 
+[debug] [2020-05-18T21:44:08.074Z] [runtime-status] [16456] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-05-18T21:44:08.075Z] [runtime-status] [16456] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-05-18T21:44:08.075Z] [runtime-status] [16456] Running api in mode HTTPS 
+[debug] [2020-05-18T21:44:08.076Z] [runtime-status] [16456] Attempting to listen to socketPath: /tmp/fire_emu_16456.sock 
+[debug] [2020-05-18T21:44:08.076Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T21:44:08.080Z] [runtime-status] [16456] Ephemeral server handling GET request 
+[debug] [2020-05-18T21:44:08.082Z] [runtime-status] [16456] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-05-18T21:44:08.194Z] [worker-api-4ab2b903-ebb7-4caf-b8db-31fb2c15e3b0]: IDLE 
+[debug] [2020-05-18T21:44:08.195Z] [work-queue] {"queueLength":0,"workRunningCount":0}

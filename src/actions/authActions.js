@@ -16,6 +16,7 @@ import { toastMsg } from "../services/Service";
 import * as Sentry from "@sentry/browser";
 
 const firebase = require("firebase");
+const fbAuth = app.auth();
 
 const BASE_URL = process.env.REACT_APP_LOCAL;
 
@@ -39,82 +40,73 @@ export const loginAction = (userData) => (dispatch) => {
     });
 };
 
-export const succesWorker = (providerResponse) => async (dispatch) => {
-  const userCheck = await newSocialUserMap(providerResponse);
-  await saveNewUser(userCheck);
-  const recivedToken = await app.auth().currentUser.getIdToken();
-  setAuthorizationHeader(recivedToken);
-  await dispatch(getUserData());
-  dispatch({ type: CLEAR_ERRORS });
-  toastMsg("Login Succesful!");
+export const tryLoginUser = () => async (dispatch) => {
+  try {
+    const recivedToken = await fbAuth.currentUser.getIdToken();
+    setAuthorizationHeader(recivedToken);
+    await dispatch(getUserData());
+    dispatch({ type: CLEAR_ERRORS });
+    toastMsg("Login Succesful!");
+  } catch (error) {
+    toastMsg("Error please try Again");
+  }
 };
 
 export const socialUserAction = (provider) => async (dispatch) => {
   try {
-    const providerResponse = await app.auth().signInWithPopup(provider);
-    console.log("providerResponse", providerResponse);
-    dispatch(succesWorker(providerResponse));
+    const providerResponse = await fbAuth.signInWithPopup(provider);
+    const userCheck = await newSocialUserMap(providerResponse);
+    await saveNewUser(userCheck);
+    dispatch(tryLoginUser());
   } catch (error) {
     const catchError = error;
-
     if (catchError.code === "auth/account-exists-with-different-credential") {
       try {
-        const providers = await app
-          .auth()
-          .fetchSignInMethodsForEmail(catchError.email);
-        console.log("providers", providers);
+        const providers = await fbAuth.fetchSignInMethodsForEmail(
+          catchError.email
+        );
         if (providers.includes("password")) {
           const password = window.prompt(
-            `Please provide the password for ${catchError.email}`
+            `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use normal login.`
           );
           try {
-            const trySignIn = await app
-              .auth()
-              .signInWithEmailAndPassword(catchError.email, password);
-            console.log("trySignIn");
+            await fbAuth.signInWithEmailAndPassword(catchError.email, password);
             try {
-              console.log("wazny conosole");
-              const user = await app
-                .auth()
-                .currentUser.linkWithCredential(catchError.credential);
-              console.log({ user });
-              console.log("mamy to kurwa");
+              const emailLinking = await fbAuth.currentUser.linkWithCredential(
+                catchError.credential
+              );
+              dispatch(tryLoginUser());
             } catch (e) {
-              console.log("hujowy password", e);
+              Sentry.captureException(
+                "Trying to sync accounts email with social",
+                e
+              );
+              console.error(e);
             }
           } catch (e) {
-            console.log("signInWithEmailAndPassword Error", e);
+            console.error(e);
           }
         } else if (catchError.credential.providerId) {
           try {
             const provider = new firebase.auth.GoogleAuthProvider();
-            const trySign = await app.auth().signInWithPopup(provider);
-
-            console.log("w 1 try", trySign);
+            const providerResponse = await fbAuth.signInWithPopup(provider);
             try {
-              console.log("w 2 try");
-              const tryLink = await app
-                .auth()
-                .currentUser.linkWithCredential(catchError.credential);
-              console.log("trylink", tryLink);
-              const providerResponse = app
-                .auth()
-                .signInWithCredential(tryLink.credential);
-              const recivedToken = await app.auth().currentUser.getIdToken();
-              setAuthorizationHeader(recivedToken);
-              await dispatch(getUserData());
-              dispatch({ type: CLEAR_ERRORS });
-              toastMsg("Login Succesful!");
+              const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
+                catchError.credential
+              );
+              const trySignWithCred = fbAuth.signInWithCredential(
+                tryLinkWithCred.credential
+              );
+              dispatch(tryLoginUser());
             } catch (e) {
-              console.log("piersze zjebanie", e);
-              // tutaj;
+              console.error(e);
             }
           } catch (e) {
-            console.log("drugie zjebanie", e);
+            console.error(e);
           }
         }
       } catch (e) {
-        console.log("huj wie", e);
+        console.error(e);
       }
     }
   }
