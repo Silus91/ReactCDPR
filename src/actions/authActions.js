@@ -39,113 +39,83 @@ export const loginAction = (userData) => (dispatch) => {
     });
 };
 
-// export const socialUserAction = (provider) => async (dispatch) => {
-//   try {
-//     const providerResponse = await app.auth().signInWithPopup(provider);
-//     console.log("providerResponse", providerResponse);
-//     const userCheck = await newSocialUserMap(providerResponse);
-//     await saveNewUser(userCheck);
-//     const recivedToken = await app.auth().currentUser.getIdToken();
-//     setAuthorizationHeader(recivedToken);
-//     await dispatch(getUserData());
-//     dispatch({ type: CLEAR_ERRORS });
-//     toastMsg("Login Succesful!");
-//   } catch (error) {
-//     console.log("idziemy dluzsza droga", error);
-//     console.log(error.code);
-
-//     if (error.code === "auth/account-exists-with-different-credential") {
-//       try {
-//         const providers = await app
-//           .auth()
-//           .fetchSignInMethodsForEmail(error.email);
-//         console.log("providers", providers);
-//         if (providers.includes("password")) {
-//           console.log("z passwordem");
-//           // open pop and ask the bastard for the password!
-//           // await alert('password please', (password) => {
-//           //   // user gave me password
-//           alert("alert");
-//           // });
-//           //popup
-//           const password = "123456";
-
-//           try {
-//             const currentUser = await app
-//               .auth()
-//               .signInWithEmailAndPassword(error.email, password);
-
-//             try {
-//               const user = await app
-//                 .auth()
-//                 .currentUser.linkWithCredential(error.credential);
-//               console.log({ user });
-//               const userCheck = await newSocialUserMap(user);
-//               await saveNewUser(userCheck);
-//               const recivedToken = await app.auth().currentUser.getIdToken();
-//               setAuthorizationHeader(recivedToken);
-//               await dispatch(getUserData());
-//               dispatch({ type: CLEAR_ERRORS });
-//               toastMsg("Login Succesful!");
-//             } catch (e) {
-//               console.log("linkWithCredential", e);
-//             }
-//           } catch (e) {
-//             console.log("signInWithEmailAndPassword Error", e);
-//           }
-//         } else if (providers === "google.com") {
-//           console.log("providers asd");
-//           try {
-//             console.log("try w sync social i social");
-//           } catch (e) {
-//             console.log("else", e);
-//           }
-//         }
-//       } catch (e) {
-//         console.log({ e });
-//         // login refused
-//       }
-//     }
-//   }
-// };
+export const succesWorker = (providerResponse) => async (dispatch) => {
+  const userCheck = await newSocialUserMap(providerResponse);
+  await saveNewUser(userCheck);
+  const recivedToken = await app.auth().currentUser.getIdToken();
+  setAuthorizationHeader(recivedToken);
+  await dispatch(getUserData());
+  dispatch({ type: CLEAR_ERRORS });
+  toastMsg("Login Succesful!");
+};
 
 export const socialUserAction = (provider) => async (dispatch) => {
   try {
-    console.log("jestesmy w 1 try");
     const providerResponse = await app.auth().signInWithPopup(provider);
-    console.log(providerResponse);
+    console.log("providerResponse", providerResponse);
+    dispatch(succesWorker(providerResponse));
   } catch (error) {
-    console.log("jestesmy w 1 catch");
+    const catchError = error;
 
-    if (error.code === "auth/account-exists-with-different-credential") {
-      console.log("if");
-      var pendingCred = error.credential;
-      var email = error.email;
-      app
-        .auth()
-        .fetchSignInMethodsForEmail(email)
-        .then(function (methods) {
-          if (methods[0] === "password") {
-            const password = {};
-            app
+    if (catchError.code === "auth/account-exists-with-different-credential") {
+      try {
+        const providers = await app
+          .auth()
+          .fetchSignInMethodsForEmail(catchError.email);
+        console.log("providers", providers);
+        if (providers.includes("password")) {
+          const password = window.prompt(
+            `Please provide the password for ${catchError.email}`
+          );
+          try {
+            const trySignIn = await app
               .auth()
-              .signInWithEmailAndPassword(email, password)
-              .then(function (user) {
-                return user.linkWithCredential(pendingCred);
-              })
-              .then(function () {});
-            return;
+              .signInWithEmailAndPassword(catchError.email, password);
+            console.log("trySignIn");
+            try {
+              console.log("wazny conosole");
+              const user = await app
+                .auth()
+                .currentUser.linkWithCredential(catchError.credential);
+              console.log({ user });
+              console.log("mamy to kurwa");
+            } catch (e) {
+              console.log("hujowy password", e);
+            }
+          } catch (e) {
+            console.log("signInWithEmailAndPassword Error", e);
           }
+        } else if (catchError.credential.providerId) {
+          try {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            const trySign = await app.auth().signInWithPopup(provider);
 
-          app
-            .auth()
-            .signInWithPopup(provider)
-            .then(function (result) {
-              result.user
-                .linkAndRetrieveDataWithCredential(pendingCred)
-                .then(function (usercred) {});
-            });
-        });
+            console.log("w 1 try", trySign);
+            try {
+              console.log("w 2 try");
+              const tryLink = await app
+                .auth()
+                .currentUser.linkWithCredential(catchError.credential);
+              console.log("trylink", tryLink);
+              const providerResponse = app
+                .auth()
+                .signInWithCredential(tryLink.credential);
+              const recivedToken = await app.auth().currentUser.getIdToken();
+              setAuthorizationHeader(recivedToken);
+              await dispatch(getUserData());
+              dispatch({ type: CLEAR_ERRORS });
+              toastMsg("Login Succesful!");
+            } catch (e) {
+              console.log("piersze zjebanie", e);
+              // tutaj;
+            }
+          } catch (e) {
+            console.log("drugie zjebanie", e);
+          }
+        }
+      } catch (e) {
+        console.log("huj wie", e);
+      }
     }
   }
 };

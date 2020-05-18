@@ -11,8 +11,12 @@ export const toastMsg = (msg) => {
 
 export const newSocialUserMap = (res) => {
   const newUser = {
-    firstName: res.user.displayName.split(" ")[0],
-    lastName: res.user.displayName.split(" ")[1],
+    firstName: res.user.displayName
+      ? res.user.displayName.split(" ")[0]
+      : res.user.email,
+    lastName: res.user.displayName
+      ? res.user.displayName.split(" ")[1]
+      : res.user.email,
     email: res.user.email,
     handle: res.user.email,
     createdAt: new Date().toISOString(),
@@ -20,21 +24,6 @@ export const newSocialUserMap = (res) => {
     userId: res.user.uid,
   };
   return newUser;
-};
-
-export const linkWithPopup = (provider) => {
-  app.auth.currentUser
-    .linkWithPopup(provider)
-    .then(function (result) {
-      console.log("jestem");
-
-      var credential = result.credential;
-      var user = result.user;
-      console.log(user, credential);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
 };
 
 export const saveNewUser = async (newUser) => {
