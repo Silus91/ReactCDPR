@@ -77,6 +77,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
               );
               dispatch(tryLoginUser());
             } catch (e) {
+              dispatch({ type: SET_ERRORS, payload: e });
               Sentry.captureException(
                 "Trying to sync accounts email with social",
                 e
@@ -90,23 +91,21 @@ export const socialUserAction = (provider) => async (dispatch) => {
           try {
             const provider = new firebase.auth.GoogleAuthProvider();
             const providerResponse = await fbAuth.signInWithPopup(provider);
-            try {
-              const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
-                catchError.credential
-              );
-              const trySignWithCred = fbAuth.signInWithCredential(
-                tryLinkWithCred.credential
-              );
-              dispatch(tryLoginUser());
-            } catch (e) {
-              console.error(e);
-            }
+            const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
+              catchError.credential
+            );
+            const trySignWithCred = await fbAuth.signInWithCredential(
+              tryLinkWithCred.credential
+            );
+            dispatch(tryLoginUser());
           } catch (e) {
             console.error(e);
+            Sentry.captureException("Social with social", e);
           }
         }
       } catch (e) {
         console.error(e);
+        dispatch({ type: SET_ERRORS, payload: e });
       }
     }
   }

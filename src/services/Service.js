@@ -9,8 +9,12 @@ export const toastMsg = (msg) => {
 
 export const newSocialUserMap = (res) => {
   const newUser = {
-    firstName: res.user.displayName.split(" ")[0],
-    lastName: res.user.displayName.split(" ")[1],
+    firstName: res.user.displayName
+      ? res.user.displayName.split(" ")[0]
+      : res.user.email,
+    lastName: res.user.displayName
+      ? res.user.displayName.split(" ")[0]
+      : res.user.email,
     email: res.user.email,
     handle: res.user.email,
     createdAt: new Date().toISOString(),
