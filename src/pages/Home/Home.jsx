@@ -11,8 +11,13 @@ import QuoteGenerator from "../../components/QuoteGenerator/QuoteGenerator";
 
 class Home extends Component {
   componentDidMount() {
+    const {
+      UI: { surveys },
+    } = this.props;
     M.AutoInit();
-    this.props.getSurveys();
+    if (!surveys.length > 0) {
+      this.props.getSurveys();
+    }
   }
 
   render() {

@@ -8,16 +8,10 @@ const {
   validateRegisterData,
   validateLoginData,
 } = require("../utility/validaters");
+const { mapLogin, mapRegister } = require("../utility/mapper");
 
 exports.register = (req, res) => {
-  const newUser = {
-    email: req.body.email,
-    password: req.body.password,
-    confirmPassword: req.body.confirmPassword,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    handle: req.body.email,
-  };
+  const newUser = mapRegister(req);
 
   const { valid, errors } = validateRegisterData(newUser);
   if (!valid) return res.status(400).json(errors);
@@ -70,11 +64,7 @@ exports.register = (req, res) => {
 };
 
 exports.login = (req, res) => {
-  const user = {
-    email: req.body.email,
-    password: req.body.password,
-  };
-
+  const user = mapLogin(req);
   const { valid, errors } = validateLoginData(user);
   if (!valid) return res.status(400).json(errors);
 

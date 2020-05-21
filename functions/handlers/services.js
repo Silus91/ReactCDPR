@@ -6,14 +6,11 @@ const {
   validateNewSurvey,
 } = require("../utility/validaters");
 const Logger = require("../utility/logger");
+const { emailMap, surveyMap } = require("../utility/mapper");
 const logger = new Logger("app");
 
 exports.sendEmail = async (req, res) => {
-  const newEmail = {
-    email: req.body.email,
-    name: req.body.name,
-    message: req.body.message,
-  };
+  const newEmail = emailMap(req);
   const { valid, errors } = validateNewEmail(newEmail);
   if (!valid) return res.status(400).json(errors);
 
@@ -41,12 +38,7 @@ exports.sendEmail = async (req, res) => {
 };
 
 exports.sendSurvey = (req, res) => {
-  const newSurvey = {
-    opinion: req.body.opinion,
-    rating: req.body.rating,
-    createdAt: new Date().toISOString(),
-  };
-
+  const newSurvey = surveyMap(req);
   const { valid, errors } = validateNewSurvey(newSurvey);
   if (!valid) return res.status(400).json(errors);
 
