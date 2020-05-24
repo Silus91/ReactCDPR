@@ -8,8 +8,8 @@ import {
 import axios from "axios";
 import app from "../resources/Firebase/Firebase";
 import {
-  newSocialUserMap,
-  saveNewUser,
+  mapSocialUser,
+  firstOrCreate,
   setAuthorizationHeader,
 } from "../services/Service";
 import { toastMsg } from "../services/Service";
@@ -52,51 +52,54 @@ export const tryLoginUser = () => async (dispatch) => {
   }
 };
 
+const handlePasswordBasedAccountLinking = async () => {
+  const password = window.prompt(
+    `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use normal login.`
+  );
+
+  await fbAuth.signInWithEmailAndPassword(catchError.email, password);
+  try {
+    await fbAuth.currentUser.linkWithCredential(catchError.credential);
+    dispatch(tryLoginUser());
+  } catch (e) {
+    dispatch({ type: SET_ERRORS, payload: e });
+    Sentry.captureException("Trying to sync accounts email with social", e);
+    console.error(e);
+    throw e;
+  }
+};
+
 export const socialUserAction = (provider) => async (dispatch) => {
   try {
     const providerResponse = await fbAuth.signInWithPopup(provider);
-    const userCheck = await newSocialUserMap(providerResponse);
-    await saveNewUser(userCheck);
+    const user = await mapSocialUser(providerResponse);
+    await firstOrCreate(user);
+    // todo: ugraj inaczej
     dispatch(tryLoginUser());
-  } catch (error) {
-    const catchError = error;
-    if (catchError.code === "auth/account-exists-with-different-credential") {
+  } catch (catchError) {
+    const isAlreadyInUse =
+      catchError.code === "auth/account-exists-with-different-credential";
+    if (isAlreadyInUse) {
       try {
         const providers = await fbAuth.fetchSignInMethodsForEmail(
           catchError.email
         );
+        // providers ma FB
+        // ['google', 'github']
         if (providers.includes("password")) {
-          const password = window.prompt(
-            `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use normal login.`
-          );
           try {
-            await fbAuth.signInWithEmailAndPassword(catchError.email, password);
-            try {
-              const emailLinking = await fbAuth.currentUser.linkWithCredential(
-                catchError.credential
-              );
-              dispatch(tryLoginUser());
-            } catch (e) {
-              dispatch({ type: SET_ERRORS, payload: e });
-              Sentry.captureException(
-                "Trying to sync accounts email with social",
-                e
-              );
-              console.error(e);
-            }
-          } catch (e) {
-            console.error(e);
+            await handlePasswordBasedAccountLinking();
+          } catch (passwordLinkingError) {
+            console.error("Password based linknig acount failed");
           }
         } else if (catchError.credential.providerId) {
           try {
             const provider = new firebase.auth.GoogleAuthProvider();
-            const providerResponse = await fbAuth.signInWithPopup(provider);
+            await fbAuth.signInWithPopup(provider);
             const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
               catchError.credential
             );
-            const trySignWithCred = await fbAuth.signInWithCredential(
-              tryLinkWithCred.credential
-            );
+            await fbAuth.signInWithCredential(tryLinkWithCred.credential);
             dispatch(tryLoginUser());
           } catch (e) {
             console.error(e);

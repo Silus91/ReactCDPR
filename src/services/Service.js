@@ -7,8 +7,8 @@ export const toastMsg = (msg) => {
   M.toast({ html: msg, displayLength: 4000 });
 };
 
-export const newSocialUserMap = (res) => {
-  const newUser = {
+export const mapSocialUser = (res) => {
+  return {
     firstName: res.user.displayName
       ? res.user.displayName.split(" ")[0]
       : res.user.email,
@@ -21,21 +21,19 @@ export const newSocialUserMap = (res) => {
     photoURL: res.user.photoURL,
     userId: res.user.uid,
   };
-  return newUser;
 };
 
-export const saveNewUser = async (newUser) => {
+export const firstOrCreate = async (newUser) => {
   try {
     const user = await db.doc(`/users/${newUser.handle}`).get();
     if (user.exists) {
       return newUser;
-    } else {
-      try {
-        await db.doc(`/users/${newUser.handle}`).set(newUser);
-        return newUser;
-      } catch (error) {
-        console.error(error);
-      }
+    }
+    try {
+      await db.doc(`/users/${newUser.handle}`).set(newUser);
+      return newUser;
+    } catch (error) {
+      console.error(error);
     }
   } catch (error) {
     console.error(error);

@@ -76,7 +76,7 @@ class Stock extends Component {
           ]}
           layout={{
             autosize: true,
-            title: "CD Project Red SA",
+            title: "CD Project Red SA PLN",
             showlegend: false,
           }}
           displayModeBar={false}

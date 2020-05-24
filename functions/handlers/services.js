@@ -10,7 +10,7 @@ const { emailMap, surveyMap } = require("../utility/mapper");
 const logger = new Logger("app");
 
 exports.sendEmail = async (req, res) => {
-  const newEmail = emailMap(req);
+  const newEmail = await emailMap(req);
   const { valid, errors } = validateNewEmail(newEmail);
   if (!valid) return res.status(400).json(errors);
 
@@ -38,7 +38,7 @@ exports.sendEmail = async (req, res) => {
 };
 
 exports.sendSurvey = (req, res) => {
-  const newSurvey = surveyMap(req);
+  const newSurvey = await surveyMap(req);
   const { valid, errors } = validateNewSurvey(newSurvey);
   if (!valid) return res.status(400).json(errors);
 
