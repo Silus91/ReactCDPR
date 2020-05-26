@@ -3,7 +3,6 @@ import "./CardTabs.css";
 
 export class CardTabs extends Component {
   render() {
-    console.log("test");
     return (
       <div className='card'>
         <div className='card-content'>
