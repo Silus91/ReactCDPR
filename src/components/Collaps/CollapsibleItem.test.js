@@ -14,4 +14,7 @@ describe("Collaps component", () => {
   it("should render content text", () => {
     expect(CollapsibleItemWrapper.find("span"));
   });
+  it("should render content text", () => {
+    expect(CollapsibleItemWrapper.find("div"));
+  });
 });
