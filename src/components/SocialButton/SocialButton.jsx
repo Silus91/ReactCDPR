@@ -17,7 +17,7 @@ export class SocialButton extends Component {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <img className='imgsize' src={this.props.src} alt='' />
+          <img className='imgsize' src={this.props.src} alt='socialMedia' />
         </a>
       </>
     );

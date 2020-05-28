@@ -34,8 +34,8 @@ class QuoteGenerator extends Component {
     if (allQuotes) {
       return (
         <>
-          <h5 className=''>{allQuotes[quoteIndex].quote}</h5>
-          <span className=''>{allQuotes[quoteIndex].book}</span>
+          <h5>{allQuotes[quoteIndex].quote}</h5>
+          <span>{allQuotes[quoteIndex].book}</span>
         </>
       );
     } else {
