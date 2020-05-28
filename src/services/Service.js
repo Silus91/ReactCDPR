@@ -1,6 +1,7 @@
 import db from "../resources/Firebase/Firestore";
 import axios from "axios";
 import M from "materialize-css";
+import * as Sentry from "@sentry/browser";
 
 export const toastMsg = (msg) => {
   M.AutoInit();
@@ -31,6 +32,7 @@ export const firstOrCreate = async (newUser) => {
     }
     try {
       await db.doc(`/users/${newUser.handle}`).set(newUser);
+      Sentry.captureEvent(`New User ${newUser.handle}`);
       return newUser;
     } catch (error) {
       console.error(error);

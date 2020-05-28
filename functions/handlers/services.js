@@ -37,7 +37,7 @@ exports.sendEmail = async (req, res) => {
   }
 };
 
-exports.sendSurvey = (req, res) => {
+exports.sendSurvey = async (req, res) => {
   const newSurvey = await surveyMap(req);
   const { valid, errors } = validateNewSurvey(newSurvey);
   if (!valid) return res.status(400).json(errors);

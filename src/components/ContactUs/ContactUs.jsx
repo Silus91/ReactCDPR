@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import TextInput from "../TextInput/TextInput";
+import TextArea from "../TextInput/TextArea";
 import { sendMessage } from "../../actions/uiActions";
 import M from "materialize-css";
 
@@ -72,9 +73,8 @@ class ContactUs extends Component {
             errors={errors.email ? errors.email : ""}
             onChange={this.handleChange}
           />
-          <TextInput
+          <TextArea
             id='message'
-            type='text'
             htmlFor='message'
             label='Message'
             icon='message'

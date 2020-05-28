@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 
-export class TextInput extends Component {
+export class TextArea extends Component {
   componentDidMount() {
     M.AutoInit();
   }
-
   render() {
     return (
       <div className='input-field'>
@@ -13,13 +12,11 @@ export class TextInput extends Component {
         <label className='active' htmlFor={this.props.htmlFor}>
           {this.props.label}
         </label>
-        <input
-          type={this.props.type}
+        <textarea
           id={this.props.id}
-          className='validate'
+          className='materialize-textarea'
           onChange={this.props.onChange}
-          data-length={this.props.datalength}
-        />
+        ></textarea>
         <span className='helper-text red-text center-align'>
           {this.props.errors}
         </span>
@@ -28,4 +25,4 @@ export class TextInput extends Component {
   }
 }
 
-export default TextInput;
+export default TextArea;

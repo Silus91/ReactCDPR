@@ -52,7 +52,7 @@ export const tryLoginUser = () => async (dispatch) => {
   }
 };
 
-const handlePasswordBasedAccountLinking = async () => {
+const handlePasswordBasedAccountLinking = (catchError) => async (dispatch) => {
   const password = window.prompt(
     `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use normal login.`
   );

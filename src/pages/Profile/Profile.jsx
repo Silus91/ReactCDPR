@@ -64,7 +64,7 @@ export class Profile extends Component {
                 data-tooltip='Edit photo Only jpeg/png'
                 onClick={this.inputHandler}
               >
-                <img className='profilePic circle' src={photoURL} />
+                <img className='profilePic circle' alt='user' src={photoURL} />
                 <input
                   id='imgInput'
                   hidden='hidden'
