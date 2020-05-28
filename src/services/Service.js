@@ -32,7 +32,7 @@ export const firstOrCreate = async (newUser) => {
     }
     try {
       await db.doc(`/users/${newUser.handle}`).set(newUser);
-      Sentry.captureEvent(`New User ${newUser.handle}`);
+      Sentry.captureMessage(`New User ${newUser.handle}`);
       return newUser;
     } catch (error) {
       console.error(error);

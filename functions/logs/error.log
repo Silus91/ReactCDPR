@@ -25,3 +25,7 @@ Sat, 16 May 2020 15:54:39 GMT | ERROR | Error At Trying to register  {} |
 Sat, 16 May 2020 15:54:39 GMT | ERROR | Error unhandledRejection {} | 
 Sat, 16 May 2020 17:11:09 GMT | ERROR | Error At Trying to Login | data: dyczek.dawid@gmail.com | 
 Mon, 18 May 2020 16:01:50 GMT | ERROR | Error At Trying to Login | data: silussinister@gmail.com | 
+Thu, 28 May 2020 19:22:08 GMT | ERROR | Error At Trying to register  {} | 
+Thu, 28 May 2020 19:23:20 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Thu, 28 May 2020 19:24:34 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Thu, 28 May 2020 19:25:50 GMT | ERROR | Error At Trying to register  {} | 

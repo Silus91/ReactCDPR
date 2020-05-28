@@ -17,28 +17,7 @@ import * as Sentry from "@sentry/browser";
 
 const firebase = require("firebase");
 const fbAuth = app.auth();
-
 const BASE_URL = process.env.REACT_APP_LOCAL;
-
-export const loginAction = (userData) => (dispatch) => {
-  dispatch({ type: LOADING_UI });
-  axios
-    .post(`${BASE_URL}/login`, userData)
-    .then((res) => {
-      setAuthorizationHeader(res.data.token);
-      dispatch(getUserData());
-      dispatch({ type: CLEAR_ERRORS });
-      toastMsg("Login Succesful!");
-    })
-    .catch((err) => {
-      toastMsg("Error please try Again");
-      Sentry.captureException(err);
-      dispatch({
-        type: SET_ERRORS,
-        payload: err.response.data,
-      });
-    });
-};
 
 export const tryLoginUser = () => async (dispatch) => {
   try {
@@ -53,15 +32,15 @@ export const tryLoginUser = () => async (dispatch) => {
 };
 
 const handlePasswordBasedAccountLinking = (catchError) => async (dispatch) => {
-  const password = window.prompt(
-    `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use normal login.`
-  );
-
-  await fbAuth.signInWithEmailAndPassword(catchError.email, password);
   try {
+    const password = window.prompt(
+      `You do have account already with ${catchError.email}, please provide your password to synchronize accounts as one, or close this window and use email login.`
+    );
+    await fbAuth.signInWithEmailAndPassword(catchError.email, password);
     await fbAuth.currentUser.linkWithCredential(catchError.credential);
     dispatch(tryLoginUser());
   } catch (e) {
+    toastMsg("Use Email/Password Login Instead");
     dispatch({ type: SET_ERRORS, payload: e });
     Sentry.captureException("Trying to sync accounts email with social", e);
     console.error(e);
@@ -69,12 +48,21 @@ const handlePasswordBasedAccountLinking = (catchError) => async (dispatch) => {
   }
 };
 
+const handleSocialAccountLinking = (catchError) => async (dispatch) => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  await fbAuth.signInWithPopup(provider);
+  const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
+    catchError.credential
+  );
+  await fbAuth.signInWithCredential(tryLinkWithCred.credential);
+  dispatch(tryLoginUser());
+};
+
 export const socialUserAction = (provider) => async (dispatch) => {
   try {
     const providerResponse = await fbAuth.signInWithPopup(provider);
     const user = await mapSocialUser(providerResponse);
     await firstOrCreate(user);
-    // todo: ugraj inaczej
     dispatch(tryLoginUser());
   } catch (catchError) {
     const isAlreadyInUse =
@@ -84,23 +72,18 @@ export const socialUserAction = (provider) => async (dispatch) => {
         const providers = await fbAuth.fetchSignInMethodsForEmail(
           catchError.email
         );
-        // providers ma FB
-        // ['google', 'github']
         if (providers.includes("password")) {
           try {
-            await handlePasswordBasedAccountLinking();
+            dispatch(await handlePasswordBasedAccountLinking(catchError));
           } catch (passwordLinkingError) {
-            console.error("Password based linknig acount failed");
+            console.error(
+              "Password based linknig acount failed",
+              passwordLinkingError
+            );
           }
         } else if (catchError.credential.providerId) {
           try {
-            const provider = new firebase.auth.GoogleAuthProvider();
-            await fbAuth.signInWithPopup(provider);
-            const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
-              catchError.credential
-            );
-            await fbAuth.signInWithCredential(tryLinkWithCred.credential);
-            dispatch(tryLoginUser());
+            dispatch(await handleSocialAccountLinking(catchError));
           } catch (e) {
             console.error(e);
             Sentry.captureException("Social with social", e);
@@ -145,6 +128,26 @@ export const registerAction = (newUserData) => (dispatch) => {
     });
 };
 
+export const loginAction = (userData) => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios
+    .post(`${BASE_URL}/login`, userData)
+    .then((res) => {
+      setAuthorizationHeader(res.data.token);
+      dispatch(getUserData());
+      dispatch({ type: CLEAR_ERRORS });
+      toastMsg("Login Succesful!");
+    })
+    .catch((err) => {
+      toastMsg("Error please try Again");
+      Sentry.captureException(err);
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data,
+      });
+    });
+};
+
 export const getUserData = () => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
@@ -156,7 +159,7 @@ export const getUserData = () => (dispatch) => {
       });
       dispatch({ type: CLEAR_ERRORS });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => dispatch({ type: SET_ERRORS, payload: err }));
 };
 
 export const logout = () => async (dispatch) => {

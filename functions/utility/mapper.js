@@ -18,20 +18,6 @@ exports.mapRegister = (req) => {
   return newUser;
 };
 
-exports.mapUserCredential = (newUser) => {
-  const userCredentials = {
-    handle: newUser.email,
-    email: newUser.email,
-    firstName: newUser.firstName,
-    lastName: newUser.lastName,
-    createdAt: new Date().toISOString(),
-    photoURL:
-      "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/userImgs%2Fsamurai.png?alt=media&token=3a74747b-4740-40c6-b297-33d1599e4b14",
-    userId,
-  };
-  return userCredentials;
-};
-
 exports.emailMap = (req) => {
   const newEmail = {
     email: req.body.email,

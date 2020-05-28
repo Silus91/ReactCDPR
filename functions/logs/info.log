@@ -51,3 +51,9 @@ Thu, 21 May 2020 14:18:59 GMT | INFO | New User created | data : dyczek.dawiaad@
 Thu, 21 May 2020 14:19:15 GMT | INFO | Survey Was submited Hmm intresting design | 
 Thu, 21 May 2020 14:19:31 GMT | INFO | Email was send Sucessfuly by dyczek.dawid@gmail.com | 
 Thu, 28 May 2020 11:23:28 GMT | INFO | Email was send Sucessfuly by dyczek.dawid@gmail.com | 
+Thu, 28 May 2020 19:22:08 GMT | ERROR | Error At Trying to register  {} | 
+Thu, 28 May 2020 19:23:20 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Thu, 28 May 2020 19:24:34 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
+Thu, 28 May 2020 19:25:50 GMT | ERROR | Error At Trying to register  {} | 
+Thu, 28 May 2020 19:32:30 GMT | INFO | New User created | data : silussinister@gmail.com | 
+Thu, 28 May 2020 20:28:16 GMT | INFO | New User created | data : silussinister@gmail.com | 
