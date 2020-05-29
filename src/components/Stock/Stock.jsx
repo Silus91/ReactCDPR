@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Plot from "react-plotly.js";
 import "./Stock.css";
 
-const values = new Set([5, 30, 60, 120, 360, 1000]);
+const values = new Set([30, 60, 120, 360, 1000]);
 
 class Stock extends Component {
   constructor(props) {

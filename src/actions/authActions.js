@@ -17,7 +17,7 @@ import * as Sentry from "@sentry/browser";
 
 const firebase = require("firebase");
 const fbAuth = app.auth();
-const BASE_URL = process.env.REACT_APP_LOCAL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const tryLoginUser = () => async (dispatch) => {
   try {
@@ -49,13 +49,18 @@ const handlePasswordBasedAccountLinking = (catchError) => async (dispatch) => {
 };
 
 const handleSocialAccountLinking = (catchError) => async (dispatch) => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  await fbAuth.signInWithPopup(provider);
-  const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
-    catchError.credential
-  );
-  await fbAuth.signInWithCredential(tryLinkWithCred.credential);
-  dispatch(tryLoginUser());
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    await fbAuth.signInWithPopup(provider);
+    const tryLinkWithCred = await fbAuth.currentUser.linkWithCredential(
+      catchError.credential
+    );
+    await fbAuth.signInWithCredential(tryLinkWithCred.credential);
+    dispatch(tryLoginUser());
+  } catch (e) {
+    dispatch({ type: SET_ERRORS, payload: e });
+    toastMsg("Error please referesh");
+  }
 };
 
 export const socialUserAction = (provider) => async (dispatch) => {
@@ -75,17 +80,14 @@ export const socialUserAction = (provider) => async (dispatch) => {
         if (providers.includes("password")) {
           try {
             dispatch(handlePasswordBasedAccountLinking(catchError));
-          } catch (passwordLinkingError) {
-            console.error(
-              "Password based linknig acount failed",
-              passwordLinkingError
-            );
+          } catch (e) {
+            dispatch({ type: SET_ERRORS, payload: e });
           }
         } else if (catchError.credential.providerId) {
           try {
             dispatch(handleSocialAccountLinking(catchError));
           } catch (e) {
-            console.error(e);
+            dispatch({ type: SET_ERRORS, payload: e });
             Sentry.captureException("Social with social", e);
           }
         }
