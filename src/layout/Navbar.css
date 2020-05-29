@@ -9,3 +9,8 @@
 nav {
   background-color: rgb(80, 80, 80) !important;
 }
+
+.navLogo {
+  position: relative;
+  height: 100%;
+}

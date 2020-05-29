@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logout } from "../actions/authActions";
 import M from "materialize-css";
 import "./Navbar.css";
+import nav_logo from "../resources/imgs/nav_logo.png";
 
 const profilePic =
   "https://firebasestorage.googleapis.com/v0/b/cdred-project.appspot.com/o/pageImgs%2Fprofile.png?alt=media&token=12756539-29a9-4177-bb3b-c81548f4acbd";
@@ -44,6 +45,9 @@ class Navbar extends Component {
             >
               <i className='material-icons'>menu</i>
             </a>
+            <Link to='/'>
+              <img className='navLogo brand-logo' src={nav_logo} />
+            </Link>
             <ul className='right hide-on-med-and-down'>
               <li>
                 <Link to='/'>Home</Link>
