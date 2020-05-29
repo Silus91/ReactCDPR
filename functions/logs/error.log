@@ -29,3 +29,5 @@ Thu, 28 May 2020 19:22:08 GMT | ERROR | Error At Trying to register  {} |
 Thu, 28 May 2020 19:23:20 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
 Thu, 28 May 2020 19:24:34 GMT | ERROR | Error At Trying to register  {"code":"auth/email-already-in-use","message":"The email address is already in use by another account."} | 
 Thu, 28 May 2020 19:25:50 GMT | ERROR | Error At Trying to register  {} | 
+Fri, 29 May 2020 14:37:04 GMT | ERROR | Error At Trying to register  {} | 
+Fri, 29 May 2020 14:37:04 GMT | ERROR | Error unhandledRejection {} | 

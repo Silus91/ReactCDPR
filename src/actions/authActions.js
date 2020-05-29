@@ -74,7 +74,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
         );
         if (providers.includes("password")) {
           try {
-            dispatch(await handlePasswordBasedAccountLinking(catchError));
+            dispatch(handlePasswordBasedAccountLinking(catchError));
           } catch (passwordLinkingError) {
             console.error(
               "Password based linknig acount failed",
@@ -83,7 +83,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
           }
         } else if (catchError.credential.providerId) {
           try {
-            dispatch(await handleSocialAccountLinking(catchError));
+            dispatch(handleSocialAccountLinking(catchError));
           } catch (e) {
             console.error(e);
             Sentry.captureException("Social with social", e);

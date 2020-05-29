@@ -57,3 +57,7 @@ Thu, 28 May 2020 19:24:34 GMT | ERROR | Error At Trying to register  {"code":"au
 Thu, 28 May 2020 19:25:50 GMT | ERROR | Error At Trying to register  {} | 
 Thu, 28 May 2020 19:32:30 GMT | INFO | New User created | data : silussinister@gmail.com | 
 Thu, 28 May 2020 20:28:16 GMT | INFO | New User created | data : silussinister@gmail.com | 
+Fri, 29 May 2020 14:31:08 GMT | INFO | New User created | data : silussinister@gmail.com | 
+Fri, 29 May 2020 14:37:04 GMT | ERROR | Error At Trying to register  {} | 
+Fri, 29 May 2020 14:37:04 GMT | ERROR | Error unhandledRejection {} | 
+Fri, 29 May 2020 14:37:11 GMT | INFO | New User created | data : silusaasinister@gmail.com | 
