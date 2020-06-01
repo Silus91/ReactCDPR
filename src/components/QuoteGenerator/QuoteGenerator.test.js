@@ -8,10 +8,10 @@ describe("CardTabs component", () => {
   it("should render without explosion", () => {
     expect(QuoteGeneratorWrapper.length).toEqual(1);
   });
-  it("should render tabs", () => {
+  it("should render span", () => {
     expect(QuoteGeneratorWrapper.find("span"));
   });
   it("should render content text", () => {
-    expect(QuoteGeneratorWrapper.find("p").length).toEqual(configs.length);
+    expect(QuoteGeneratorWrapper.find("h5"));
   });
 });
