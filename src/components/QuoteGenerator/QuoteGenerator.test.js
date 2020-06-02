@@ -1,7 +1,6 @@
 import { mount } from "enzyme";
 import QuoteGenerator from "./QuoteGenerator";
 import React from "react";
-import configs from "../../resources/textConfigs/configsCDPR";
 
 describe("CardTabs component", () => {
   const QuoteGeneratorWrapper = mount(<QuoteGenerator allQuotes={allQuotes} />);
