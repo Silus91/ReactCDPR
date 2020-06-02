@@ -2,7 +2,7 @@ import { mount } from "enzyme";
 import QuoteGenerator from "./QuoteGenerator";
 import React from "react";
 
-describe("CardTabs component", () => {
+describe("Quotegenerator component", () => {
   const QuoteGeneratorWrapper = mount(<QuoteGenerator allQuotes={allQuotes} />);
   it("should render without explosion", () => {
     expect(QuoteGeneratorWrapper.length).toEqual(1);
