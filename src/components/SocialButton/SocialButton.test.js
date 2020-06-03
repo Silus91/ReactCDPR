@@ -7,7 +7,7 @@ describe("Social Button", () => {
   it("should render without explosion", () => {
     expect(SocialButtonWrapper).toBeTruthy();
   });
-  it("should render a tag", () => {
+  it("should render click tag", () => {
     expect(SocialButtonWrapper.find("a"));
   });
   it("should render img", () => {
