@@ -10,7 +10,7 @@ describe("Quotegenerator component", () => {
   it("should render span", () => {
     expect(QuoteGeneratorWrapper.find("span"));
   });
-  it("should render content text", () => {
+  it("should render content header", () => {
     expect(QuoteGeneratorWrapper.find("h5"));
   });
 });
