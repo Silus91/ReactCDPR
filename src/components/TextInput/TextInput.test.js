@@ -27,16 +27,16 @@ describe("Text input", () => {
   it("should render span", () => {
     expect(TextInputWrapper.find("span"));
   });
-  //   it("should let me fill form", () => {
-  //     const TextInputWrapper = shallow(<TextInput />);
-  //     // const nameInput = simulateOnChangeInput(
-  //     //   TextInputWrapper,
-  //     //   "#name",
-  //     //   "testName"
-  //     // );
-  //     const inputTrial = TextInputWrapper.find("input");
-  //     const test = inputTrial.simulate("change");
-  //     expect(test).toHaveBeenCalled();
-  //     // expect(nameInput.props().value).toEqual("testName");
-  //   });
+  it("should let me fill form", () => {
+    const TextInputWrapper = shallow(<TextInput />);
+    // const nameInput = simulateOnChangeInput(
+    //   TextInputWrapper,
+    //   "#name",
+    //   "testName"
+    // );
+    const inputTrial = TextInputWrapper.find("input");
+    const test = inputTrial.simulate("change");
+    expect(test).toHaveBeenCalled();
+    // expect(nameInput.props().value).toEqual("testName");
+  });
 });
