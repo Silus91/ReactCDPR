@@ -43,7 +43,7 @@ class Cyberpunk extends React.Component {
           <div className='col l4 s12'>
             <div className='card counter'>
               <div className='card-content'>
-                <CountdownTimer deadline='September 17, 2020' />
+                <CountdownTimer deadline='November 19, 2020' />
               </div>
             </div>
           </div>
