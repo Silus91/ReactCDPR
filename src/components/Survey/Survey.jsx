@@ -52,7 +52,6 @@ export class Survey extends Component {
       <span key={index}>
         <label>
           <input
-            name='group1'
             type='radio'
             id='rating'
             onChange={this.handleChange}
