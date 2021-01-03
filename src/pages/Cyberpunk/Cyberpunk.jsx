@@ -4,7 +4,6 @@ import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import M from "materialize-css";
 import { cyber } from "../../resources/textConfigs/info";
 import "./Cyberpunk.css";
-import InstagramEmbed from "react-instagram-embed";
 
 class Cyberpunk extends React.Component {
   componentDidMount() {
@@ -21,30 +20,9 @@ class Cyberpunk extends React.Component {
           <div className=' col l12 card'>
             <div className='card-content cyberText'>{cyber}</div>
           </div>
-          <div className='col l4 s12 insta center card'>
-            <InstagramEmbed
-              url='https://www.instagram.com/p/B5_zQFSn3zQ/?utm_source=ig_web_copy_link'
-              maxWidth={400}
-              hideCaption={false}
-              containerTagName='div'
-              protocol=''
-              injectScript
-              onLoading={() => {}}
-              onSuccess={() => {}}
-              onAfterRender={() => {}}
-              onFailure={() => {}}
-            />
-          </div>
           <div className='card col l8 s12'>
             <div className='card-content'>
               <YoutubeVideo videoId='LembwKDo1Dk' />
-            </div>
-          </div>
-          <div className='col l4 s12'>
-            <div className='card counter'>
-              <div className='card-content'>
-                <CountdownTimer deadline='November 19, 2020' />
-              </div>
             </div>
           </div>
           <div className='col l4 s12 center-align flex'>
@@ -54,7 +32,7 @@ class Cyberpunk extends React.Component {
               target='_blank'
               href='https://www.cyberpunk.net/gb/en/pre-order'
             >
-              PREORDER
+              ORDER
             </a>
           </div>
         </div>

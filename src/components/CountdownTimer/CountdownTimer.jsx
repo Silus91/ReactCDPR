@@ -38,7 +38,7 @@ class CountdownTimer extends Component {
     const { days, hours, minutes, seconds } = this.state;
     return (
       <>
-        <span>D get ready{this.leadingZero(days)}</span>
+        <span> D {this.leadingZero(days)}</span>
         <span> H {this.leadingZero(hours)}</span>
         <span> M {this.leadingZero(minutes)}</span>
         <span> S {this.leadingZero(seconds)}</span>

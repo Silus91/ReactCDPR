@@ -67,6 +67,7 @@ export const socialUserAction = (provider) => async (dispatch) => {
   try {
     const providerResponse = await fbAuth.signInWithPopup(provider);
     const user = await mapSocialUser(providerResponse);
+    console.log("response", providerResponse);
     await firstOrCreate(user);
     dispatch(tryLoginUser());
   } catch (catchError) {

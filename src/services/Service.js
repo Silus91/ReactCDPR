@@ -14,7 +14,7 @@ export const mapSocialUser = (res) => {
       ? res.user.displayName.split(" ")[0]
       : res.user.email,
     lastName: res.user.displayName
-      ? res.user.displayName.split(" ")[0]
+      ? res.user.displayName.split(" ")[1]
       : res.user.email,
     email: res.user.email,
     handle: res.user.email,
